@@ -1,0 +1,321 @@
+/* ============================================================
+   site.css — kotori マーケティング門面デザインシステム
+   CEO 原型(Kotori Marketing Site.html)準拠:暖色クリーム/ゴールド、
+   丸ゴシック(Zen Maru Gothic 見出し + Noto Sans JP 本文)。
+   ホーム/機能ページ用。アプリ画面は実スクショ(assets/screens/)。
+   依存:Google Fonts(Zen Maru Gothic / Noto Sans JP)= HTML head で読込。
+   ============================================================ */
+
+/* 自托管フォント subset(Google Fonts text= サブセット・runtime で Google を呼ばない) */
+@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/zenmaru-500.woff2') format('woff2'); }
+@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/zenmaru-700.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/notosansjp-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/notosansjp-500.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/notosansjp-700.woff2') format('woff2'); }
+
+:root {
+  --cream:      #fbf7ee;   /* ページ地 */
+  --cream-2:    #f4ead2;   /* バンド地(機能 teaser) */
+  --cream-3:    #f6ebd0;
+  --card:       #fffdf8;   /* カード */
+  --ink:        #2e2a22;   /* 本文/見出し(濃茶) */
+  --ink-soft:   #6b6456;   /* 副次テキスト */
+  --ink-faint:  #a0967f;   /* 注釈 */
+  --gold:       #c8881c;   /* アクセント */
+  --gold-bright:#f0c04a;
+  --green:      #5ba86f;   /* 支柱① */
+  --blue:       #2e84c4;   /* 支柱③/リンク */
+  --navy:       #22395b;
+  --line:       rgba(46,42,34,0.10);
+  --shadow:     rgba(46,42,34,0.08);
+  --pill-bg:    #2e2a22;   /* CTA(濃) */
+  --pill-fg:    #fbf7ee;
+  --maxw: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream:    #1f1c17;
+    --cream-2:  #26221b;
+    --cream-3:  #221e18;
+    --card:     #2b2820;
+    --ink:      #f4ead2;
+    --ink-soft: #c3b9a3;
+    --ink-faint:#a0967f;
+    --gold:     #e6b450;
+    --gold-bright:#f0c04a;
+    --green:    #7bc492;
+    --blue:     #6fb1e8;
+    --line:     rgba(244,234,210,0.12);
+    --shadow:   rgba(0,0,0,0.4);
+    --pill-bg:  #f4ead2;
+    --pill-fg:  #221e18;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .brand-type {
+  font-family: "Zen Maru Gothic", "Noto Sans JP", -apple-system, sans-serif;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+a { color: var(--blue); }
+img { max-width: 100%; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.eyebrow {
+  font-size: 0.8rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 0.04em; margin-bottom: 8px;
+}
+
+/* ---------- ナビ ---------- */
+.site-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--cream) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.site-nav .wrap {
+  display: flex; align-items: center; gap: 16px;
+  height: 60px;
+}
+.site-nav .logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.15rem;
+  color: var(--ink); text-decoration: none;
+}
+.site-nav .logo img { width: 30px; height: 30px; }
+.site-nav .nav-links {
+  display: flex; gap: 22px; margin-left: 18px;
+}
+.site-nav .nav-links a {
+  color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+}
+.site-nav .nav-links a:hover { color: var(--gold); }
+.site-nav .nav-lang {
+  margin-left: auto; font-size: 0.85rem; color: var(--ink-faint);
+}
+.site-nav .nav-lang a { color: var(--ink-soft); text-decoration: none; }
+.site-nav .nav-lang strong { color: var(--ink); }
+
+/* ---------- ヒーロー ---------- */
+.hero { padding: 56px 0 40px; }
+.hero .wrap {
+  display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;
+}
+.hero h1 { font-size: 2.6rem; margin: 4px 0 16px; }
+.hero .lead { font-size: 1.18rem; font-weight: 500; margin: 0 0 10px; }
+.hero .sub { color: var(--ink-soft); font-size: 1rem; margin: 0 0 26px; }
+.hero-visual { display: flex; justify-content: center; position: relative; }
+.hero-visual .mascot-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-58px);
+  width: 56px; height: 56px; border-radius: 50%; background: var(--card);
+  box-shadow: 0 6px 18px var(--shadow); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; z-index: 30;
+}
+.hero-visual .mascot-badge img { width: 76%; }
+/* ヒーロー実機 RAW 真図(朴素・en は英語UI実機) */
+.hero-visual .hero-shot {
+  display: block; width: 290px; max-width: 80vw; height: auto;
+  border-radius: 38px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 44px rgba(60, 45, 25, 0.18);
+  background: #fff;
+}
+/* 見出しの改行制御(日本語/英語で分岐)
+   ・英語 :lang(en) → text-wrap:balance(ラテン語向き・行長均等で orphan 回避)
+   ・日本語 :lang(ja) → word-break:auto-phrase(BudouX 文節改行・Chrome119+/lang=ja 必須)
+     ※text-wrap:balance は日本語では文字単位の不自然な改行・右端余白を生むため、
+       auto-phrase 対応ブラウザに限り @supports で併用(非対応では掛けない)
+   ・.nb = 文節を nowrap で塊化し、全ブラウザで改行を文節境界に限定
+     (助詞「と」等が行頭に来る不自然改行を防ぐ;BudouX 非対応ブラウザのフォールバック) */
+:lang(en) h1, :lang(en) h2, :lang(en) h3 { text-wrap: balance; }
+:lang(ja) h1, :lang(ja) h2, :lang(ja) h3 { word-break: auto-phrase; }
+@supports (word-break: auto-phrase) {
+  :lang(ja) h1, :lang(ja) h2, :lang(ja) h3 { text-wrap: balance; }
+}
+.nb { white-space: nowrap; }
+
+/* CTA */
+.cta-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--pill-bg); color: var(--pill-fg);
+  font-weight: 700; font-size: 1rem;
+  padding: 13px 26px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.cta-pill.is-soon { opacity: 0.96; cursor: default; }
+.cta-note { display: block; margin-top: 10px; font-size: 0.78rem; color: var(--ink-faint); }
+
+/* ---------- ことり紹介バンド ---------- */
+.intro-band { padding: 8px 0 36px; }
+.intro-band .card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 4px 18px var(--shadow);
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 22px;
+}
+.intro-band .card .av {
+  width: 52px; height: 52px; border-radius: 50%; flex: 0 0 52px;
+  background: var(--cream-2); display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.intro-band .card .av img { width: 86%; }
+.intro-band .card .tx { font-size: 1rem; }
+.intro-band .card .tx .eyebrow { margin-bottom: 2px; }
+
+/* ---------- 3 支柱 ---------- */
+.pillars { padding: 20px 0 44px; }
+.pillars .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pillar {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  padding: 24px 22px; box-shadow: 0 4px 18px var(--shadow);
+}
+.pillar .ic {
+  width: 42px; height: 42px; border-radius: 12px; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+}
+.pillar.p1 .ic { background: color-mix(in srgb, var(--green) 18%, transparent); }
+.pillar.p2 .ic { background: color-mix(in srgb, var(--gold) 20%, transparent); }
+.pillar.p3 .ic { background: color-mix(in srgb, var(--blue) 18%, transparent); }
+.pillar h3 { font-size: 1.18rem; margin: 0 0 8px; }
+.pillar p { color: var(--ink-soft); font-size: 0.95rem; margin: 0; }
+
+/* ---------- 機能 teaser バンド ---------- */
+.teaser { background: var(--cream-2); padding: 48px 0; text-align: center; }
+.teaser h2 { font-size: 1.7rem; margin: 0 0 12px; }
+.teaser .lead { color: var(--ink-soft); max-width: 620px; margin: 0 auto 22px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 26px; }
+.chip {
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 16px; font-size: 0.86rem; color: var(--ink); font-weight: 500;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* ---------- 使い方 3 ステップ ---------- */
+.how-sec { padding: 40px 0 8px; text-align: center; }
+.how-sec h2 { font-size: 1.6rem; margin: 0 0 28px; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.step {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  padding: 24px 18px; box-shadow: 0 4px 18px var(--shadow); position: relative;
+}
+.step .num {
+  width: 34px; height: 34px; border-radius: 50%; margin: 0 auto 12px;
+  background: var(--gold); color: #fff; font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.step h3 { font-size: 1.1rem; margin: 0 0 6px; }
+.step p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+.step .ex { display: block; margin-top: 8px; color: var(--ink-faint); font-size: 0.82rem; }
+
+/* ---------- スクショギャラリー(アプリモック) ---------- */
+.gallery-sec { padding: 52px 0 40px; text-align: center; }
+.gallery-sec h2 { font-size: 1.5rem; margin: 0 0 6px; }
+.gallery-sec .sub { color: var(--ink-soft); margin: 0 0 28px; font-size: 0.95rem; }
+.gallery {
+  display: flex; gap: 26px; overflow-x: auto; padding: 8px 24px 22px;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+}
+.gallery::-webkit-scrollbar { height: 8px; }
+.gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+.gallery .shot { flex: 0 0 auto; width: 300px; scroll-snap-align: center; }
+/* 実機 RAW 真図(朴素・無套框);Stage 2 営銷套框版は別ステップ */
+.gallery .shot img {
+  display: block; width: 100%; height: auto;
+  border-radius: 34px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(60, 45, 25, 0.15);
+  background: #fff;
+}
+.gallery .shot figcaption { margin-top: 14px; font-weight: 600; font-size: 0.92rem; }
+.gallery .shot figcaption .en { display: block; color: var(--ink-faint); font-weight: 400; font-size: 0.78rem; margin-top: 2px; }
+
+/* ---------- フッター ---------- */
+.site-footer {
+  border-top: 1px solid var(--line); background: var(--cream);
+  padding: 30px 0; margin-top: 20px;
+}
+.site-footer .wrap { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.site-footer .logo { display: flex; align-items: center; gap: 8px; font-family: "Zen Maru Gothic"; font-weight: 700; color: var(--ink); }
+.site-footer .logo img { width: 24px; height: 24px; }
+.site-footer .f-links { display: flex; gap: 16px; }
+.site-footer .f-links a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; }
+.site-footer .f-lang { margin-left: auto; font-size: 0.84rem; color: var(--ink-faint); }
+.site-footer .f-lang a { color: var(--ink-soft); text-decoration: none; }
+.site-footer .f-copy { width: 100%; color: var(--ink-faint); font-size: 0.8rem; margin-top: 4px; }
+
+/* ---------- 機能ページ(features) ---------- */
+.feat-head { padding: 48px 0 12px; text-align: center; }
+.feat-head h1 { font-size: 2.1rem; margin: 0 0 8px; }
+.feat-head .lead { color: var(--ink-soft); max-width: 600px; margin: 0 auto; }
+.feat-sec { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.feat-sec:last-of-type { border-bottom: 0; }
+.feat-sec h2 { font-size: 1.35rem; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+.feat-sec h2 .fic { font-size: 1.2rem; }
+.feat-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.feat-item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; box-shadow: 0 2px 10px var(--shadow); }
+.feat-item h3 { font-size: 1rem; margin: 0 0 5px; }
+.feat-item p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+.feat-note { font-size: 0.82rem; color: var(--ink-faint); margin-top: 8px; }
+
+/* ---------- ドキュメント/法務ページ(privacy / support) ---------- */
+/* features と同じ門面デザインシステムで、長文ドキュメント(プライバシー/サポート)を表示 */
+.doc-head { padding: 46px 0 4px; text-align: center; }
+.doc-head h1 { font-size: 2rem; margin: 0 0 10px; }
+.doc-head .doc-meta { color: var(--ink-faint); font-size: 0.9rem; line-height: 1.65; margin: 0; }
+.doc { max-width: 760px; margin: 0 auto; padding: 16px 24px 28px; }
+.doc > *:first-child { margin-top: 6px; }
+.doc h2 { font-size: 1.3rem; margin: 32px 0 12px; }
+.doc p { color: var(--ink-soft); margin: 0 0 14px; }
+.doc strong { color: var(--ink); font-weight: 700; }
+.doc a { color: var(--blue); }
+.doc ul { color: var(--ink-soft); padding-left: 1.3rem; margin: 0 0 16px; }
+.doc li { margin-bottom: 7px; }
+/* クイックヘルプ(カード列) */
+.doc .help-list { list-style: none; padding: 0; margin: 0 0 6px; }
+.doc .help-list li {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 16px; margin-bottom: 9px; box-shadow: 0 2px 8px var(--shadow);
+}
+.doc .help-list li strong { color: var(--ink); }
+/* FAQ アコーディオン(JS 不要・<details>) */
+.doc details {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 13px 18px; margin-bottom: 9px; box-shadow: 0 2px 8px var(--shadow);
+}
+.doc details > summary {
+  cursor: pointer; list-style: none;
+  font-family: "Zen Maru Gothic", "Noto Sans JP", -apple-system, sans-serif; font-weight: 700;
+  color: var(--ink); display: flex; align-items: flex-start; gap: 10px;
+}
+.doc details > summary::-webkit-details-marker { display: none; }
+.doc details > summary::before { content: "＋"; color: var(--gold); font-weight: 700; }
+.doc details[open] > summary::before { content: "−"; }
+.doc details > p { margin: 11px 0 2px; }
+.doc-back { text-align: center; margin: 38px 0 4px; }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .hero-visual { order: -1; }
+  .hero h1 { font-size: 2.1rem; }
+  .pillars .grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .feat-list { grid-template-columns: 1fr; }
+  .site-nav .nav-links { display: none; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+  .wrap { padding: 0 18px; }
+  .doc { padding-left: 18px; padding-right: 18px; }
+  .doc-head h1 { font-size: 1.7rem; }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotori — One-Line Expenses. Just talk.</title>
+  <meta name="description" content="Say &quot;Lunch, $12.99.&quot; That's it. Amount and category logged automatically — no typing, no bank linking, no account. Kotori, your little bird sidekick, keeps your expenses on-device and private.">
+  <meta property="og:title" content="Kotori — One-Line Expenses. Just talk.">
+  <meta property="og:description" content="Say it and it's logged: amount and category, automatically. On-device, private, no account. Meet Kotori, your little bird sidekick.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kicucya.github.io/kotori/index-en.html">
+  <link rel="canonical" href="https://kicucya.github.io/kotori/index-en.html">
+  <link rel="alternate" hreflang="ja" href="https://kicucya.github.io/kotori/index.html">
+  <link rel="alternate" hreflang="en" href="https://kicucya.github.io/kotori/index-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://kicucya.github.io/kotori/index.html">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+  <!-- SVG symbols (app mock) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ic-cell" viewBox="0 0 18 12"><g fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="4.5" width="3" height="7.5" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></g></symbol>
+    <symbol id="ic-wifi" viewBox="0 0 18 13"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2.5 6.5a9 9 0 0113 0"/><path d="M5 9a5.5 5.5 0 018 0"/></g><path fill="currentColor" d="M9 13l2.2-2.6a3 3 0 00-4.4 0z"/></symbol>
+    <symbol id="ic-batt" viewBox="0 0 27 13"><rect x="0.6" y="1" width="22" height="11" rx="3" fill="none" stroke="currentColor" stroke-opacity="0.45"/><rect x="2.5" y="3" width="15.5" height="7" rx="1.6" fill="currentColor"/><rect x="24" y="4.5" width="1.8" height="4" rx="0.9" fill="currentColor" fill-opacity="0.45"/></symbol>
+    <symbol id="ic-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-5"/><path d="M18.6 3.4a1.9 1.9 0 012.7 2.7L12.5 15l-3.6 1 1-3.6 8.7-9z"/></g></symbol>
+    <symbol id="ic-list" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="5" cy="7" r="1.6"/><circle cx="5" cy="12" r="1.6"/><circle cx="5" cy="17" r="1.6"/></g><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9.5 7h10"/><path d="M9.5 12h10"/><path d="M9.5 17h10"/></g></symbol>
+    <symbol id="ic-pie" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 12V3a9 9 0 017.8 4.5L12 12z" fill="currentColor"/></symbol>
+    <symbol id="ic-ellipsis" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="6" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18" cy="12" r="1.7"/></g></symbol>
+    <symbol id="ic-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="currentColor"/><path d="M7.8 12.4l2.7 2.7 5.6-6" fill="none" stroke="var(--osa-bg)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11a6 6 0 0012 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17.2V20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-send" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 16.5V8m0 0l-3.2 3.2M12 8l3.2 3.2" fill="none" stroke="var(--osa-bg)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-waveform-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 10v4"/><path d="M10.5 8v8"/><path d="M13.5 9.5v5"/><path d="M16 11v2"/></g></symbol>
+    <symbol id="ic-plus-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="ic-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3.2" fill="currentColor"/><circle cx="16.8" cy="12.5" r="1.5" fill="var(--osa-bg)"/></symbol>
+    <symbol id="ic-chev-ud" viewBox="0 0 24 24"><path d="M8 11l4-4 4 4M8 13.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 12.5l4.6 4.6L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-transfer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8.5h11l-3-3"/><path d="M17 15.5H6l3 3"/></g></symbol>
+  </svg>
+
+  <!-- Nav -->
+  <nav class="site-nav"><div class="wrap">
+    <a class="logo" href="index-en.html"><img src="assets/kotori-avatar.png" alt="">Kotori</a>
+    <span class="nav-links">
+      <a href="index-en.html">Home</a>
+      <a href="features-en.html">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </span>
+    <span class="nav-lang"><a href="index.html">日本語</a> | <strong>English</strong></span>
+  </div></nav>
+
+  <!-- Hero -->
+  <header class="hero"><div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">Talk to track</div>
+      <h1>Say &ldquo;Lunch, $12.99.&rdquo; That's it.</h1>
+      <p class="lead">Amount and category — logged automatically.</p>
+      <p class="sub">No typing, no bank linking, no account. Just say it, and you're done.</p>
+      <a class="cta-pill is-soon" role="button" aria-disabled="true">📲 Coming Soon</a>
+      <span class="cta-note">Coming to the App Store</span>
+    </div>
+    <div class="hero-visual">
+      <div class="mascot-badge"><img src="assets/kotori-avatar.png" alt="Kotori"></div>
+      <img class="hero-shot" src="assets/screens/en/01-conversation.jpg" width="660" height="1434" fetchpriority="high" decoding="async" alt="Kotori record screen (English app UI)">
+    </div>
+  </div></header>
+
+  <!-- Kotori intro -->
+  <section class="intro-band"><div class="wrap">
+    <div class="card">
+      <div class="av"><img src="assets/kotori-avatar.png" alt="Kotori"></div>
+      <div class="tx">
+        <div class="eyebrow">Meet your sidekick</div>
+        Meet Kotori, your little bird sidekick — talk to it and it logs, with a short reply along the way.
+      </div>
+    </div>
+  </div></section>
+
+  <!-- 3 pillars -->
+  <section class="pillars"><div class="wrap"><div class="grid">
+    <div class="pillar p1">
+      <div class="ic">💬</div>
+      <div class="eyebrow">Log by talking</div>
+      <h3>Say it. It's logged.</h3>
+      <p>Say an expense out loud and Kotori — your little bird sidekick — catches it: amount and category, logged automatically — and the merchant too, if you say it. Ask Siri or fire a Shortcut, no need to open the app. It's not data entry; it's a chat.</p>
+    </div>
+    <div class="pillar p2">
+      <div class="ic">🧠</div>
+      <div class="eyebrow">On-device learning</div>
+      <h3>The more you use it, the better it knows you.</h3>
+      <p>Kotori learns your wording and your categorization habits — on your device. It gets more accurate the more you use it, and that learning never leaves your iPhone.</p>
+    </div>
+    <div class="pillar p3">
+      <div class="ic">🔒</div>
+      <div class="eyebrow">Privacy</div>
+      <h3>Your money stays on your phone.</h3>
+      <p>Your financial data is never sent to our servers. Everything is processed on-device, and syncing runs only through your own iCloud. No account required.</p>
+    </div>
+  </div></div></section>
+
+  <!-- How it works -->
+  <section class="how-sec"><div class="wrap">
+    <h2>Three steps.</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Say it</h3><p>One spoken line.<span class="ex">e.g. &ldquo;Lunch, $12.99&rdquo;</span></p></div>
+      <div class="step"><div class="num">2</div><h3>Auto-sorted</h3><p>Amount and category, figured out.<span class="ex">A merchant you said is kept</span></p></div>
+      <div class="step"><div class="num">3</div><h3>Learns on-device</h3><p>Tuned to you over time.<span class="ex">More accurate next time</span></p></div>
+    </div>
+  </div></section>
+
+  <!-- Features teaser -->
+  <section class="teaser"><div class="wrap">
+    <h2>Everything an expense tracker needs.</h2>
+    <p class="lead">Multiple wallets, family sharing, budgets, monthly reports, 25+ currencies, CSV import.</p>
+    <div class="chips">
+      <span class="chip">Multiple wallets</span>
+      <span class="chip">Family sharing</span>
+      <span class="chip">Budgets</span>
+      <span class="chip">Monthly reports</span>
+      <span class="chip">25+ currencies</span>
+      <span class="chip">CSV import</span>
+    </div>
+    <a class="cta-pill" href="features-en.html">See all features →</a>
+  </div></section>
+
+  <!-- Screenshot gallery (app mock) -->
+  <section class="gallery-sec">
+    <h2>App screens</h2>
+    <p class="sub">Actual app screens. Display may change with app updates.</p>
+    <div class="gallery">
+
+      <figure class="shot">
+        <img class="shot-img" src="assets/screens/en/05-report.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="Kotori monthly report screen">
+        <figcaption>See your month at a glance.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img class="shot-img" src="assets/screens/en/06-wallet-share.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="Kotori wallets and family sharing screen">
+        <figcaption>Share with family — through your own iCloud.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img class="shot-img" src="assets/screens/en/04-export.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="Kotori data export screen">
+        <figcaption>Your data is yours — export it anytime.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img class="shot-img" src="assets/screens/en/03-learning.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="Kotori keyword learning screen">
+        <figcaption>The more you use it, the smarter it gets.</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer"><div class="wrap">
+    <span class="logo"><img src="assets/kotori-avatar.png" alt="">Kotori — One-Line Expenses</span>
+    <span class="f-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a href="features-en.html">Features</a>
+    </span>
+    <span class="f-lang"><a href="index.html">日本語</a> | <strong>English</strong></span>
+    <span class="f-copy">© 2026 kicucya · Free to use the basics</span>
+  </div></footer>
+
+</body>
+</html>
