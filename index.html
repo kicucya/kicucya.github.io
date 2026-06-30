@@ -50,6 +50,16 @@
   <p class="subtitle">iOS / macOS Apps</p>
 
   <div class="app">
+    <h2>Kotori</h2>
+    <p class="desc">ことり 一言家計簿 — One-Line Expenses</p>
+    <div class="links">
+      <a href="kotori/index-en.html" data-ja="kotori/index.html">Website</a>
+      <a href="kotori/privacy.html" data-ja="kotori/privacy-ja.html">Privacy Policy</a>
+      <a href="kotori/support.html" data-ja="kotori/support-ja.html">Support</a>
+    </div>
+  </div>
+
+  <div class="app">
     <h2>unroll</h2>
     <p class="desc">Stitch Long Screenshots</p>
     <div class="links">
@@ -67,8 +77,17 @@
     </div>
   </div>
 
-  <footer>
-    Contact: <a href="mailto:kicu.cya+dev@gmail.com" style="color:inherit;">kicu.cya+dev@gmail.com</a>
-  </footer>
+  <script>
+    // Kotori 入口按浏览器环境语言路由:日语环境 → 日文页,其它 → 英文页(HTML 默认即英文)。
+    // 渐进增强:无 JS 时链接仍可用(退英文页),爬虫也取英文默认。
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.indexOf('ja') !== 0) return;            // 非日语环境:保持英文默认
+      var links = document.querySelectorAll('a[data-ja]');
+      for (var i = 0; i < links.length; i++) {
+        links[i].setAttribute('href', links[i].getAttribute('data-ja'));
+      }
+    })();
+  </script>
 </body>
 </html>
