@@ -70,6 +70,13 @@ h1, h2, h3, .brand-type {
 }
 a { color: var(--blue); }
 img { max-width: 100%; }
+/* draggable=false を明示した画像はドラッグ/選択/長押しコールアウトも抑止(ホーム画像保護) */
+img[draggable="false"] {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .eyebrow {
   font-size: 0.8rem; font-weight: 700; color: var(--gold);
@@ -225,6 +232,15 @@ img { max-width: 100%; }
   scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
   justify-content: flex-start;
 }
+/* 自動ループ有効時(home.js が付与・常駐)は snap を解除し、スクロールバーも隠す。
+   ・mandatory snap は自動停止や再開のたびに最寄りカードへ即吸着して「跳び」を生む
+   ・バーの thumb は有限の帯を往復して「無限ループではない」ことを露呈する
+   手動スワイプ/ホイール/キーボード操作は維持(JS 無効環境では従来どおり snap+バー) */
+.gallery.is-looping { scroll-snap-type: none; scrollbar-width: none; cursor: grab; }
+.gallery.is-looping::-webkit-scrollbar { display: none; }
+/* マウスのドラッグスクロール中(home.js が付与)。バー非表示後のデスクトップの
+   横移動手段。テキスト選択がドラッグと競合しないよう抑止 */
+.gallery.is-dragging { cursor: grabbing; user-select: none; -webkit-user-select: none; }
 .gallery::-webkit-scrollbar { height: 8px; }
 .gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
 .gallery .shot { flex: 0 0 auto; width: 300px; scroll-snap-align: center; }
@@ -311,7 +327,20 @@ img { max-width: 100%; }
   .pillars .grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .feat-list { grid-template-columns: 1fr; }
-  .site-nav .nav-links { display: none; }
+  /* 狭幅ではナビを隠さず 2 段組に:1 段目はロゴ+言語、2 段目はリンク列
+     (丸ごと隠すのは誤った適配、全リンクを見せる)。フッター重複リンク撤去後の導線でもある。
+     リンク列は単一行が基本、幅が足りなければ自然に折り返す(行数は固定しない)。
+     列間はデスクトップと同じ 22px、行間はリンク自身の padding に任せて詰める。
+     ロゴ行とリンク行の距離は row-gap(旧 2px の 3 倍 = 6px) */
+  .site-nav .wrap {
+    flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 12px;
+    row-gap: 6px;
+  }
+  .site-nav .nav-links {
+    order: 3; width: 100%; margin-left: 0;
+    flex-wrap: wrap; gap: 2px 22px;
+  }
+  .site-nav .nav-links a { padding: 4px 0; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 1.8rem; }

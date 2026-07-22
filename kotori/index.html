@@ -14,6 +14,7 @@
   <link rel="alternate" hreflang="en" href="https://kicucya.github.io/kotori/index-en.html">
   <link rel="alternate" hreflang="x-default" href="https://kicucya.github.io/kotori/index.html">
   <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/home.js" defer></script>
 </head>
 <body>
 
@@ -42,7 +43,7 @@
 
   <!-- ナビ -->
   <nav class="site-nav"><div class="wrap">
-    <a class="logo" href="index.html"><img src="assets/kotori-avatar.png" alt="">ことり</a>
+    <a class="logo" href="index.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり</a>
     <span class="nav-links">
       <a href="index.html">ホーム</a>
       <a href="features.html">機能</a>
@@ -63,15 +64,15 @@
       <span class="cta-note">App Store にて公開予定</span>
     </div>
     <div class="hero-visual">
-      <div class="mascot-badge"><img src="assets/kotori-avatar.png" alt="ことり"></div>
-      <img class="hero-shot" src="assets/screens/ja/01-conversation.jpg" width="660" height="1434" fetchpriority="high" decoding="async" alt="ことり アプリの記録画面">
+      <div class="mascot-badge"><img draggable="false" src="assets/kotori-avatar.png" alt="ことり"></div>
+      <img draggable="false" class="hero-shot" src="assets/screens/ja/01-conversation.jpg" width="660" height="1434" fetchpriority="high" decoding="async" alt="ことり アプリの記録画面">
     </div>
   </div></header>
 
   <!-- ことり紹介 -->
   <section class="intro-band"><div class="wrap">
     <div class="card">
-      <div class="av"><img src="assets/kotori-avatar.png" alt="ことり"></div>
+      <div class="av"><img draggable="false" src="assets/kotori-avatar.png" alt="ことり"></div>
       <div class="tx">
         <div class="eyebrow">相棒紹介</div>
         相棒は小鳥の「ことり」。話しかけると記録して、ちょっとした返事も返してくれます。
@@ -145,22 +146,37 @@
     <div class="gallery">
 
       <figure class="shot">
-        <img class="shot-img" src="assets/screens/ja/05-report.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの月次レポート画面">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/08-voice.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの音声入力画面">
+        <figcaption>話しかければ、そのまま記録。<span class="en">Just speak — it's logged.</span></figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/02-siri.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの Siri ショートカット設定画面">
+        <figcaption>アプリを開かず、Siri からも。<span class="en">No need to open the app — just ask Siri.</span></figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/05-report.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの月次レポート画面">
         <figcaption>支出は、月次レポートでひと目。<span class="en">See your month at a glance.</span></figcaption>
       </figure>
 
       <figure class="shot">
-        <img class="shot-img" src="assets/screens/ja/06-wallet-share.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの財布・家族共有画面">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/07-budget.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの予算設定画面">
+        <figcaption>予算はスライダーで、さっと配分。<span class="en">Split your budget with simple sliders.</span></figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/06-wallet-share.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリの財布・家族共有画面">
         <figcaption>家族とも、自分の iCloud で共有。<span class="en">Share with family — through your own iCloud.</span></figcaption>
       </figure>
 
       <figure class="shot">
-        <img class="shot-img" src="assets/screens/ja/04-export.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリのデータ書き出し画面">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/04-export.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリのデータ書き出し画面">
         <figcaption>あなたのデータは、あなたのもの。いつでも書き出せる。<span class="en">Your data is yours — export it anytime.</span></figcaption>
       </figure>
 
       <figure class="shot">
-        <img class="shot-img" src="assets/screens/ja/03-learning.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリのキーワード学習画面">
+        <img draggable="false" class="shot-img" src="assets/screens/ja/03-learning.jpg" width="660" height="1434" loading="lazy" decoding="async" alt="ことり アプリのキーワード学習画面">
         <figcaption>使うほど、あなた仕様に。<span class="en">The more you use it, the smarter it gets.</span></figcaption>
       </figure>
 
@@ -169,13 +185,7 @@
 
   <!-- フッター -->
   <footer class="site-footer"><div class="wrap">
-    <span class="logo"><img src="assets/kotori-avatar.png" alt="">ことり 一言家計簿</span>
-    <span class="f-links">
-      <a href="privacy-ja.html">プライバシー</a>
-      <a href="support-ja.html">サポート</a>
-      <a href="features.html">機能</a>
-    </span>
-    <span class="f-lang"><strong>日本語</strong> | <a href="index-en.html">English</a></span>
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり 一言家計簿</span>
     <span class="f-copy">© 2026 kicucya ・ 基本利用無料</span>
   </div></footer>
 
