@@ -14,11 +14,19 @@
 </head>
 <body>
 
-  <!-- 導覽（衛星合規頁:標誌 + 語言切換） -->
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
   <nav class="site-nav"><div class="wrap">
-    <a class="logo" href="index.html"><img src="assets/kotori-avatar.png" alt="">Kotori</a>
-    <span class="nav-lang"><a href="privacy.html">English</a> | <a href="privacy-ja.html">日本語</a> | <strong>繁體中文</strong></span>
+    <a class="logo" href="index.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</a>
+    <span class="nav-links">
+      <a href="index.html">首頁</a>
+      <a href="features.html">功能</a>
+      <a href="privacy-zh-Hant.html">隱私權</a>
+      <a href="support-ja.html">支援</a>
+    </span>
+    <span class="nav-lang"><a href="privacy-ja.html">日本語</a> | <a href="privacy.html">English</a> | <strong>繁體中文</strong></span>
   </div></nav>
+  <!-- kotori:nav:end -->
 
   <header class="doc-head"><div class="wrap">
     <h1>隱私權政策</h1>
@@ -80,17 +88,12 @@
 
   </main>
 
-  <!-- 頁尾 -->
+  <!-- kotori:footer:start -->
   <footer class="site-footer"><div class="wrap">
-    <span class="logo"><img src="assets/kotori-avatar.png" alt="">Kotori</span>
-    <span class="f-links">
-      <a href="privacy-zh-Hant.html">隱私權</a>
-      <a href="support-ja.html">支援</a>
-      <a href="index.html">首頁</a>
-    </span>
-    <span class="f-lang"><a href="privacy.html">English</a> | <a href="privacy-ja.html">日本語</a> | <strong>繁體中文</strong></span>
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</span>
     <span class="f-copy">© 2026 kicucya</span>
   </div></footer>
+  <!-- kotori:footer:end -->
 
 </body>
 </html>

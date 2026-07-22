@@ -13,9 +13,10 @@
 </head>
 <body>
 
-  <!-- ナビ -->
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
   <nav class="site-nav"><div class="wrap">
-    <a class="logo" href="index.html"><img src="assets/kotori-avatar.png" alt="">ことり</a>
+    <a class="logo" href="index.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり</a>
     <span class="nav-links">
       <a href="index.html">ホーム</a>
       <a href="features.html">機能</a>
@@ -24,6 +25,7 @@
     </span>
     <span class="nav-lang"><strong>日本語</strong> | <a href="features-en.html">English</a></span>
   </div></nav>
+  <!-- kotori:nav:end -->
 
   <header class="feat-head"><div class="wrap">
     <h1>家計簿に必要なもの、ひと通り。</h1>
@@ -88,16 +90,12 @@
 
   </main>
 
+  <!-- kotori:footer:start -->
   <footer class="site-footer"><div class="wrap">
-    <span class="logo"><img src="assets/kotori-avatar.png" alt="">ことり 一言家計簿</span>
-    <span class="f-links">
-      <a href="privacy-ja.html">プライバシー</a>
-      <a href="support-ja.html">サポート</a>
-      <a href="index.html">ホーム</a>
-    </span>
-    <span class="f-lang"><strong>日本語</strong> | <a href="features-en.html">English</a></span>
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり 一言家計簿</span>
     <span class="f-copy">© 2026 kicucya ・ 基本利用無料</span>
   </div></footer>
+  <!-- kotori:footer:end -->
 
 </body>
 </html>

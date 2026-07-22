@@ -13,9 +13,10 @@
 </head>
 <body>
 
-  <!-- Nav -->
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
   <nav class="site-nav"><div class="wrap">
-    <a class="logo" href="index-en.html"><img src="assets/kotori-avatar.png" alt="">Kotori</a>
+    <a class="logo" href="index-en.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</a>
     <span class="nav-links">
       <a href="index-en.html">Home</a>
       <a href="features-en.html">Features</a>
@@ -24,6 +25,7 @@
     </span>
     <span class="nav-lang"><a href="features.html">日本語</a> | <strong>English</strong></span>
   </div></nav>
+  <!-- kotori:nav:end -->
 
   <header class="feat-head"><div class="wrap">
     <h1>Everything an expense tracker needs.</h1>
@@ -88,16 +90,12 @@
 
   </main>
 
+  <!-- kotori:footer:start -->
   <footer class="site-footer"><div class="wrap">
-    <span class="logo"><img src="assets/kotori-avatar.png" alt="">Kotori — One-Line Expenses</span>
-    <span class="f-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="support.html">Support</a>
-      <a href="index-en.html">Home</a>
-    </span>
-    <span class="f-lang"><a href="features.html">日本語</a> | <strong>English</strong></span>
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori — One-Line Expenses</span>
     <span class="f-copy">© 2026 kicucya · Free to use the basics</span>
   </div></footer>
+  <!-- kotori:footer:end -->
 
 </body>
 </html>

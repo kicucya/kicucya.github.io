@@ -41,7 +41,8 @@
     <symbol id="ic-transfer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8.5h11l-3-3"/><path d="M17 15.5H6l3 3"/></g></symbol>
   </svg>
 
-  <!-- Nav -->
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
   <nav class="site-nav"><div class="wrap">
     <a class="logo" href="index-en.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</a>
     <span class="nav-links">
@@ -52,6 +53,7 @@
     </span>
     <span class="nav-lang"><a href="index.html">日本語</a> | <strong>English</strong></span>
   </div></nav>
+  <!-- kotori:nav:end -->
 
   <!-- Hero -->
   <header class="hero"><div class="wrap">
@@ -171,11 +173,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- kotori:footer:start -->
   <footer class="site-footer"><div class="wrap">
     <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori — One-Line Expenses</span>
     <span class="f-copy">© 2026 kicucya · Free to use the basics</span>
   </div></footer>
+  <!-- kotori:footer:end -->
 
 </body>
 </html>
