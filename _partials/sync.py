@@ -13,6 +13,9 @@ GitHub Pages(純静的配信)でも、ビルドなしでそのまま正しく表
 ヘッダー/フッターを変えるときは _partials/kotori/ 側を編集して --write を実行する。
 ページ側の区块を直接編集しても --check が漂移を検出し、--write で真相源に戻される。
 依存なし(標準ライブラリのみ)。
+
+サイトの記載が対応するアプリのバージョンは下の APP_VERSION が唯一の真相源。
+アプリのリリースごとにここだけ書き換えて --write を実行すれば全ページのフッターが揃う。
 """
 import re
 import sys
@@ -21,6 +24,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent   # リポジトリルート
 PARTIALS = Path(__file__).resolve().parent / 'kotori'
 KOTORI = ROOT / 'kotori'
+
+# このサイトの記載が対応するアプリのバージョン(フッターの __APP_VERSION__ に埋め込まれる)。
+# アプリのリリースに合わせて更新する箇所はここ一か所だけ。
+APP_VERSION = '1.0.0'
 
 # 各ページの言語と「同じ内容の他言語版」へのリンク先(言語切替行の生成に使う)。
 # 現在の言語は <strong>、他言語はリンク。存在する言語だけ並ぶ(順序は ja → en → zh 固定)。
@@ -58,6 +65,7 @@ def render(block: str, page: str) -> str:
     tpl = (PARTIALS / f'{block}-{cfg["lang"]}.html').read_text(encoding='utf-8')
     if block == 'nav':
         tpl = tpl.replace('__NAV_LANG__', nav_lang_span(cfg['lang'], cfg['links']))
+    tpl = tpl.replace('__APP_VERSION__', APP_VERSION)
     assert '__' not in tpl, f'{page}/{block}: unresolved placeholder'
     return tpl.rstrip('\n')
 
