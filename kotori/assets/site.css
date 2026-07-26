@@ -260,16 +260,25 @@ img[draggable="false"] {
   border-top: 1px solid var(--line); background: var(--cream);
   padding: 30px 0; margin-top: 20px;
 }
-.site-footer .wrap { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+/* ロゴ・著作権・適用バージョンを 1 行に横並びで置く。
+   列間 36px は「詰まって見えない」ための下限で、余白が残れば space-between が
+   バーいっぱいに広げる(ヘッダーがロゴ左・言語右に広げるのと同じ作法)。
+   幅が足りなくなったら縮めずに折り返す —— 横スクロールを出さないための選択。
+   行間 10px は折り返したときだけ効く。 */
+.site-footer .wrap {
+  display: flex; align-items: center; flex-wrap: wrap;
+  justify-content: space-between; gap: 10px 36px;
+}
 .site-footer .logo { display: flex; align-items: center; gap: 8px; font-family: "Zen Maru Gothic"; font-weight: 700; color: var(--ink); }
 .site-footer .logo img { width: 24px; height: 24px; }
 .site-footer .f-links { display: flex; gap: 16px; }
 .site-footer .f-links a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; }
 .site-footer .f-lang { margin-left: auto; font-size: 0.84rem; color: var(--ink-faint); }
 .site-footer .f-lang a { color: var(--ink-soft); text-decoration: none; }
-.site-footer .f-copy { width: 100%; color: var(--ink-faint); font-size: 0.8rem; margin-top: 4px; }
-/* サイトの記載が対応するアプリのバージョン(値は _partials/sync.py の APP_VERSION が真相源) */
-.site-footer .f-ver { width: 100%; color: var(--ink-faint); font-size: 0.8rem; }
+/* 著作権と適用バージョン(値は _partials/sync.py の APP_VERSION が真相源)。
+   width:100% を持たせない —— 持たせると各自が 1 行を占有して縦積みに戻る。 */
+.site-footer .f-copy,
+.site-footer .f-ver { color: var(--ink-faint); font-size: 0.8rem; }
 
 /* ---------- 機能ページ(features) ---------- */
 .feat-head { padding: 48px 0 12px; text-align: center; }
