@@ -30,7 +30,7 @@
 
   <header class="doc-head"><div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="doc-meta">Last Updated: June 30, 2026<br>App: Kotori (One-Line Expenses)<br>Developer: kicucya</p>
+    <p class="doc-meta">Last Updated: July 26, 2026<br>App: Kotori (One-Line Expenses)<br>Developer: kicucya</p>
   </div></header>
 
   <main class="doc">
@@ -54,6 +54,19 @@
     <h2>Microphone &amp; Speech Recognition</h2>
     <p>The microphone is used only while you are actively recording an entry. Audio is used for on-device speech recognition and is not sent to the developer.</p>
 
+    <h2>Diagnostic Logs</h2>
+    <p>Kotori can record diagnostic logs to help investigate problems with the app. <strong>This is off by default, and recording starts only after you turn it on yourself inside the app.</strong></p>
+    <ul>
+      <li><strong>Diagnostic logs contain nothing that points to you as a person.</strong> They hold no content from your entries (merchant names, amounts, notes), no speech transcripts, and no identifier tied to your iCloud account</li>
+      <li>What they do hold is the app's internal activity (which operations ran, when, and where they failed) together with device-level details: your device model, iOS version, language and region, app version, and the app's operating environment (such as sync and Apple Intelligence availability)</li>
+      <li>They also hold counts derived from your ledger (for example, how many entries a screen displayed, or how many were queued for sync or re-categorization) and the answer you gave to the tracking permission prompt (whether you allowed it). These are numbers and a yes-or-no answer only, never the content of the entries themselves (merchant names, amounts, notes)</li>
+      <li>Kotori stores diagnostic logs only on this device, and does not send them to the developer's servers, or to any server</li>
+      <li>Logs leave your device only when you export them and pick a recipient yourself — the app never sends them automatically</li>
+      <li>There is no contact form or send button inside the app. Kotori only records and exports the file; whether to send it, and to whom, is entirely your decision</li>
+      <li>The switch that turns diagnostic logging on and off, and the button that deletes what has already been recorded, both live on the Diagnostic Log page. To open it, go to the More tab and tap the Version row ten times in a row; that page holds Export Log and Delete Log, so you can erase the logs yourself whenever you want</li>
+    </ul>
+    <p>Diagnostic logs never grow without bound. They are capped in size (roughly 1–2 MB in total), and once the cap is reached the oldest entries are replaced by newer ones. No third-party crash-reporting or analytics SDK is included for this feature.</p>
+
     <h2>Third-Party Advertising</h2>
     <p>Kotori may display ads through Google AdMob where available. Google may collect:</p>
     <ul>
@@ -66,6 +79,7 @@
     <h2>Data Retention</h2>
     <ul>
       <li>Your transactions and settings remain on your device (and in your iCloud, if sync is enabled) until you delete them or remove the app</li>
+      <li>Diagnostic logs are different: they do not stay on your device indefinitely. They are capped at roughly 1–2 MB in total, and once the cap is reached the oldest entries are replaced by newer ones — they are not wiped on a schedule, so only the most recent activity is kept. You can also erase them yourself at any time with Delete Log on the Diagnostic Log page, and removing the app deletes the logs with it</li>
       <li>Advertising-related data is handled according to Google's own policies</li>
     </ul>
 
@@ -73,6 +87,7 @@
     <ul>
       <li>You can use the app entirely without voice by typing entries</li>
       <li>You can disable microphone, Siri, or iCloud access in system settings at any time</li>
+      <li>Diagnostic logging is off by default and records only after you turn it on; you can turn it off again at any time. The switch, and the button that deletes logs already recorded, are on the Diagnostic Log page — open the More tab and tap the Version row ten times in a row</li>
       <li>You can manage ad and privacy preferences through your device settings and any consent flow provided by the app or Google</li>
     </ul>
 
@@ -92,7 +107,7 @@
   <footer class="site-footer"><div class="wrap">
     <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori — One-Line Expenses</span>
     <span class="f-copy">© 2026 kicucya · Free to use the basics</span>
-    <span class="f-ver">Applies to: app version 1.0.0</span>
+    <span class="f-ver">Applies to: app version 1.0.1</span>
   </div></footer>
   <!-- kotori:footer:end -->
 
