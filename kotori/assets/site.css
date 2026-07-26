@@ -261,13 +261,19 @@ img[draggable="false"] {
   padding: 30px 0; margin-top: 20px;
 }
 /* ロゴ・著作権・適用バージョンを 1 行に横並びで置く。
-   列間 36px は「詰まって見えない」ための下限で、余白が残れば space-between が
-   バーいっぱいに広げる(ヘッダーがロゴ左・言語右に広げるのと同じ作法)。
-   幅が足りなくなったら縮めずに折り返す —— 横スクロールを出さないための選択。
+   space-between で「両端 + 均等な空き」に配置し、その並び全体を
+   本文幅の 75% に絞って中央に寄せる —— バー全幅に散らすと間延びするため。
+   max-width の 0.75 は内容幅(--maxw から左右 padding 48px を引いた分)に
+   掛けたいので、padding の 48px を戻した 12px を足す
+   (1080*0.75 + 12 = 822 → 内容幅 774 = 1032 の 75%)。
+   3 言語とも space-between が両端を揃えるので、跨度は文字量によらず 75% で一致する。
+   列間 36px は「詰まって見えない」ための下限。狭幅では max-width が効かなくなり
+   (幅がもともとそれ以下)、足りなくなったら縮めずに折り返す —— 横スクロール回避。
    行間 10px は折り返したときだけ効く。 */
 .site-footer .wrap {
   display: flex; align-items: center; flex-wrap: wrap;
   justify-content: space-between; gap: 10px 36px;
+  max-width: calc(var(--maxw) * 0.75 + 12px);
 }
 .site-footer .logo { display: flex; align-items: center; gap: 8px; font-family: "Zen Maru Gothic"; font-weight: 700; color: var(--ink); }
 .site-footer .logo img { width: 24px; height: 24px; }
