@@ -65,7 +65,10 @@ def render(block: str, page: str) -> str:
     tpl = (PARTIALS / f'{block}-{cfg["lang"]}.html').read_text(encoding='utf-8')
     if block == 'nav':
         tpl = tpl.replace('__NAV_LANG__', nav_lang_span(cfg['lang'], cfg['links']))
-    tpl = tpl.replace('__APP_VERSION__', APP_VERSION)
+    # Codex: Review documents cover both the live release and the pending update.
+    review_documents = {'privacy-ja.html', 'privacy.html', 'privacy-zh-Hant.html', 'support-ja.html', 'support.html'}
+    page_version = '1.0.0 / 1.1.0' if page in review_documents else APP_VERSION
+    tpl = tpl.replace('__APP_VERSION__', page_version)
     assert '__' not in tpl, f'{page}/{block}: unresolved placeholder'
     return tpl.rstrip('\n')
 
