@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート - ことり 一言家計簿</title>
+  <meta name="description" content="ことり 一言家計簿のサポートページ。お問い合わせ・クイックヘルプ・よくある質問。">
+  <link rel="canonical" href="https://kicucya.github.io/kotori/v1.1.0/support-ja.html">
+  <link rel="alternate" hreflang="ja" href="https://kicucya.github.io/kotori/v1.1.0/support-ja.html">
+  <link rel="alternate" hreflang="en" href="https://kicucya.github.io/kotori/v1.1.0/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://kicucya.github.io/kotori/v1.1.0/support-ja.html">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/version-ui.css">
+  <script src="assets/version-ui.js" defer></script>
+</head>
+<body>
+
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
+  <nav class="site-nav"><div class="wrap">
+    <a class="logo" href="index.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり</a>
+    <span class="nav-links">
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能</a>
+      <a href="privacy-ja.html">プライバシー</a>
+      <a href="support-ja.html">サポート</a>
+    </span>
+    <span class="nav-lang"><strong>日本語</strong> | <a href="support.html">English</a></span>
+  </div></nav>
+  <!-- kotori:nav:end -->
+
+  <!-- kotori:version:start -->
+  <aside class="kotori-version-bar" aria-label="アプリのバージョン">
+    <div class="kotori-version-inner"><span>アプリのバージョン</span><details class="kotori-version-menu"><summary>1.1.0 · 過去のバージョン</summary><nav aria-label="アプリのバージョン"><ul><li><a href="../support-ja.html" data-version-link data-anchors="[&quot;shortcuts&quot;,&quot;pending&quot;,&quot;keywords&quot;,&quot;reports&quot;,&quot;recurring&quot;]">最新 · 1.1.2</a></li><li><a href="../v1.1.2/support-ja.html" data-version-link data-anchors="[&quot;shortcuts&quot;,&quot;pending&quot;,&quot;keywords&quot;,&quot;reports&quot;,&quot;recurring&quot;]">1.1.2</a></li><li><a href="../v1.1.1/support-ja.html" data-version-link data-anchors="[&quot;shortcuts&quot;,&quot;keywords&quot;,&quot;reports&quot;]">1.1.1</a></li><li><a href="support-ja.html" data-version-link data-anchors="[&quot;shortcuts&quot;,&quot;keywords&quot;,&quot;reports&quot;]" aria-current="page">1.1.0</a></li><li><a href="../v1.0.0/support-ja.html" data-version-link data-anchors="[]">1.0.0</a></li></ul></nav></details></div>
+  </aside>
+  <!-- kotori:version:end -->
+
+  <header class="doc-head"><div class="wrap">
+    <h1>ことり — サポート</h1>
+    <p class="doc-meta">アプリ: ことり 一言家計簿<br>開発者: kicucya</p>
+  </div></header>
+
+  <main class="doc">
+
+    <h2>お問い合わせ</h2>
+    <p>ご質問・不具合のご報告・ご要望は、<a href="https://forms.gle/rjNS575huiUCg7TU6" target="_blank" rel="noopener">お問い合わせフォーム</a>からお気軽にどうぞ。</p>
+
+    <h2>クイックヘルプ</h2>
+    <ul class="help-list">
+      <li><strong>音声で記録:</strong> マイクボタンを押しながら一言。例:「スターバックス 600円」。</li>
+      <li><strong>Siri・ショートカット:</strong> ことりのショートカットを追加すれば、アプリを開かずに記録できます。</li>
+      <li><strong>カテゴリ:</strong> 分類はあなたの修正から学習します。一度直せば次から覚えます(すべて端末内)。</li>
+      <li><strong>Apple Intelligence:</strong> 対応端末では学習を加速します。なくても問題なく使えます。</li>
+      <li><strong>プライバシー:</strong> データは端末内に保存されます。詳しくは<a href="privacy-ja.html">プライバシーポリシー</a>をご覧ください。</li>
+    </ul>
+
+    <h2 id="shortcuts">ショートカットと計算式入力</h2>
+    <ul class="help-list">
+      <li><strong>ショートカットで記録:</strong> ショートカット App でことりのショートカットを追加しておけば、アプリを開かずに記録できます。追加したショートカットを実行して一言を話すか入力すると、そのまま記録されます。</li>
+      <li><strong>一言の書き方:</strong> 店名(または品目)と金額を続けて一言。例:「スターバックス 600円」「コンビニ 480円」。</li>
+      <li><strong>計算式入力:</strong> 金額のかわりに計算式を書くと、その場で計算して記録します。例:「スーパー 170*4」→ 680円。使える演算子は + × ÷ で、× は * とも書けます。対応しているのは一言入力(クイック記録)です。手動で編集する画面の金額欄は電卓キーボードをお使いください。バージョン 1.1.0 以降。</li>
+    </ul>
+
+    <h2 id="keywords">キーワード管理</h2>
+    <ul class="help-list">
+      <li><strong>できること:</strong> ことりが学習したキーワード(店名など)の分類先を一覧・編集できます。分類先の変更のほか、同じ店の別名をまとめる「関連付け」、学習データの削除、「履歴から学習」にも対応しています。</li>
+      <li><strong>開き方:</strong> 「その他」タブ → 「キーワード管理」。</li>
+    </ul>
+
+    <h2 id="reports">レポートの見方</h2>
+    <ul class="help-list">
+      <li><strong>開き方:</strong> 「レポート」タブ。上の「月 / 年」で集計の単位を切り替え、矢印で前後の期間へ移動します。期間の表示をタップすると、記録のある月や年だけを並べた一覧から直接選べます(記録のない期間は飛ばします)。</li>
+      <li><strong>収支サマリー:</strong> その期間の支出・収入・差額。主通貨以外の支出は「その他通貨」にまとめて表示します。</li>
+      <li><strong>円グラフ:</strong> 最初は収入と支出の割合。支出をタップすると大分類の内訳、大分類をタップすると子分類の内訳に切り替わります。左上の「&lt;」で一つ前に戻ります。収入のない期間は、最初から支出の大分類を表示します。</li>
+      <li><strong>予算:</strong> 全体予算の使用状況と、カテゴリ別の予算・実績。カテゴリをタップすると子分類の内訳、子分類の行をタップすると、その期間の取引がその場に一覧表示されます。取引をタップして編集、左にスワイプして削除、もう一度行をタップすると閉じます。子分類のないカテゴリは、タップするとそのまま取引一覧が開きます。バージョン 1.1.0 以降。</li>
+      <li><strong>年で見る:</strong> 「年」に切り替えると 1 年分の集計になり、予算は月額の 12 倍と比較します。掘り下げた状態は期間を切り替えても保たれます。</li>
+      <li><strong>予算の設定:</strong> 「その他」タブ → 「予算管理」。</li>
+    </ul>
+
+    <h2>よくある質問</h2>
+
+    <details>
+      <summary>アカウント登録は必要ですか?</summary>
+      <p>不要です。メールアドレスもパスワードもいりません。</p>
+    </details>
+    <details>
+      <summary>データはどこに保存されますか?</summary>
+      <p>端末内に保存されます。同期を有効にした場合のみ、あなた自身の iCloud を通じて端末間で同期されます。開発者のサーバーには送信されません。</p>
+    </details>
+    <details>
+      <summary>オフラインでも使えますか?</summary>
+      <p>はい。記録と学習は端末内で完結します。</p>
+    </details>
+    <details>
+      <summary>家族と一緒に使えますか?</summary>
+      <p>共有財布を家族やパートナーと共有できます。共有もあなた自身の iCloud だけで行われ、専用サーバーもアカウントも不要です。</p>
+    </details>
+    <details>
+      <summary>他の家計簿アプリや CSV から移行できますか?</summary>
+      <p>他アプリから書き出した CSV データを取り込めます。</p>
+    </details>
+    <details>
+      <summary>分類を間違えたら?</summary>
+      <p>一度直せば、ことりが次から覚えます(端末内で学習)。</p>
+    </details>
+    <details>
+      <summary>無料で使えますか?</summary>
+      <p>基本機能は無料でお使いいただけます。</p>
+    </details>
+
+    <h2>関連リンク</h2>
+    <ul>
+      <li><a href="privacy-ja.html">プライバシーポリシー</a></li>
+      <li><a href="index.html">← ホーム</a></li>
+    </ul>
+
+  </main>
+
+  <!-- kotori:footer:start -->
+  <footer class="site-footer"><div class="wrap">
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">ことり 一言家計簿</span>
+    <span class="f-copy">© 2026 kicucya ・ 基本利用無料</span>
+    <span class="f-ver">適用対象: アプリバージョン 1.1.0</span>
+  </div></footer>
+  <!-- kotori:footer:end -->
+
+</body>
+</html>

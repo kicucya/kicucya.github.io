@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "latest": "1.1.2",
+  "working": "1.1.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "status": "released",
+      "source": "v1.0.0",
+      "source_commit": "d9fe639",
+      "provenance": "Last released main snapshot for app 1.0.0; original report JPEG assets retained."
+    },
+    {
+      "version": "1.1.0",
+      "status": "released",
+      "source": "v1.1.0",
+      "source_commit": "4638bd3",
+      "provenance": "Official 1.1.0 website release tag; excludes the unpublished d7a6321 draft."
+    },
+    {
+      "version": "1.1.1",
+      "status": "released",
+      "source": "v1.1.1",
+      "source_commit": "4638bd3",
+      "reconstructed_from": "1.1.0",
+      "provenance": "No independent website snapshot exists. Restore 1.1.0 site content, update applicability to 1.1.1, and show the approved app release notes from app tag v1.1.1.",
+      "release_notes": {
+        "ja": [
+          "キーボードが閉じにくくなる不具合を修正しました。",
+          "ショートカットで記録した金額が、一部の通貨で正しく保存されない不具合を修正しました。",
+          "CSVの読み込みで、記録が重複したり一部が読み込まれなかったりする不具合を修正しました。",
+          "財布間での記録の移動と、バックアップ・復元の安定性を改善しました。"
+        ],
+        "en": [
+          "Fixed an issue that made the keyboard difficult to dismiss.",
+          "Fixed an issue where amounts recorded with Shortcuts were saved incorrectly for some currencies.",
+          "Fixed issues where CSV imports could duplicate or skip records.",
+          "Improved the reliability of moving records between wallets and of backup and restore."
+        ],
+        "zh-hant": [
+          "修正鍵盤難以關閉的問題。",
+          "修正透過捷徑記錄部分貨幣金額時儲存不正確的問題。",
+          "修正 CSV 匯入可能重複或遺漏記錄的問題。",
+          "改善錢包間移動記錄及備份、還原的穩定性。"
+        ]
+      }
+    },
+    {
+      "version": "1.1.2",
+      "status": "released",
+      "source": "v1.1.2",
+      "source_commit": "b97b94e",
+      "provenance": "Website aligned with app 1.1.2 as requested; no public release date is inferred."
+    }
+  ]
+}

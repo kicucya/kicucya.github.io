@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隱私權政策 - Kotori（一句話記帳）</title>
+  <meta name="description" content="Kotori（一句話記帳）的隱私權政策。Kotori 不會將您的記帳資料上傳至開發者的伺服器。">
+  <link rel="canonical" href="https://kicucya.github.io/kotori/privacy-zh-Hant.html">
+  <link rel="alternate" hreflang="en" href="https://kicucya.github.io/kotori/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://kicucya.github.io/kotori/privacy-ja.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kicucya.github.io/kotori/privacy-zh-Hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://kicucya.github.io/kotori/privacy-ja.html">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+  <!-- ナビ/フッターは _partials/kotori/ が真相源。編集は _partials/ 側で行い、_partials/sync.py --write で全ページ同期する(ページ直編集は --check で検出) -->
+  <!-- kotori:nav:start -->
+  <nav class="site-nav"><div class="wrap">
+    <a class="logo" href="index.html"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</a>
+    <span class="nav-links">
+      <a href="index.html">首頁</a>
+      <a href="features.html">功能</a>
+      <a href="privacy-zh-Hant.html">隱私權</a>
+      <a href="support-ja.html">支援</a>
+    </span>
+    <span class="nav-lang"><a href="privacy-ja.html">日本語</a> | <a href="privacy.html">English</a> | <strong>繁體中文</strong></span>
+  </div></nav>
+  <!-- kotori:nav:end -->
+
+  <header class="doc-head"><div class="wrap">
+    <h1>隱私權政策</h1>
+    <p class="doc-meta">最後更新：2026年8月13日<br>應用程式：Kotori（一句話記帳）<br>開發者：kicucya</p>
+  </div></header>
+
+  <main class="doc">
+
+    <p>本隱私權政策適用於 iOS 版 Kotori。</p>
+
+    <h2>資料處理</h2>
+    <p><strong>Kotori 不會將您的記帳資料上傳至開發者的伺服器。</strong></p>
+    <p>您輸入的所有內容都在裝置上本機處理：</p>
+    <ul>
+      <li>記錄您透過語音、文字、Siri 或捷徑輸入的支出</li>
+      <li>在裝置上將語音轉換為文字（Apple Speech 框架）</li>
+      <li>在裝置上解析與分類（支援的裝置由 Apple Intelligence 輔助）</li>
+      <li>學習您的分類習慣（學習資料僅保留在您的裝置上）</li>
+      <li>在本機儲存交易、錢包與分類（Core Data）</li>
+    </ul>
+
+    <h2>iCloud 同步</h2>
+    <p>若您啟用，記帳資料會透過您自己的 iCloud 帳戶（Apple CloudKit）在您的裝置之間同步。這些資料存放在您個人的 iCloud 中，開發者無法存取。</p>
+
+    <h2>麥克風與語音辨識</h2>
+    <p>麥克風僅在您實際進行記錄時使用。音訊用於裝置上的語音辨識，不會傳送給開發者。</p>
+
+    <h2>診斷記錄</h2>
+    <p>Kotori 具備記錄「診斷記錄」的功能，用來調查應用程式發生的問題。<strong>此功能預設為關閉，只有在您自己於應用程式內開啟後才會開始記錄。</strong></p>
+    <ul>
+      <li><strong>診斷記錄不會包含任何指向您個人的資訊。</strong>其中沒有您記帳的內容（店名、金額、備註），沒有語音的逐字稿，也沒有任何與您 iCloud 帳戶相關的識別資訊</li>
+      <li>實際記錄的是應用程式內部的運作情形（哪些處理在何時執行、在何處失敗），以及裝置機型、iOS 版本、語言與地區、應用程式版本，還有應用程式的運作環境（例如同步與 Apple Intelligence 的支援狀況）</li>
+      <li>此外還會記錄由您的帳目衍生的數量（例如畫面顯示了多少筆、有多少筆進入同步或重新分類的佇列），以及您在追蹤授權對話框中所做的選擇（是否允許）。這些僅止於數字與是否允許的結果，不會包含記帳的內容本身（店名、金額、備註）</li>
+      <li>Kotori 只會將診斷記錄保存在這台裝置上，不會傳送至開發者的伺服器，也不會傳送至任何伺服器</li>
+      <li>診斷記錄離開裝置的唯一情況，是您自行匯出並親自選擇接收對象後分享出去；應用程式不會自動傳送</li>
+      <li>應用程式內未設置聯絡表單或傳送按鈕。Kotori 只負責記錄與匯出檔案，是否傳送、傳送給誰，完全由您決定</li>
+      <li>開啟或關閉診斷記錄，以及刪除已記錄的內容，都在應用程式的「診斷日誌」頁面進行。開啟方式是進入「更多」分頁，連續點按「版本」該列五次；該頁面上有「匯出日誌」與「刪除日誌」，您隨時可以自行清除已記錄的內容</li>
+    </ul>
+    <p>診斷記錄不會無止盡累積。其大小設有上限（合計約 1 至 2 MB），達到上限後，最舊的記錄會依序被較新的記錄取代。本功能也未導入任何第三方的當機回報或分析 SDK。</p>
+
+    <h2>第三方廣告</h2>
+    <p>Kotori 可能在提供的地區透過 Google AdMob 顯示廣告。Google 可能收集：</p>
+    <ul>
+      <li>裝置識別碼</li>
+      <li>由 IP 推估的概略位置</li>
+      <li>廣告互動資料</li>
+    </ul>
+    <p>詳情請參閱 <a href="https://policies.google.com/privacy">Google 的隱私權政策</a>。</p>
+
+    <h2>歐洲用戶（EEA 與英國）</h2>
+    <p>若您位於歐洲經濟區（EEA）或英國，以下內容適用於您。</p>
+    <p><strong>廣告同意：</strong>在 EEA 與英國，Kotori 會顯示由 Google User Messaging Platform（UMP）提供的應用程式內同意對話框。只有在您同意後才會投放個人化廣告；若您未同意，廣告會以非個人化或受限的形式顯示，或可能不顯示。您隨時可以透過應用程式內「更多」分頁中的「個人化廣告」變更或撤回同意。</p>
+    <p><strong>資料接收方：</strong>廣告資料由 Google AdMob 及其認證廣告合作夥伴接收與處理。詳情請參閱 <a href="https://policies.google.com/privacy">Google 的隱私權政策</a>。</p>
+    <p><strong>您依 GDPR / 英國 GDPR 享有的權利：</strong>您有權：</p>
+    <ul>
+      <li>查閱與您相關的個人資料</li>
+      <li>更正不正確的資料</li>
+      <li>刪除您的資料</li>
+      <li>限制對您資料的處理</li>
+      <li>以可攜格式取得您的資料（資料可攜權）</li>
+      <li>反對對您資料的處理</li>
+      <li>隨時撤回同意——撤回不影響撤回前處理的合法性</li>
+      <li>向您所在地的資料保護監管機關提出申訴</li>
+    </ul>
+    <p>如欲行使上述權利，請使用下方「聯絡方式」中的表單。</p>
+
+    <h2>資料保留</h2>
+    <ul>
+      <li>您的交易與設定會保留在裝置（若啟用同步則包含 iCloud）中，直到您刪除它們或移除應用程式</li>
+      <li>診斷記錄則不同，不會一直保留在裝置上：其大小設有上限（合計約 1 至 2 MB），達到上限後最舊的記錄會被較新的記錄取代，而不是定期整批清空，裝置上永遠只留下最近的記錄；您也可以隨時透過「診斷日誌」頁面的「刪除日誌」自行清除，移除應用程式時，診斷記錄也會一併刪除</li>
+      <li>廣告相關資料依 Google 自身的政策處理</li>
+    </ul>
+
+    <h2>您的選擇</h2>
+    <ul>
+      <li>您可以完全不使用語音，僅以文字輸入</li>
+      <li>您可以隨時在系統設定中停用麥克風、Siri 或 iCloud 存取</li>
+      <li>診斷記錄功能預設為關閉，只有在您開啟後才會記錄，並且可以隨時關閉。此開關與刪除已記錄內容的按鈕，位於「更多」分頁中連續點按「版本」該列五次後開啟的「診斷日誌」頁面</li>
+      <li>您可以透過裝置設定，以及應用程式或 Google 提供的同意流程管理廣告與隱私偏好</li>
+    </ul>
+
+    <h2>兒童隱私</h2>
+    <p>Kotori 並非以13歲以下兒童為對象，且不會在知情情況下收集兒童的個人資訊。</p>
+
+    <h2>本政策的變更</h2>
+    <p>本隱私權政策可能不定期更新。更新版本將連同修訂日期一併公布。</p>
+
+    <h2>聯絡方式</h2>
+    <p>有關隱私與個人資料的詢問(包括查閱、更正、刪除請求),請使用<a href="https://forms.gle/rjNS575huiUCg7TU6" target="_blank" rel="noopener">此表單</a>。</p>
+    <p>您發送的詢問內容(以及您填寫的電子郵件地址,如有)會透過 Google 表單收集與保存,用於回覆您的請求。</p>
+
+  </main>
+
+  <!-- kotori:footer:start -->
+  <footer class="site-footer"><div class="wrap">
+    <span class="logo"><img draggable="false" src="assets/kotori-avatar.png" alt="">Kotori</span>
+    <span class="f-copy">© 2026 kicucya</span>
+    <span class="f-ver">適用於：應用程式版本 1.1.1</span>
+  </div></footer>
+  <!-- kotori:footer:end -->
+
+</body>
+</html>
