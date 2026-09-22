@@ -102,10 +102,17 @@ def read_clips(ui_language):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != '1.1.3' or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version=1.1.3 and ui_language={ui_language}')
+    expected_ids = list(ENTRY_POINTS)
+    if [clip['id'] for clip in manifest['clips']] != expected_ids:
+        raise ValueError(f'{ui_language}: expected all {len(expected_ids)} recording IDs in guide order')
     ids = set()
     clips = []
     for clip in manifest['clips']:
         slug = clip['id']
+        # Original JA manifests predate per-clip language metadata. Keep them
+        # valid, but never relabel an explicitly different UI language.
+        if 'ui_language' in clip and clip['ui_language'] != ui_language:
+            raise ValueError(f'{slug}: clip UI language does not match {ui_language}')
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) or slug in ids:
             raise ValueError(f'Invalid or duplicate clip id: {slug}')
         ids.add(slug)
@@ -131,6 +138,18 @@ def read_clips(ui_language):
     return clips
 
 
+def check_matching_provenance():
+    manifests = [json.loads((MEDIA_ROOT / lang / 'manifest.json').read_text())
+                 for lang in ('ja', 'en')]
+    # Legacy metadata may omit build provenance. When both recordings declare
+    # it, a translated guide must describe the same app build and source.
+    for key in ('app_build', 'source_commit'):
+        values = [manifest.get(key) for manifest in manifests]
+        if all(value is not None and value != '' for value in values):
+            if str(values[0]) != str(values[1]):
+                raise ValueError(f'Japanese and English recording {key} must match')
+
+
 def card(clip, lang):
     t = TEXT[lang]
     slug = clip['id']
@@ -147,6 +166,13 @@ def card(clip, lang):
     steps = ''.join(f'<li><span>{esc(s[lang])}</span></li>' for s in clip['steps'])
     scope_note = (f'<p class="guide-scope-note">{esc(SCOPE_NOTES[slug][lang])}</p>'
                   if slug in SCOPE_NOTES else '')
+    # Explain visible 1.1.3 limitations beside the affected English recording.
+    english_ui_notes = {
+        '13-import-and-undo': 'This build shows preset category names in Japanese in the import menu. The video maps Food to 食費 (Food).',
+        '14-batch-input': 'In this build, use single-entry recording for amounts with cents. Opening the batch preview editor can also change an amount, so check and correct it before importing. This video shows that correction using whole-dollar amounts.',
+    }
+    if ui_language == 'en' and lang == 'en' and slug in english_ui_notes:
+        scope_note += f'<p class="guide-scope-note">{esc(english_ui_notes[slug])}</p>'
     seconds = int(round(float(clip['duration'])))
     duration_a11y = f'動画の長さ {seconds} 秒' if lang == 'ja' else f'Video duration: {seconds} seconds'
     tracks = ''.join(
@@ -214,6 +240,8 @@ def main():
         if args.require_english and not has_english:
             raise ValueError('English interface recordings are required')
         english = read_clips('en') if has_english else japanese
+        if has_english:
+            check_matching_provenance()
         if [c['id'] for c in japanese] != [c['id'] for c in english]:
             raise ValueError('Japanese and English recording IDs must match')
         changed = []

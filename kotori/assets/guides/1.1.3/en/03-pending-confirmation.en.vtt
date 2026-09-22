@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:01.010 --> 00:00:22.500
+A previous unconfirmed entry becomes pending when the next entry is sent
+
+2
+00:00:22.500 --> 00:00:26.500
+Confirm the new entry
+
+3
+00:00:26.500 --> 00:00:30.500
+Confirm the pending entry directly in Record
+
+4
+00:00:30.500 --> 00:00:40.033
+Both confirmed entries are available in Transactions
