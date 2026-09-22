@@ -1,15 +1,64 @@
-# 操作動画の更新
+# バージョン別サイトと操作動画の更新
 
-`kotori/support-ja.html` と `kotori/support.html` の操作動画一覧は、`build_guides.py` で生成する。既存の文章・FAQ は生成範囲の外にあり、ページ内で編集できる。
+## 編集する場所
 
-1. 実際に収録した動画・ポスター・字幕を `kotori/assets/guides/1.1.3/ja/` に置く。
-2. `manifest.json` を同じ場所に置き、`python3 Tools/build_guides.py` を実行する。
-3. `python3 Tools/build_guides.py --check` と `python3 _partials/sync.py --check` で生成物を確認する。
-4. モバイルとデスクトップで動画の開始、字幕、折りたたみ、検索、キーボード操作を確認する。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は既定の公開内容、`working` は現在編集する版を表す。現在は `latest: 1.1.2`、`working: 1.1.3`。1.1.3 はプレビューとして扱い、既定の入口へ自動昇格させない。
 
-各動画の `id` を基に、`<id>.mp4`、`<id>.jpg`、`<id>.ja.vtt`、`<id>.en.vtt` を参照する。ファイルが欠けている場合は生成を中止する。動画はクリック後に読み込み、ポスターのみ遅延読み込みする。JavaScript がなくても手順を読んだり、動画ファイルを直接開いたりできる。
+- `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
+- `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
+- `_partials/kotori/`：`working` だけに適用する編集中のナビゲーションとフッター。
+- `_versions/kotori/version-ui.css` と `version-ui.js`：全版共通の小さなバージョン切替。
+- `kotori/assets/guides/1.1.3/{ja,en}/`：言語別の実際の操作動画、ポスター、字幕、manifest。容量の大きい動画は各版へコピーせず、ここに一組ずつ保持する。
 
-動画は機能画面を開いた後から始まるため、`build_guides.py` の `ENTRY_POINTS` に日英の「開く場所」を記載する。画面名は実際のアプリと照合する。実演の範囲に説明が必要な動画は、同ファイルの `SCOPE_NOTES` も更新する。
+`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。1.1.3 の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.1.3/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
+
+## 生成と確認
+
+```sh
+python3 _partials/sync.py --write
+python3 Tools/build_guides.py
+python3 Tools/build_versions.py
+python3 _partials/sync.py --check --all
+python3 Tools/build_guides.py --check
+python3 Tools/build_versions.py --check
+```
+
+`sync.py` の既定対象は `working` だけ。過去の版を明示して確認する場合は `--check --version 1.1.0` を使う。過去の版は必ずその版の `_partials/` を使うので、現在のナビゲーションやバージョン番号で履歴を上書きしない。明示した版を同期するときだけ `--write --version <version>` を指定する。
+
+`build_versions.py` は標準ライブラリだけで動作し、9ページすべてを各入口へ生成する。ローカルリンク、ページ内アンカー、画像、CSS内のフォント参照も確認する。`--check` は生成せず、真相源との不一致を検出する。Git、外部サービス、サーバー側のルーティングは生成・配信に不要。
+
+| 入口 | 内容 |
+| --- | --- |
+| `/kotori/` とその各ページ | `latest` の完全なサイト |
+| `/kotori/main/` とその各ページ | 同じ `latest` の完全なサイト |
+| `/kotori/v1.0.0/` などとその各ページ | 指定した版の完全なサイト |
+| `/kotori/v1.1.3/` | 1.1.3 のプレビュー |
+
+ナビゲーション、言語切替、canonical、hreflang、通常の画像やCSSは閲覧中の版にとどまる。版の切替は同じページ・言語へ移動し、移動先に存在する場合だけ現在のアンカーを引き継ぐ。JavaScriptが無効でも版の切替と各ページは利用できる。新しい版を追加するときは完全な9ページと対応するアセットを用意し、registryへ追記して生成する。最新の正式版を変更するのは公開判断後に `latest` を更新したときだけ。
+
+## 履歴の根拠
+
+- 1.0.0：ウェブサイトのGit `d9fe639`。当時の `05-report.jpg` を含む実際のmainの最終スナップショット。
+- 1.1.0：正式公開タグの `4638bd3`。未公開草稿 `d7a6321` は使わない。
+- 1.1.1：独立したウェブサイトのスナップショットが存在しないため、1.1.0の内容とアセットを基に再構成。適用バージョンだけを変更し、Appの正式タグ `v1.1.1` にある日英の `fastlane/metadata/*/release_notes.txt` の4項目を追記する。画面の更新内容欄にも再構成であることを明記する。
+- 1.1.2：ウェブサイトのGit `b97b94e` の内容。
+- 1.1.3：現在のプレビュー。改修後の操作動画と幅を揃えたガイド。
+
+1.0.1 は公開版として作らない。予定されていた内容は1.1.0に統合済み。各版の詳細な出典もregistryに残す。公開日をGitの日付から推定して追加しない。
+
+## 操作動画の更新
+
+`Tools/build_guides.py` は `_versions/kotori/v1.1.3/support-ja.html` と `support.html` の操作動画カードだけを生成する。
+
+1. 実際に収録した動画・ポスター・日英字幕を `kotori/assets/guides/1.1.3/{ja,en}/` に置く。
+2. 各言語の `manifest.json` を同じ場所に置く。
+3. `python3 Tools/build_guides.py`、続けて `python3 Tools/build_versions.py` を実行する。
+4. 日英の画面をそろえた最終確認では `python3 Tools/build_guides.py --check --require-english` を使う。
+5. モバイルとデスクトップで動画、字幕、折りたたみ、検索、キーボード操作、版・言語切替、ページ幅を確認する。
+
+各動画の `id` から `<id>.mp4`、`<id>.jpg`、`<id>.ja.vtt`、`<id>.en.vtt` を参照する。不足があれば生成を中止する。動画はクリック後に読み込み、ポスターだけ遅延読み込みする。JavaScriptがなくても手順と動画ファイルへのリンクを利用できる。英語の実画面の録画がまだない間は日本語動画を使い、英語ページにも日本語の画面であることを明記する。
+
+動画は機能画面を開いた後から始まるため、`build_guides.py` の `ENTRY_POINTS` に日英の「開く場所」を記載する。実演範囲に説明が必要な動画は `SCOPE_NOTES` も更新する。入力音声の認識や共有の完了など、録画にない結果を完了したように書かない。
 
 manifest の形式：
 
@@ -31,6 +80,4 @@ manifest の形式：
 }
 ```
 
-`duration` は秒、`bytes` は実際の MP4 のサイズ、`steps[].time` は動画の先頭からの秒数。`source_take` は制作記録として保持し、公開ページには表示しない。必要な場合だけ、動画に `group` (`record` / `organize` / `review` / `data`) を追加して分類を指定できる。
-
-ページ共通のナビゲーション・適用バージョンは引き続き `_partials/` が真相源。新しい動画を公開する際は、アプリの公開バージョンとサイトのブランチをそろえる。
+`duration` は秒、`bytes` は実際のMP4のサイズ、`steps[].time` は動画の先頭からの秒数。`source_take` は制作記録で、ページには表示しない。分類を明示する場合だけ動画へ `group` (`record` / `organize` / `review` / `data`) を追加できる。

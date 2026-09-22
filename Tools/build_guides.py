@@ -2,7 +2,7 @@
 """Build the Japanese/English guide cards from real 1.1.3 recordings.
 
 Run from any directory: python3 Tools/build_guides.py [--check]
-The media manifest lives at kotori/assets/guides/1.1.3/ja/manifest.json.
+Media manifests live at kotori/assets/guides/1.1.3/{ja,en}/manifest.json.
 Only complete MP4/poster/JA+EN caption sets can produce a playable card.
 """
 import argparse
@@ -13,7 +13,8 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-MEDIA = ROOT / 'kotori/assets/guides/1.1.3/ja'
+MEDIA_ROOT = ROOT / 'kotori/assets/guides/1.1.3'
+SOURCE = ROOT / '_versions/kotori/v1.1.3'
 MARKER = re.compile(r'(    <!-- guide-library:start -->\n).*?(    <!-- guide-library:end -->)', re.S)
 GROUPS = {
     'record': ('記録する', 'Record', '一言入力から、内容の確認まで。', 'From your first entry to checking its details.'),
@@ -95,11 +96,12 @@ def duration_label(seconds):
     return f'{total // 60}:{total % 60:02d}'
 
 
-def read_clips():
-    manifest_path = MEDIA / 'manifest.json'
+def read_clips(ui_language):
+    media = MEDIA_ROOT / ui_language
+    manifest_path = media / 'manifest.json'
     manifest = json.loads(manifest_path.read_text())
-    if manifest.get('app_version') != '1.1.3' or manifest.get('ui_language') != 'ja':
-        raise ValueError('Expected app_version=1.1.3 and ui_language=ja')
+    if manifest.get('app_version') != '1.1.3' or manifest.get('ui_language') != ui_language:
+        raise ValueError(f'Expected app_version=1.1.3 and ui_language={ui_language}')
     ids = set()
     clips = []
     for clip in manifest['clips']:
@@ -107,7 +109,7 @@ def read_clips():
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) or slug in ids:
             raise ValueError(f'Invalid or duplicate clip id: {slug}')
         ids.add(slug)
-        required = [MEDIA / f'{slug}{suffix}' for suffix in ('.mp4', '.jpg', '.ja.vtt', '.en.vtt')]
+        required = [media / f'{slug}{suffix}' for suffix in ('.mp4', '.jpg', '.ja.vtt', '.en.vtt')]
         if any(not p.is_file() or p.stat().st_size == 0 for p in required):
             raise ValueError(f'Incomplete media set: {slug}')
         if not clip.get('title_ja') or not clip.get('title_en') or not clip.get('steps'):
@@ -125,7 +127,7 @@ def read_clips():
         for path in required[2:]:
             if not path.read_text().lstrip('\ufeff').startswith('WEBVTT'):
                 raise ValueError(f'Invalid caption header: {path.name}')
-        clips.append(clip)
+        clips.append({**clip, '_ui_language': ui_language})
     return clips
 
 
@@ -133,7 +135,12 @@ def card(clip, lang):
     t = TEXT[lang]
     slug = clip['id']
     title = clip[f'title_{lang}']
-    base = f'assets/guides/1.1.3/ja/{slug}'
+    ui_language = clip['_ui_language']
+    base = f'assets/guides/1.1.3/{ui_language}/{slug}'
+    caption = t['caption']
+    if ui_language == 'en':
+        caption = ('アプリ 1.1.3・英語の画面／日本語・英語字幕' if lang == 'ja'
+                   else 'App 1.1.3 · English interface · Japanese and English captions')
     entry = ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
     entry_label = '開く場所' if lang == 'ja' else 'Where to start'
     search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
@@ -158,7 +165,7 @@ def card(clip, lang):
                   {tracks}
                 </video>
                 <p class="guide-video-error" hidden>{t['error']}</p>
-                <p class="guide-media-note">{t['caption']}</p>
+                <p class="guide-media-note">{caption}</p>
                 <a class="guide-download" href="{base}.mp4">{t['download']}</a>
               </div>
               <div class="guide-instructions"><p class="guide-entry"><strong>{entry_label}</strong><br>{esc(entry)}</p><h4>{t['steps']}</h4>{scope_note}<ol>{steps}</ol></div>
@@ -199,12 +206,20 @@ def library(clips, lang):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--require-english', action='store_true', help='Fail unless all English interface recordings are present')
     args = parser.parse_args()
     try:
-        clips = read_clips()
+        japanese = read_clips('ja')
+        has_english = (MEDIA_ROOT / 'en/manifest.json').is_file()
+        if args.require_english and not has_english:
+            raise ValueError('English interface recordings are required')
+        english = read_clips('en') if has_english else japanese
+        if [c['id'] for c in japanese] != [c['id'] for c in english]:
+            raise ValueError('Japanese and English recording IDs must match')
         changed = []
         for lang, name in [('ja', 'support-ja.html'), ('en', 'support.html')]:
-            path = ROOT / 'kotori' / name
+            clips = japanese if lang == 'ja' else english
+            path = SOURCE / name
             source = path.read_text()
             if len(MARKER.findall(source)) != 1:
                 raise ValueError(f'Missing unique guide markers: {name}')
@@ -216,7 +231,7 @@ def main():
         if args.check and changed:
             print('Guide content drift: ' + ', '.join(changed), file=sys.stderr)
             return 1
-        print(f'OK: {len(clips)} complete recording sets; Japanese and English guides ' + ('match.' if args.check else 'generated.'))
+        print(f'OK: {len(japanese)} Japanese / {len(english) if has_english else 0} English recording sets; guide sources ' + ('match.' if args.check else 'generated.'))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as error:
         print(f'Guide build failed: {error}', file=sys.stderr)

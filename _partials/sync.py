@@ -1,36 +1,23 @@
 #!/usr/bin/env python3
-"""sync.py — kotori 各ページのヘッダー/フッターを真相源(_partials/kotori/)から同期する。
+"""Synchronize version source navigation/footer without rewriting historical snapshots.
 
-ページ側は <!-- kotori:nav:start --> … <!-- kotori:nav:end --> と
-<!-- kotori:footer:start --> … <!-- kotori:footer:end --> のマーカーで区块を持ち、
-区块の中身は「展開済みの完全な HTML」——ローカルで file:// 直開きしても、
-GitHub Pages(純静的配信)でも、ビルドなしでそのまま正しく表示される。
+Default target is registry.working (currently the preview source). Historical
+versions use their own frozen _partials, never the current global templates.
+After --write, run Tools/build_versions.py to regenerate static output routes.
 
-使い方(リポジトリ内どこからでも):
-  python3 _partials/sync.py --check   # 各ページの区块が真相源と一致するか検査(不一致は exit 1)
-  python3 _partials/sync.py --write   # 真相源から各ページの区块を書き直して同期
-
-ヘッダー/フッターを変えるときは _partials/kotori/ 側を編集して --write を実行する。
-ページ側の区块を直接編集しても --check が漂移を検出し、--write で真相源に戻される。
-依存なし(標準ライブラリのみ)。
-
-サイトの記載が対応するアプリのバージョンは下の APP_VERSION が唯一の真相源。
-アプリのリリースごとにここだけ書き換えて --write を実行すれば全ページのフッターが揃う。
+python3 _partials/sync.py --check [--all | --version 1.1.2]
+python3 _partials/sync.py --write [--version 1.1.3]
 """
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent   # リポジトリルート
-PARTIALS = Path(__file__).resolve().parent / 'kotori'
-KOTORI = ROOT / 'kotori'
+ROOT = Path(__file__).resolve().parent.parent
+PARTIALS = ROOT / '_partials/kotori'
+VERSIONS = ROOT / '_versions/kotori'
 
-# このサイトの記載が対応するアプリのバージョン(フッターの __APP_VERSION__ に埋め込まれる)。
-# アプリのリリースに合わせて更新する箇所はここ一か所だけ。
-APP_VERSION = '1.1.3'
-
-# 各ページの言語と「同じ内容の他言語版」へのリンク先(言語切替行の生成に使う)。
-# 現在の言語は <strong>、他言語はリンク。存在する言語だけ並ぶ(順序は ja → en → zh 固定)。
 PAGES = {
     'index.html':           {'lang': 'ja',      'links': {'en': 'index-en.html'}},
     'features.html':        {'lang': 'ja',      'links': {'en': 'features-en.html'}},
@@ -46,9 +33,11 @@ PAGES = {
 LANG_LABELS = [('ja', '日本語'), ('en', 'English'), ('zh', '繁體中文')]
 LANG_KEY = {'ja': 'ja', 'en': 'en', 'zh-hant': 'zh'}  # PAGES.lang → LANG_LABELS のキー
 
+def load_registry():
+    return json.loads((VERSIONS / 'versions.json').read_text())
+
 
 def nav_lang_span(lang: str, links: dict) -> str:
-    """言語切替行(<span class="nav-lang">…</span>)を生成する。"""
     current = LANG_KEY[lang]
     items = []
     for key, label in LANG_LABELS:
@@ -59,62 +48,66 @@ def nav_lang_span(lang: str, links: dict) -> str:
     return '<span class="nav-lang">' + ' | '.join(items) + '</span>'
 
 
-def render(block: str, page: str) -> str:
-    """ページの指定区块(nav/footer)の期待 HTML を返す(末尾改行なし)。"""
+def render(block: str, page: str, version: dict, working: str) -> str:
     cfg = PAGES[page]
-    tpl = (PARTIALS / f'{block}-{cfg["lang"]}.html').read_text(encoding='utf-8')
+    templates = PARTIALS if version['version'] == working else VERSIONS / version['source'] / '_partials'
+    tpl = (templates / f'{block}-{cfg["lang"]}.html').read_text()
     if block == 'nav':
         tpl = tpl.replace('__NAV_LANG__', nav_lang_span(cfg['lang'], cfg['links']))
-    tpl = tpl.replace('__APP_VERSION__', APP_VERSION)
-    assert '__' not in tpl, f'{page}/{block}: unresolved placeholder'
+    tpl = tpl.replace('__APP_VERSION__', version['version'])
+    if '__' in tpl:
+        raise ValueError(f'{version["version"]}/{page}/{block}: unresolved placeholder')
     return tpl.rstrip('\n')
 
 
 def block_re(block: str) -> re.Pattern:
-    return re.compile(
-        rf'(  <!-- kotori:{block}:start -->\n)(.*?)(  <!-- kotori:{block}:end -->)',
-        re.DOTALL,
-    )
+    return re.compile(rf'(  <!-- kotori:{block}:start -->\n)(.*?)(  <!-- kotori:{block}:end -->)', re.DOTALL)
 
 
 def main() -> int:
-    mode = sys.argv[1] if len(sys.argv) > 1 else ''
-    if mode not in ('--check', '--write'):
-        print(__doc__)
-        return 2
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--check', action='store_true'); mode.add_argument('--write', action='store_true')
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument('--version'); selection.add_argument('--all', action='store_true')
+    args = parser.parse_args()
+    data = load_registry()
+    wanted = args.version or data['working']
+    selected = data['versions'] if args.all else [v for v in data['versions'] if v['version'] == wanted]
+    if not selected:
+        parser.error('Unknown version: ' + wanted)
     drift = []
-    for page in PAGES:
-        path = KOTORI / page
-        src = path.read_text(encoding='utf-8')
-        for block in ('nav', 'footer'):
-            m = block_re(block).search(src)
-            if not m:
-                drift.append(f'{page}: {block} マーカーが見つからない')
-                continue
-            expected = render(block, page) + '\n'
-            if m.group(2) != expected:
-                drift.append(f'{page}: {block} 区块が真相源と不一致')
-                if mode == '--write':
-                    src = src[:m.start(2)] + expected + src[m.end(2):]
-        if mode == '--write':
-            path.write_text(src, encoding='utf-8')
-    if mode == '--check':
-        if drift:
-            print('漂移を検出:')
-            for d in drift:
-                print(f'  - {d}')
-            return 1
-        print(f'OK: {len(PAGES)} ページの nav/footer は真相源と一致')
-        return 0
-    # --write
-    if drift:
-        print('同期(書き直し)した区块:')
-        for d in drift:
-            print(f'  - {d}')
-    else:
-        print('全ページ既に一致(書き換えなし)')
+    for version in selected:
+        source_dir = VERSIONS / version['source']
+        for page in PAGES:
+            path = source_dir / page
+            src = path.read_text()
+            for block in ('nav', 'footer'):
+                match = block_re(block).search(src)
+                if not match:
+                    raise ValueError(f'{path}: missing {block} marker')
+                expected = render(block, page, version, data['working']) + '\n'
+                if match[2] != expected:
+                    drift.append(f'{version["version"]}/{page}: {block}')
+                    if args.write:
+                        src = src[:match.start(2)] + expected + src[match.end(2):]
+            if args.write and path.read_text() != src:
+                path.write_text(src)
+        if args.write and version['version'] == data['working']:
+            for template in PARTIALS.glob('*.html'):
+                target = source_dir / '_partials' / template.name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                if not target.exists() or target.read_bytes() != template.read_bytes():
+                    target.write_bytes(template.read_bytes())
+    if args.check and drift:
+        print('Partial drift:\n' + '\n'.join('  ' + d for d in drift)); return 1
+    print(f'OK: {len(selected) * len(PAGES)} version source pages; historical templates remain isolated.')
     return 0
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (OSError, ValueError, KeyError) as error:
+        print('Partial sync failed: ' + str(error), file=sys.stderr)
+        sys.exit(1)
