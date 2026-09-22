@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:01.009 --> 00:00:26.690
+Use the same editor for a category's name and optional icon
+
+2
+00:00:26.690 --> 00:00:45.671
+Create a category with no icon
+
+3
+00:00:45.671 --> 00:01:02.217
+Add a subcategory inside the category
+
+4
+00:01:02.217 --> 00:01:16.966
+Keep a valid hierarchy while renaming the parent

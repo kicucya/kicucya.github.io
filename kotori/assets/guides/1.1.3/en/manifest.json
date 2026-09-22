@@ -1,0 +1,942 @@
+{
+  "schema_version": 2,
+  "render_revision": 3,
+  "app_version": "1.1.3",
+  "app_build": "1397",
+  "source_commit": "5a7ed066a737a3222083e7ebc19321e27e97db54",
+  "device_name": "iPhone 17 Pro Max",
+  "runtime": "iOS 26.5",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-09-22T15:08:04.308174+00:00",
+  "ui_language": "en",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "01-quick-entry",
+      "title_ja": "ひとことで記帳",
+      "title_en": "Record an expense in a sentence",
+      "ui_language": "en",
+      "duration": 40.7,
+      "bytes": 805599,
+      "steps": [
+        {
+          "time": 1.009,
+          "ja": "内容と金額を入力します",
+          "en": "Enter a description and an amount"
+        },
+        {
+          "time": 9.0,
+          "ja": "内容を確認して保存します",
+          "en": "Review the result and confirm"
+        },
+        {
+          "time": 17.0,
+          "ja": "金額には計算式も使えます",
+          "en": "Use an expression for the amount"
+        },
+        {
+          "time": 29.0,
+          "ja": "収支一覧にも保存されます",
+          "en": "The saved records also appear in Transactions"
+        }
+      ],
+      "source_take": "01-quick-entry-20260923-001747-609653",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790086667.8951428,
+      "source_stopped_at": 1790086708.588011,
+      "source_wall_duration": 40.693,
+      "source_raw_duration": 37.928,
+      "source_raw_sha256": "e7e28ea0edaef0ffd55d877b529ab05c4a3c4970b9b4813126cb865b7d3fdd64",
+      "source_manifest_sha256": "7e2701ac3585b04eecc86c282774ead151b791ed75e546d62c4196ee028e34ef",
+      "poster_time": 9.5,
+      "render_fingerprint": "7b257f90593d279245dcf8d4854d71381a2ececb975cb61f4bde71d10132c3c8",
+      "sha256": "52016bfc0bb1123c0619499eb7ada44907d829067aa32ed37827b4316e7d94f2",
+      "poster_sha256": "6b618a60e1a8be7321c4feef754489934d14b159df08b45f7ce43e52d4f4c54c",
+      "caption_timing_review": {
+        "method": "Sequential decode from the start using ffmpeg fps=1; cues moved before or at observed action onset. No input seeking; source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.009,
+          14.216,
+          18.58,
+          34.233
+        ],
+        "reviewed_step_times": [
+          1.009,
+          9.0,
+          17.0,
+          29.0
+        ]
+      }
+    },
+    {
+      "id": "02-manual-entry",
+      "title_ja": "手入力と電卓",
+      "title_en": "Manual entry and the calculator",
+      "ui_language": "en",
+      "duration": 39.667,
+      "bytes": 654872,
+      "steps": [
+        {
+          "time": 1.015,
+          "ja": "記帳画面の＋を開きます",
+          "en": "Open the plus button in Record"
+        },
+        {
+          "time": 3.5,
+          "ja": "電卓で合計を入力します",
+          "en": "Calculate the total in the amount field"
+        },
+        {
+          "time": 19.5,
+          "ja": "内容を入力して保存します",
+          "en": "Add a description and save"
+        },
+        {
+          "time": 29.5,
+          "ja": "保存した記録を一覧で確認します",
+          "en": "Check the saved record in Transactions"
+        }
+      ],
+      "source_take": "02-manual-entry-20260923-002203-415997",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790086923.575607,
+      "source_stopped_at": 1790086963.239549,
+      "source_wall_duration": 39.664,
+      "source_raw_duration": 36.927,
+      "source_raw_sha256": "8d6d46deb63dae91eda90124827ba41169e9ed6d5566ad8ff5614037e34371ea",
+      "source_manifest_sha256": "530f4f872a5af794d3592d51ca3aade41b3c6c0744cae3fefb013525bd3c4d55",
+      "poster_time": 4.0,
+      "render_fingerprint": "934c1e77daad5d81dc00d5040a690fc7b527f6233b67f38d078d6ff6b198a49a",
+      "sha256": "06802a829f7fca3afe1b280e911a7be4411db94789ec2f82f09caf7414d383da",
+      "poster_sha256": "53f10b198cd462c8e86295eb4547573b177997c70435f7e28bf77ecfbc7d2424",
+      "caption_timing_review": {
+        "method": "Sequential decoding from the beginning at fps=1, with no input seeking; visible UI transitions checked against bilingual instruction cues. Cue starts are placed just before or during the relevant action, not presented as exact tap timestamps. Exact final raw frame checked separately.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.015,
+          5.088,
+          20.728,
+          33.568
+        ],
+        "reviewed_step_times": [
+          1.015,
+          3.5,
+          19.5,
+          29.5
+        ]
+      }
+    },
+    {
+      "id": "03-pending-confirmation",
+      "title_ja": "あとから確認する",
+      "title_en": "Review pending entries",
+      "ui_language": "en",
+      "duration": 40.033,
+      "bytes": 775802,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "続けて記帳すると、前の内容は確認待ちになります",
+          "en": "A previous unconfirmed entry becomes pending when the next entry is sent"
+        },
+        {
+          "time": 22.5,
+          "ja": "新しい内容を確認します",
+          "en": "Confirm the new entry"
+        },
+        {
+          "time": 26.5,
+          "ja": "確認待ちの内容も、その場で確認できます",
+          "en": "Confirm the pending entry directly in Record"
+        },
+        {
+          "time": 30.5,
+          "ja": "収支一覧で両方の記録を確認します",
+          "en": "Both confirmed entries are available in Transactions"
+        }
+      ],
+      "source_take": "03-pending-confirmation-20260923-002248-430932",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790086968.667256,
+      "source_stopped_at": 1790087008.70035,
+      "source_wall_duration": 40.033,
+      "source_raw_duration": 37.13,
+      "source_raw_sha256": "9fb07b914b81a16952e3115db33c9a7d059495ab4636c30aa91ecba5ebdf0c28",
+      "source_manifest_sha256": "8babe635f24f6f1e00337bd9a5eb2c3a13d95721d3bf6ad8b64210671fb4dab3",
+      "poster_time": 23.0,
+      "render_fingerprint": "f4286df7e1941a38614761851d2eb33876e8bf1d018561109a1a88b778ad7d76",
+      "sha256": "211fe6ecf6956855b48bf56ff30e7b31d4e062e78e1b5bef2226d3af80621317",
+      "poster_sha256": "d63053901370ba96a101753830e9b96040d73f1ad91088e81cd0d78e6715dbec",
+      "caption_timing_review": {
+        "method": "Sequential decoding from the beginning at fps=1, with no input seeking; visible UI transitions checked against bilingual instruction cues. Cue starts are placed just before or during the relevant action, not presented as exact tap timestamps. Exact final raw frame checked separately.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.01,
+          25.786,
+          29.089,
+          33.633
+        ],
+        "reviewed_step_times": [
+          1.01,
+          22.5,
+          26.5,
+          30.5
+        ]
+      }
+    },
+    {
+      "id": "04-transaction-actions",
+      "title_ja": "スワイプで編集・削除・復元",
+      "title_en": "Swipe to edit, delete, and restore",
+      "ui_language": "en",
+      "duration": 71.967,
+      "bytes": 1358909,
+      "steps": [
+        {
+          "time": 1.075,
+          "ja": "右へ大きくスワイプすると編集できます",
+          "en": "Swipe fully right to open the editor"
+        },
+        {
+          "time": 9.824,
+          "ja": "短くスワイプしてから、もう一度右へ動かしても編集できます",
+          "en": "Reveal the action, then swipe right again to edit"
+        },
+        {
+          "time": 32.0,
+          "ja": "左へ大きくスワイプすると削除されます",
+          "en": "Swipe fully left to delete"
+        },
+        {
+          "time": 39.5,
+          "ja": "削除済み取引から復元できます",
+          "en": "Restore the entry from Recently Deleted"
+        }
+      ],
+      "source_take": "04-transaction-actions-20260923-002408-754930",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087048.979151,
+      "source_stopped_at": 1790087120.9615219,
+      "source_wall_duration": 71.982,
+      "source_raw_duration": 68.152,
+      "source_raw_sha256": "7128576a15677903e93b7a2df122cecf4e113c80b34f7909a87b21fcc02eb376",
+      "source_manifest_sha256": "10232c577ad9583ef54db6a9e8bc9db7f2e4989ea4935476919a3bdfd32aeb39",
+      "poster_time": 10.324,
+      "render_fingerprint": "6e852e2c3e6c3ed7d7ec1dbf52f30d30a36f076df0037764d6f636c1a3ad1565",
+      "sha256": "aacfc2c10805f184543867d67926868f7f9c5317263d11206452f6945225e3f7",
+      "poster_sha256": "ed5b94e93e19b2f0646e98d731dcd390ea8ec432d993f51eddb7dbbf0e22c181",
+      "caption_timing_review": {
+        "method": "Sequential decoding from the beginning at fps=1, with no input seeking; visible UI transitions checked against bilingual instruction cues. Cue starts are placed just before or during the relevant action, not presented as exact tap timestamps. Exact final raw frame checked separately.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.075,
+          9.824,
+          34.82,
+          41.418
+        ],
+        "reviewed_step_times": [
+          1.075,
+          9.824,
+          32.0,
+          39.5
+        ]
+      }
+    },
+    {
+      "id": "05-category-editor",
+      "title_ja": "カテゴリとサブカテゴリを整える",
+      "title_en": "Organize categories and subcategories",
+      "ui_language": "en",
+      "duration": 75.233,
+      "bytes": 993243,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "同じ編集画面で名前とアイコンを変更できます",
+          "en": "Use the same editor for a category's name and optional icon"
+        },
+        {
+          "time": 21.0,
+          "ja": "アイコンなしでもカテゴリを作れます",
+          "en": "Create a category with no icon"
+        },
+        {
+          "time": 40.0,
+          "ja": "カテゴリの中にサブカテゴリを追加します",
+          "en": "Add a subcategory inside the category"
+        },
+        {
+          "time": 53.0,
+          "ja": "子カテゴリがある間は階層を保ち、名前は変更できます",
+          "en": "Keep a valid hierarchy while renaming the parent"
+        }
+      ],
+      "source_take": "05-category-editor-20260923-001840-310162",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790086720.5462909,
+      "source_stopped_at": 1790086795.786886,
+      "source_wall_duration": 75.241,
+      "source_raw_duration": 73.852,
+      "source_raw_sha256": "9d9255be61a546aa6805a5faf3c070a30da9d0ce52b50bbd063bdf2d0e606a17",
+      "source_manifest_sha256": "ad0a57f5db0e0dbdc4de314de8e768a8a1623ce6a32246752dbbad79905aa4a9",
+      "poster_time": 21.5,
+      "render_fingerprint": "ff9d9a63ed32b3d9f6d6c14505054cd142cecb4506cedd5077464f55f923bd1e",
+      "sha256": "068e3339fd3c7325911a20761a4fe8b0afbb7905b27c6e2403ccc488a9faed02",
+      "poster_sha256": "d7b96848806d952fe3e74dabfd8b98f523c89a907cc781578162014ceeb97de1",
+      "caption_timing_review": {
+        "method": "Sequential decode from the start using ffmpeg fps=1; cues moved before or at observed action onset. No input seeking; source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.011,
+          25.198,
+          43.998,
+          60.379
+        ],
+        "reviewed_step_times": [
+          1.011,
+          21.0,
+          40.0,
+          53.0
+        ]
+      }
+    },
+    {
+      "id": "06-category-order",
+      "title_ja": "表示と並び順を整える",
+      "title_en": "Choose category visibility and order",
+      "ui_language": "en",
+      "duration": 29.1,
+      "bytes": 313200,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "右へスワイプして非表示にできます",
+          "en": "Swipe right to hide a category"
+        },
+        {
+          "time": 16.057,
+          "ja": "編集を開き、つまみをドラッグします",
+          "en": "Enter edit mode and drag the reorder handle"
+        },
+        {
+          "time": 24.467,
+          "ja": "保存すると並び順が確定します",
+          "en": "Save to commit the new order"
+        }
+      ],
+      "source_take": "06-category-order-20260923-002533-123066",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087133.3829172,
+      "source_stopped_at": 1790087162.4759412,
+      "source_wall_duration": 29.093,
+      "source_raw_duration": 27.113,
+      "source_raw_sha256": "db929497c713a9510fb40bde040a2f64653ae66abdb1ab240277c9b419cd6bed",
+      "source_manifest_sha256": "f0ba79a9b5df280ab8ede2ec50fa9f933e344515b09300395e9391a68d1550f6",
+      "poster_time": 16.557,
+      "render_fingerprint": "081493fb942ff85010517a9752d5495dd3209582983565a8b2a6b0956ba2f741",
+      "sha256": "1c3a01b67ef0d318ab6d93f277133679e552cd58d542395419621b48929bde6a",
+      "poster_sha256": "62f69a23a9a0930ad844f8805377889a3b0af695578507a0305b11751e74120a",
+      "caption_timing_review": {
+        "method": "Sequential decoding from the beginning at fps=1, with no input seeking; visible UI transitions checked against bilingual instruction cues. Cue starts are placed just before or during the relevant action, not presented as exact tap timestamps. Exact final raw frame checked separately.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.008,
+          16.057,
+          24.467
+        ],
+        "reviewed_step_times": [
+          1.008,
+          16.057,
+          24.467
+        ]
+      }
+    },
+    {
+      "id": "07-wallets",
+      "title_ja": "財布を分けて管理する",
+      "title_en": "Create, rename, and switch wallets",
+      "ui_language": "en",
+      "duration": 50.8,
+      "bytes": 564884,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "旅行用の財布を作ります",
+          "en": "Create a wallet for travel"
+        },
+        {
+          "time": 15.612,
+          "ja": "別の財布を選び、旅行用の財布を右へスワイプして改名します",
+          "en": "Select another wallet, then swipe the travel wallet right to rename it"
+        },
+        {
+          "time": 37.0,
+          "ja": "財布を選ぶと、記帳と収支の両方に反映されます",
+          "en": "The selected wallet is shared by Record and Transactions"
+        }
+      ],
+      "source_take": "07-wallets-20260923-002614-038462",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087174.25345,
+      "source_stopped_at": 1790087225.056751,
+      "source_wall_duration": 50.803,
+      "source_raw_duration": 48.885,
+      "source_raw_sha256": "1772d7ae767b4d29c5dd3335475064ee2ed7cc37a40e0a401f9a2c3efb83f22a",
+      "source_manifest_sha256": "612eda4946ecbba43d1de43c974f4b5e0b5a4d87cc4497d41c3f565e7ef4f831",
+      "poster_time": 16.112,
+      "render_fingerprint": "98d0a4477114c2a4f8cc579e59fb504ed1abb16519a4810444b3a45565d946dd",
+      "sha256": "77f9aa73992a840e0f9a0aa718387f82aa0a9a4135e80e5fe3953eb0e35126db",
+      "poster_sha256": "11de0a480180392aa4e939912c22c836cf20bb357c245bc8b9bad470f804d429",
+      "caption_timing_review": {
+        "method": "Sequential decode from the start using ffmpeg fps=1; cues moved before or at observed action onset. No input seeking; source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.01,
+          15.612,
+          38.567
+        ],
+        "reviewed_step_times": [
+          1.01,
+          15.612,
+          37.0
+        ]
+      }
+    },
+    {
+      "id": "08-transfers",
+      "title_ja": "財布の間で振り替える",
+      "title_en": "Transfer between wallets",
+      "ui_language": "en",
+      "duration": 87.633,
+      "bytes": 1434533,
+      "steps": [
+        {
+          "time": 1.009,
+          "ja": "振替を開き、金額と内容を入力します",
+          "en": "Open Transfer and enter the amount and description"
+        },
+        {
+          "time": 26.0,
+          "ja": "振替元と振替先に対応する記録が作られます",
+          "en": "The transfer creates linked entries in both wallets"
+        },
+        {
+          "time": 49.0,
+          "ja": "片方を編集すると両方に反映されます",
+          "en": "Editing either side updates the linked transfer"
+        }
+      ],
+      "source_take": "08-transfers-20260923-002717-067837",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087237.3357282,
+      "source_stopped_at": 1790087324.957977,
+      "source_wall_duration": 87.622,
+      "source_raw_duration": 83.892,
+      "source_raw_sha256": "d706877d93500340c7ef23c518766414876bff8ed64d02419e5bc8d2a1bc1c38",
+      "source_manifest_sha256": "1838d8e950ad2314d50d6185d5a810c352fcf8c710659f51cd5f10e706f430a9",
+      "poster_time": 26.5,
+      "render_fingerprint": "ab2e95838016030ed633d74f12b665c1539160bf302e7fc54bd08cca64495f1d",
+      "sha256": "95134ac7cf87235672b24045ec1aaa373de5d10fa52d18e1e3363e056fe629a7",
+      "poster_sha256": "2b03721374237b1ef1e07053011db2cc1508f2a1c3cb1adc0fbd43ccfb015f43",
+      "caption_timing_review": {
+        "method": "Sequential decode from the start using ffmpeg fps=1; cues moved before or at observed action onset. No input seeking; source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.009,
+          31.052,
+          53.046
+        ],
+        "reviewed_step_times": [
+          1.009,
+          26.0,
+          49.0
+        ]
+      }
+    },
+    {
+      "id": "09-keywords",
+      "title_ja": "学習したキーワードを整理する",
+      "title_en": "Organize learned keywords",
+      "ui_language": "en",
+      "duration": 39.5,
+      "bytes": 539779,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "学習した内容を確認して編集を開きます。この動画では広告を読み込めない場合の案内が表示されます",
+          "en": "Open keyword editing. This recording shows the notice used when an ad cannot load"
+        },
+        {
+          "time": 11.285,
+          "ja": "右へスワイプすると学習内容の詳細が開きます",
+          "en": "Swipe right to inspect a learned keyword"
+        },
+        {
+          "time": 19.35,
+          "ja": "同じお店の別名はグループとして管理できます",
+          "en": "Manage different names for the same merchant as a group"
+        },
+        {
+          "time": 29.36,
+          "ja": "表記の違う二つを選んで関連付けます",
+          "en": "Select both spellings and link them again"
+        }
+      ],
+      "source_take": "09-keywords-20260923-003945-982306",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087986.384537,
+      "source_stopped_at": 1790088025.875933,
+      "source_wall_duration": 39.491,
+      "source_raw_duration": 35.34,
+      "source_raw_sha256": "a43168dde8c667e815533e633dbc48c820d0c44252dbc37f9d090fc8805d73fa",
+      "source_manifest_sha256": "cdedbffa8426dc7377ef73d40d2d0f5268aa87ff3df225180c14ef1f5518f153",
+      "poster_time": 11.785,
+      "render_fingerprint": "54413f01c6e97bd4b9ea7b2f9546b2bca0d2a57e261ab193e5c2640615116335",
+      "sha256": "c3027f6f78e2cc5cfd0a809c85cbde45e9efd78e39d07fb8e0cb1de9cf8c99ab",
+      "poster_sha256": "c2a67b91eb8e7bd5be71d0a439ae66efe0459f15e88f806e94d78eff1c7a87c6",
+      "caption_timing_review": {
+        "method": "Sequential decode from start at fps=1, with fps=4 and original decoded-frame order inspection at the tail; no input seek. Existing cues already precede actions and are preserved. Source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.013,
+          11.285,
+          19.35,
+          29.36
+        ],
+        "reviewed_step_times": [
+          1.013,
+          11.285,
+          19.35,
+          29.36
+        ]
+      }
+    },
+    {
+      "id": "10-reports",
+      "title_ja": "月・年の収支を見返す",
+      "title_en": "Explore monthly and yearly reports",
+      "ui_language": "en",
+      "duration": 39.267,
+      "bytes": 831325,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "期間を選んで収支を見返します",
+          "en": "Choose a reporting period"
+        },
+        {
+          "time": 5.0,
+          "ja": "円グラフを押すとカテゴリの内訳が開きます",
+          "en": "Tap the chart to explore category breakdowns"
+        },
+        {
+          "time": 13.0,
+          "ja": "月表示と年表示を切り替えられます",
+          "en": "Switch between monthly and yearly views"
+        },
+        {
+          "time": 21.0,
+          "ja": "予算のカテゴリから取引明細まで開けます",
+          "en": "Expand a budget category to see its transactions"
+        },
+        {
+          "time": 30.0,
+          "ja": "明細をタップして編集画面を開けます",
+          "en": "Tap a transaction to open its editor"
+        }
+      ],
+      "source_take": "10-reports-20260923-002924-085931",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087364.285308,
+      "source_stopped_at": 1790087403.557604,
+      "source_wall_duration": 39.272,
+      "source_raw_duration": 37.308,
+      "source_raw_sha256": "6b9db6140261c478c3b41710c3d510f4f5c80754044e37243be82599da231cff",
+      "source_manifest_sha256": "7ad2f7a254ab7547bf23677f80a26c92b7975321c9d2c583f0a8ea834c276e61",
+      "poster_time": 5.5,
+      "render_fingerprint": "5e7c75a5d14bb18c9c038bf3d8ca7919253ef3b9cf17071330bbd5892af4996d",
+      "sha256": "52f673be09ec0397b491094e9b6c8501e6ac8853c722b9425830a75bbf4b051a",
+      "poster_sha256": "1410c42bfd1b984336902bce6defbad1807f7a70be1629912f7e84fdf1da0ad7",
+      "caption_timing_review": {
+        "method": "Sequential decode from the start using ffmpeg fps=1; cues moved before or at observed action onset. No input seeking; source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.012,
+          7.584,
+          16.881,
+          23.246,
+          33.258
+        ],
+        "reviewed_step_times": [
+          1.012,
+          5.0,
+          13.0,
+          21.0,
+          30.0
+        ]
+      }
+    },
+    {
+      "id": "11-budget",
+      "title_ja": "予算を配分して確認する",
+      "title_en": "Allocate and review your budget",
+      "ui_language": "en",
+      "duration": 36.166,
+      "bytes": 430191,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "月の総予算を設定します",
+          "en": "Set the total monthly budget"
+        },
+        {
+          "time": 16.775,
+          "ja": "スライダーでカテゴリに配分します",
+          "en": "Allocate money with the category slider"
+        },
+        {
+          "time": 20.146,
+          "ja": "固定したい配分はロックできます",
+          "en": "Lock an allocation that should stay fixed"
+        },
+        {
+          "time": 26.159,
+          "ja": "保存して、設定した予算を確認します",
+          "en": "Save and reopen the budget"
+        }
+      ],
+      "source_take": "11-budget-20260923-003015-168879",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087415.4785259,
+      "source_stopped_at": 1790087451.64096,
+      "source_wall_duration": 36.162,
+      "source_raw_duration": 34.47,
+      "source_raw_sha256": "8808ff175ba0bd75352248854bc00c628d0f946c0eddfeab525ef211aa9b6a78",
+      "source_manifest_sha256": "3a09481079f051e136e8f61a04eadaf303cee6bf5e8d9f3cf0a0407a26fa8ac2",
+      "poster_time": 17.275,
+      "render_fingerprint": "6ba9ba01333052a68d20cdd9eeee89834aaecc70de70b53ae34d84e73208da0c",
+      "sha256": "ce7a8fc81e21540c25047376efe65140eb3cd1ec53b8b2c7645757ba33951d4b",
+      "poster_sha256": "b34f8bb8c0748dfbe2c655d10ac99334e33e0aabc912e7f728b8747ea2f7b23a"
+    },
+    {
+      "id": "12-recurring",
+      "title_ja": "固定費・定期収入を登録する",
+      "title_en": "Set up recurring entries",
+      "ui_language": "en",
+      "duration": 67.6,
+      "bytes": 903440,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "毎月の固定費を登録します",
+          "en": "Add a monthly recurring expense"
+        },
+        {
+          "time": 28.114,
+          "ja": "周期と終了日の設定を確認します",
+          "en": "Review the schedule and optional end date"
+        },
+        {
+          "time": 47.957,
+          "ja": "スイッチで一時停止と再開ができます",
+          "en": "Pause and resume the recurring rule with its switch"
+        },
+        {
+          "time": 53.475,
+          "ja": "右スワイプでもタップでも編集できます",
+          "en": "Edit using a right swipe or by tapping the row"
+        }
+      ],
+      "source_take": "12-recurring-20260923-003103-370340",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087463.649524,
+      "source_stopped_at": 1790087531.244432,
+      "source_wall_duration": 67.595,
+      "source_raw_duration": 65.28,
+      "source_raw_sha256": "545a933345063db85c1f59a4129ccf3d292846866feff67336164badde857833",
+      "source_manifest_sha256": "78dcc00150b88cc8ceb407d48d278b9acc7a55430b2c2aa533e1f9505b935727",
+      "poster_time": 28.614,
+      "render_fingerprint": "1031441b02b6645d072ebe62c9163bf22fbb97933161e9a659adbec321656d33",
+      "sha256": "e1de7aae035f50bd632c7f6471280aa299388c41b591af0e5dae6d84b7e7006e",
+      "poster_sha256": "cb9f811729b7adf887abd4169920e48e4ddb3e72ade0a02c56dc7bc43519aab8"
+    },
+    {
+      "id": "13-import-and-undo",
+      "title_ja": "CSVを読み込み、履歴から取り消す",
+      "title_en": "Import a CSV and undo its batch",
+      "ui_language": "en",
+      "duration": 64.167,
+      "bytes": 1496306,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "ファイルを選んで読み込みます",
+          "en": "Choose the CSV in the system file picker"
+        },
+        {
+          "time": 8.338,
+          "ja": "CSV の Food を食費に割り当てます",
+          "en": "Map Food to the food category (shown as 食費)"
+        },
+        {
+          "time": 16.508,
+          "ja": "カテゴリの対応を確認して読み込みます",
+          "en": "Review the category mapping and confirm the import"
+        },
+        {
+          "time": 37.425,
+          "ja": "読み込み履歴から、このまとまりを取り消せます",
+          "en": "Undo the imported batch from Import History"
+        }
+      ],
+      "source_take": "13-import-and-undo-20260923-005630-977962",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790088991.203578,
+      "source_stopped_at": 1790089055.35793,
+      "source_wall_duration": 64.154,
+      "source_raw_duration": 60.258,
+      "source_raw_sha256": "751c8a23222323fad014afe0e1b5deb957e9aa8217dd6dfe9b591cc3f421d2fa",
+      "source_manifest_sha256": "126a5c0f98e3757663764c87a19cda6962e22a686400e47a1215fd03706af7df",
+      "poster_time": 8.838,
+      "render_fingerprint": "a49353b1710bed32ace30dcc956f09deb6ce0a6038e4791a16719710217eb7be",
+      "sha256": "afd12b5210c058f8691cf3fcd0da6588c79bc72f32c7e45dc057bc80b0ee82ed",
+      "poster_sha256": "e41be45a7e15440ce3c0644229012af9e97dae7d2186976df121c6b65b622f17",
+      "caption_timing_review": {
+        "method": "Sequential decode from start at fps=1 without input seek. Existing cues already precede the observed actions; original times preserved. Source video unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.011,
+          8.338,
+          16.508,
+          37.425
+        ],
+        "reviewed_step_times": [
+          1.011,
+          8.338,
+          16.508,
+          37.425
+        ]
+      }
+    },
+    {
+      "id": "14-batch-input",
+      "title_ja": "まとめて入力する",
+      "title_en": "Enter several records at once",
+      "ui_language": "en",
+      "duration": 45.5,
+      "bytes": 647743,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "複数の記録を改行して入力します",
+          "en": "Enter multiple records on separate lines"
+        },
+        {
+          "time": 11.689,
+          "ja": "入力する記録を選択できます",
+          "en": "Select the entries to import"
+        },
+        {
+          "time": 15.755,
+          "ja": "プレビューの金額を確認し、内容を修正します",
+          "en": "Check the preview amount and edit the description"
+        },
+        {
+          "time": 37.521,
+          "ja": "選んだ二件を入力します",
+          "en": "Import the two selected entries"
+        }
+      ],
+      "source_take": "14-batch-input-20260923-010044-170076",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790089244.3961542,
+      "source_stopped_at": 1790089289.893104,
+      "source_wall_duration": 45.497,
+      "source_raw_duration": 43.052,
+      "source_raw_sha256": "f6b791615c34fa15fed55752c9032794009e81d764911f7191b664e7a6d5d2f8",
+      "source_manifest_sha256": "46cda1ffe773488a138cef56c432e6ff20b3f46e178477e56d13e03d301324b6",
+      "poster_time": 12.189,
+      "render_fingerprint": "62c980635f2194316c0602b191cf149675d94f455aababa4a79dc423e3c62e54",
+      "sha256": "8907ddfeaa7b3618a29905961d50458051c64ee0a685b46ed5b261104fa3858b",
+      "poster_sha256": "b0ec6ed467cb621af7ae666d12cae42ee9b3a4ca01a36719e940c43f8eb277ab",
+      "caption_timing_review": {
+        "method": "Decoded the raw video from its beginning into one-second contact sheets; reviewed amount and import transitions using accurate output seeking, and independently decoded the final transaction frame. Existing caption times align with the visible operations and were retained.",
+        "sampling_precision_seconds": 0.5,
+        "original_step_times": [
+          1.007,
+          11.689,
+          15.755,
+          37.521
+        ],
+        "reviewed_step_times": [
+          1.007,
+          11.689,
+          15.755,
+          37.521
+        ]
+      }
+    },
+    {
+      "id": "15-export",
+      "title_ja": "バックアップとCSVを書き出す",
+      "title_en": "Export a backup and CSV",
+      "ui_language": "en",
+      "duration": 30.933,
+      "bytes": 466429,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "バックアップを書き出します",
+          "en": "Generate a complete backup"
+        },
+        {
+          "time": 5.8,
+          "ja": "保存先を選ぶ画面を確認し、この動画では選ばずに閉じます",
+          "en": "Review the share sheet; this walkthrough closes it without choosing a destination"
+        },
+        {
+          "time": 16.144,
+          "ja": "CSVでは書き出す期間を選べます",
+          "en": "Choose a date range for a CSV export"
+        }
+      ],
+      "source_take": "15-export-20260923-003257-154511",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087577.366192,
+      "source_stopped_at": 1790087608.304186,
+      "source_wall_duration": 30.938,
+      "source_raw_duration": 26.027,
+      "source_raw_sha256": "1160a5a6c324dc676ff204f8d18868a28f3c33266be78876615cbac1d98a0ca4",
+      "source_manifest_sha256": "9a1f2085e937adbf3c4784a24a6e10be25f84064246ff6597af3b001c2a9eced",
+      "poster_time": 6.3,
+      "render_fingerprint": "3a6431acc770f330e4d16bb0a61f10837e7bcb81af081d53b9700c57600066c8",
+      "sha256": "7e38adbc1b802fa00c962a98e6b29482356d59ecbd59250888c33f0c0f71681e",
+      "poster_sha256": "fc594ab99034d46f831be6081792058c745585e3b0214862ae5623eff90adfa9",
+      "caption_timing_review": {
+        "method": "Decoded raw-video frame review: 1-second contact sheets followed by accurate output seeking at visible transitions and final frames. Only cue times changed; caption wording and recording timestamps retained.",
+        "sampling_precision_seconds": 0.1,
+        "original_step_times": [
+          1.007,
+          7.921,
+          16.144
+        ],
+        "reviewed_step_times": [
+          1.007,
+          5.8,
+          16.144
+        ]
+      }
+    },
+    {
+      "id": "16-settings-and-shortcuts",
+      "title_ja": "表示・入力設定とショートカット",
+      "title_en": "Display, input, and shortcut settings",
+      "ui_language": "en",
+      "duration": 43.133,
+      "bytes": 821763,
+      "steps": [
+        {
+          "time": 1.031,
+          "ja": "集計の基準になる通貨を選べます",
+          "en": "Choose the primary reporting currency"
+        },
+        {
+          "time": 8.636,
+          "ja": "締め日を生活に合わせて変更できます",
+          "en": "Set a settlement day that matches your budget cycle"
+        },
+        {
+          "time": 15.827,
+          "ja": "日付の表示形式を選べます",
+          "en": "Choose how dates are displayed"
+        },
+        {
+          "time": 23.447,
+          "ja": "記帳に使う入力言語を選びます",
+          "en": "Choose the language used for recording"
+        },
+        {
+          "time": 31.574,
+          "ja": "ショートカットの案内を開きます",
+          "en": "Open the shortcut setup guide"
+        },
+        {
+          "time": 37.035,
+          "ja": "Siriの実行と音声認識は、対応する実機で設定・確認してください",
+          "en": "Complete Siri and speech setup on a supported physical device"
+        }
+      ],
+      "source_take": "16-settings-and-shortcuts-20260923-005443-824004",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790088884.285981,
+      "source_stopped_at": 1790088927.428261,
+      "source_wall_duration": 43.142,
+      "source_raw_duration": 36.682,
+      "source_raw_sha256": "02427d8dba51375cafa36d0dab0b43f44f86c27104b26013ba46c8045cc730ea",
+      "source_manifest_sha256": "10e393be27b742765907f5eb8a78b110b905118f063e5e8b4f0455ee0bd1c1a2",
+      "poster_time": 9.136,
+      "render_fingerprint": "7ad4cb3f9511f7ee0cf279709e9353173cf2150826ad568047f8f4d8f47f66bd",
+      "sha256": "d702f91b5837813c1c315705524e788fe2cf4e369e96163848f78ab44b9451bd",
+      "poster_sha256": "525b747d8a6118bb09b06abf85d6dc1a1b824ba2d914179b9a00e3b595839643"
+    },
+    {
+      "id": "17-voice-and-sharing-entry",
+      "title_ja": "音声入力と共有の入口",
+      "title_en": "Voice input and sharing entry points",
+      "ui_language": "en",
+      "duration": 31.133,
+      "bytes": 378295,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "音声入力は記帳画面から切り替えます",
+          "en": "Switch to voice input from Record"
+        },
+        {
+          "time": 4.987,
+          "ja": "実際の録音と認識は、対応する実機で確認してください",
+          "en": "Use a supported physical device to record and verify speech recognition"
+        },
+        {
+          "time": 11.894,
+          "ja": "財布を右にスワイプすると共有の入口があります",
+          "en": "Swipe a wallet right to find sharing"
+        },
+        {
+          "time": 24.2,
+          "ja": "共有する前に権限を選びます。ここでは選ばずに閉じます",
+          "en": "Choose permissions before sharing; this walkthrough dismisses without creating a share"
+        }
+      ],
+      "source_take": "17-voice-and-sharing-entry-20260923-003412-429432",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790087652.6498282,
+      "source_stopped_at": 1790087683.783764,
+      "source_wall_duration": 31.134,
+      "source_raw_duration": 28.023,
+      "source_raw_sha256": "df2dde9759ba79b952a494dad046ad0cbb477f7d7d2ff0a8671c88b09304d2ca",
+      "source_manifest_sha256": "cb4bee86e265d6bb754f31fab3af74d1974bd371d8d933b4f1c1fe5f64edbd1c",
+      "poster_time": 5.487,
+      "render_fingerprint": "b04a9266cd0713b413f2d1e0b7a0dab4f45d5dae340ade8bf0901e1d576df68d",
+      "sha256": "7ce74604f0dce87708f297424c1734cd328142e9ef90fc1a4974bab53068cfe3",
+      "poster_sha256": "7ca071fbc5dfff16e0ea09d2b3304936f70997b8fbad8479b225c8551974e354",
+      "caption_timing_review": {
+        "method": "Decoded raw-video frame review: 1-second contact sheets followed by accurate output seeking at visible transitions and final frames. Only cue times changed; caption wording and recording timestamps retained.",
+        "sampling_precision_seconds": 0.1,
+        "original_step_times": [
+          1.012,
+          4.987,
+          11.894,
+          27.244
+        ],
+        "reviewed_step_times": [
+          1.012,
+          4.987,
+          11.894,
+          24.2
+        ]
+      }
+    }
+  ]
+}

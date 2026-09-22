@@ -1,0 +1,734 @@
+{
+  "schema_version": 2,
+  "render_revision": 2,
+  "app_version": "1.1.3",
+  "app_build": "1397",
+  "source_commit": "5a7ed066a737a3222083e7ebc19321e27e97db54",
+  "device_name": "iPhone 17 Pro Max",
+  "runtime": "iOS 26.5",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-09-22T13:39:40.340003+00:00",
+  "ui_language": "ja",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "01-quick-entry",
+      "title_ja": "ひとことで記帳",
+      "title_en": "Record an expense in a sentence",
+      "duration": 40.433,
+      "bytes": 779569,
+      "steps": [
+        {
+          "time": 1.005,
+          "ja": "カテゴリと金額を入力します",
+          "en": "Enter a category and an amount"
+        },
+        {
+          "time": 13.704,
+          "ja": "内容を確認して保存します",
+          "en": "Review the result and confirm"
+        },
+        {
+          "time": 18.19,
+          "ja": "金額には計算式も使えます",
+          "en": "Use an expression for the amount"
+        },
+        {
+          "time": 33.891,
+          "ja": "収支一覧にも保存されます",
+          "en": "The saved records also appear in Transactions"
+        }
+      ],
+      "source_take": "01-quick-entry-20260922-223131",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790080291.306129,
+      "source_stopped_at": 1790080331.745056,
+      "source_wall_duration": 40.439,
+      "source_raw_duration": 37.698,
+      "source_raw_sha256": "b68ece7dedb1d26576db8729a8be47e693656ea66d6f11b95e737b5d592efb0d",
+      "source_manifest_sha256": "f7317a2cba02c070648cc15bd566c04eda52912d06823f1073afd60f4c185fac",
+      "poster_time": 14.204,
+      "render_fingerprint": "e4e4384d2123530f5a34f9f307da5a04180106d670610c4190633cd89328d20c",
+      "sha256": "b7d880256369b0d67f0e9bb574310852bc63576bc92a74a66d0227d7783fe4b5",
+      "poster_sha256": "49efad81ed0c80c7db71b89ee23015127bf883f813d6f0e573ad895a8dc0455d"
+    },
+    {
+      "id": "02-manual-entry",
+      "title_ja": "手入力と電卓",
+      "title_en": "Manual entry and the calculator",
+      "duration": 47.233,
+      "bytes": 693805,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "記帳画面の＋を開きます",
+          "en": "Open the plus button in Chat"
+        },
+        {
+          "time": 5.188,
+          "ja": "電卓で合計を入力します",
+          "en": "Calculate the total in the amount field"
+        },
+        {
+          "time": 28.34,
+          "ja": "内容を入力して保存します",
+          "en": "Add a description and save"
+        },
+        {
+          "time": 40.785,
+          "ja": "保存した記録を一覧で確認します",
+          "en": "Check the saved record in Transactions"
+        }
+      ],
+      "source_take": "02-manual-entry-20260922-223216",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790080337.1087072,
+      "source_stopped_at": 1790080384.3376231,
+      "source_wall_duration": 47.229,
+      "source_raw_duration": 44.47,
+      "source_raw_sha256": "45a29781aed4d72296f7454e8b5266d906517d52036c5b5924666cdc56b08eee",
+      "source_manifest_sha256": "6c1ed246ca128b7a61c0245e61841aa0d8fc95aa9fb4fe1b520d60f63fcee602",
+      "poster_time": 5.688,
+      "render_fingerprint": "eebed039b0379df27771c92d29172d68f5470f67e9135dcd56720e1b153e9749",
+      "sha256": "863858fbecd7ad3e0acca780284b70978b9422e8a6e4adf3078f9db85e50b509",
+      "poster_sha256": "5353c2e4e057cd2db42b685e5f8b1f9b3dd97b21b4371eda2db52d27f7c1e4ce"
+    },
+    {
+      "id": "03-pending-confirmation",
+      "title_ja": "あとから確認する",
+      "title_en": "Review pending entries",
+      "duration": 39.3,
+      "bytes": 768610,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "続けて記帳すると、前の内容は確認待ちになります",
+          "en": "A previous unconfirmed entry becomes pending when the next entry is sent"
+        },
+        {
+          "time": 24.698,
+          "ja": "新しい内容を確認します",
+          "en": "Confirm the new entry"
+        },
+        {
+          "time": 28.143,
+          "ja": "確認待ちの内容も、その場で確認できます",
+          "en": "Confirm the pending entry directly in Chat"
+        },
+        {
+          "time": 32.738,
+          "ja": "収支一覧で両方の記録を確認します",
+          "en": "Both confirmed entries are available in Transactions"
+        }
+      ],
+      "source_take": "03-pending-confirmation-20260922-223411",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790080452.2814279,
+      "source_stopped_at": 1790080491.583045,
+      "source_wall_duration": 39.302,
+      "source_raw_duration": 36.648,
+      "source_raw_sha256": "7db80b19f28091eaf522786fce57ce10aca78bcbb0819ce5d59f7a8d71dc734e",
+      "source_manifest_sha256": "564b0c1a62c36e493f295514c8d566462b00b843761d46c8c70fb084feb16fee",
+      "poster_time": 25.198,
+      "render_fingerprint": "5a968a69e534132d42285263f86278cc1c31d28723702a64873dbbca8bebab77",
+      "sha256": "d5c904af94f81d50973909ac7868f7db2c98fb272f9475e0ca24a5d8b5740ffe",
+      "poster_sha256": "5b0ff40da719a58df36ca13ddab67ef3cacd193d2f7e0c2b394b28c1dfe8032e"
+    },
+    {
+      "id": "04-transaction-actions",
+      "title_ja": "スワイプで編集・削除・復元",
+      "title_en": "Swipe to edit, delete, and restore",
+      "duration": 72.6,
+      "bytes": 1305161,
+      "steps": [
+        {
+          "time": 1.104,
+          "ja": "右へ大きくスワイプすると編集できます",
+          "en": "Swipe fully right to open the editor"
+        },
+        {
+          "time": 7.0,
+          "ja": "短くスワイプしてから、もう一度右へ動かしても編集できます",
+          "en": "Reveal the action, then swipe right again to edit"
+        },
+        {
+          "time": 32.0,
+          "ja": "左へ大きくスワイプすると削除されます",
+          "en": "Swipe fully left to delete"
+        },
+        {
+          "time": 39.0,
+          "ja": "削除済み取引から復元できます",
+          "en": "Restore the entry from Deleted Transactions"
+        }
+      ],
+      "source_take": "04-transaction-actions-20260922-233312",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790083993.061781,
+      "source_stopped_at": 1790084065.658088,
+      "source_wall_duration": 72.596,
+      "source_raw_duration": 68.882,
+      "source_raw_sha256": "7786d97f6b95c7ea37c7f2d082d5ad51f60a3f5d40d503a54f561818c87a8b55",
+      "source_manifest_sha256": "8c44ca71af7702482529281e44a38ddb2a89f75c4e90a26b5e01e4b7b314e5be",
+      "poster_time": 7.5,
+      "render_fingerprint": "59964762db2f577811b587592887b387dace7d40da26ccda143189176c368b2d",
+      "sha256": "7cd45d1ddb36a7f30fad79029b916322b08b147b03cff59ab29e696fe8ad0410",
+      "poster_sha256": "e0a84d9746b2b654a0b2f85b0026ca8883b06630809e29f6e247da0179e0bfa8",
+      "caption_timing_review": {
+        "method": "Sequential decode from the beginning of raw.mov, fps=1, threads=2; no fast seek. Revised cues precede their first visible action. Raw media unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.104,
+          9.753,
+          35.536,
+          42.11
+        ],
+        "reviewed_step_times": [
+          1.104,
+          7.0,
+          32.0,
+          39.0
+        ]
+      }
+    },
+    {
+      "id": "05-category-editor",
+      "title_ja": "カテゴリとサブカテゴリを整える",
+      "title_en": "Organize categories and subcategories",
+      "duration": 76.966,
+      "bytes": 959085,
+      "steps": [
+        {
+          "time": 1.009,
+          "ja": "同じ編集画面で名前とアイコンを変更できます",
+          "en": "Use the same editor for a category's name and optional icon"
+        },
+        {
+          "time": 26.69,
+          "ja": "アイコンなしでもカテゴリを作れます",
+          "en": "Create a category with no icon"
+        },
+        {
+          "time": 45.671,
+          "ja": "カテゴリの中にサブカテゴリを追加します",
+          "en": "Add a subcategory inside the category"
+        },
+        {
+          "time": 62.217,
+          "ja": "子カテゴリがある間は階層を保ち、名前は変更できます",
+          "en": "Keep a valid hierarchy while renaming the parent"
+        }
+      ],
+      "source_take": "05-category-editor-20260922-230026",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082027.0643442,
+      "source_stopped_at": 1790082104.025214,
+      "source_wall_duration": 76.961,
+      "source_raw_duration": 75.59,
+      "source_raw_sha256": "e73dd6317da0d4735111018fef9bd8fe0dea29431bf90a64b6ea42d1c69952e2",
+      "source_manifest_sha256": "65bbda0959b7ff1939bffc7a6d0fdf63fcd8ee29c0b74dad93f0c121b00ad6c0",
+      "poster_time": 27.19,
+      "render_fingerprint": "706f7b3d9b3078ac46f5217b2a469d7e772206259fabad6a52627e1e8097137b",
+      "sha256": "d5394184dcf1f96265a7c1edfd8d75918fa2a29f705c43012ce8a86639484380",
+      "poster_sha256": "a5825d2e3ed77d26c1aa4a9a3cd109a652f57fc4dabcf59b2a975fbd9128bd85"
+    },
+    {
+      "id": "06-category-order",
+      "title_ja": "表示と並び順を整える",
+      "title_en": "Choose category visibility and order",
+      "duration": 29.633,
+      "bytes": 282598,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "右へスワイプして非表示にできます",
+          "en": "Swipe right to hide a category"
+        },
+        {
+          "time": 15.961,
+          "ja": "編集を開き、つまみをドラッグします",
+          "en": "Enter edit mode and drag the reorder handle"
+        },
+        {
+          "time": 24.668,
+          "ja": "保存すると並び順が確定します",
+          "en": "Save to commit the new order"
+        }
+      ],
+      "source_take": "06-category-order-20260922-230156",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082116.5535512,
+      "source_stopped_at": 1790082146.172004,
+      "source_wall_duration": 29.618,
+      "source_raw_duration": 27.738,
+      "source_raw_sha256": "3d8e8c1883674f662286a429bc7a38d9da2b66758eb588085e46a3263a22ab75",
+      "source_manifest_sha256": "92f3514b715238928ddc0aac34cbf94fe4ce9f58f517fd016067e826a9fd0701",
+      "poster_time": 16.461,
+      "render_fingerprint": "fe5c88d74045185e06c2ffd24a9c21fa6c5f65c605fc704349ce04e3ab98e640",
+      "sha256": "51e8260caf5bd6ed12e7198a02170c59a932744ee879307cfcf5563d1ce457e8",
+      "poster_sha256": "18deaf1310a4cf1a5ff65659d52d0c49986454910a67d318e541f3c5531cdebf"
+    },
+    {
+      "id": "07-wallets",
+      "title_ja": "財布を分けて管理する",
+      "title_en": "Create, rename, and switch wallets",
+      "duration": 50.367,
+      "bytes": 595987,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "旅行用の財布を作ります",
+          "en": "Create a wallet for travel"
+        },
+        {
+          "time": 15.515,
+          "ja": "別の財布を選び、旅行用の財布を右へスワイプして改名します",
+          "en": "Select another wallet, then swipe the travel wallet right to rename it"
+        },
+        {
+          "time": 37.857,
+          "ja": "財布を選ぶと、記帳と収支の両方に反映されます",
+          "en": "The selected wallet is shared by Chat and Transactions"
+        }
+      ],
+      "source_take": "07-wallets-20260922-230238",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082158.435877,
+      "source_stopped_at": 1790082208.7977118,
+      "source_wall_duration": 50.362,
+      "source_raw_duration": 48.55,
+      "source_raw_sha256": "b4ceaab74b827c4bca93ffba71406914d51bdc42cbf0ac8b3145e04d805e8091",
+      "source_manifest_sha256": "19cacd26a9070219bd7c3dae3682d35fd4e04266cc54c11272c066bee6f4911c",
+      "poster_time": 16.015,
+      "render_fingerprint": "f244d0918ea485ecd202d0e3ed4842075546486a7226fb65e3b244e0ad624b71",
+      "sha256": "53901ceff6349523fd047f2b3dc23aab75e0ce65957cfa0ad400a3d173d3f1d5",
+      "poster_sha256": "7046495262fc1dbddcbe7b3eb6a2f4255708c7b177ab837af0619387fa03c5a0"
+    },
+    {
+      "id": "08-transfers",
+      "title_ja": "財布の間で振り替える",
+      "title_en": "Transfer between wallets",
+      "duration": 93.767,
+      "bytes": 1392645,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "振替を開き、金額と内容を入力します",
+          "en": "Open Transfer and enter the amount and description"
+        },
+        {
+          "time": 32.687,
+          "ja": "振替元と振替先に対応する記録が作られます",
+          "en": "The transfer creates linked entries in both wallets"
+        },
+        {
+          "time": 54.891,
+          "ja": "片方を編集すると両方に反映されます",
+          "en": "Editing either side updates the linked transfer"
+        }
+      ],
+      "source_take": "08-transfers-20260922-230340",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082221.011352,
+      "source_stopped_at": 1790082314.775442,
+      "source_wall_duration": 93.764,
+      "source_raw_duration": 90.315,
+      "source_raw_sha256": "82909a1c7ee5434eb6130e2ff862597b9d23afdfed2ac1a94c3c0ae21f542ab8",
+      "source_manifest_sha256": "620ebff2dfbb5864682522fbd44c68339d525e0eeed124016934fca87794ed04",
+      "poster_time": 33.187,
+      "render_fingerprint": "0065412ec4fa9457dc908508b8d3dc5b9791610cb520d33149ed7a41a004736e",
+      "sha256": "e8134a9e0dcc34bba1e5ab93966c8052bc1216890a0077aca7415cbe7a7d6370",
+      "poster_sha256": "8eb6b1418ac9b1bc128b503e9712e96450646f535d72ee4a6d0a475074082367"
+    },
+    {
+      "id": "09-keywords",
+      "title_ja": "学習したキーワードを整理する",
+      "title_en": "Organize learned keywords",
+      "duration": 41.333,
+      "bytes": 501529,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "学習した内容を確認して編集を開きます。この動画では広告を読み込めない場合の案内が表示されます",
+          "en": "Open keyword editing. This recording shows the notice used when an ad cannot load"
+        },
+        {
+          "time": 11.22,
+          "ja": "右へスワイプすると学習内容の詳細が開きます",
+          "en": "Swipe right to inspect a learned keyword"
+        },
+        {
+          "time": 19.245,
+          "ja": "同じお店の別名はグループとして管理できます",
+          "en": "Manage different names for the same merchant as a group"
+        },
+        {
+          "time": 29.539,
+          "ja": "表記の違う二つを選んで関連付けます",
+          "en": "Select both spellings and link them again"
+        }
+      ],
+      "source_take": "09-keywords-20260922-224931",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790081371.8187048,
+      "source_stopped_at": 1790081413.152986,
+      "source_wall_duration": 41.334,
+      "source_raw_duration": 36.952,
+      "source_raw_sha256": "057225c0690aab7720a0a385f6223bd5a7bb0f1de4e8c1fc689fd9e386e16094",
+      "source_manifest_sha256": "73db9b509bf1d92bf68c922ba9564785412871ca2b29dd5448d90cb164e7030a",
+      "poster_time": 11.72,
+      "render_fingerprint": "6b350a59359fc43f06848e357fa1261a0d6b1d9d35421bebf946fa778b552dcf",
+      "sha256": "073f394a813467fc0b68254764a7137369f416bd353dba20664dc4773b64331a",
+      "poster_sha256": "7422c87d7ca57fcd08adf4ab3f14288f44de3f954fbbb5c33373a641d2e0b895"
+    },
+    {
+      "id": "10-reports",
+      "title_ja": "月・年の収支を見返す",
+      "title_en": "Explore monthly and yearly reports",
+      "duration": 54.1,
+      "bytes": 866618,
+      "steps": [
+        {
+          "time": 1.036,
+          "ja": "期間を選んで収支を見返します",
+          "en": "Choose a reporting period"
+        },
+        {
+          "time": 10.144,
+          "ja": "円グラフを押すとカテゴリの内訳が開きます",
+          "en": "Tap the chart to explore category breakdowns"
+        },
+        {
+          "time": 24.042,
+          "ja": "月表示と年表示を切り替えられます",
+          "en": "Switch between monthly and yearly views"
+        },
+        {
+          "time": 31.868,
+          "ja": "予算のカテゴリから取引明細まで開けます",
+          "en": "Expand a budget category to see its transactions"
+        },
+        {
+          "time": 45.997,
+          "ja": "明細をタップして編集画面を開けます",
+          "en": "Tap a transaction to open its editor"
+        }
+      ],
+      "source_take": "10-reports-20260922-225022",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790081423.7398021,
+      "source_stopped_at": 1790081477.851871,
+      "source_wall_duration": 54.112,
+      "source_raw_duration": 52.195,
+      "source_raw_sha256": "325e17b6db6604bcf12caa070af41fecd76e32e3fb1264577f7c1cf442d8dab4",
+      "source_manifest_sha256": "185023d6f6086053257ad1b65694ac5b5c2ec9b8a1efa77d59e955dafb641b90",
+      "poster_time": 10.644,
+      "render_fingerprint": "daf43abd168cdb338dcdb663567e07e44228dd36b6eae737f65f6206556d6e5e",
+      "sha256": "2f29af0a783ec8ed30a1c202103c05a3d343019af655610e9bdd59a3f3d96288",
+      "poster_sha256": "2d2c6220ffa8c9a97981d635c79dd886d9c4c277c61290da1e3fee264780602e"
+    },
+    {
+      "id": "11-budget",
+      "title_ja": "予算を配分して確認する",
+      "title_en": "Allocate and review your budget",
+      "duration": 54.3,
+      "bytes": 527005,
+      "steps": [
+        {
+          "time": 1.014,
+          "ja": "月の総予算を設定します",
+          "en": "Set the total monthly budget"
+        },
+        {
+          "time": 26.987,
+          "ja": "スライダーでカテゴリに配分します",
+          "en": "Allocate money with the category slider"
+        },
+        {
+          "time": 31.854,
+          "ja": "固定したい配分はロックできます",
+          "en": "Lock an allocation that should stay fixed"
+        },
+        {
+          "time": 41.941,
+          "ja": "保存して、設定した予算を確認します",
+          "en": "Save and reopen the budget"
+        }
+      ],
+      "source_take": "11-budget-20260922-225134",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790081495.216776,
+      "source_stopped_at": 1790081549.520288,
+      "source_wall_duration": 54.304,
+      "source_raw_duration": 53.857,
+      "source_raw_sha256": "b1b4cc7ce5f1eca5e39434528723e563f8db50434bb1bfb7dc9175450ae0a5ff",
+      "source_manifest_sha256": "f09189e61dc114dbe948c50f61dfedb4dc0f160f2059c4482c5de0383e1c91d9",
+      "poster_time": 27.487,
+      "render_fingerprint": "0d15914ed05d345dd3cf9ec2646855024991e95893d20bfe8e0ec8c7feacf6a2",
+      "sha256": "ce6ac0d2da91a0c54ef4a63484a2ea90a101eb821b7d1e40ff9aa8487e0594e9",
+      "poster_sha256": "0e8b3106a20d4f828355ff957b9a7e609baa0b8e273a5e72adf9548368babade"
+    },
+    {
+      "id": "12-recurring",
+      "title_ja": "固定費・定期収入を登録する",
+      "title_en": "Set up recurring entries",
+      "duration": 64.867,
+      "bytes": 786912,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "毎月の固定費を登録します",
+          "en": "Add a monthly recurring expense"
+        },
+        {
+          "time": 22.0,
+          "ja": "周期と終了日の設定を確認します",
+          "en": "Review the schedule and optional end date"
+        },
+        {
+          "time": 40.0,
+          "ja": "スイッチで一時停止と再開ができます",
+          "en": "Pause and resume the recurring rule with its switch"
+        },
+        {
+          "time": 47.0,
+          "ja": "右スワイプでもタップでも編集できます",
+          "en": "Edit using a right swipe or by tapping the row"
+        }
+      ],
+      "source_take": "12-recurring-20260922-230526",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082327.028888,
+      "source_stopped_at": 1790082391.884088,
+      "source_wall_duration": 64.855,
+      "source_raw_duration": 62.742,
+      "source_raw_sha256": "f4744786307a82484b4f9e26cdfa6baee8fb3c969d6ae2ea1cb4b8e2a5dc24fd",
+      "source_manifest_sha256": "367a4409c6ea659030ee5ed0d7595df3091b606b4ac07b1d188d1fbdf382bdf0",
+      "poster_time": 22.5,
+      "render_fingerprint": "62805309e3d53532550ece9d67225b3ae0de7df3563aa0c95efaedf6a37e60a8",
+      "sha256": "d74064603ad276aaa04a866141654374588ad55943ee4756b38c4886a2d5d055",
+      "poster_sha256": "d7c74d12ce25d5a2da262bc7106fd910a1ffbeac8c68694933d6bdcdc08112f0",
+      "caption_timing_review": {
+        "method": "Decoded raw.mov sequentially from the beginning at fps=1; no fast seek. Each revised cue precedes its first visible action. Raw media unchanged.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.012,
+          25.828,
+          45.614,
+          51.13
+        ],
+        "reviewed_step_times": [
+          1.012,
+          22.0,
+          40.0,
+          47.0
+        ]
+      }
+    },
+    {
+      "id": "13-import-and-undo",
+      "title_ja": "CSVを読み込み、履歴から取り消す",
+      "title_en": "Import a CSV and undo its batch",
+      "duration": 53.567,
+      "bytes": 1212154,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "ファイルを選んで読み込みます",
+          "en": "Choose the CSV in the system file picker"
+        },
+        {
+          "time": 8.567,
+          "ja": "カテゴリの対応を確認して読み込みます",
+          "en": "Review the category mapping and confirm the import"
+        },
+        {
+          "time": 26.942,
+          "ja": "読み込み履歴から、このまとまりを取り消せます",
+          "en": "Undo the imported batch from Import History"
+        }
+      ],
+      "source_take": "13-import-and-undo-20260922-233442",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790084083.028807,
+      "source_stopped_at": 1790084136.594785,
+      "source_wall_duration": 53.566,
+      "source_raw_duration": 49.733,
+      "source_raw_sha256": "f30dcd9c72b94e46592c6f14da1fcc4478c5491b232bf0e418c9e0ca6f46efc5",
+      "source_manifest_sha256": "58b19c3cfc32a1ef7e79a093f3b560f5f23ed9293cd2395ddb5706a622529f7d",
+      "poster_time": 9.067,
+      "render_fingerprint": "93ac1acf859da3ba32d2b9332522d919603b154481b8e9a1b2acb08b1a62578a",
+      "sha256": "71d09106f62d819f7e9199220869a2034333673f92e24693369d3a69612da9d2",
+      "poster_sha256": "f0b55cb0475f2ef1f39c4d5c781bdacd5c24e88672e023ab970dffc28159b5ff"
+    },
+    {
+      "id": "14-batch-input",
+      "title_ja": "まとめて入力する",
+      "title_en": "Enter several records at once",
+      "duration": 37.267,
+      "bytes": 480833,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "複数の記録を改行して入力します",
+          "en": "Enter multiple records on separate lines"
+        },
+        {
+          "time": 11.324,
+          "ja": "入力する記録を選択できます",
+          "en": "Select the entries to import"
+        },
+        {
+          "time": 15.426,
+          "ja": "プレビューで内容を修正します",
+          "en": "Edit the description in the preview"
+        },
+        {
+          "time": 29.5,
+          "ja": "選んだ二件を入力します",
+          "en": "Import the two selected entries"
+        }
+      ],
+      "source_take": "14-batch-input-20260922-223945",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790080785.3964741,
+      "source_stopped_at": 1790080822.676478,
+      "source_wall_duration": 37.28,
+      "source_raw_duration": 35.03,
+      "source_raw_sha256": "ce781d52137896ea28ee3c2e6515d9c90688c8270de8e6685ba2fb4487850378",
+      "source_manifest_sha256": "3efcb5a011098ed9b1d7db26f44f9f11f31ed77e17a2d70e5dc713ccb6beb407",
+      "poster_time": 11.824,
+      "render_fingerprint": "3b46638bd2e8ccc094c7eb237a4d777db18b6508c335fcf391c266d50907ca52",
+      "sha256": "b7ba128ac48f988704f01adec01e498a073e2f3db762fd8b5b49b00f1d0d997f",
+      "poster_sha256": "dcb57b0259004c98073322e3abbbb89ef0e44c18ef86e9961284ff6ad090c302"
+    },
+    {
+      "id": "15-export",
+      "title_ja": "バックアップとCSVを書き出す",
+      "title_en": "Export a backup and CSV",
+      "duration": 30.833,
+      "bytes": 441155,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "バックアップを書き出します",
+          "en": "Generate a complete backup"
+        },
+        {
+          "time": 7.893,
+          "ja": "保存先を選ぶ画面を確認し、この動画では選ばずに閉じます",
+          "en": "Review the share sheet; this walkthrough closes it without choosing a destination"
+        },
+        {
+          "time": 16.031,
+          "ja": "CSVでは書き出す期間を選べます",
+          "en": "Choose a date range for a CSV export"
+        }
+      ],
+      "source_take": "15-export-20260922-230721",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082441.638274,
+      "source_stopped_at": 1790082472.4779258,
+      "source_wall_duration": 30.84,
+      "source_raw_duration": 26.09,
+      "source_raw_sha256": "37f01172f5892233a7e59749c131ef58841b4792b7965d7deefc63b683bcf3f7",
+      "source_manifest_sha256": "4643d29a30cb6af19838afeb15761b20b17446304e03b6cdc0987a52a4a6b361",
+      "poster_time": 8.393,
+      "render_fingerprint": "53742e379463da4aa366d496ad16c06fa0a2b5db6e00fd67e20abb6870cccaae",
+      "sha256": "89ab5d98da89c384425c9ecdd038365c5db68ce1b08fead7c1bfbf796d53211c",
+      "poster_sha256": "48a188cc27f635efec6240e4a4696b633b2339a7fc970bf9953e9322b4453a64"
+    },
+    {
+      "id": "16-settings-and-shortcuts",
+      "title_ja": "表示・入力設定とショートカット",
+      "title_en": "Display, input, and shortcut settings",
+      "duration": 52.967,
+      "bytes": 1171132,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "集計の基準になる通貨を選べます",
+          "en": "Choose the primary reporting currency"
+        },
+        {
+          "time": 14.714,
+          "ja": "締め日を生活に合わせて変更できます",
+          "en": "Set a settlement day that matches your budget cycle"
+        },
+        {
+          "time": 25.963,
+          "ja": "日付の表示形式を選べます",
+          "en": "Choose how dates are displayed"
+        },
+        {
+          "time": 33.67,
+          "ja": "記帳に使う入力言語を選びます",
+          "en": "Choose the language used for recording"
+        },
+        {
+          "time": 41.417,
+          "ja": "ショートカットの案内を開きます",
+          "en": "Open the shortcut setup guide"
+        },
+        {
+          "time": 46.842,
+          "ja": "Siriの実行と音声認識は、対応する実機で設定・確認してください",
+          "en": "Complete Siri and speech setup on a supported physical device"
+        }
+      ],
+      "source_take": "16-settings-and-shortcuts-20260922-225410",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790081650.360855,
+      "source_stopped_at": 1790081703.311054,
+      "source_wall_duration": 52.95,
+      "source_raw_duration": 49.74,
+      "source_raw_sha256": "1b2423f465ec9b5df59b88d7862aaa751869fd4ef4a5232fa836e13ca9cec4a8",
+      "source_manifest_sha256": "34378cbec1df668dbc0185b50ff49a3270adf7a24fc2de0d00b855f913e70cfe",
+      "poster_time": 15.214,
+      "render_fingerprint": "8574946978bcca3115d1d66bd8ec5d695a235f2dba3e4877a847ff13c1b5ea9c",
+      "sha256": "13daf89601d58bcddff0c16d0f09a03badc17a055459313ed3b62b3ba3b7ef96",
+      "poster_sha256": "13c2c57d93259d01271e7c59762433b055cc9baeea233d6f98143728ef078822"
+    },
+    {
+      "id": "17-voice-and-sharing-entry",
+      "title_ja": "音声入力と共有の入口",
+      "title_en": "Voice input and sharing entry points",
+      "duration": 30.167,
+      "bytes": 364482,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "音声入力は記帳画面から切り替えます",
+          "en": "Switch to voice input from Chat"
+        },
+        {
+          "time": 5.056,
+          "ja": "実際の録音と認識は、対応する実機で確認してください",
+          "en": "Use a supported physical device to record and verify speech recognition"
+        },
+        {
+          "time": 11.947,
+          "ja": "財布を右にスワイプすると共有の入口があります",
+          "en": "Swipe a wallet right to find sharing"
+        },
+        {
+          "time": 26.416,
+          "ja": "共有する前に権限を選びます。ここでは選ばずに閉じます",
+          "en": "Choose permissions before sharing; this walkthrough dismisses without creating a share"
+        }
+      ],
+      "source_take": "17-voice-and-sharing-entry-20260922-230757",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790082477.891329,
+      "source_stopped_at": 1790082508.0593998,
+      "source_wall_duration": 30.168,
+      "source_raw_duration": 27.102,
+      "source_raw_sha256": "3efbcf61726bb60e4b113be44a5fbda1442a1037fc0bbe77e8e44d6c8f911bb7",
+      "source_manifest_sha256": "0d57c96254bd915d6b14761ca1a1ad68da8b2f8ab421feedd8c52799463ad3f0",
+      "poster_time": 5.556,
+      "render_fingerprint": "2a4bd698509f5222d4bc722974ef6124bc31954e3c27919b0607e9a596ef4d1b",
+      "sha256": "254d50042edce745d7bcd6f8c03c1cf0bd2aa08bf065806f822454fbba83b245",
+      "poster_sha256": "8c87710d866b1e34b2b5eeddb4c8561eb16012ff59d072b3e16bcf469b6a40fe"
+    }
+  ]
+}
