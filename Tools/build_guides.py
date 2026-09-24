@@ -26,11 +26,11 @@ TEXT = {
     'ja': {'heading': 'やりたいことから探す', 'intro': '動画を選ぶと、操作の手順が開きます。自分のペースで再生・一時停止できます。',
            'search': '操作を検索', 'placeholder': '例：カテゴリ、予算、取り込み', 'clear': '検索をクリア', 'count': '本の操作動画',
            'play': '動画を再生', 'steps': '操作の手順', 'download': '動画ファイルを開く', 'empty': '該当する操作が見つかりません。別の言葉で検索してください。',
-           'caption': 'アプリ 1.1.3・日本語の画面／日本語・英語字幕', 'error': '動画を読み込めませんでした。下のリンクから動画を開けます。'},
+           'caption': 'アプリ {app_version}・日本語の画面／日本語・英語字幕', 'error': '動画を読み込めませんでした。下のリンクから動画を開けます。'},
     'en': {'heading': 'Find what you want to do', 'intro': 'Choose a video to see the steps. Play and pause whenever you need.',
            'search': 'Find a guide', 'placeholder': 'Try categories, budget, or import', 'clear': 'Clear search', 'count': 'how-to videos',
            'play': 'Play video', 'steps': 'Step by step', 'download': 'Open video file', 'empty': 'No matching guides. Try another word.',
-           'caption': 'App 1.1.3 · Japanese interface · Japanese and English captions', 'error': 'The video could not load. Use the link below to open it.'},
+           'caption': 'App {app_version} · Japanese interface · Japanese and English captions', 'error': 'The video could not load. Use the link below to open it.'},
 }
 SCOPE_NOTES = {
     '09-keywords': {
@@ -48,6 +48,10 @@ SCOPE_NOTES = {
     '17-voice-and-sharing-entry': {
         'ja': '音声入力への切り替えと、財布を共有する前の設定を紹介します。音声の認識結果や共有の完了は、この動画では実演していません。',
         'en': 'This video shows how to open voice input and the settings before sharing a wallet. It does not demonstrate speech recognition or a completed share.',
+    },
+    '20-shortcuts-siri-name': {
+        'ja': '自分用のショートカットを作り、Siriに呼びかけやすい短い名前を付ける設定を紹介します。Siriからの実行や、マイクを使った音声認識は、この動画には含まれていません。',
+        'en': 'This recording shows creating a personal shortcut and giving it a short name for Siri. It does not demonstrate running it with Siri or microphone-based speech recognition.',
     },
 }
 
@@ -71,6 +75,14 @@ ENTRY_POINTS = {
     '16-settings-and-shortcuts': ('その他', 'More'),
     '17-voice-and-sharing-entry': ('音声入力は「記録」／共有は「その他 → 財布」', 'Voice input: Record / sharing: More → Wallets'),
 }
+# The original 17 recordings stay mandatory and in their original order.
+REQUIRED_RECORDING_IDS = tuple(ENTRY_POINTS)
+ENTRY_POINTS.update({
+    '18-shortcuts-tap': ('iPhoneの「ショートカット」アプリ → ライブラリ → すべてのショートカット', 'iPhone Shortcuts app → Library → All Shortcuts'),
+    '19-shortcuts-home-screen': ('iPhoneの「ショートカット」アプリ → ライブラリ → すべてのショートカット', 'iPhone Shortcuts app → Library → All Shortcuts'),
+    '20-shortcuts-siri-name': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
+})
+PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 
 
 def esc(value):
@@ -103,8 +115,10 @@ def read_clips(ui_language):
     if manifest.get('app_version') != '1.1.3' or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version=1.1.3 and ui_language={ui_language}')
     expected_ids = list(ENTRY_POINTS)
-    if [clip['id'] for clip in manifest['clips']] != expected_ids:
-        raise ValueError(f'{ui_language}: expected all {len(expected_ids)} recording IDs in guide order')
+    recording_ids = [clip['id'] for clip in manifest['clips']]
+    if (not len(REQUIRED_RECORDING_IDS) <= len(recording_ids) <= len(expected_ids)
+            or recording_ids != expected_ids[:len(recording_ids)]):
+        raise ValueError(f'{ui_language}: expected all {len(REQUIRED_RECORDING_IDS)} original recordings, followed by a continuous prefix of recordings 18–20')
     ids = set()
     clips = []
     for clip in manifest['clips']:
@@ -113,6 +127,11 @@ def read_clips(ui_language):
         # valid, but never relabel an explicitly different UI language.
         if 'ui_language' in clip and clip['ui_language'] != ui_language:
             raise ValueError(f'{slug}: clip UI language does not match {ui_language}')
+        provenance = {key: clip.get(key, manifest.get(key)) for key in PROVENANCE_FIELDS}
+        for key in PROVENANCE_FIELDS:
+            if key in clip and (not isinstance(clip[key], (str, int)) or isinstance(clip[key], bool)
+                                or not str(clip[key]).strip()):
+                raise ValueError(f'{slug}: invalid recording {key}')
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) or slug in ids:
             raise ValueError(f'Invalid or duplicate clip id: {slug}')
         ids.add(slug)
@@ -134,20 +153,22 @@ def read_clips(ui_language):
         for path in required[2:]:
             if not path.read_text().lstrip('\ufeff').startswith('WEBVTT'):
                 raise ValueError(f'Invalid caption header: {path.name}')
-        clips.append({**clip, '_ui_language': ui_language})
+        clips.append({**clip, '_ui_language': ui_language, '_provenance': provenance})
     return clips
 
 
-def check_matching_provenance():
-    manifests = [json.loads((MEDIA_ROOT / lang / 'manifest.json').read_text())
-                 for lang in ('ja', 'en')]
+def check_matching_provenance(japanese, english):
+    if [clip['id'] for clip in japanese] != [clip['id'] for clip in english]:
+        raise ValueError('Japanese and English recording IDs must match')
     # Legacy metadata may omit build provenance. When both recordings declare
-    # it, a translated guide must describe the same app build and source.
-    for key in ('app_build', 'source_commit'):
-        values = [manifest.get(key) for manifest in manifests]
-        if all(value is not None and value != '' for value in values):
-            if str(values[0]) != str(values[1]):
-                raise ValueError(f'Japanese and English recording {key} must match')
+    # it, each translated guide must describe the same app version/build/source.
+    # Runtime can differ because it describes the device used for each take.
+    for ja_clip, en_clip in zip(japanese, english):
+        for key in ('app_version', 'app_build', 'source_commit'):
+            values = [clip['_provenance'][key] for clip in (ja_clip, en_clip)]
+            if all(value is not None and value != '' for value in values):
+                if str(values[0]) != str(values[1]):
+                    raise ValueError(f'{ja_clip["id"]}: Japanese and English recording {key} must match')
 
 
 def card(clip, lang):
@@ -156,10 +177,11 @@ def card(clip, lang):
     title = clip[f'title_{lang}']
     ui_language = clip['_ui_language']
     base = f'assets/guides/1.1.3/{ui_language}/{slug}'
-    caption = t['caption']
+    app_version = clip['_provenance']['app_version']
+    caption = t['caption'].format(app_version=app_version)
     if ui_language == 'en':
-        caption = ('アプリ 1.1.3・英語の画面／日本語・英語字幕' if lang == 'ja'
-                   else 'App 1.1.3 · English interface · Japanese and English captions')
+        caption = (f'アプリ {app_version}・英語の画面／日本語・英語字幕' if lang == 'ja'
+                   else f'App {app_version} · English interface · Japanese and English captions')
     entry = ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
     entry_label = '開く場所' if lang == 'ja' else 'Where to start'
     search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
@@ -191,7 +213,7 @@ def card(clip, lang):
                   {tracks}
                 </video>
                 <p class="guide-video-error" hidden>{t['error']}</p>
-                <p class="guide-media-note">{caption}</p>
+                <p class="guide-media-note">{esc(caption)}</p>
                 <a class="guide-download" href="{base}.mp4">{t['download']}</a>
               </div>
               <div class="guide-instructions"><p class="guide-entry"><strong>{entry_label}</strong><br>{esc(entry)}</p><h4>{t['steps']}</h4>{scope_note}<ol>{steps}</ol></div>
@@ -239,11 +261,11 @@ def main():
         has_english = (MEDIA_ROOT / 'en/manifest.json').is_file()
         if args.require_english and not has_english:
             raise ValueError('English interface recordings are required')
+        if len(japanese) > len(REQUIRED_RECORDING_IDS) and not has_english:
+            raise ValueError('Recordings 18–20 require matching Japanese and English interface recordings')
         english = read_clips('en') if has_english else japanese
         if has_english:
-            check_matching_provenance()
-        if [c['id'] for c in japanese] != [c['id'] for c in english]:
-            raise ValueError('Japanese and English recording IDs must match')
+            check_matching_provenance(japanese, english)
         changed = []
         for lang, name in [('ja', 'support-ja.html'), ('en', 'support.html')]:
             clips = japanese if lang == 'ja' else english

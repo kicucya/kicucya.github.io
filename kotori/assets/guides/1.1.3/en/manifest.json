@@ -937,6 +937,273 @@
           24.2
         ]
       }
+    },
+    {
+      "id": "18-shortcuts-tap",
+      "title_ja": "ショートカットをタップして記録する",
+      "title_en": "Tap a shortcut to record",
+      "ui_language": "en",
+      "duration": 24.2,
+      "bytes": 494214,
+      "steps": [
+        {
+          "time": 0.001,
+          "ja": "「ショートカット」で、作成した「Record spending」を開きます。",
+          "en": "In Shortcuts, find the personal shortcut Record spending."
+        },
+        {
+          "time": 4.0,
+          "ja": "カード右上の再生ボタンをタップします。",
+          "en": "Tap the play button at the top right of the card."
+        },
+        {
+          "time": 7.0,
+          "ja": "内容と金額を入力します。例：Coffee $4.50。",
+          "en": "Enter the description and amount, for example Coffee $4.50."
+        },
+        {
+          "time": 10.5,
+          "ja": "「Done」で送信。金額を確認します。",
+          "en": "Tap Done and check the saved amount."
+        },
+        {
+          "time": 14.5,
+          "ja": "Kotoriを開くと、未確認の記録として確認できます。",
+          "en": "Open Kotori to review the pending entry."
+        }
+      ],
+      "source_take": "18-shortcuts-tap-20260924-235848-281591",
+      "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
+      "source_started_at": 1790265528.460955,
+      "source_stopped_at": 1790265552.6490219,
+      "source_wall_duration": 24.188,
+      "source_raw_duration": 24.19,
+      "source_raw_sha256": "ba549fe02b5b9a0fd8a5099a78d7c3b5abe9c01899399a1d546739d67393781a",
+      "source_manifest_sha256": "dfd569023323f8aaa41bf7972f2f76cc42f135e454195a181296f51a8195a65f",
+      "poster_time": 4.5,
+      "render_fingerprint": "d6bbe3599f48338f784e129271b7a33a5ea1d7e3664b1677e5c65534dbc216e3",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "4d6d2401280a707c3778bf562df841aa588a1cd98fa0f19dd6f619ed6985b008",
+      "sha256": "a5210f7fc746b2c6a8c2deb057c78590f268d753fe6636bb03b9c19ec95ced1c",
+      "poster_sha256": "0feccef35bc71a3669fd70afdc788db09fb6d28dc43bbb397a1419d08fc6c553",
+      "caption_timing_review": {
+        "method": "Decoded each rendered MP4 from the beginning with ffmpeg fps=2 (no input seeking); visually reviewed every 0.5-second sample and placed captions before the corresponding recorded actions. Raw movie and action order unchanged.",
+        "sampling_precision_seconds": 0.5,
+        "original_step_times": [
+          0.001,
+          2.947,
+          7.5,
+          11.526,
+          19.781
+        ],
+        "reviewed_step_times": [
+          0.001,
+          4.0,
+          7.0,
+          10.5,
+          14.5
+        ]
+      },
+      "app_version": "1.1.3",
+      "app_build": "1409",
+      "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+      "device_name": "iPhone 17 Pro Max",
+      "runtime": "iOS 27.0 (24A434)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time"
+    },
+    {
+      "id": "19-shortcuts-home-screen",
+      "title_ja": "ホーム画面からタップして記録する",
+      "title_en": "Record from the Home Screen",
+      "ui_language": "en",
+      "duration": 50.467,
+      "bytes": 1696242,
+      "steps": [
+        {
+          "time": 0.001,
+          "ja": "作成した「Record spending」のカードを開きます。",
+          "en": "Open the personal shortcut Record spending."
+        },
+        {
+          "time": 4.0,
+          "ja": "「Edit」でアクションの編集画面を開きます。",
+          "en": "Tap Edit to open the action editor."
+        },
+        {
+          "time": 9.0,
+          "ja": "上部の名前のメニューから「Add to Home Screen」を選びます。",
+          "en": "Open the name menu at the top and choose Add to Home Screen."
+        },
+        {
+          "time": 19.5,
+          "ja": "表示名とアイコンを確認し、右上のチェックマークで追加します。",
+          "en": "Check the name and icon, then tap the checkmark to add it."
+        },
+        {
+          "time": 27.5,
+          "ja": "ホーム画面の「Record spending」をタップします。",
+          "en": "Tap Record spending on the Home Screen."
+        },
+        {
+          "time": 32.5,
+          "ja": "内容と金額を入力します。例：Lunch $12.80。",
+          "en": "Enter the description and amount, for example Lunch $12.80."
+        },
+        {
+          "time": 36.5,
+          "ja": "「Done」で送信し、追加された金額を確認します。",
+          "en": "Tap Done and check the amount in the confirmation."
+        },
+        {
+          "time": 45.5,
+          "ja": "Kotoriを開いて、未確認の内容を確認できます。",
+          "en": "Open Kotori to review the pending entry."
+        }
+      ],
+      "source_take": "19-shortcuts-home-screen-20260925-003420-666063",
+      "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
+      "source_started_at": 1790267660.850097,
+      "source_stopped_at": 1790267711.311222,
+      "source_wall_duration": 50.461,
+      "source_raw_duration": 50.462,
+      "source_raw_sha256": "891c07722efc6934b3aedf0f7714ba815948eeed6ecd9f25dc0b1d6b45f2dd5e",
+      "source_manifest_sha256": "0233c4f3b812a3b80792ed63815e2e6dcd98b9f50f7d5aa78323be1dc09e77d3",
+      "poster_time": 15.0,
+      "render_fingerprint": "133574c1b2386583efc72c8a71f7bb4bbf49230a12469dc659448a3ea875a4a0",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "617118dd411fca2a74fdf42ca0a9133b849e5503b8fd4906c663f40a24ee9b56",
+      "sha256": "1ccd10fe60a6b37a8f383edeece950a2c543486473df07c241999b3c5be123fe",
+      "poster_sha256": "d725669735b29827766eb7456e53af70a35db3861c95aa0c4fd0c06351c2f78e",
+      "poster_time_override": 15.0,
+      "poster_time_override_reason": "Visual review at 0.5-second intervals: 15.0 seconds shows the real Home Screen icon-addition panel; the default 4.5-second frame shows an unrepresentative system shortcut-description preparation page.",
+      "caption_timing_review": {
+        "method": "Decoded each rendered MP4 from the beginning with ffmpeg fps=2 (no input seeking); visually reviewed every 0.5-second sample and placed captions before the corresponding recorded actions. Raw movie and action order unchanged.",
+        "sampling_precision_seconds": 0.5,
+        "original_step_times": [
+          0.001,
+          3.896,
+          9.046,
+          19.074,
+          27.872,
+          32.93,
+          36.985,
+          46.02
+        ],
+        "reviewed_step_times": [
+          0.001,
+          4.0,
+          9.0,
+          19.5,
+          27.5,
+          32.5,
+          36.5,
+          45.5
+        ]
+      },
+      "app_version": "1.1.3",
+      "app_build": "1409",
+      "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+      "device_name": "iPhone 17 Pro Max",
+      "runtime": "iOS 27.0 (24A434)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time"
+    },
+    {
+      "id": "20-shortcuts-siri-name",
+      "title_ja": "Siriに呼びかける名前を決める",
+      "title_en": "Choose a short name for Siri",
+      "ui_language": "en",
+      "duration": 51.733,
+      "bytes": 682081,
+      "steps": [
+        {
+          "time": 0.001,
+          "ja": "「ショートカット」のライブラリからKotoriを開きます。",
+          "en": "In the Shortcuts library, open Kotori."
+        },
+        {
+          "time": 5.5,
+          "ja": "マイクの「Record Entry」を長押しします。",
+          "en": "Touch and hold Record Entry with the microphone icon."
+        },
+        {
+          "time": 11.0,
+          "ja": "「New Shortcut」で自分用のショートカットを作ります。",
+          "en": "Choose New Shortcut to create a personal shortcut."
+        },
+        {
+          "time": 16.5,
+          "ja": "「Edit」でアクションの編集画面を開きます。",
+          "en": "Tap Edit to open the action editor."
+        },
+        {
+          "time": 21.0,
+          "ja": "Entryをタップし「Ask Each Time」を選びます。",
+          "en": "Tap Entry and choose Ask Each Time."
+        },
+        {
+          "time": 28.5,
+          "ja": "画面上部の名前から「Rename」を選びます。",
+          "en": "Open the name menu at the top and choose Rename."
+        },
+        {
+          "time": 38.5,
+          "ja": "例として「Log my spending」という短い名前を付けます。",
+          "en": "Choose a short name, such as Log my spending."
+        },
+        {
+          "time": 46.0,
+          "ja": "保存された名前を確認します。この動画は名前の設定までを紹介します。",
+          "en": "Check the saved name. This video covers setting up the name."
+        }
+      ],
+      "source_take": "20-shortcuts-siri-name-20260925-003635-452392",
+      "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
+      "source_started_at": 1790267795.6148438,
+      "source_stopped_at": 1790267847.3338969,
+      "source_wall_duration": 51.719,
+      "source_raw_duration": 47.855,
+      "source_raw_sha256": "6980132977de23c68b6843c7379e34439718e83dba9596632f0fa4c991136ed2",
+      "source_manifest_sha256": "cc9adf8acbeece79d29c02a690f2381b2e14a9686e6a91a64517789071fe6e78",
+      "poster_time": 6.0,
+      "render_fingerprint": "2f94d7e4aaee5c123c60b0ee75d5a12d6524924c5d6e954a96add48ecdfcd4b5",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "a47761ff5efaad349e7fc544f02392ccf4a8a425bcab0813155c713ee321a912",
+      "sha256": "e5260a107957f832d43cbfb9f9e29e5410a0ffc36febe25c3f1e79e61da6a835",
+      "poster_sha256": "a5c3d10b34397691c2d4ccc01d9574ebca89fb11e7fcf1ac6b8cb42574f342d2",
+      "caption_timing_review": {
+        "method": "Decoded each rendered MP4 from the beginning with ffmpeg fps=2 (no input seeking); visually reviewed every 0.5-second sample and placed captions before the corresponding recorded actions. Raw movie and action order unchanged.",
+        "sampling_precision_seconds": 0.5,
+        "original_step_times": [
+          0.001,
+          4.901,
+          10.881,
+          16.232,
+          21.251,
+          29.064,
+          41.936,
+          45.691
+        ],
+        "reviewed_step_times": [
+          0.001,
+          5.5,
+          11.0,
+          16.5,
+          21.0,
+          28.5,
+          38.5,
+          46.0
+        ]
+      },
+      "app_version": "1.1.3",
+      "app_build": "1409",
+      "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+      "device_name": "iPhone 17 Pro Max",
+      "runtime": "iOS 27.0 (24A434)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time",
+      "demonstration_scope": "Create and rename a personal shortcut; no Siri execution or microphone recognition recorded"
     }
   ]
 }
