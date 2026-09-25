@@ -40,8 +40,7 @@ def registry():
   raise ValueError('Invalid or duplicate version')
  if data['latest'] not in names or data['working'] not in names:
   raise ValueError('latest/working must name a registered version')
- if next(v for v in versions if v['version'] == data['latest'])['status'] != 'released':
-  raise ValueError('latest must be a released version')
+ # The default website version and App Store release status are independent.
  for v in versions:
   if v['source'] != 'v' + v['version'] or v['status'] not in ('released', 'preview'):
    raise ValueError('Invalid source or status: ' + v['version'])
