@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from l10n_terms import validate_copy
 
 ROOT = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = ROOT / 'kotori/assets/guides/1.1.3'
@@ -142,15 +143,18 @@ def read_clips(ui_language):
             raise ValueError(f'Missing title or steps: {slug}')
         if float(clip['duration']) <= 0 or int(clip['bytes']) != required[0].stat().st_size:
             raise ValueError(f'Invalid duration or stale video byte count: {slug}')
+        validate_copy(clip['title_ja'], 'ja', f'{ui_language}/{slug}: title_ja')
         previous = -1
         for step in clip['steps']:
             if not step.get('ja') or not step.get('en'):
                 raise ValueError(f'Missing step translation: {slug}')
+            validate_copy(step['ja'], 'ja', f'{ui_language}/{slug}: step')
             time = float(step['time'])
             if not 0 <= time <= float(clip['duration']) or time < previous:
                 raise ValueError(f'Invalid step time: {slug}')
             previous = time
         for path in required[2:]:
+            validate_copy(path.read_text(), 'ja' if path.name.endswith('.ja.vtt') else 'en', str(path))
             if not path.read_text().lstrip('\ufeff').startswith('WEBVTT'):
                 raise ValueError(f'Invalid caption header: {path.name}')
         clips.append({**clip, '_ui_language': ui_language, '_provenance': provenance})

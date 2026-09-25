@@ -13,6 +13,7 @@ import posixpath
 import re
 import sys
 from urllib.parse import unquote, urlsplit
+from l10n_terms import validate_copy
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / '_versions/kotori'
@@ -93,6 +94,7 @@ def render(data, version, page, route):
  if source.count(marker) != 1:
   raise ValueError('Missing unique navigation marker: ' + page)
  source = source.replace(marker, marker + '\n\n' + version_bar(data, version, page, route), 1)
+ validate_copy(source, PAGES[page], version['source'] + '/' + page)
  return source.encode()
 
 

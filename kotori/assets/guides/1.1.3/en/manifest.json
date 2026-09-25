@@ -13,7 +13,7 @@
   "clips": [
     {
       "id": "01-quick-entry",
-      "title_ja": "ひとことで記帳",
+      "title_ja": "ひとことで記録",
       "title_en": "Record an expense in a sentence",
       "ui_language": "en",
       "duration": 40.7,
@@ -79,7 +79,7 @@
       "steps": [
         {
           "time": 1.015,
-          "ja": "記帳画面の＋を開きます",
+          "ja": "「記録」画面の＋を開きます",
           "en": "Open the plus button in Record"
         },
         {
@@ -137,7 +137,7 @@
       "steps": [
         {
           "time": 1.01,
-          "ja": "続けて記帳すると、前の内容は確認待ちになります",
+          "ja": "続けて記録すると、前の内容は確認待ちになります",
           "en": "A previous unconfirmed entry becomes pending when the next entry is sent"
         },
         {
@@ -372,7 +372,7 @@
         },
         {
           "time": 37.0,
-          "ja": "財布を選ぶと、記帳と収支の両方に反映されます",
+          "ja": "財布を選ぶと、「記録」と「収支」の両方に反映されます",
           "en": "The selected wallet is shared by Record and Transactions"
         }
       ],
@@ -853,7 +853,7 @@
         },
         {
           "time": 23.447,
-          "ja": "記帳に使う入力言語を選びます",
+          "ja": "記録に使う入力言語を選びます",
           "en": "Choose the language used for recording"
         },
         {
@@ -890,7 +890,7 @@
       "steps": [
         {
           "time": 1.012,
-          "ja": "音声入力は記帳画面から切り替えます",
+          "ja": "音声入力は「記録」画面から切り替えます",
           "en": "Switch to voice input from Record"
         },
         {
