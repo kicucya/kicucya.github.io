@@ -807,8 +807,8 @@
     },
     {
       "id": "19-shortcuts-home-screen",
-      "title_ja": "ホーム画面からタップして記録する",
-      "title_en": "Record from the Home Screen",
+      "title_ja": "アプリを開かずに記録：ホーム画面のショートカット",
+      "title_en": "Record without opening the app: Home Screen shortcut",
       "ui_language": "ja",
       "duration": 96.667,
       "bytes": 2389649,
@@ -933,8 +933,8 @@
     },
     {
       "id": "20-shortcuts-siri-name",
-      "title_ja": "Siriに呼びかける名前を決める",
-      "title_en": "Choose a short name for Siri",
+      "title_ja": "アプリを開かずに記録：Siriで使う準備",
+      "title_en": "Record without opening the app: Set up a Siri phrase",
       "ui_language": "ja",
       "duration": 50.9,
       "bytes": 679569,

@@ -87,8 +87,8 @@ manifest の形式：
 既存の `01-quick-entry` から `17-voice-and-sharing-entry` までの17本は、元の順序ですべて残す。実際に収録して素材がそろったら、次の順序で末尾へ追加できる。
 
 1. `18-shortcuts-tap`：ショートカットアプリでタップして実行する。
-2. `19-shortcuts-home-screen`：自分用のショートカットをホーム画面に追加して実行する。
-3. `20-shortcuts-siri-name`：自分用のショートカットを作り、Siriに呼びかけやすい短い名前を付ける。タイトルは「Siriに呼びかける名前を決める」／「Choose a short name for Siri」とする。
+2. `19-shortcuts-home-screen`：自分用のショートカットをホーム画面に追加して実行する。タイトルは「アプリを開かずに記録：ホーム画面のショートカット」／「Record without opening the app: Home Screen shortcut」とする。
+3. `20-shortcuts-siri-name`：自分用のショートカットを作り、Siriに呼びかけやすい短い名前を付ける。タイトルは「アプリを開かずに記録：Siriで使う準備」／「Record without opening the app: Set up a Siri phrase」とする。
 
 18だけ、18と19、18〜20の順次追加に対応する。途中を抜かす、並べ替える、元の17本を減らす構成は拒否する。追加する各動画には、日本語画面と英語画面の両方の収録が必要。日英manifestのID一覧が一致しない場合や、追加分があるのに英語manifestがない場合は、生成も `--check` も失敗する。旧17本だけの構成では、従来どおり英語manifestがない場合の日本語動画への切り替えを維持する。
 
