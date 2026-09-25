@@ -731,195 +731,76 @@
       "poster_sha256": "8c87710d866b1e34b2b5eeddb4c8561eb16012ff59d072b3e16bcf469b6a40fe"
     },
     {
-      "id": "18-shortcuts-tap",
-      "title_ja": "ショートカットをタップして記録する",
-      "title_en": "Tap a shortcut to record",
-      "ui_language": "ja",
-      "duration": 24.333,
-      "bytes": 469251,
-      "steps": [
-        {
-          "time": 0.002,
-          "ja": "「ショートカット」で、作成した「記録する」を表示します。",
-          "en": "In Shortcuts, find the personal shortcut 記録する (Record)."
-        },
-        {
-          "time": 4.0,
-          "ja": "カード右上の再生ボタンをタップします。",
-          "en": "Tap the play button at the top right of the card."
-        },
-        {
-          "time": 7.0,
-          "ja": "内容と金額を入力します。例：コーヒー450円。",
-          "en": "Enter the description and amount, for example コーヒー450円 (coffee, 450 yen)."
-        },
-        {
-          "time": 11.0,
-          "ja": "「Done」で送信。金額を確認します。",
-          "en": "Tap Done and check the saved amount."
-        },
-        {
-          "time": 19.5,
-          "ja": "ことりを開くと、未確認の記録として確認できます。",
-          "en": "Open Kotori to review the pending entry."
-        }
-      ],
-      "source_take": "18-shortcuts-tap-20260925-015153-945413",
-      "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
-      "source_started_at": 1790272314.124543,
-      "source_stopped_at": 1790272338.4720068,
-      "source_wall_duration": 24.347,
-      "source_raw_duration": 24.352,
-      "source_raw_sha256": "e0de444db3cece70ab1d3e1e9e4f2b9ac5b1fba4a0bf56d5476eb98c5213f5a8",
-      "source_manifest_sha256": "75087d20ff65ac32a78ffcc6791474fa51c01b15a3c64dea32c3efb62298dc55",
-      "poster_time": 4.5,
-      "render_fingerprint": "79511ed59ea37c78647733cd51ed475f3f9b52d1aa071a0b6c0e5e0abd12ee8d",
-      "poster_time_source": "step_default",
-      "poster_fingerprint": "99adbf45c2dd50ec6691b4060d6497dd8a7489b2b542a09542181185f1755a4a",
-      "sha256": "69ec3e787fc54605ef2aa8da7f4fa14baf44a2bd4380b3b8aa287eae20769aed",
-      "poster_sha256": "90819a21f3af9e7c52b21642693836b0cc927ccd0f263434631d7429a1a02778",
-      "caption_timing_review": {
-        "method": "Decoded rendered video from the beginning at 2 fps with ffmpeg; visually inspected all 0.5-second contact-sheet samples, then aligned instructions just before each visible action. No UI pixels or recording content changed.",
-        "sampling_precision_seconds": 0.5,
-        "original_step_times": [
-          0.002,
-          2.946,
-          7.492,
-          11.371,
-          19.777
-        ],
-        "reviewed_step_times": [
-          0.002,
-          4.0,
-          7.0,
-          11.0,
-          19.5
-        ]
-      },
-      "app_version": "1.1.3",
-      "app_build": "1409",
-      "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
-      "device_name": "iPhone 17 Pro Max",
-      "runtime": "iOS 27.0 (24A434)",
-      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
-      "provenance_source": "Build and simulator identity supplied by the operator at render time",
-      "system_dialog_language": "en; shortcut editor and app UI are Japanese"
-    },
-    {
       "id": "19-shortcuts-home-screen",
       "title_ja": "アプリを開かずに記録：ホーム画面のショートカット",
       "title_en": "Record without opening the app: Home Screen shortcut",
       "ui_language": "ja",
-      "duration": 96.667,
-      "bytes": 2389649,
+      "duration": 43.2,
+      "bytes": 957427,
       "steps": [
         {
-          "time": 0.004,
-          "ja": "作成した「記録する」のカードを開きます。",
-          "en": "Open the personal shortcut 記録する (Record)."
+          "time": 0.001,
+          "ja": "「ショートカット」のライブラリで「ことり」を開きます。",
+          "en": "In the Shortcuts library, open ことり (Kotori)."
         },
         {
-          "time": 7.0,
-          "ja": "「編集」でアクションの編集画面を開きます。",
-          "en": "Tap 編集 (Edit) to open the action editor."
+          "time": 6.599,
+          "ja": "3つの記録方法から、使いたいものを長押しします。ここでは「記録を追加」を選びます。",
+          "en": "Touch and hold one of the three preset recording options. This example uses 記録を追加 (Record Entry)."
         },
         {
-          "time": 11.5,
-          "ja": "上部の名前のメニューから「ホーム画面に追加」を選びます。",
-          "en": "Open the name menu at the top and choose ホーム画面に追加 (Add to Home Screen)."
+          "time": 14.484,
+          "ja": "「ホーム画面に追加」を選び、右上のチェックマークで追加します。",
+          "en": "Choose ホーム画面に追加 (Add to Home Screen), then tap the checkmark."
         },
         {
-          "time": 18.0,
-          "ja": "ホーム画面に表示する名前とアイコンを確認します。",
-          "en": "Check the name and icon that will appear on the Home Screen."
+          "time": 23.262,
+          "ja": "次からは、ホーム画面の「記録を追加」をタップするだけです。",
+          "en": "Next time, just tap 記録を追加 (Record Entry) on the Home Screen."
         },
         {
-          "time": 23.5,
-          "ja": "色は好みに合わせて変更できます。ここではブルーを選びます。",
-          "en": "Choose a color for the icon. This example uses blue."
+          "time": 30.0,
+          "ja": "内容と金額を入力して「Done」をタップします。例：ランチ1200円。",
+          "en": "Enter a description and amount, then tap Done. For example, ランチ1200円 (lunch, 1,200 yen)."
         },
         {
-          "time": 29.0,
-          "ja": "下へスクロールすると記号も選べます。今回は元の記号を使います。",
-          "en": "Scroll down to see the available symbols. Keep the current symbol for this example."
-        },
-        {
-          "time": 36.5,
-          "ja": "上に戻り、表示名と青いアイコンを確認します。",
-          "en": "Scroll back up and check the name and blue icon."
-        },
-        {
-          "time": 46.0,
-          "ja": "表示名とアイコンを確認し、右上のチェックマークで追加します。",
-          "en": "Check the name and icon, then tap the checkmark to add it."
-        },
-        {
-          "time": 63.5,
-          "ja": "ホーム画面の「記録する」をタップします。",
-          "en": "Tap 記録する (Record) on the Home Screen."
-        },
-        {
-          "time": 71.0,
-          "ja": "内容と金額を入力します。例：ランチ1200円。",
-          "en": "Enter the description and amount, for example ランチ1200円 (lunch, 1,200 yen)."
-        },
-        {
-          "time": 77.5,
-          "ja": "「Done」で送信し、追加された金額を確認します。",
-          "en": "Tap Done and check the amount in the confirmation."
-        },
-        {
-          "time": 88.5,
-          "ja": "ことりを開いて、未確認の内容を確認できます。",
-          "en": "Open Kotori to review the pending entry."
+          "time": 34.0,
+          "ja": "アプリを開かずに追加できました。あとで「収支」で未確認の記録を確認できます。",
+          "en": "The entry was added without opening the app. Review the pending entry later in Transactions."
         }
       ],
-      "source_take": "19-shortcuts-home-screen-20260925-085327-293331",
+      "source_take": "19-shortcuts-home-screen-20260925-110423-747179",
       "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
-      "source_started_at": 1790294007.74402,
-      "source_stopped_at": 1790294104.407678,
-      "source_wall_duration": 96.664,
-      "source_raw_duration": 96.665,
-      "source_raw_sha256": "ddf5b1fdf09d9e729077e3f4e73f3d6d2c00d5ec60fd81f171f2c26b80f4f06d",
-      "source_manifest_sha256": "8350854ff37904799bb828cdb32a57e638e4711927522b050c2f949bb1804fa7",
-      "poster_time": 26.0,
-      "render_fingerprint": "894edf4749381c055f5cae8c40b5486a8c7547ab8fb16868d8cde4ddcf56bba8",
-      "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "bafce49cf8ce05f0f68dd0c68506174b6e9e54d60f5126fafb232ec9de84598a",
-      "sha256": "9a26c53a5758e3eda4ac55b7ac2a9cf6ccc7eb84ec7bf05934ed20d76a583d80",
-      "poster_sha256": "e0972f2609eb028e3b786b375ad4049da4a9be33c3f41c74a30b99a27ec37022",
-      "poster_time_override": 26.0,
-      "poster_time_override_reason": "Manually reviewed real frame: the full Add to Home Screen panel clearly shows the blue 記録する icon, the selected color and the top-right checkmark, after the color change has settled. The default poster showed the intermediate shortcut description instead.",
+      "source_started_at": 1790301863.936544,
+      "source_stopped_at": 1790301907.137198,
+      "source_wall_duration": 43.201,
+      "source_raw_duration": 37.623,
+      "source_raw_sha256": "94a2d628d63f873ca3b8f112a7b19ecac0dccf2cf0fa598d189a043331628392",
+      "source_manifest_sha256": "09646835e8d015173ace5ee3cbfe5201c6cf13a3c6c987bd4a99fe1f54c35152",
+      "poster_time": 7.099,
+      "render_fingerprint": "0c9d69d06e5bbeae1171ddade8e4cf96182bd596adedc5edb340dc782b04fcbc",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "154be1cb53feaa9eca164c76d42b96993798ecbd558a431a9a8d3239a2fdf2d4",
+      "sha256": "f3e705c24fa6d9732d1675bd945f3573dec61520f0fb1579cfb0ba67bdc2ebdf",
+      "poster_sha256": "31008a8cc7687389af89be3f9a858130baef3bcb5cbf3ddb86774bc453759575",
       "caption_timing_review": {
-        "method": "Decoded the full rendered replacement take from the beginning using ffmpeg fps=2; visually inspected all 193 samples at 0.5-second spacing, then aligned action instructions approximately 0.5–1 second before each visible action. The complete Add to Home Screen panel, blue selection, symbol scroll, checkmark confirmation, real input, success receipt and pending entry are present. No UI pixels or recording content changed.",
-        "sampling_precision_seconds": 0.5,
+        "method": "Decoded the rendered video from the beginning and reviewed a 1 fps contact sheet plus the original XCTest screenshots. Aligned input and success captions to the actual input and result frames; no video frame altered.",
+        "sampling_precision_seconds": 1.0,
         "original_step_times": [
-          0.004,
-          6.668,
-          11.922,
-          16.532,
-          23.278,
-          29.552,
-          37.252,
-          45.621,
-          58.565,
-          71.369,
-          77.876,
-          89.419
+          0.001,
+          6.599,
+          14.484,
+          23.262,
+          32.116,
+          39.19
         ],
         "reviewed_step_times": [
-          0.004,
-          7.0,
-          11.5,
-          18.0,
-          23.5,
-          29.0,
-          36.5,
-          46.0,
-          63.5,
-          71.0,
-          77.5,
-          88.5
+          0.001,
+          6.599,
+          14.484,
+          23.262,
+          30.0,
+          34.0
         ]
       },
       "app_version": "1.1.3",
@@ -929,7 +810,7 @@
       "runtime": "iOS 27.0 (24A434)",
       "capture": "Real iOS Simulator UI; synthetic local demonstration data",
       "provenance_source": "Build and simulator identity supplied by the operator at render time",
-      "system_dialog_language": "en; shortcut editor and app UI are Japanese"
+      "system_dialog_language": "en; shortcut library and app UI are Japanese"
     },
     {
       "id": "20-shortcuts-siri-name",

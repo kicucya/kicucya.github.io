@@ -79,8 +79,7 @@ ENTRY_POINTS = {
 # The original 17 recordings stay mandatory and in their original order.
 REQUIRED_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS.update({
-    '18-shortcuts-tap': ('iPhoneの「ショートカット」アプリ → ライブラリ → すべてのショートカット', 'iPhone Shortcuts app → Library → All Shortcuts'),
-    '19-shortcuts-home-screen': ('iPhoneの「ショートカット」アプリ → ライブラリ → すべてのショートカット', 'iPhone Shortcuts app → Library → All Shortcuts'),
+    '19-shortcuts-home-screen': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
     '20-shortcuts-siri-name': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
 })
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
@@ -119,7 +118,7 @@ def read_clips(ui_language):
     recording_ids = [clip['id'] for clip in manifest['clips']]
     if (not len(REQUIRED_RECORDING_IDS) <= len(recording_ids) <= len(expected_ids)
             or recording_ids != expected_ids[:len(recording_ids)]):
-        raise ValueError(f'{ui_language}: expected all {len(REQUIRED_RECORDING_IDS)} original recordings, followed by a continuous prefix of recordings 18–20')
+        raise ValueError(f'{ui_language}: expected all {len(REQUIRED_RECORDING_IDS)} original recordings, followed by a continuous prefix of recordings 19–20')
     ids = set()
     clips = []
     for clip in manifest['clips']:
@@ -266,7 +265,7 @@ def main():
         if args.require_english and not has_english:
             raise ValueError('English interface recordings are required')
         if len(japanese) > len(REQUIRED_RECORDING_IDS) and not has_english:
-            raise ValueError('Recordings 18–20 require matching Japanese and English interface recordings')
+            raise ValueError('Recordings 19–20 require matching Japanese and English interface recordings')
         english = read_clips('en') if has_english else japanese
         if has_english:
             check_matching_provenance(japanese, english)

@@ -1,49 +1,25 @@
 WEBVTT
 
 1
-00:00:00.004 --> 00:00:07.000
-Open the personal shortcut 記録する (Record).
+00:00:00.001 --> 00:00:06.599
+In the Shortcuts library, open ことり (Kotori).
 
 2
-00:00:07.000 --> 00:00:11.500
-Tap 編集 (Edit) to open the action editor.
+00:00:06.599 --> 00:00:14.484
+Touch and hold one of the three preset recording options. This example uses 記録を追加 (Record Entry).
 
 3
-00:00:11.500 --> 00:00:18.000
-Open the name menu at the top and choose ホーム画面に追加 (Add to Home Screen).
+00:00:14.484 --> 00:00:23.262
+Choose ホーム画面に追加 (Add to Home Screen), then tap the checkmark.
 
 4
-00:00:18.000 --> 00:00:23.500
-Check the name and icon that will appear on the Home Screen.
+00:00:23.262 --> 00:00:30.000
+Next time, just tap 記録を追加 (Record Entry) on the Home Screen.
 
 5
-00:00:23.500 --> 00:00:29.000
-Choose a color for the icon. This example uses blue.
+00:00:30.000 --> 00:00:34.000
+Enter a description and amount, then tap Done. For example, ランチ1200円 (lunch, 1,200 yen).
 
 6
-00:00:29.000 --> 00:00:36.500
-Scroll down to see the available symbols. Keep the current symbol for this example.
-
-7
-00:00:36.500 --> 00:00:46.000
-Scroll back up and check the name and blue icon.
-
-8
-00:00:46.000 --> 00:01:03.500
-Check the name and icon, then tap the checkmark to add it.
-
-9
-00:01:03.500 --> 00:01:11.000
-Tap 記録する (Record) on the Home Screen.
-
-10
-00:01:11.000 --> 00:01:17.500
-Enter the description and amount, for example ランチ1200円 (lunch, 1,200 yen).
-
-11
-00:01:17.500 --> 00:01:28.500
-Tap Done and check the amount in the confirmation.
-
-12
-00:01:28.500 --> 00:01:36.667
-Open Kotori to review the pending entry.
+00:00:34.000 --> 00:00:43.200
+The entry was added without opening the app. Review the pending entry later in Transactions.
