@@ -79,7 +79,7 @@ ENTRY_POINTS = {
 # The original 17 recordings stay mandatory and in their original order.
 REQUIRED_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS.update({
-    '19-shortcuts-home-screen': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
+    '19-shortcuts-home-screen': ('Kotori → その他 → 記録を追加 / Siri', 'Kotori → More → Record Entry / Siri'),
     '20-shortcuts-siri-name': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
 })
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')

@@ -735,72 +735,74 @@
       "title_ja": "アプリを開かずに記録：ホーム画面のショートカット",
       "title_en": "Record without opening the app: Home Screen shortcut",
       "ui_language": "ja",
-      "duration": 43.2,
-      "bytes": 957427,
+      "duration": 46.733,
+      "bytes": 1403122,
       "steps": [
         {
           "time": 0.001,
-          "ja": "「ショートカット」のライブラリで「ことり」を開きます。",
-          "en": "In the Shortcuts library, open ことり (Kotori)."
+          "ja": "「その他」→「記録を追加 / Siri」で、ショートカットのボタンをタップします。",
+          "en": "In その他 (More) → 記録を追加 / Siri (Record Entry / Siri), tap the Shortcuts button."
         },
         {
-          "time": 6.599,
+          "time": 7.942,
           "ja": "3つの記録方法から、使いたいものを長押しします。ここでは「記録を追加」を選びます。",
           "en": "Touch and hold one of the three preset recording options. This example uses 記録を追加 (Record Entry)."
         },
         {
-          "time": 14.484,
+          "time": 15.813,
           "ja": "「ホーム画面に追加」を選び、右上のチェックマークで追加します。",
           "en": "Choose ホーム画面に追加 (Add to Home Screen), then tap the checkmark."
         },
         {
-          "time": 23.262,
+          "time": 24.392,
           "ja": "次からは、ホーム画面の「記録を追加」をタップするだけです。",
           "en": "Next time, just tap 記録を追加 (Record Entry) on the Home Screen."
         },
         {
-          "time": 30.0,
+          "time": 34.0,
           "ja": "内容と金額を入力して「Done」をタップします。例：ランチ1200円。",
           "en": "Enter a description and amount, then tap Done. For example, ランチ1200円 (lunch, 1,200 yen)."
         },
         {
-          "time": 34.0,
+          "time": 41.5,
           "ja": "アプリを開かずに追加できました。あとで「収支」で未確認の記録を確認できます。",
           "en": "The entry was added without opening the app. Review the pending entry later in Transactions."
         }
       ],
-      "source_take": "19-shortcuts-home-screen-20260925-110423-747179",
+      "source_take": "19-shortcuts-home-screen-20260925-120756-729271",
       "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
-      "source_started_at": 1790301863.936544,
-      "source_stopped_at": 1790301907.137198,
-      "source_wall_duration": 43.201,
-      "source_raw_duration": 37.623,
-      "source_raw_sha256": "94a2d628d63f873ca3b8f112a7b19ecac0dccf2cf0fa598d189a043331628392",
-      "source_manifest_sha256": "09646835e8d015173ace5ee3cbfe5201c6cf13a3c6c987bd4a99fe1f54c35152",
-      "poster_time": 7.099,
-      "render_fingerprint": "0c9d69d06e5bbeae1171ddade8e4cf96182bd596adedc5edb340dc782b04fcbc",
-      "poster_time_source": "step_default",
-      "poster_fingerprint": "154be1cb53feaa9eca164c76d42b96993798ecbd558a431a9a8d3239a2fdf2d4",
-      "sha256": "f3e705c24fa6d9732d1675bd945f3573dec61520f0fb1579cfb0ba67bdc2ebdf",
-      "poster_sha256": "31008a8cc7687389af89be3f9a858130baef3bcb5cbf3ddb86774bc453759575",
+      "source_started_at": 1790305676.8790689,
+      "source_stopped_at": 1790305723.602218,
+      "source_wall_duration": 46.723,
+      "source_raw_duration": 41.172,
+      "source_raw_sha256": "6cf4d67e28ddf498a4ab7e831fd3eeeb437675e340b0e24697048d3cb398037a",
+      "source_manifest_sha256": "ae57c82a35b733caaacb9263eeb28e384ad27ea4c63b2ea05fb04593805e85a4",
+      "poster_time": 1.0,
+      "render_fingerprint": "9838956e4296f1eeca4ea16ce2d4d0527c1119c314d02720a9c8facf25ec7260",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "350765514c62b2ded77cf8607643437dda6a5517299c8fd436e5b20be6401d2e",
+      "sha256": "29a97e39fe4a9a5cb19a431b9f66dd6511db5b34303eed6a13576e147cdbf3b0",
+      "poster_sha256": "7aeddc8992813e2f3e1e2ea3cf4b8896ed8e44efbb5b226964693d099683fecf",
+      "poster_time_override": 1.0,
+      "poster_time_override_reason": "Show the existing in-app Shortcuts button that now starts the guide.",
       "caption_timing_review": {
-        "method": "Decoded the rendered video from the beginning and reviewed a 1 fps contact sheet plus the original XCTest screenshots. Aligned input and success captions to the actual input and result frames; no video frame altered.",
+        "method": "Reviewed sequential full-video decoding at 1 fps; aligned input and success captions to the visible system dialog. No raw frames changed.",
         "sampling_precision_seconds": 1.0,
         "original_step_times": [
           0.001,
-          6.599,
-          14.484,
-          23.262,
-          32.116,
-          39.19
+          7.942,
+          15.813,
+          24.392,
+          35.491,
+          42.712
         ],
         "reviewed_step_times": [
           0.001,
-          6.599,
-          14.484,
-          23.262,
-          30.0,
-          34.0
+          7.942,
+          15.813,
+          24.392,
+          34.0,
+          41.5
         ]
       },
       "app_version": "1.1.3",
@@ -810,7 +812,9 @@
       "runtime": "iOS 27.0 (24A434)",
       "capture": "Real iOS Simulator UI; synthetic local demonstration data",
       "provenance_source": "Build and simulator identity supplied by the operator at render time",
-      "system_dialog_language": "en; shortcut library and app UI are Japanese"
+      "system_dialog_language": "en; shortcut library and app UI are Japanese",
+      "capture_start": "Existing in-app ShortcutsLink at More → Record Entry / Siri",
+      "capture_app_launch": "Existing GuideRecordingUITests.guideApp configuration: OSA_UI_TEST_MODE=1, OSA_UI_TEST_SUPPRESS_AI_NOTICE=1, OSA_UI_TEST_DEMO_SEED=ui_language"
     },
     {
       "id": "20-shortcuts-siri-name",
