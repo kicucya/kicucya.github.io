@@ -7,6 +7,7 @@ Only complete MP4/poster/JA+EN caption sets can produce a playable card.
 """
 import argparse
 import html
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -80,7 +81,7 @@ ENTRY_POINTS = {
 REQUIRED_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS.update({
     '19-shortcuts-home-screen': ('Kotori → その他 → 記録を追加 / Siri', 'Kotori → More → Record Entry / Siri'),
-    '20-shortcuts-siri-name': ('iPhoneの「ショートカット」アプリ → ライブラリ → ことり', 'iPhone Shortcuts app → Library → Kotori'),
+    '20-shortcuts-siri-name': ('Kotori → その他 → 記録を追加 / Siri', 'Kotori → More → Record Entry / Siri'),
 })
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 
@@ -156,7 +157,13 @@ def read_clips(ui_language):
             validate_copy(path.read_text(), 'ja' if path.name.endswith('.ja.vtt') else 'en', str(path))
             if not path.read_text().lstrip('\ufeff').startswith('WEBVTT'):
                 raise ValueError(f'Invalid caption header: {path.name}')
-        clips.append({**clip, '_ui_language': ui_language, '_provenance': provenance})
+        # Re-recordings keep their filenames; content-derived URLs invalidate
+        # each changed asset without evicting unchanged videos or captions.
+        media_urls = {path.name[len(slug):]:
+                      f'assets/guides/1.1.3/{ui_language}/{path.name}?v={hashlib.sha256(path.read_bytes()).hexdigest()[:12]}'
+                      for path in required}
+        clips.append({**clip, '_ui_language': ui_language, '_provenance': provenance,
+                      '_media_urls': media_urls})
     return clips
 
 
@@ -179,7 +186,7 @@ def card(clip, lang):
     slug = clip['id']
     title = clip[f'title_{lang}']
     ui_language = clip['_ui_language']
-    base = f'assets/guides/1.1.3/{ui_language}/{slug}'
+    media_urls = clip['_media_urls']
     app_version = clip['_provenance']['app_version']
     caption = t['caption'].format(app_version=app_version)
     if ui_language == 'en':
@@ -201,23 +208,23 @@ def card(clip, lang):
     seconds = int(round(float(clip['duration'])))
     duration_a11y = f'動画の長さ {seconds} 秒' if lang == 'ja' else f'Video duration: {seconds} seconds'
     tracks = ''.join(
-        f'<track kind="captions" data-src="{base}.{code}.vtt" srclang="{code}" label="{label}"' + (' default' if code == lang else '') + '>'
+        f'<track kind="captions" data-src="{esc(media_urls[f".{code}.vtt"])}" srclang="{code}" label="{label}"' + (' default' if code == lang else '') + '>'
         for code, label in [('ja', '日本語'), ('en', 'English')])
     return f'''          <details class="guide-card" id="guide-{slug}" data-guide-card data-search="{esc(search)}">
             <summary><span class="guide-card-title">{esc(title)}</span><span class="guide-duration"><span aria-hidden="true">{duration_label(clip['duration'])}</span><span class="guide-sr-only">{duration_a11y}</span></span><span class="guide-chevron" aria-hidden="true"></span></summary>
             <div class="guide-card-body">
               <div class="guide-media">
                 <button class="guide-play" type="button" data-guide-play disabled aria-label="{esc(t['play'] + ': ' + title)}">
-                  <img src="{base}.jpg" width="450" height="978" loading="lazy" decoding="async" alt="">
+                  <img src="{esc(media_urls['.jpg'])}" width="450" height="978" loading="lazy" decoding="async" alt="">
                   <span class="guide-play-label"><span aria-hidden="true">▶</span> {t['play']}</span>
                 </button>
-                <video hidden controls playsinline preload="none" tabindex="0" data-guide-video data-poster="{base}.jpg" aria-label="{esc(title)}">
-                  <source data-src="{base}.mp4" type="video/mp4">
+                <video hidden controls playsinline preload="none" tabindex="0" data-guide-video data-poster="{esc(media_urls['.jpg'])}" aria-label="{esc(title)}">
+                  <source data-src="{esc(media_urls['.mp4'])}" type="video/mp4">
                   {tracks}
                 </video>
                 <p class="guide-video-error" hidden>{t['error']}</p>
                 <p class="guide-media-note">{esc(caption)}</p>
-                <a class="guide-download" href="{base}.mp4">{t['download']}</a>
+                <a class="guide-download" href="{esc(media_urls['.mp4'])}">{t['download']}</a>
               </div>
               <div class="guide-instructions"><p class="guide-entry"><strong>{entry_label}</strong><br>{esc(entry)}</p><h4>{t['steps']}</h4>{scope_note}<ol>{steps}</ol></div>
             </div>

@@ -821,86 +821,88 @@
       "title_ja": "アプリを開かずに記録：Siriで使う準備",
       "title_en": "Record without opening the app: Set up a Siri phrase",
       "ui_language": "ja",
-      "duration": 50.9,
-      "bytes": 679569,
+      "duration": 56.667,
+      "bytes": 888253,
       "steps": [
         {
           "time": 0.001,
-          "ja": "「ショートカット」のライブラリから「ことり」を開きます。",
-          "en": "In the Shortcuts library, open ことり (Kotori)."
+          "ja": "「その他」→「記録を追加 / Siri」で、ショートカットのボタンをタップします。",
+          "en": "In その他 (More) → 記録を追加 / Siri (Record Entry / Siri), tap the Shortcuts button."
         },
         {
-          "time": 5.5,
+          "time": 8.514,
           "ja": "マイクの「記録を追加」を長押しします。",
           "en": "Touch and hold 記録を追加 (Record Entry) with the microphone icon."
         },
         {
-          "time": 11.0,
+          "time": 14.489,
           "ja": "「新規ショートカット」で自分用のショートカットを作ります。",
           "en": "Choose 新規ショートカット (New Shortcut) to create a personal shortcut."
         },
         {
-          "time": 15.5,
+          "time": 20.917,
           "ja": "「編集」でアクションの編集画面を開きます。",
           "en": "Tap 編集 (Edit) to open the action editor."
         },
         {
-          "time": 20.0,
+          "time": 26.052,
           "ja": "「記録内容」をタップし「毎回尋ねる」を選びます。",
           "en": "Tap 記録内容 (Entry) and choose 毎回尋ねる (Ask Each Time)."
         },
         {
-          "time": 28.0,
+          "time": 34.148,
           "ja": "画面上部の名前から「名称変更」を選びます。",
           "en": "Open the name menu at the top and choose 名称変更 (Rename)."
         },
         {
-          "time": 38.0,
+          "time": 46.912,
           "ja": "例として「家計簿につけて」という短い名前を付けます。",
           "en": "Choose a short name, such as 家計簿につけて (Log my spending)."
         },
         {
-          "time": 45.5,
+          "time": 50.516,
           "ja": "保存された名前を確認します。この動画は名前の設定までを紹介します。",
           "en": "Check the saved name. This video covers setting up the name."
         }
       ],
-      "source_take": "20-shortcuts-siri-name-20260925-015738-187314",
+      "source_take": "20-shortcuts-siri-name-20260925-132743-736990",
       "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
-      "source_started_at": 1790272658.36131,
-      "source_stopped_at": 1790272709.272274,
-      "source_wall_duration": 50.911,
-      "source_raw_duration": 46.942,
-      "source_raw_sha256": "a48d677ef7dea22ebae25b22b9cb55e08d31e12d6a612106408c863dad8bf26c",
-      "source_manifest_sha256": "c6c477bd894d7ffdc8c3b892f7b170e962c9844de4ac154505cc8ac095e6bb41",
-      "poster_time": 6.0,
-      "render_fingerprint": "677f6454d2753c5097bbf692aab0b96ffe8875e8bae54345b3109eee9dbbade2",
-      "poster_time_source": "step_default",
-      "poster_fingerprint": "86154fa5af607427a9909bb10c3e772594b670437c713ddee386a1d427f44cd1",
-      "sha256": "f4d65033999892fc86517e856e19fb9424d9043508b549c4a80cf58fcb9e82dc",
-      "poster_sha256": "50e30ec69b7fd1fc9903158b8b81b62896e711eb462577dc8a50100dcde5370c",
+      "source_started_at": 1790310463.932835,
+      "source_stopped_at": 1790310520.613631,
+      "source_wall_duration": 56.681,
+      "source_raw_duration": 52.82,
+      "source_raw_sha256": "82d2ce4d37aabf81959f4da6f0beea1ba349cd98912e3373c6288740fa4907c5",
+      "source_manifest_sha256": "e9dea24b3d14cc39a5fc8f43c10861de34e012ec864d78b5474ce459b1ac73a1",
+      "poster_time": 1.0,
+      "render_fingerprint": "921256f8a14adb07324389dfcee57b5bfecad299d7548173d9af6517458e4232",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "d6e292ccc005e350a978e4735e8685d6dec5a060d5fc561bf238a66b54efb16b",
+      "sha256": "557c26ef5e8215e151937d1fb599ab4fefb31981f9cd75464787aa6d676a5b0a",
+      "poster_sha256": "71918a96ec23891f9ec918f897c2fef82d2979629c3adeda9f7ff468f6542b31",
+      "poster_time_override": 1.0,
+      "poster_time_override_reason": "Start from the real in-app Shortcuts button, matching the guide entry point.",
       "caption_timing_review": {
-        "method": "Decoded rendered video from the beginning at 2 fps with ffmpeg; visually inspected all 0.5-second contact-sheet samples, then aligned instructions just before each visible action. No UI pixels or recording content changed.",
-        "sampling_precision_seconds": 0.5,
+        "method": "Sequential decode at 1 fps; inspected all action transitions and 2-second contact sheet. Captions precede their actions; no retiming required.",
+        "sampling_precision_seconds": 1,
         "original_step_times": [
           0.001,
-          4.659,
-          10.522,
-          15.46,
-          20.55,
-          28.435,
-          41.216,
-          44.787
+          8.514,
+          14.489,
+          20.917,
+          26.052,
+          34.148,
+          46.912,
+          50.516
         ],
         "reviewed_step_times": [
           0.001,
-          5.5,
-          11.0,
-          15.5,
-          20.0,
-          28.0,
-          38.0,
-          45.5
+          8.514,
+          14.489,
+          20.917,
+          26.052,
+          34.148,
+          46.912,
+          50.516
         ]
       },
       "app_version": "1.1.3",
@@ -909,9 +911,7 @@
       "device_name": "iPhone 17 Pro Max",
       "runtime": "iOS 27.0 (24A434)",
       "capture": "Real iOS Simulator UI; synthetic local demonstration data",
-      "provenance_source": "Build and simulator identity supplied by the operator at render time",
-      "system_dialog_language": "en; shortcut editor and app UI are Japanese",
-      "demonstration_scope": "Create and rename a personal shortcut; no Siri execution or microphone recognition recorded"
+      "provenance_source": "Build and simulator identity supplied by the operator at render time"
     }
   ]
 }
