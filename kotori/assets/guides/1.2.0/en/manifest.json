@@ -54,6 +54,95 @@
       "poster_fingerprint": "866fa1a363732f3fdce05f458d190ba1cb1f23f2790071812b513d6af5c3bb18",
       "sha256": "644264fa3ded9faac8646aead8e09226afc9a69ca4c92dfc8cbfecfb405ee5a0",
       "poster_sha256": "61d3784b2a7d58d9e0c9e8f6c89ffa0810de813d16da277cbfccd683b57baf57"
+    },
+    {
+      "id": "22-exchange-rates",
+      "title_ja": "為替レートを入力してメイン通貨で集計する",
+      "title_en": "Add exchange rates and total in your primary currency",
+      "ui_language": "en",
+      "duration": 117.967,
+      "bytes": 2967669,
+      "steps": [
+        {
+          "time": 0.3,
+          "ja": "外貨の記録を右にスワイプして編集し、「為替レート」を開きます",
+          "en": "Swipe a foreign-currency record right to edit it, then open Exchange Rate"
+        },
+        {
+          "time": 4.8,
+          "ja": "入力しやすい向きを選べます。ここでは 1 AUD = 110.510 JPY と入力します",
+          "en": "Choose either direction. Here, enter 1 AUD = 110.510 JPY"
+        },
+        {
+          "time": 18.7,
+          "ja": "換算結果を確認して保存します。元の金額と通貨は変わりません",
+          "en": "Check the conversion and save. The original amount and currency stay unchanged"
+        },
+        {
+          "time": 29.6,
+          "ja": "レポートの「為替レート」で、未設定の記録をまとめて選べます",
+          "en": "In Reports, open Exchange Rate to select records that still need a rate"
+        },
+        {
+          "time": 47.7,
+          "ja": "保存すると、設定済みのレートを残したまま合計が更新されます",
+          "en": "Save to update the total while keeping rates already entered"
+        },
+        {
+          "time": 54.3,
+          "ja": "メイン通貨を USD に変えると、USD 用のレートが必要になります",
+          "en": "Switch the primary currency to USD; those records now need USD rates"
+        },
+        {
+          "time": 85.5,
+          "ja": "AUD に戻すと、保存しておいたレートで再び集計されます",
+          "en": "Switch back to AUD to reuse the saved rates"
+        }
+      ],
+      "source_take": "22-exchange-rates-20260927-181229-735909",
+      "source_device": "8D400165-D92B-43CE-8D14-4F6082D44E23",
+      "source_started_at": 1790500349.997015,
+      "source_stopped_at": 1790500467.9505181,
+      "source_wall_duration": 117.954,
+      "source_raw_duration": 111.375,
+      "source_raw_sha256": "021dc40730f0e975f5731c5b42c21593e50f0a1d08f3a4e58cc82349489f2185",
+      "source_manifest_sha256": "4217e54083ad3b027499005c75a11fb5e96aa92460f6878fe76abad08180791b",
+      "poster_time": 18.7,
+      "render_fingerprint": "70a97d62f3adbd9d28c4291dc777a53dc77cbcfa5a1578b2ae43c9cf2d911135",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "db66ca7e895e5cd9a05cf204c7364655fb1bbee0017d94d2c31064210ff438c4",
+      "sha256": "ec319312db97915537640f948a93b551086314ccb379809150d08f169720ad4b",
+      "poster_sha256": "20f535e91abe3aeb1cbff8406f871f5f8c507db1f6f8c608600c6e781293a783",
+      "poster_time_override": 18.7,
+      "poster_time_override_reason": "Shows both quote directions, entered 1 AUD = 110.510 JPY and the actual JPY 11051 to AUD 100 preview without the keyboard.",
+      "caption_timing_review": {
+        "method": "Decoded raw video from the beginning: 5-second contact sheet plus targeted frames at 4.8, 18.7, 29.6, 47.7, 54.3 and 85.5 seconds. Each caption begins before its corresponding action; no raw video frames changed.",
+        "sampling_precision_seconds": 5.0,
+        "original_step_times": [
+          1.009,
+          9.758,
+          23.751,
+          34.675,
+          52.702,
+          59.339,
+          90.502
+        ],
+        "reviewed_step_times": [
+          0.3,
+          4.8,
+          18.7,
+          29.6,
+          47.7,
+          54.3,
+          85.5
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1452",
+      "source_commit": "46bec0c67ab3e3354c894797748752d23b29f88f",
+      "device_name": "iPhone 17",
+      "runtime": "iOS 26.5",
+      "group": "review"
     }
   ]
 }

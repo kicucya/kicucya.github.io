@@ -1,0 +1,29 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:04.800
+Swipe a foreign-currency record right to edit it, then open Exchange Rate
+
+2
+00:00:04.800 --> 00:00:18.700
+Choose either direction. Here, enter 1 AUD = 110.510 JPY
+
+3
+00:00:18.700 --> 00:00:29.600
+Check the conversion and save. The original amount and currency stay unchanged
+
+4
+00:00:29.600 --> 00:00:47.700
+In Reports, open Exchange Rate to select records that still need a rate
+
+5
+00:00:47.700 --> 00:00:54.300
+Save to update the total while keeping rates already entered
+
+6
+00:00:54.300 --> 00:01:25.500
+Switch the primary currency to USD; those records now need USD rates
+
+7
+00:01:25.500 --> 00:01:57.967
+Switch back to AUD to reuse the saved rates
