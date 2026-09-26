@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "render_revision": 3,
+  "app_version": "1.2.0",
+  "app_build": "1446",
+  "source_commit": "5a0b5b29b4df8773c433f10fd4cf9db5584e1eeb",
+  "device_name": "iPhone 17 Pro Max",
+  "runtime": "iOS 26.5",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-09-26T17:25:34.806242+00:00",
+  "ui_language": "ja",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "21-chat-recurring",
+      "title_ja": "チャットで固定費・定期収入を追加する",
+      "title_en": "Add recurring expenses or income in chat",
+      "ui_language": "ja",
+      "duration": 40.133,
+      "bytes": 552216,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "「記録」で、内容・金額・繰り返す日を送ります",
+          "en": "In Record, send the description, amount, and repeat day"
+        },
+        {
+          "time": 14.652,
+          "ja": "いつから始めるか聞かれたら、「来月から」を選びます",
+          "en": "When asked when to start, choose next month"
+        },
+        {
+          "time": 19.549,
+          "ja": "金額・周期・開始日を確認して登録します",
+          "en": "Check the amount, cycle, and start date, then confirm"
+        },
+        {
+          "time": 27.45,
+          "ja": "「その他 → 固定費・定期収入」で登録した内容を確認できます",
+          "en": "Find the saved rule in More → Recurring"
+        }
+      ],
+      "source_take": "21-chat-recurring-20260927-022338-870233",
+      "source_device": "B77123A2-F141-4DBB-8B8A-1C30E088AB62",
+      "source_started_at": 1790443419.343315,
+      "source_stopped_at": 1790443459.466922,
+      "source_wall_duration": 40.124,
+      "source_raw_duration": 35.783,
+      "source_raw_sha256": "c99887a09545d1bcdade3a65d6df059e20206f21b7dfac46aeebaf3268186273",
+      "source_manifest_sha256": "c4bf467688f124e78f593688c782ac2d9d3538a8133a4256137b3ef58e8c71d3",
+      "poster_time": 15.152,
+      "render_fingerprint": "d0de448a45e90427ba293082d498f1031ed4516c0995e40608e92bce6d600e88",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "a0bedc4f5c800ad0da57e6f65722214e597b5199f963349b7064c068ea1d7190",
+      "sha256": "164d1f491bcc9512ca6938aeb9af27a9a47619a24aec32f09b0af37bac512b98",
+      "poster_sha256": "dda73dac80913d9500a73654ac95b253ed6d188edb47b4ff4ed57d1c4f2d250a"
+    }
+  ]
+}
