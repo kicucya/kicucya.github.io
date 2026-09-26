@@ -2,7 +2,7 @@
 
 ## 編集する場所
 
-バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は既定の公開内容、`working` は現在編集する版を表す。現在は `latest: 1.1.3`、`working: 1.1.3`。26/09/25 の少佐の指定により、既定の入口を1.1.3へ切り替えた。Appの公開状態を表す `status` は別に管理し、既定の切り替えだけで `preview` を `released` に変更しない。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は既定の公開内容、`working` は現在編集する版を表す。現在は `latest: 1.1.3`、`working: 1.2.0`。26/09/25 の少佐の指定により、既定の入口を1.1.3へ切り替えた。Appの公開状態を表す `status` は別に管理し、既定の切り替えだけで `preview` を `released` に変更しない。
 
 - `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
 - `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
@@ -10,7 +10,7 @@
 - `_versions/kotori/version-ui.css` と `version-ui.js`：全版共通の小さなバージョン切替。
 - `kotori/assets/guides/1.1.3/{ja,en}/`：言語別の実際の操作動画、ポスター、字幕、manifest。容量の大きい動画は各版へコピーせず、ここに一組ずつ保持する。
 
-`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。1.1.3 の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.1.3/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
+`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。現在の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.2.0/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
 
 ## 生成と確認
 
@@ -48,7 +48,7 @@ python3 Tools/build_versions.py --check
 
 ## 操作動画の更新
 
-`Tools/build_guides.py` は `_versions/kotori/v1.1.3/support-ja.html` と `support.html` の操作動画カードだけを生成する。
+`Tools/build_guides.py` は registry の `working` 版の `support-ja.html` と `support.html` の操作動画カードを生成する。`--version 1.1.3` のように過去の版を明示できる。1.2.0以降はホーム画面のショートカットとSiriの準備を先頭に表示する。manifestの収録順・元の動画・撮影版は変更しない。
 
 1. 実際に収録した動画・ポスター・日英字幕を `kotori/assets/guides/1.1.3/{ja,en}/` に置く。
 2. 各言語の `manifest.json` を同じ場所に置く。
@@ -97,7 +97,7 @@ manifest の形式：
 
 各clipに `app_version`、`app_build`、`source_commit`、`runtime` を指定できる。指定した値は、その動画についてだけmanifestのトップレベルの値に優先する。省略した項目はトップレベルの値を引き継ぐ。追加収録が別ビルドの場合は、この4項目を各clipに明記し、旧動画の出典を表すトップレベルの情報は書き換えない。
 
-カードには、その動画の実際の `app_version` と画面言語を表示する。現在の対象版は引き続き1.1.3。日英の同じ動画では、継承後のアプリ版・ビルド・ソースコミットが一致することを検査する。旧manifestにないビルド情報を推測して補完はしない。`runtime` は各言語の実際の収録環境を記録するため、日英で異なっていてもよい。
+カードには、その動画の実際の `app_version` と画面言語を表示する。1.2.0の案内でも既存動画の撮影版1.1.3をそのまま表示する。日英の同じ動画では、継承後のアプリ版・ビルド・ソースコミットが一致することを検査する。旧manifestにないビルド情報を推測して補完はしない。`runtime` は各言語の実際の収録環境を記録するため、日英で異なっていてもよい。
 
 ### 日本語の用語チェック
 

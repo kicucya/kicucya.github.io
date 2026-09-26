@@ -1,0 +1,64 @@
+{
+  "assets/screens/ja/01-conversation.jpg": {
+    "app_version": "1.2.0",
+    "app_build": "1441",
+    "capture_date": "2026-09-27",
+    "source_base": "fe6f0560",
+    "change": "Quick record guide is first in More functions",
+    "test": "ScreenshotUITests/testCaptureStoreScreenshots",
+    "ui_locale": "ja",
+    "raw_sha256": "2607cb6644b38a3a270f4f18a64c69156086b2fc5d140c44d56c12e3309ffa48",
+    "note": "Production UI with deterministic demo seed and parser override; not a parsing-accuracy benchmark."
+  },
+  "assets/screens/ja/02-siri.jpg": {
+    "app_version": "1.2.0",
+    "app_build": "1441",
+    "capture_date": "2026-09-27",
+    "source_base": "fe6f0560",
+    "change": "Quick record guide is first in More functions",
+    "test": "ScreenshotUITests/testCaptureStoreScreenshots",
+    "ui_locale": "ja",
+    "raw_sha256": "46d745f5b6d8713e04217361285628131bb68d26d4c3438dbc38c1afa63546be",
+    "note": "Production UI with deterministic demo seed and parser override; not a parsing-accuracy benchmark."
+  },
+  "assets/screens/en/01-conversation.jpg": {
+    "app_version": "1.2.0",
+    "app_build": "1441",
+    "capture_date": "2026-09-27",
+    "source_base": "fe6f0560",
+    "change": "Quick record guide is first in More functions",
+    "test": "ScreenshotUITests/testCaptureStoreScreenshots",
+    "ui_locale": "en-US",
+    "raw_sha256": "4a60dbb2f847170385324884c4586d2a1b1bb5c8fd5cee61a1ecf34c21c4d3ea",
+    "note": "Production UI with deterministic demo seed and parser override; not a parsing-accuracy benchmark."
+  },
+  "assets/screens/en/02-siri.jpg": {
+    "app_version": "1.2.0",
+    "app_build": "1441",
+    "capture_date": "2026-09-27",
+    "source_base": "fe6f0560",
+    "change": "Quick record guide is first in More functions",
+    "test": "ScreenshotUITests/testCaptureStoreScreenshots",
+    "ui_locale": "en-US",
+    "raw_sha256": "a1ff76593a77982c8c6a5ca4577199d3e9402af79c63c54db7995cab08999b42",
+    "note": "Production UI with deterministic demo seed and parser override; not a parsing-accuracy benchmark."
+  },
+  "assets/screens/ja/19-shortcuts-saved.png": {
+    "app_version": "1.1.3",
+    "app_build": "1409",
+    "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+    "capture_date": "2026-09-25",
+    "recording": "kotori/assets/guides/1.1.3/ja/19-shortcuts-home-screen.mp4",
+    "frame_seconds": 42.5,
+    "note": "Original recorded frame, no relabeling as a new 1.2.0 capture."
+  },
+  "assets/screens/en/19-shortcuts-saved.png": {
+    "app_version": "1.1.3",
+    "app_build": "1409",
+    "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+    "capture_date": "2026-09-25",
+    "recording": "kotori/assets/guides/1.1.3/en/19-shortcuts-home-screen.mp4",
+    "frame_seconds": 41.5,
+    "note": "Original recorded frame, no relabeling as a new 1.2.0 capture."
+  }
+}

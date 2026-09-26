@@ -16,7 +16,7 @@ from l10n_terms import validate_copy
 
 ROOT = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = ROOT / 'kotori/assets/guides/1.1.3'
-SOURCE = ROOT / '_versions/kotori/v1.1.3'
+REGISTRY = ROOT / '_versions/kotori/versions.json'
 MARKER = re.compile(r'(    <!-- guide-library:start -->\n).*?(    <!-- guide-library:end -->)', re.S)
 GROUPS = {
     'record': ('記録する', 'Record', '一言入力から、内容の確認まで。', 'From your first entry to checking its details.'),
@@ -231,10 +231,13 @@ def card(clip, lang):
           </details>'''
 
 
-def library(clips, lang):
+def library(clips, lang, shortcuts_first=False):
     t = TEXT[lang]
     if not clips:
         return ''
+    if shortcuts_first:
+        priority = {'19-shortcuts-home-screen': 0, '20-shortcuts-siri-name': 1}
+        clips = sorted(clips, key=lambda clip: priority.get(clip['id'], 2))
     grouped = {key: [c for c in clips if group_for(c) == key] for key in GROUPS}
     toc = ''.join(f'<a href="#guide-group-{key}"><span>{labels[0 if lang == "ja" else 1]}</span><span aria-hidden="true">{len(grouped[key])}</span></a>'
                   for key, labels in GROUPS.items() if grouped[key])
@@ -264,9 +267,17 @@ def library(clips, lang):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--version', help='Target website version; defaults to registry working version')
     parser.add_argument('--require-english', action='store_true', help='Fail unless all English interface recordings are present')
     args = parser.parse_args()
     try:
+        registry = json.loads(REGISTRY.read_text())
+        version = args.version or registry['working']
+        entry = next((item for item in registry['versions'] if item['version'] == version), None)
+        if entry is None:
+            raise ValueError(f'Unknown website version: {version}')
+        source_root = ROOT / '_versions/kotori' / entry['source']
+        shortcuts_first = tuple(int(part) for part in version.split('.')) >= (1, 2, 0)
         japanese = read_clips('ja')
         has_english = (MEDIA_ROOT / 'en/manifest.json').is_file()
         if args.require_english and not has_english:
@@ -279,11 +290,11 @@ def main():
         changed = []
         for lang, name in [('ja', 'support-ja.html'), ('en', 'support.html')]:
             clips = japanese if lang == 'ja' else english
-            path = SOURCE / name
+            path = source_root / name
             source = path.read_text()
             if len(MARKER.findall(source)) != 1:
                 raise ValueError(f'Missing unique guide markers: {name}')
-            output = MARKER.sub(lambda m: m[1] + library(clips, lang) + m[2], source)
+            output = MARKER.sub(lambda m: m[1] + library(clips, lang, shortcuts_first) + m[2], source)
             if output != source:
                 changed.append(name)
                 if not args.check:

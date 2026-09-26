@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "latest": "1.1.3",
-  "working": "1.1.3",
+  "working": "1.2.0",
   "versions": [
     {
       "version": "1.0.0",
@@ -58,6 +58,12 @@
       "source": "v1.1.3",
       "source_commit": "6a2f459",
       "provenance": "Version 1.1.3 guide content promoted to the default website by explicit user decision on 2026-09-25. App Store release status remains preview; versioned routes are preserved."
+    },
+    {
+      "version": "1.2.0",
+      "status": "preview",
+      "source": "v1.2.0",
+      "provenance": "Local 1.2.0 preview prepared around chat-like entry, one sentence, and recording without opening the app. Existing guide media retain their actual 1.1.3 capture metadata."
     }
   ]
 }
