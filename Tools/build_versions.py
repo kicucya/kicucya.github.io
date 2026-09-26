@@ -62,10 +62,12 @@ def anchors(version, page):
 
 def version_bar(data, version, page, route):
  t = TEXT[PAGES[page]]
- status = t['preview'] if version['status'] == 'preview' else t['latest'] if version['version'] == data['latest'] else t['history']
+ # Website labels do not expose the independent App Store release status.
+ status = t['latest'] if version['version'] == data['latest'] else t['history'] if version['status'] == 'released' else ''
+ current_label = version['version'] + (' · ' + status if status else '')
  links = []
  options = [(t['latest'] + ' · ' + data['latest'], 'kotori', next(v for v in data['versions'] if v['version'] == data['latest']))]
- options += [(v['version'] + (' · ' + t['preview'] if v['status'] == 'preview' else ''), 'kotori/v' + v['version'], v) for v in reversed(data['versions'])]
+ options += [(v['version'], 'kotori/v' + v['version'], v) for v in reversed(data['versions'])]
  for label, target, v in options:
   current = ' aria-current="page"' if route == target else ''
   valid = json.dumps(anchors(v, page), ensure_ascii=False, separators=(',', ':'))
@@ -76,7 +78,7 @@ def version_bar(data, version, page, route):
   notes = f'<details class="kotori-version-notes"><summary>{esc(t["notes"])}</summary><p>{esc(t["restored"])}</p><ul>{items}</ul></details>'
  return f'''  <!-- kotori:version:start -->
   <aside class="kotori-version-bar" aria-label="{esc(t['label'])}">
-    <div class="kotori-version-inner"><span>{esc(t['label'])}</span><details class="kotori-version-menu"><summary>{esc(version['version'])} · {esc(status)}</summary><nav aria-label="{esc(t['label'])}"><ul>{''.join(links)}</ul></nav></details>{notes}</div>
+    <div class="kotori-version-inner"><span>{esc(t['label'])}</span><details class="kotori-version-menu"><summary>{esc(current_label)}</summary><nav aria-label="{esc(t['label'])}"><ul>{''.join(links)}</ul></nav></details>{notes}</div>
   </aside>
   <!-- kotori:version:end -->'''
 

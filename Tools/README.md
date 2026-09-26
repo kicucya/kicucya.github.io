@@ -2,7 +2,7 @@
 
 ## 編集する場所
 
-バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は既定の公開内容、`working` は現在編集する版を表す。現在は `latest: 1.1.3`、`working: 1.2.0`。26/09/25 の少佐の指定により、既定の入口を1.1.3へ切り替えた。Appの公開状態を表す `status` は別に管理し、既定の切り替えだけで `preview` を `released` に変更しない。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は既定の公開内容、`working` は現在編集する版を表す。現在は `latest: 1.1.3`、`working: 1.2.0`。26/09/25 の少佐の指定により、既定の入口を1.1.3へ切り替えた。26/09/27 の指定により、公開ページのバージョン表示にはプレビュー表記を付けない。Appの公開状態を表す `status` は別に管理し、既定の切り替えだけで `preview` を `released` に変更しない。
 
 - `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
 - `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
