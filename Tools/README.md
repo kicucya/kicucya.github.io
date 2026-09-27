@@ -124,3 +124,7 @@ manifest の形式：
 ### Control Center recording (1.2.0)
 
 The Control Center group contains `24-control-center-record` and `23-control-center-pending`. The first records creating a saved shortcut named `Kotori`, adding the native control, entering an expense through the system prompt, and checking the pending count. Shortcuts opens in the foreground; Kotori does not. The Home Screen recording remains available as the second entry method, with its original provenance. Both entry methods appear together in the 1.2.0 home page introduction. Do not relabel the original Home Screen recording as a new capture.
+
+### Reminders (1.2.0)
+
+`26-bookkeeping-reminders` demonstrates adding times, selecting repeat weekdays, switching to daily repetition, and enabling individual reminders on each device. Times and weekdays sync with iCloud; notification switches remain local, and new reminders start off. The Japanese and English recordings show the settings flow on a signed-out simulator; they do not establish cross-device CloudKit delivery. Keep the existing clips’ provenance and attach this recording’s actual build and commit to its own manifest entry. Version 1.2.0 requires its first two guides and accepts subsequent feature guides in their defined order while other features are still being recorded.
