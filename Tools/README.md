@@ -125,7 +125,7 @@ manifest の形式：
 
 The final decision on 26/09/28 supersedes the native recording control: Kotori keeps only its pending-count control. Guide `23-control-center-pending` remains applicable. Guide `24-control-center-record` must show adding the system Shortcuts control, choosing Kotori’s existing Record Entry action, and using it. It must not ask for a personal shortcut with the fixed name `Kotori`, or present a native Kotori recording control. The Home Screen guide must also show adding and using the shortcut. Record the replacement flows separately in Japanese and English; keep the original recordings’ provenance until their actual replacements exist.
 
-The current guide 24 still shows the withdrawn native-control flow and is not ready for publication. Replacing its captions alone does not replace the recorded operation. Control Center remains the first entry method in the 1.2.0 introduction, followed by Home Screen.
+On 26/09/28, commit 7c73fba replaced guide 24 and the 1.2.0 Home Screen guide with separate Japanese and English recordings of the system Shortcuts flows, including actual entry and saving. The withdrawn native-control recording is no longer the current guide. Commit 39d5111 corrected player sizing to preserve the video aspect ratio. Control Center remains the first entry method in the 1.2.0 introduction, followed by Home Screen.
 
 ### New-feature labels (1.2.0)
 
