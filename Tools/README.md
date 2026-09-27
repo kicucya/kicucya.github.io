@@ -123,7 +123,13 @@ manifest の形式：
 
 ### Control Center recording (1.2.0)
 
-The Control Center group contains `24-control-center-record` and `23-control-center-pending`. The first records creating a saved shortcut named `Kotori`, adding the native control, entering an expense through the system prompt, and checking the pending count. Shortcuts opens in the foreground; Kotori does not. The Home Screen recording remains available as the second entry method, with its original provenance. Both entry methods appear together in the 1.2.0 home page introduction. Do not relabel the original Home Screen recording as a new capture.
+The final decision on 26/09/28 supersedes the native recording control: Kotori keeps only its pending-count control. Guide `23-control-center-pending` remains applicable. Guide `24-control-center-record` must show adding the system Shortcuts control, choosing Kotori’s existing Record Entry action, and using it. It must not ask for a personal shortcut with the fixed name `Kotori`, or present a native Kotori recording control. The Home Screen guide must also show adding and using the shortcut. Record the replacement flows separately in Japanese and English; keep the original recordings’ provenance until their actual replacements exist.
+
+The current guide 24 still shows the withdrawn native-control flow and is not ready for publication. Replacing its captions alone does not replace the recorded operation. Control Center remains the first entry method in the 1.2.0 introduction, followed by Home Screen.
+
+### New-feature labels (1.2.0)
+
+Place `NEW` at the upper left of feature description cards for capabilities added since 1.1.3: recurring entries in chat and weekly schedules, exchange rates and final charges, reminders, appearance, and the pending-count control. Existing calculation input, keyword management, reports, and Home Screen shortcuts are not new to 1.2.0. Keep the historical pages and the default 1.1.3 entry unchanged.
 
 ### Reminders (1.2.0)
 
