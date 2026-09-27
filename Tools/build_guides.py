@@ -87,7 +87,7 @@ ENTRY_POINTS.update({
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS['25-appearance'] = ('その他 → カスタマイズ', 'More → Appearance')
-ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → リマインダー', 'More → Reminders')
+ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → 記録リマインダー', 'More → Reminders')
 SCOPE_NOTES['26-bookkeeping-reminders'] = {
     'ja': '時刻と曜日はiCloudで同期できます。通知のオン・オフは端末ごとに保存され、新しいリマインダーはオフで追加されます。この動画では設定操作を紹介します。',
     'en': 'Times and weekdays can sync with iCloud. Notification switches stay on each device, and new reminders start off. This video demonstrates the settings.'
