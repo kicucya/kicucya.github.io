@@ -143,6 +143,62 @@
       "device_name": "iPhone 17",
       "runtime": "iOS 26.5",
       "group": "review"
+    },
+    {
+      "id": "23-control-center-pending",
+      "title_ja": "コントロールセンターで未確認の件数を見る",
+      "title_en": "Check pending entries in Control Center",
+      "ui_language": "en",
+      "duration": 38.333,
+      "bytes": 743072,
+      "steps": [
+        {
+          "time": 1.009,
+          "ja": "右上から下にスワイプして、コントロールを追加します",
+          "en": "Swipe down from the top right and add a control"
+        },
+        {
+          "time": 15.604,
+          "ja": "右下のハンドルを横にドラッグすると、未確認の件数が見えます",
+          "en": "Drag the bottom-right handle sideways to show the pending count"
+        },
+        {
+          "time": 25.58,
+          "ja": "件数をタップすると、未確認の記録が開きます",
+          "en": "Tap the count to open pending entries"
+        },
+        {
+          "time": 30.13,
+          "ja": "内容を確認して、一括確認します",
+          "en": "Review the entries and confirm them"
+        },
+        {
+          "time": 35.371,
+          "ja": "確認すると、コントロールセンターの件数も更新されます",
+          "en": "The Control Center count updates after confirmation"
+        }
+      ],
+      "source_take": "23-control-center-pending-20260927-210837-025153",
+      "source_device": "E203E56B-5336-40BD-9DA2-6E3C2B8B415E",
+      "source_started_at": 1790510917.363462,
+      "source_stopped_at": 1790510955.6847968,
+      "source_wall_duration": 38.321,
+      "source_raw_duration": 38.323,
+      "source_raw_sha256": "41e39160195a8eaa73fec7a6794388a1723aa230eccf2984e2b81e8de6fa49bf",
+      "source_manifest_sha256": "4a89093a1acbc2a22ce2d6e6160302a84250a7a504f076e45ba865c5ec0273ec",
+      "poster_time": 24.8,
+      "render_fingerprint": "634aa5503cde8a755e988786aae7d259acf22218a17d7a5bee323b283014fd26",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "59863cf9448424dca06d9d7fad95a93329490f7813a5a6793cf7687b3a1b4d00",
+      "sha256": "dadc64fbf6041729296ca8a3f74b0b3033010a674c453e7c7a7eb8e145c6e486",
+      "poster_sha256": "1f1919713fb6dcb4d13311fd7a178599c92b31879b497f97e77911470b486355",
+      "poster_time_override": 24.8,
+      "poster_time_override_reason": "Show the verified wide control and one pending entry before opening the app.",
+      "app_version": "1.2.0",
+      "app_build": "1453",
+      "source_commit": "b451fefdd5e12c3eb3a23a6867e1c9e0687d64ba",
+      "runtime": "iOS 26.5",
+      "device_name": "iPhone 17 Pro Max (OSA Control Probe)"
     }
   ]
 }

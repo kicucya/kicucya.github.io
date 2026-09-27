@@ -87,6 +87,7 @@ PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS['21-chat-recurring'] = ('記録', 'Record')
 ENTRY_POINTS['22-exchange-rates'] = ('収支 → 記録を右にスワイプ → 為替レート／一括入力は「レポート → 為替レート」', 'Transactions → swipe a record right → Exchange Rate / batch entry: Reports → Exchange Rate')
+ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
 
 
 def esc(value):
@@ -118,8 +119,8 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates']
-    minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else len(expected_ids)
+    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending']
+    minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     if (not minimum_count <= len(recording_ids) <= len(expected_ids)
             or recording_ids != expected_ids[:len(recording_ids)]):
@@ -298,7 +299,8 @@ def main():
             # Put each new feature beside the existing related guide.
             for clips, additions in ((japanese, extra_ja), (english, extra_en)):
                 for addition in additions:
-                    predecessor = '12-recurring' if addition['id'] == '21-chat-recurring' else '10-reports'
+                    predecessor = {'21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
+                                   '23-control-center-pending': '03-pending-confirmation'}[addition['id']]
                     index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)
                     clips.insert(index + 1, addition)
         changed = []
