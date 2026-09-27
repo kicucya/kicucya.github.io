@@ -241,91 +241,89 @@
     },
     {
       "id": "24-control-center-record",
-      "title_ja": "ことりを開かずに記録：コントロールセンター",
-      "title_en": "Record without opening Kotori: Control Center",
+      "title_ja": "アプリを開かずに記録：コントロールセンター",
+      "title_en": "Record without opening the app: Control Center shortcut",
       "ui_language": "en",
-      "duration": 82.833,
-      "bytes": 2274546,
+      "duration": 52.133,
+      "bytes": 1646360,
       "steps": [
         {
           "time": 0,
-          "ja": "最初に「ショートカット」を開き、ことりの記録アクションを用意します",
-          "en": "First, open Shortcuts to set up Kotori’s record action"
+          "ja": "右上から下にスワイプし、「コントロールを追加」を開きます",
+          "en": "Swipe down from the top right and open Add a Control"
         },
         {
-          "time": 5,
-          "ja": "マイクの「記録を追加」を長押しし、「新規ショートカット」を選びます",
-          "en": "Press and hold Record Entry with the microphone icon, then choose New Shortcut"
+          "time": 4.5,
+          "ja": "「ショートカット」を検索し、「ショートカットを実行」を追加します",
+          "en": "Search for Shortcuts and add Run Shortcut"
         },
         {
-          "time": 13,
-          "ja": "記録内容は空欄のまま、名前を「Kotori」にして保存します",
-          "en": "Leave Entry blank, name the shortcut Kotori, and save it"
+          "time": 8.5,
+          "ja": "ことりを選び、既存の「記録を追加」を指定します",
+          "en": "Choose Kotori, then select the existing Record Entry action"
         },
         {
-          "time": 32,
-          "ja": "右上から下にスワイプし、ことりの「記録を追加」をコントロールセンターに追加します",
-          "en": "Swipe down from the top right and add Kotori’s Record Entry control"
+          "time": 20,
+          "ja": "次からは、コントロールセンターのこのボタンをタップします",
+          "en": "Next time, tap this button in Control Center"
         },
         {
-          "time": 56,
-          "ja": "次からはこのボタンをタップ。ショートカットが開き、入力欄が表示されます",
-          "en": "Next time, tap this control. Shortcuts opens and asks for the entry"
+          "time": 24,
+          "ja": "内容と金額を入力して完了します。アプリを開かずに記録できます",
+          "en": "Enter the description and amount, then tap Done to save without opening the app"
         },
         {
-          "time": 60,
-          "ja": "内容と金額を入力して完了します。ことりを開く必要はありません",
-          "en": "Enter the description and amount, then tap Done. Kotori stays in the background"
-        },
-        {
-          "time": 73,
-          "ja": "未確認の件数も、コントロールセンターで確認できます",
-          "en": "Check the pending count in Control Center too"
+          "time": 40,
+          "ja": "未確認の件数が増えました。あとで内容を確認できます",
+          "en": "The pending count increased. Review the entry later"
         }
       ],
-      "source_take": "24-control-center-record-20260927-232339-787089",
-      "source_device": "E203E56B-5336-40BD-9DA2-6E3C2B8B415E",
-      "source_started_at": 1790519020.4568079,
-      "source_stopped_at": 1790519103.293061,
-      "source_wall_duration": 82.836,
-      "source_raw_duration": 77.233,
-      "source_raw_sha256": "84c3e4d88fe6da756af667a97c4caf98d01214490510b43dc5dfbfe4149309c5",
-      "source_manifest_sha256": "b46d9be377aa5936949d301f6f216cb5e2a613f724a3c49e2f0f4c6cd8bff0c8",
-      "poster_time": 76.0,
-      "render_fingerprint": "22aeaa68d236a7686569fc36f313d4b72a96dec5139ac915adf962955420a571",
+      "source_take": "24-control-center-record-20260928-115212-217320",
+      "source_device": "CF9A8D1E-C164-4912-911F-347946317CA9",
+      "source_started_at": 1790563932.387576,
+      "source_stopped_at": 1790563984.532701,
+      "source_wall_duration": 52.145,
+      "source_raw_duration": 48.493,
+      "source_raw_sha256": "9d158036cec47134d267ba2f816d8faedd0b063b616118a7e1f2ca9857a33fd8",
+      "source_manifest_sha256": "22fc82815d3bc23f9e4c143e52f539a2851203edc70b33458412c16bbffddf1c",
+      "poster_time": 22.0,
+      "render_fingerprint": "409ac8c320c09f99a6bb3e71cb63cc11a5af5514c31b81d288c9e0e1c5e9c6ea",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "2dff6346a7ac9c03862f08def11a8005382dd22357cbeb07dab4c3df9c12f42a",
-      "sha256": "949fb2d3bb0fed7db807c005b72553d4f8f99761163361a7d831bb903762cc34",
-      "poster_sha256": "91fc2744fd79318be0c744b91895fffb5a88cdc50784074fead57ec73c2a9936",
-      "poster_time_override": 76.0,
-      "poster_time_override_reason": "Actual wide pending control; record tutorial also shows the adjacent native Record Entry button.",
+      "poster_fingerprint": "a1fb5909589de83f824352cdad024cb3559ac6636fd4d1aa05ea19eafc4c80e0",
+      "sha256": "b0a26f8323f45e48bdd62c2538cf11a2527217114c33c4c32d52829bf6dfbfd0",
+      "poster_sha256": "9f750726bb256328bba1c60ee919de21f18c9fa8ea2388ef5744f3b450740034",
+      "poster_time_override": 22.0,
+      "poster_time_override_reason": "Completed system Record Entry button beside the existing pending-count control.",
       "caption_timing_review": {
-        "method": "Decoded raw video from the beginning; reviewed contact sheets, input and final controls frames against the successful UI test.",
-        "sampling_precision_seconds": 5,
+        "method": "Sequential full-flow decode every 4 seconds, with 1-second opening samples showing the search result and preset selection.",
+        "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.008,
-          5.531,
-          15.187,
-          32.954,
-          58.218,
-          62.739,
-          73.557
+          1.01,
+          6.664,
+          14.741,
+          23.189,
+          32.037,
+          44.791
         ],
         "reviewed_step_times": [
           0,
-          5,
-          13,
-          32,
-          56,
-          60,
-          73
+          4.5,
+          8.5,
+          20,
+          24,
+          40
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1455",
-      "source_commit": "a2eacc1258cceead3202d393cf72a8687658bb88",
-      "runtime": "iOS 26.5",
-      "device_name": "iPhone 17 Pro Max"
+      "app_build": "1483",
+      "source_commit": "cab581d928f41462160106e6e7ddaa8e6d5e0fa1",
+      "device_name": "iPhone 17e",
+      "runtime": "iOS 27.0",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time",
+      "rendered_at": "2026-09-28T02:55:21.352340+00:00",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "recording_script_commit": "28393fc583134550ba24d85cd3a91047f643d29b",
+      "recording_script_note": "Only the XCTest search-result hold changed; App sources and build match cab581d9. Incremental build recompiled only the UI test target."
     },
     {
       "id": "25-appearance",
@@ -495,6 +493,83 @@
       "source_commit": "a6e980403ffbe0bb4d426c0ba906ca7e6f4d60e9",
       "runtime": "iOS 26.5",
       "device_name": "OSA Reminder Verification (iPhone 17)"
+    },
+    {
+      "id": "19-shortcuts-home-screen",
+      "title_ja": "アプリを開かずに記録：ホーム画面のショートカット",
+      "title_en": "Record without opening the app: Home Screen shortcut",
+      "ui_language": "en",
+      "duration": 41.7,
+      "bytes": 1568300,
+      "steps": [
+        {
+          "time": 0,
+          "ja": "「記録を追加 / Siri」からショートカットを開きます",
+          "en": "Open Shortcuts from Record Entry / Siri"
+        },
+        {
+          "time": 5,
+          "ja": "「記録を追加」を長押しし、「ホーム画面に追加」を選びます",
+          "en": "Touch and hold Record Entry, then choose Add to Home Screen"
+        },
+        {
+          "time": 10,
+          "ja": "右上の追加ボタンで、ホーム画面に置きます",
+          "en": "Confirm the addition at the top right"
+        },
+        {
+          "time": 14,
+          "ja": "次からは、ホーム画面の「記録を追加」をタップします",
+          "en": "Next time, tap Record Entry on the Home Screen"
+        },
+        {
+          "time": 24,
+          "ja": "内容と金額を入力して完了します。アプリを開かずに記録できます",
+          "en": "Enter the description and amount, then tap Done to save without opening the app"
+        }
+      ],
+      "source_take": "19-shortcuts-home-screen-20260928-114637-370841",
+      "source_device": "CF9A8D1E-C164-4912-911F-347946317CA9",
+      "source_started_at": 1790563597.580559,
+      "source_stopped_at": 1790563639.284162,
+      "source_wall_duration": 41.704,
+      "source_raw_duration": 40.76,
+      "source_raw_sha256": "7365cf703bf14529bea6d5ac64451225de26f3c8f409d0ee6d01005ab97f1718",
+      "source_manifest_sha256": "5b5fcc06d047d986dd48ae7162c1dd7feb2bd0d99d39c6f7ca3cbf1993d59170",
+      "poster_time": 20.0,
+      "render_fingerprint": "5a7082dfa8fd63e3ffac8a7c1dca18cebace62f4bd247a02d239f80554876595",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "110c2e634dfc4baa4b54f9ee868a2c9303fc7d68f814a85e034cfb84d3257eb8",
+      "sha256": "be014498587ef65fd140cc36e8f22b708638b470fda20dc6e715639fcc35a74f",
+      "poster_sha256": "61b5ae64cc93e1ad064a97d0005be4b1b88ef8fdee4df9f496a3d49dcb89d958",
+      "poster_time_override": 20.0,
+      "poster_time_override_reason": "The newly added English Record Entry icon is visible on the Home Screen.",
+      "caption_timing_review": {
+        "method": "Sequential decode of completed recording, full-flow samples every 4 seconds and opening sequence every second.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.012,
+          2.402,
+          11.797,
+          17.261,
+          27.387
+        ],
+        "reviewed_step_times": [
+          0,
+          5,
+          10,
+          14,
+          24
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1483",
+      "source_commit": "cab581d928f41462160106e6e7ddaa8e6d5e0fa1",
+      "device_name": "iPhone 17e",
+      "runtime": "iOS 27.0",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time",
+      "rendered_at": "2026-09-28T02:51:22.811450+00:00",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data"
     }
   ]
 }

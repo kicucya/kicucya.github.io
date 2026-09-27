@@ -94,10 +94,10 @@ SCOPE_NOTES['26-bookkeeping-reminders'] = {
 }
 ENTRY_POINTS['21-chat-recurring'] = ('記録', 'Record')
 ENTRY_POINTS['22-exchange-rates'] = ('収支 → 記録を右にスワイプ → 為替レート／一括入力は「レポート → 為替レート」', 'Transactions → swipe a record right → Exchange Rate / batch entry: Reports → Exchange Rate')
-ENTRY_POINTS['24-control-center-record'] = ('Kotori → その他 → 記録を追加 / Siri', 'Kotori → More → Record Entry / Siri')
+ENTRY_POINTS['24-control-center-record'] = ('iPhoneのコントロールセンター → コントロールを追加 → ショートカットを実行', 'iPhone Control Center → Add a Control → Run Shortcut')
 SCOPE_NOTES['24-control-center-record'] = {
-    'ja': '最初に、名前を「Kotori」にした自分用のショートカットを保存します。記録時はショートカットが開きますが、Kotoriを開く必要はありません。名前を変えたり削除したりすると実行できなくなります。',
-    'en': 'First, save a personal shortcut named “Kotori”. Recording opens Shortcuts, but does not open Kotori. Renaming or deleting the shortcut stops this control from working.',
+    'ja': '「ショートカットを実行」で、ことりの「記録を追加」を選びます。次回からはこのボタンで入力し、アプリを開かずに保存できます。',
+    'en': 'In Run Shortcut, choose Kotori’s Record Entry action. Next time, tap this button to enter and save a record without opening the app.',
 }
 ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
 
@@ -131,7 +131,7 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record', '25-appearance', '26-bookkeeping-reminders']
+    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record', '25-appearance', '26-bookkeeping-reminders', '19-shortcuts-home-screen']
     minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     expected_present = [identity for identity in expected_ids if identity in recording_ids]
@@ -314,6 +314,10 @@ def main():
             # Put each new feature beside the existing related guide.
             for clips, additions in ((japanese, extra_ja), (english, extra_en)):
                 for addition in additions:
+                    if addition['id'] == '19-shortcuts-home-screen':
+                        index = next(i for i, clip in enumerate(clips) if clip['id'] == addition['id'])
+                        clips[index] = addition
+                        continue
                     predecessor = {'21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
                                    '23-control-center-pending': '03-pending-confirmation', '24-control-center-record': '23-control-center-pending', '26-bookkeeping-reminders': '16-settings-and-shortcuts', '25-appearance': '16-settings-and-shortcuts'}[addition['id']]
                     index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)

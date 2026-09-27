@@ -134,3 +134,5 @@ Place `NEW` at the upper left of feature description cards for capabilities adde
 ### Reminders (1.2.0)
 
 `26-bookkeeping-reminders` briefly shows how to open reminder settings, set a time and repeat days for one reminder, and enable it. Keep this tutorial to basic setup; daily, weekday, and weekend summary variants belong in UI regression checks, not additional tutorial steps. Times and weekdays sync with iCloud; notification switches remain local, and new reminders start off. The Japanese and English recordings show the settings flow on a signed-out simulator; they do not establish cross-device CloudKit delivery. Keep the existing clips’ provenance and attach this recording’s actual build and commit to its own manifest entry. Version 1.2.0 requires its first two guides and accepts subsequent feature guides in their defined order while other features are still being recorded.
+
+1.2.0 のホーム画面ガイド `19-shortcuts-home-screen` は、同版の manifest にある新しい日英動画を優先する。1.1.3 の同名動画・字幕・出典は変更しない。コントロールセンターでは「ショートカットを実行 → Kotori → 記録を追加」を選ぶ。どちらも追加後にシステムの入力画面から保存する流れを紹介する。

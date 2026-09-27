@@ -1,29 +1,25 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:05.000
-First, open Shortcuts to set up Kotori’s record action
+00:00:00.000 --> 00:00:04.500
+Swipe down from the top right and open Add a Control
 
 2
-00:00:05.000 --> 00:00:13.000
-Press and hold Record Entry with the microphone icon, then choose New Shortcut
+00:00:04.500 --> 00:00:08.500
+Search for Shortcuts and add Run Shortcut
 
 3
-00:00:13.000 --> 00:00:32.000
-Leave Entry blank, name the shortcut Kotori, and save it
+00:00:08.500 --> 00:00:20.000
+Choose Kotori, then select the existing Record Entry action
 
 4
-00:00:32.000 --> 00:00:56.000
-Swipe down from the top right and add Kotori’s Record Entry control
+00:00:20.000 --> 00:00:24.000
+Next time, tap this button in Control Center
 
 5
-00:00:56.000 --> 00:01:00.000
-Next time, tap this control. Shortcuts opens and asks for the entry
+00:00:24.000 --> 00:00:40.000
+Enter the description and amount, then tap Done to save without opening the app
 
 6
-00:01:00.000 --> 00:01:13.000
-Enter the description and amount, then tap Done. Kotori stays in the background
-
-7
-00:01:13.000 --> 00:01:22.833
-Check the pending count in Control Center too
+00:00:40.000 --> 00:00:52.133
+The pending count increased. Review the entry later
