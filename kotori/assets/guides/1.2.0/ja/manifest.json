@@ -305,6 +305,101 @@
       "source_commit": "a2eacc1258cceead3202d393cf72a8687658bb88",
       "runtime": "iOS 26.5",
       "device_name": "iPhone 17 Pro Max"
+    },
+    {
+      "id": "25-appearance",
+      "title_ja": "カラーと背景を自分好みに",
+      "title_en": "Choose your own colors and background",
+      "ui_language": "ja",
+      "duration": 135.0,
+      "bytes": 2487913,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "その他からカスタマイズを開きます。",
+          "en": "Open Appearance from More."
+        },
+        {
+          "time": 8.383,
+          "ja": "アクセントカラーを選ぶと、プレビューで見え方を確認できます。",
+          "en": "Choose an accent color and check the preview."
+        },
+        {
+          "time": 11.527,
+          "ja": "カスタムカラーでは、好きな色を選べます。",
+          "en": "Use Custom Color to choose another color."
+        },
+        {
+          "time": 19.998,
+          "ja": "背景にはカラーや写真を選べます。まずカラーを選びます。",
+          "en": "Choose a color or photo for the chat background. Start with a color."
+        },
+        {
+          "time": 34.066,
+          "ja": "写真を使う場合は、写真を選択します。",
+          "en": "To use a photo, choose it from Photos."
+        },
+        {
+          "time": 48.0,
+          "ja": "ピンチで大きさを、ドラッグで位置を調整して完了します。",
+          "en": "Pinch to resize, drag to reposition, then tap Done."
+        },
+        {
+          "time": 56.0,
+          "ja": "不透明度を調整して保存すると、記録画面に反映されます。",
+          "en": "Adjust the opacity and save to apply it to the chat screen."
+        },
+        {
+          "time": 72.0,
+          "ja": "iCloudのカスタマイズ同期は、初期状態ではオフです。",
+          "en": "Appearance syncing in iCloud starts turned off."
+        }
+      ],
+      "source_take": "25-appearance-20260928-002227-075664",
+      "source_device": "6E7C2E49-992F-4AF4-A265-1EBFEB53F165",
+      "source_started_at": 1790522547.275712,
+      "source_stopped_at": 1790522682.2883148,
+      "source_wall_duration": 135.013,
+      "source_raw_duration": 133.392,
+      "source_raw_sha256": "983f37acdfaf3cf8ced4307429cb5daf41f8acd22dc2b326292131ce2a0efd87",
+      "source_manifest_sha256": "8969cccd74bb1a9db7acc7de5c97d215726219cb6463ed74eaa4c2c38fda6558",
+      "poster_time": 68.0,
+      "render_fingerprint": "25b543fe498b4900dd84a7362d69f4f3eafdfd401ff56e77b5b7380c64d6fffd",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "3d319ac4648843261a8c2cc03c68e61207668ffd11b5c97072f018aee5de66bf",
+      "sha256": "7a054082a8bbb8cd15a66f3fb91a935051dc6a3818b0bece9b42d7e88908e76e",
+      "poster_sha256": "0960281450e39f5efe8f243933fd24063f30e32b265f008ba252fd9dce1f52bd",
+      "poster_time_override": 68.0,
+      "poster_time_override_reason": "Reviewed stable chat screen with the saved photo background and chosen accent.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; reviewed 4-second overview and exact 2-second samples around photo adjustment, opacity, Save and return to More.",
+        "sampling_precision_seconds": 2,
+        "original_step_times": [
+          1.012,
+          8.383,
+          11.527,
+          19.998,
+          34.066,
+          56.013,
+          63.234,
+          75.422
+        ],
+        "reviewed_step_times": [
+          1.012,
+          8.383,
+          11.527,
+          19.998,
+          34.066,
+          48.0,
+          56.0,
+          72.0
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1463",
+      "source_commit": "24b9e5733203e6b179ac53806c9f73f1caaee7f2",
+      "runtime": "iOS 26.5",
+      "device_name": "iPhone 17"
     }
   ]
 }
