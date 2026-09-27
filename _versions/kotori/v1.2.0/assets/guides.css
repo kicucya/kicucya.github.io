@@ -47,7 +47,7 @@
 .guide-play:hover .guide-play-label { background: #715117; }
 .guide-play:disabled { cursor: default; }
 .guide-play:disabled .guide-play-label { display: none; }
-.guide-media video { width: 100%; max-height: 70vh; aspect-ratio: 450 / 978; background: #151515; border-radius: 20px; display: block; }
+.guide-media video { width: auto; height: auto; max-width: 100%; max-height: 70vh; margin-inline: auto; background: #151515; border-radius: 20px; display: block; }
 .guide-media-note { color: var(--ink-soft); font-size: .74rem; line-height: 1.6; margin: 10px 0 5px; }
 .guide-download { display: inline-flex; align-items: center; min-height: 32px; font-size: .8rem; text-underline-offset: 3px; }
 .guide-video-error { color: var(--ink); font-size: .85rem; }
