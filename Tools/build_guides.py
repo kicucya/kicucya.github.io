@@ -86,6 +86,7 @@ ENTRY_POINTS.update({
 })
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
+ENTRY_POINTS['25-appearance'] = ('その他 → カスタマイズ', 'More → Appearance')
 ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → リマインダー', 'More → Reminders')
 SCOPE_NOTES['26-bookkeeping-reminders'] = {
     'ja': '時刻と曜日はiCloudで同期できます。通知のオン・オフは端末ごとに保存され、新しいリマインダーはオフで追加されます。この動画では設定操作を紹介します。',
@@ -110,7 +111,7 @@ def group_for(clip):
         return clip['group']
     identity = clip['id'].lower()
     # Precise slugs can override this without changing the public manifest schema.
-    if any(word in identity for word in ('import', 'export', 'backup', 'restore-backup', 'setting', 'preference', 'currency', 'language', 'icloud', 'sync', 'reminder')):
+    if any(word in identity for word in ('import', 'export', 'backup', 'restore-backup', 'setting', 'preference', 'currency', 'language', 'icloud', 'sync', 'reminder', 'appearance')):
         return 'data'
     if any(word in identity for word in ('report', 'budget', 'recurring')):
         return 'review'
@@ -130,7 +131,7 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record', '26-bookkeeping-reminders']
+    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record', '25-appearance', '26-bookkeeping-reminders']
     minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     expected_present = [identity for identity in expected_ids if identity in recording_ids]
@@ -314,7 +315,7 @@ def main():
             for clips, additions in ((japanese, extra_ja), (english, extra_en)):
                 for addition in additions:
                     predecessor = {'21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
-                                   '23-control-center-pending': '03-pending-confirmation', '24-control-center-record': '23-control-center-pending', '26-bookkeeping-reminders': '16-settings-and-shortcuts'}[addition['id']]
+                                   '23-control-center-pending': '03-pending-confirmation', '24-control-center-record': '23-control-center-pending', '26-bookkeeping-reminders': '16-settings-and-shortcuts', '25-appearance': '16-settings-and-shortcuts'}[addition['id']]
                     index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)
                     clips.insert(index + 1, addition)
         changed = []
