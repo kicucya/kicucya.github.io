@@ -86,7 +86,7 @@ manifest の形式：
 }
 ```
 
-`duration` は秒、`bytes` は実際のMP4のサイズ、`steps[].time` は動画の先頭からの秒数。`source_take` は制作記録で、ページには表示しない。分類を明示する場合だけ動画へ `group` (`record` / `organize` / `review` / `data`) を追加できる。
+`duration` は秒、`bytes` は実際のMP4のサイズ、`steps[].time` は動画の先頭からの秒数。`source_take` は制作記録で、ページには表示しない。分類を明示する場合だけ動画へ `group` (`control-center` / `record` / `organize` / `review` / `data`) を追加できる。
 
 ### ショートカット動画の追加
 
@@ -101,7 +101,7 @@ manifest の形式：
 
 ### 動画ごとのアプリ版と収録環境
 
-1.2.0 の `23-control-center-pending` は未確認の操作動画の直後に表示する。コントロールセンターでKotoriの未確認コントロールを追加し、横に広げて件数を表示する。タップして内容を確認し、一括確認後に件数が減る実際の流れを日英それぞれのシステム画面で収録する。アプリを開かずに入力する新しいコントロールは、この動画の対象に含まない。
+1.2.0 の `23-control-center-pending` はコントロールセンターの分類で、`24-control-center-record` の次に表示する。コントロールセンターでKotoriの未確認コントロールを追加し、横に広げて件数を表示する。タップして内容を確認し、一括確認後に件数が減る実際の流れを日英それぞれのシステム画面で収録する。アプリを開かずに入力する新しいコントロールは、この動画の対象に含まない。
 
 1.2.0 の `22-exchange-rates` はレポートの動画の直後に表示する。外貨の記録で反対方向のレートを入力し、未設定の記録だけを一括で補い、メイン通貨を切り替えても元のレートが残る流れを紹介する。素材は `kotori/assets/guides/1.2.0/{ja,en}/` に追加し、先に収録した動画21の出典は変更しない。
 
@@ -120,3 +120,7 @@ manifest の形式：
 ### 1.1.3 以降のガイド構成
 
 1.1.3 以降は操作動画を中心に案内し、独立した文章の操作ガイドとそのページ内リンクは設けない。動画カード内の手順、よくある質問、お問い合わせは残す。機能紹介ページからは該当する動画カードへリンクする。以前の版の本文は変更せず、新しい版はこの構成を引き継ぐ。
+
+### Control Center recording (1.2.0)
+
+The Control Center group contains `24-control-center-record` and `23-control-center-pending`. The first records creating a saved shortcut named `Kotori`, adding the native control, entering an expense through the system prompt, and checking the pending count. Shortcuts opens in the foreground; Kotori does not. The Home Screen recording remains available as the second entry method, with its original provenance. Both entry methods appear together in the 1.2.0 home page introduction. Do not relabel the original Home Screen recording as a new capture.

@@ -149,56 +149,162 @@
       "title_ja": "コントロールセンターで未確認の件数を見る",
       "title_en": "Check pending entries in Control Center",
       "ui_language": "en",
-      "duration": 38.333,
-      "bytes": 743072,
+      "duration": 46.4,
+      "bytes": 928132,
       "steps": [
         {
-          "time": 1.009,
+          "time": 0,
           "ja": "右上から下にスワイプして、コントロールを追加します",
           "en": "Swipe down from the top right and add a control"
         },
         {
-          "time": 15.604,
+          "time": 14,
           "ja": "右下のハンドルを横にドラッグすると、未確認の件数が見えます",
           "en": "Drag the bottom-right handle sideways to show the pending count"
         },
         {
-          "time": 25.58,
+          "time": 27,
           "ja": "件数をタップすると、未確認の記録が開きます",
           "en": "Tap the count to open pending entries"
         },
         {
-          "time": 30.13,
+          "time": 33,
           "ja": "内容を確認して、一括確認します",
           "en": "Review the entries and confirm them"
         },
         {
-          "time": 35.371,
+          "time": 39,
           "ja": "確認すると、コントロールセンターの件数も更新されます",
           "en": "The Control Center count updates after confirmation"
         }
       ],
-      "source_take": "23-control-center-pending-20260927-210837-025153",
+      "source_take": "23-control-center-pending-20260927-232151-855606",
       "source_device": "E203E56B-5336-40BD-9DA2-6E3C2B8B415E",
-      "source_started_at": 1790510917.363462,
-      "source_stopped_at": 1790510955.6847968,
-      "source_wall_duration": 38.321,
-      "source_raw_duration": 38.323,
-      "source_raw_sha256": "41e39160195a8eaa73fec7a6794388a1723aa230eccf2984e2b81e8de6fa49bf",
-      "source_manifest_sha256": "4a89093a1acbc2a22ce2d6e6160302a84250a7a504f076e45ba865c5ec0273ec",
-      "poster_time": 24.8,
-      "render_fingerprint": "634aa5503cde8a755e988786aae7d259acf22218a17d7a5bee323b283014fd26",
+      "source_started_at": 1790518912.023633,
+      "source_stopped_at": 1790518958.436167,
+      "source_wall_duration": 46.413,
+      "source_raw_duration": 42.983,
+      "source_raw_sha256": "6d657c874afed8a3218bf669b68602857ae02cacae845cafaa5a46077c340a81",
+      "source_manifest_sha256": "c3bf7c75618fd194fb8911e8fa7ab2f83553c5b40b24bfc8922b28bd400c3348",
+      "poster_time": 25.0,
+      "render_fingerprint": "a383d4d50dddba9fe2a055812a8c56df26d881707440f9803a00239b92b3f4f5",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "59863cf9448424dca06d9d7fad95a93329490f7813a5a6793cf7687b3a1b4d00",
-      "sha256": "dadc64fbf6041729296ca8a3f74b0b3033010a674c453e7c7a7eb8e145c6e486",
-      "poster_sha256": "1f1919713fb6dcb4d13311fd7a178599c92b31879b497f97e77911470b486355",
-      "poster_time_override": 24.8,
-      "poster_time_override_reason": "Show the verified wide control and one pending entry before opening the app.",
+      "poster_fingerprint": "a9d6abbb4d853209d4979108802b149d625b4fdf129e6ed17b23cd6151e90135",
+      "sha256": "2742dab0ba851aa3eada17a8992ea73c95f79f0dd5d6912382c093ca8258bae9",
+      "poster_sha256": "03601a74e02cbc100cf7144eec735c6ade2319f658e03e26ca5f498872c1a5dd",
+      "poster_time_override": 25.0,
+      "poster_time_override_reason": "Actual wide pending control; record tutorial also shows the adjacent native Record Entry button.",
+      "caption_timing_review": {
+        "method": "Decoded raw video from the beginning; reviewed contact sheets, input and final controls frames against the successful UI test.",
+        "sampling_precision_seconds": 3,
+        "original_step_times": [
+          1.009,
+          16.156,
+          31.191,
+          36.439,
+          43.282
+        ],
+        "reviewed_step_times": [
+          0,
+          14,
+          27,
+          33,
+          39
+        ]
+      },
       "app_version": "1.2.0",
-      "app_build": "1453",
-      "source_commit": "b451fefdd5e12c3eb3a23a6867e1c9e0687d64ba",
+      "app_build": "1455",
+      "source_commit": "a2eacc1258cceead3202d393cf72a8687658bb88",
       "runtime": "iOS 26.5",
-      "device_name": "iPhone 17 Pro Max (OSA Control Probe)"
+      "device_name": "iPhone 17 Pro Max"
+    },
+    {
+      "id": "24-control-center-record",
+      "title_ja": "ことりを開かずに記録：コントロールセンター",
+      "title_en": "Record without opening Kotori: Control Center",
+      "ui_language": "en",
+      "duration": 82.833,
+      "bytes": 2274546,
+      "steps": [
+        {
+          "time": 0,
+          "ja": "最初に「ショートカット」を開き、ことりの記録アクションを用意します",
+          "en": "First, open Shortcuts to set up Kotori’s record action"
+        },
+        {
+          "time": 5,
+          "ja": "マイクの「記録を追加」を長押しし、「新規ショートカット」を選びます",
+          "en": "Press and hold Record Entry with the microphone icon, then choose New Shortcut"
+        },
+        {
+          "time": 13,
+          "ja": "記録内容は空欄のまま、名前を「Kotori」にして保存します",
+          "en": "Leave Entry blank, name the shortcut Kotori, and save it"
+        },
+        {
+          "time": 32,
+          "ja": "右上から下にスワイプし、ことりの「記録を追加」をコントロールセンターに追加します",
+          "en": "Swipe down from the top right and add Kotori’s Record Entry control"
+        },
+        {
+          "time": 56,
+          "ja": "次からはこのボタンをタップ。ショートカットが開き、入力欄が表示されます",
+          "en": "Next time, tap this control. Shortcuts opens and asks for the entry"
+        },
+        {
+          "time": 60,
+          "ja": "内容と金額を入力して完了します。ことりを開く必要はありません",
+          "en": "Enter the description and amount, then tap Done. Kotori stays in the background"
+        },
+        {
+          "time": 73,
+          "ja": "未確認の件数も、コントロールセンターで確認できます",
+          "en": "Check the pending count in Control Center too"
+        }
+      ],
+      "source_take": "24-control-center-record-20260927-232339-787089",
+      "source_device": "E203E56B-5336-40BD-9DA2-6E3C2B8B415E",
+      "source_started_at": 1790519020.4568079,
+      "source_stopped_at": 1790519103.293061,
+      "source_wall_duration": 82.836,
+      "source_raw_duration": 77.233,
+      "source_raw_sha256": "84c3e4d88fe6da756af667a97c4caf98d01214490510b43dc5dfbfe4149309c5",
+      "source_manifest_sha256": "b46d9be377aa5936949d301f6f216cb5e2a613f724a3c49e2f0f4c6cd8bff0c8",
+      "poster_time": 76.0,
+      "render_fingerprint": "22aeaa68d236a7686569fc36f313d4b72a96dec5139ac915adf962955420a571",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "2dff6346a7ac9c03862f08def11a8005382dd22357cbeb07dab4c3df9c12f42a",
+      "sha256": "949fb2d3bb0fed7db807c005b72553d4f8f99761163361a7d831bb903762cc34",
+      "poster_sha256": "91fc2744fd79318be0c744b91895fffb5a88cdc50784074fead57ec73c2a9936",
+      "poster_time_override": 76.0,
+      "poster_time_override_reason": "Actual wide pending control; record tutorial also shows the adjacent native Record Entry button.",
+      "caption_timing_review": {
+        "method": "Decoded raw video from the beginning; reviewed contact sheets, input and final controls frames against the successful UI test.",
+        "sampling_precision_seconds": 5,
+        "original_step_times": [
+          1.008,
+          5.531,
+          15.187,
+          32.954,
+          58.218,
+          62.739,
+          73.557
+        ],
+        "reviewed_step_times": [
+          0,
+          5,
+          13,
+          32,
+          56,
+          60,
+          73
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1455",
+      "source_commit": "a2eacc1258cceead3202d393cf72a8687658bb88",
+      "runtime": "iOS 26.5",
+      "device_name": "iPhone 17 Pro Max"
     }
   ]
 }

@@ -19,6 +19,7 @@ MEDIA_ROOT = ROOT / 'kotori/assets/guides/1.1.3'
 REGISTRY = ROOT / '_versions/kotori/versions.json'
 MARKER = re.compile(r'(    <!-- guide-library:start -->\n).*?(    <!-- guide-library:end -->)', re.S)
 GROUPS = {
+    'control-center': ('コントロールセンター', 'Control Center', 'ひとことで記録。未確認の件数も、ここから。', 'Record a quick entry and check your pending count.'),
     'record': ('記録する', 'Record', '一言入力から、内容の確認まで。', 'From your first entry to checking its details.'),
     'organize': ('整理・修正する', 'Organize & edit', '収支、カテゴリ、財布を使いやすく。', 'Keep transactions, categories, and wallets in order.'),
     'review': ('振り返る・予定を立てる', 'Review & plan', 'レポート、予算、固定費・定期収入。', 'Reports, budgets, and recurring expenses or income.'),
@@ -87,6 +88,11 @@ PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS['21-chat-recurring'] = ('記録', 'Record')
 ENTRY_POINTS['22-exchange-rates'] = ('収支 → 記録を右にスワイプ → 為替レート／一括入力は「レポート → 為替レート」', 'Transactions → swipe a record right → Exchange Rate / batch entry: Reports → Exchange Rate')
+ENTRY_POINTS['24-control-center-record'] = ('Kotori → その他 → 記録を追加 / Siri', 'Kotori → More → Record Entry / Siri')
+SCOPE_NOTES['24-control-center-record'] = {
+    'ja': '最初に、名前を「Kotori」にした自分用のショートカットを保存します。記録時はショートカットが開きますが、Kotoriを開く必要はありません。名前を変えたり削除したりすると実行できなくなります。',
+    'en': 'First, save a personal shortcut named “Kotori”. Recording opens Shortcuts, but does not open Kotori. Renaming or deleting the shortcut stops this control from working.',
+}
 ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
 
 
@@ -119,7 +125,7 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending']
+    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record']
     minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     if (not minimum_count <= len(recording_ids) <= len(expected_ids)
@@ -241,8 +247,9 @@ def library(clips, lang, shortcuts_first=False):
     if not clips:
         return ''
     if shortcuts_first:
-        priority = {'19-shortcuts-home-screen': 0, '20-shortcuts-siri-name': 1}
-        clips = sorted(clips, key=lambda clip: priority.get(clip['id'], 2))
+        clips = [{**c, 'group': 'control-center'} if c['id'] in ('24-control-center-record', '23-control-center-pending') else c for c in clips]
+        priority = {'24-control-center-record': 0, '23-control-center-pending': 1, '19-shortcuts-home-screen': 2, '20-shortcuts-siri-name': 3}
+        clips = sorted(clips, key=lambda clip: priority.get(clip['id'], 4))
     grouped = {key: [c for c in clips if group_for(c) == key] for key in GROUPS}
     toc = ''.join(f'<a href="#guide-group-{key}"><span>{labels[0 if lang == "ja" else 1]}</span><span aria-hidden="true">{len(grouped[key])}</span></a>'
                   for key, labels in GROUPS.items() if grouped[key])
@@ -300,7 +307,7 @@ def main():
             for clips, additions in ((japanese, extra_ja), (english, extra_en)):
                 for addition in additions:
                     predecessor = {'21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
-                                   '23-control-center-pending': '03-pending-confirmation'}[addition['id']]
+                                   '23-control-center-pending': '03-pending-confirmation', '24-control-center-record': '23-control-center-pending'}[addition['id']]
                     index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)
                     clips.insert(index + 1, addition)
         changed = []
