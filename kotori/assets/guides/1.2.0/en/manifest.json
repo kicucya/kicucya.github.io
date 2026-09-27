@@ -434,86 +434,65 @@
       "title_ja": "記録リマインダーを設定する",
       "title_en": "Set up reminders",
       "ui_language": "en",
-      "duration": 94.267,
-      "bytes": 1505814,
+      "duration": 34.3,
+      "bytes": 333797,
       "steps": [
         {
-          "time": 1.027,
+          "time": 0,
           "ja": "「その他」から「記録リマインダー」を開きます",
           "en": "Open Reminders in More"
         },
         {
-          "time": 17.985,
+          "time": 8,
           "ja": "＋から時刻を選びます",
           "en": "Tap plus and choose a time"
         },
         {
-          "time": 32,
+          "time": 11,
           "ja": "繰り返す曜日をタップして選びます",
           "en": "Tap the weekdays to repeat on"
         },
         {
-          "time": 40,
+          "time": 18,
           "ja": "新しいリマインダーはオフです。通知を受け取る端末でオンにします",
           "en": "New reminders start off. Turn them on on each device that should notify"
-        },
-        {
-          "time": 53,
-          "ja": "すべての曜日を選ぶと毎日になります",
-          "en": "Select every weekday for a daily reminder"
-        },
-        {
-          "time": 63.364,
-          "ja": "複数の時刻を追加し、通知を個別に切り替えられます",
-          "en": "Add more times and toggle each reminder separately"
-        },
-        {
-          "time": 73.045,
-          "ja": "iCloudで同期するのは時刻と曜日だけです。通知のオン・オフは端末ごとに保存されます",
-          "en": "iCloud syncs only times and weekdays. Notification switches stay on each device"
         }
       ],
-      "source_take": "26-bookkeeping-reminders-20260928-012650-333885",
+      "source_take": "26-bookkeeping-reminders-20260928-022524-627314",
       "source_device": "C41EB2B8-1D6C-4DAC-B722-0C9BD60C5FCF",
-      "source_started_at": 1790526412.547649,
-      "source_stopped_at": 1790526506.810617,
-      "source_wall_duration": 94.263,
-      "source_raw_duration": 91.248,
-      "source_raw_sha256": "5baf3171e16d8586601386f21c14fd66660e420513ed9c60d2c79f85ffa181cc",
-      "source_manifest_sha256": "5fbee8ac1ae37f82a4f6ca323a31ca203e3b805e1235e750e97f91425cc4c503",
-      "poster_time": 41.0,
-      "render_fingerprint": "4dd52dbd09be601ea8271218059f8523abf6a23489f487ed3b28934a9e66fff0",
+      "source_started_at": 1790529925.1245928,
+      "source_stopped_at": 1790529959.41034,
+      "source_wall_duration": 34.286,
+      "source_raw_duration": 32.845,
+      "source_raw_sha256": "ebba6a8a435ce354ca4bfc60260fa318d3387f9a6a99b99185c2daf86f31fcb5",
+      "source_manifest_sha256": "844b20f1f8535fb1dec58ff2603d5ba427f88cfc699329d8e07edbe2b2f2ccda",
+      "poster_time": 14.0,
+      "render_fingerprint": "76ecce31a4b38b68c54241e44ee3f65abec23d765f59ffb3686722b2d43ac7f0",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "9d50a89f54cdef5499c0d13dfef713f15455b0fc6b66bc25779dc945068f0461",
-      "sha256": "ca27d74f6e657d481c32b229df15e050ee2d74a41fa6de4023ead8e2ecb2578f",
-      "poster_sha256": "b07495f42ead12b5fec7854c9fb50e263ddf54925fcdbc1a6834c894f591fe78",
-      "poster_time_override": 41.0,
-      "poster_time_override_reason": "Verified rendered frame shows saved Monday–Friday reminder, Weekdays summary, and default off switch.",
+      "poster_fingerprint": "2e87fcc7f4dda812c3adaadd180a922dcfd5b6569549d8eb962a169b8ef3ae28",
+      "sha256": "0bbbb7d9611afc2127a0945deee721461db209bc660a171872902495bb4e0b84",
+      "poster_sha256": "2340c8d65981bce6de307b527cc2b5c565614b3a205181925824c261ed748416",
+      "poster_time_override": 14.0,
+      "poster_time_override_reason": "Basic time and repeat-day editor shown in the concise tutorial.",
       "caption_timing_review": {
-        "method": "Reviewed complete overview and one-second frames around weekday selection, save, enable and select-all transitions.",
-        "sampling_precision_seconds": 1,
+        "method": "Reviewed rendered frames at two-second intervals and aligned captions to actual entry, editor, weekday selection and local switch.",
+        "sampling_precision_seconds": 2,
         "original_step_times": [
-          1.027,
-          17.985,
-          25.629,
-          42.328,
-          49.799,
-          63.364,
-          73.045
+          1.102,
+          11.97,
+          16.564,
+          25.784
         ],
         "reviewed_step_times": [
-          1.027,
-          17.985,
-          32,
-          40,
-          53,
-          63.364,
-          73.045
+          0,
+          8,
+          11,
+          18
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1467",
-      "source_commit": "ccb54fecd3f9852ec38cf1144a158811f2126dd9",
+      "app_build": "1471",
+      "source_commit": "a6e980403ffbe0bb4d426c0ba906ca7e6f4d60e9",
       "runtime": "iOS 26.5",
       "device_name": "OSA Reminder Verification (iPhone 17)"
     }
