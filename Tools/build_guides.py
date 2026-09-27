@@ -93,7 +93,7 @@ SCOPE_NOTES['26-bookkeeping-reminders'] = {
     'en': 'Times and weekdays can sync with iCloud. Notification switches stay on each device, and new reminders start off. This video demonstrates the settings.'
 }
 ENTRY_POINTS['21-chat-recurring'] = ('記録', 'Record')
-ENTRY_POINTS['22-exchange-rates'] = ('収支 → 記録を右にスワイプ → 為替レート／一括入力は「レポート → 為替レート」', 'Transactions → swipe a record right → Exchange Rate / batch entry: Reports → Exchange Rate')
+ENTRY_POINTS['22-exchange-rates'] = ('レポート → 為替レート', 'Reports → Exchange Rate')
 ENTRY_POINTS['24-control-center-record'] = ('iPhoneのコントロールセンター → コントロールを追加 → ショートカットを実行', 'iPhone Control Center → Add a Control → Run Shortcut')
 SCOPE_NOTES['24-control-center-record'] = {
     'ja': '「ショートカットを実行」で、ことりの「記録を追加」を選びます。次回からはこのボタンで入力し、アプリを開かずに保存できます。',

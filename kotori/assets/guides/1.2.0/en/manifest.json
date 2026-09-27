@@ -57,110 +57,103 @@
     },
     {
       "id": "22-exchange-rates",
-      "title_ja": "為替レートを入力してメイン通貨で集計する",
-      "title_en": "Add exchange rates and total in your primary currency",
+      "title_ja": "レポートで外貨のレートと請求額を入力する",
+      "title_en": "Enter foreign-currency rates and final charges in Reports",
       "ui_language": "en",
-      "duration": 174.033,
-      "bytes": 4015597,
+      "duration": 132.067,
+      "bytes": 1230225,
       "steps": [
         {
-          "time": 1.011,
-          "ja": "外貨の記録を右にスワイプして編集し、「為替レート」を開きます",
-          "en": "Swipe a foreign-currency record right to edit it, then open Exchange Rate"
+          "time": 1,
+          "ja": "レポートの「為替レート」を開くと、レート未設定の記録を日付ごとに確認できます",
+          "en": "Open Exchange Rate in Reports to see records with missing rates, grouped by date"
         },
         {
-          "time": 9.784,
-          "ja": "入力しやすい向きを選べます。ここでは 1 AUD = 110.510 JPY と入力します",
-          "en": "Choose either direction. Here, enter 1 AUD = 110.510 JPY"
+          "time": 7,
+          "ja": "「すべて表示」や通貨で絞り込み、編集したい記録をタップします",
+          "en": "Use Show All or the currency filter, then tap the record to edit"
         },
         {
-          "time": 25.392,
-          "ja": "換算結果を確認して保存します。元の金額と通貨は変わりません",
-          "en": "Check the conversion and save. The original amount and currency stay unchanged"
+          "time": 19,
+          "ja": "その日のレートを入力します。ここでは 1 AUD = 110.510 JPY を使います",
+          "en": "Enter that day's rate. Here, use 1 AUD = 110.510 JPY"
         },
         {
-          "time": 36.547,
-          "ja": "レポートの「為替レート」で、未設定の記録をまとめて選べます",
-          "en": "In Reports, open Exchange Rate to select records that still need a rate"
+          "time": 38,
+          "ja": "カードの請求額が分かる場合は、その記録を開いて「金額」を選びます",
+          "en": "If the card's final charge is known, open that record and choose Amount"
         },
         {
-          "time": 54.558,
-          "ja": "保存すると、設定済みのレートを残したまま合計が更新されます",
-          "en": "Save to update the total while keeping rates already entered"
-        },
-        {
-          "time": 61.112,
-          "ja": "メイン通貨を USD に変えると、USD 用のレートが必要になります",
-          "en": "Switch the primary currency to USD; those records now need USD rates"
-        },
-        {
-          "time": 94.199,
-          "ja": "AUD に戻すと、保存しておいたレートで再び集計されます",
-          "en": "Switch back to AUD to reuse the saved rates"
-        },
-        {
-          "time": 119.488,
-          "ja": "カードの請求額が分かるときは、記録を編集して「為替レート → 金額」を選びます",
-          "en": "If the card's final charge is known, edit the record and choose Exchange Rate → Amount"
-        },
-        {
-          "time": 133.006,
+          "time": 45,
           "ja": "手数料を含む 103.25 AUD を入力すると、実際のレートを計算します",
-          "en": "Enter the final AUD 103.25 charge, including fees, to calculate the effective rate"
+          "en": "Enter AUD 103.25 including fees to calculate the effective rate"
         },
         {
-          "time": 160.19,
-          "ja": "保存すると、元の円の金額を残して請求額どおりに集計されます",
-          "en": "Save to total the exact charge while keeping the original JPY amount"
+          "time": 75,
+          "ja": "「レート未設定」に切り替えると、まだ入力していない記録だけが残ります",
+          "en": "Switch to Missing rate to see only records that still need one"
+        },
+        {
+          "time": 84,
+          "ja": "同じレートを使う記録は「一括入力」で選んで保存できます",
+          "en": "For records that share a rate, select them in Batch Entry and save"
+        },
+        {
+          "time": 108,
+          "ja": "「すべて表示」で入力済みの記録を見直せます。元の金額と通貨は変わりません",
+          "en": "Use Show All to review saved conversions. Original amounts and currencies stay unchanged"
+        },
+        {
+          "time": 115,
+          "ja": "「完了」でレポートへ戻ると、入力した請求額とレートで合計されます",
+          "en": "Tap Done to return to Reports and see the total using the charges and rates entered"
         }
       ],
-      "source_take": "22-exchange-rates-20260928-012118-813348",
-      "source_device": "8D400165-D92B-43CE-8D14-4F6082D44E23",
-      "source_started_at": 1790526079.079138,
-      "source_stopped_at": 1790526253.1288059,
-      "source_wall_duration": 174.05,
-      "source_raw_duration": 167.568,
-      "source_raw_sha256": "299318c56fe4bc6330bc4131d3c873bdb55e9c821249798bbc441d492dfeab07",
-      "source_manifest_sha256": "e6968cef1312f17938fb1592bace2da440e69eaed0a97ee965302ce7358484c4",
-      "poster_time": 158.0,
-      "render_fingerprint": "01f2963157299c17788367e933bd2f37a32829535b2e95f3451102c556baa806",
+      "source_take": "22-exchange-rates-20260928-151039-564816",
+      "source_device": "6C764640-4A07-468B-9894-0F95F394B58B",
+      "source_started_at": 1790575839.895045,
+      "source_stopped_at": 1790575971.95424,
+      "source_wall_duration": 132.059,
+      "source_raw_duration": 125.495,
+      "source_raw_sha256": "81d921b431b76d6d1bd704de8063c9e2818ada57d726e7f13263bd6fa048a312",
+      "source_manifest_sha256": "573ebf86bdf02ba5b1af0a2471ea1c853848e97d3b454431298b58d4ad25af70",
+      "poster_time": 111.0,
+      "render_fingerprint": "279f292c3338d3db9b5cdf1ca0e0416da8f4792a6ecff72975cd021b4b7081c7",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "eb816722c64ad1d57e437e101e2893d6e36664494acdd869efb6b12c447e8edd",
-      "sha256": "c52e2a0f2ff41ee1107d916fe3d6a0c62a8d29330d14a0f0b3f337d0fbcfaa67",
-      "poster_sha256": "f91f16f2fdb13c350f8c1e28e77a3a292f391b48fea215ccff6243c2e09d051b",
-      "poster_time_override": 158.0,
-      "poster_time_override_reason": "Shows final AUD 103.25 amount, inverse effective rate, and original JPY 11051 together.",
+      "poster_fingerprint": "5b3dd1d7ddb4e582543e85079afd21e314307d24658574230fbf4fd43dc9df8d",
+      "sha256": "6a70f4977b957059848dd6dd168b56b0eaead668ce3a7888184ef76db35b6ee6",
+      "poster_sha256": "66167d37110481f73dc5275ef096baccc69aeedddce6ea5cd7ee7bce3ebdf305",
+      "poster_time_override": 111.0,
+      "poster_time_override_reason": "Reviewed frame shows All filter, JPY source, original amounts and both individual final charge AUD 103.25 and batch conversion AUD 200.00.",
       "caption_timing_review": {
-        "method": "Sequential decoded 10-second contact sheet and exact 158-second amount preview; original cues align with visible actions.",
-        "sampling_precision_seconds": 10.0,
+        "method": "Decoded rendered video from its beginning; reviewed 10-second contact sheet and 20 boundary frames at 1-second precision. Shifted instructions to actual visible interaction transitions. Raw capture retained.",
+        "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.011,
-          9.784,
-          25.392,
-          36.547,
-          54.558,
-          61.112,
-          94.199,
-          119.488,
-          133.006,
-          160.19
+          1.013,
+          7.084,
+          20.873,
+          42.153,
+          50.217,
+          83.716,
+          89.82,
+          115.335,
+          123.44
         ],
         "reviewed_step_times": [
-          1.011,
-          9.784,
-          25.392,
-          36.547,
-          54.558,
-          61.112,
-          94.199,
-          119.488,
-          133.006,
-          160.19
+          1,
+          7,
+          19,
+          38,
+          45,
+          75,
+          84,
+          108,
+          115
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1467",
-      "source_commit": "aebca16c7b63cfcebddc3480f86e64c2797b1df2",
+      "app_build": "1486",
+      "source_commit": "59398c21898f3b2775c9292642b24d5034b48fc0",
       "device_name": "iPhone 17",
       "runtime": "iOS 26.5",
       "group": "review"

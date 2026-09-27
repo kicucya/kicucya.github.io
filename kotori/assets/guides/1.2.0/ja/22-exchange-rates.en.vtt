@@ -1,41 +1,37 @@
 WEBVTT
 
 1
-00:00:00.300 --> 00:00:03.000
-Swipe a foreign-currency record right to edit it, then open Exchange Rate
+00:00:01.134 --> 00:00:08.426
+Open Exchange Rate in Reports to see records with missing rates, grouped by date
 
 2
-00:00:03.000 --> 00:00:20.500
-Choose either direction. Here, enter 1 AUD = 110.510 JPY
+00:00:08.426 --> 00:00:22.000
+Use Show All or the currency filter, then tap the record to edit
 
 3
-00:00:20.500 --> 00:00:31.600
-Check the conversion and save. The original amount and currency stay unchanged
+00:00:22.000 --> 00:00:39.000
+Enter that day's rate. Here, use 1 AUD = 110.510 JPY
 
 4
-00:00:31.600 --> 00:00:49.000
-In Reports, open Exchange Rate to select records that still need a rate
+00:00:39.000 --> 00:00:47.000
+If the card's final charge is known, open that record and choose Amount
 
 5
-00:00:49.000 --> 00:00:55.600
-Save to update the total while keeping rates already entered
+00:00:47.000 --> 00:01:13.000
+Enter AUD 103.25 including fees to calculate the effective rate
 
 6
-00:00:55.600 --> 00:01:26.700
-Switch the primary currency to USD; those records now need USD rates
+00:01:13.000 --> 00:01:21.000
+Switch to Missing rate to see only records that still need one
 
 7
-00:01:26.700 --> 00:01:56.700
-Switch back to AUD to reuse the saved rates
+00:01:21.000 --> 00:01:42.000
+For records that share a rate, select them in Batch Entry and save
 
 8
-00:01:56.700 --> 00:02:12.300
-If the card's final charge is known, edit the record and choose Exchange Rate → Amount
+00:01:42.000 --> 00:01:51.000
+Use Show All to review saved conversions. Original amounts and currencies stay unchanged
 
 9
-00:02:12.300 --> 00:02:43.500
-Enter the final AUD 103.25 charge, including fees, to calculate the effective rate
-
-10
-00:02:43.500 --> 00:03:04.700
-Save to total the exact charge while keeping the original JPY amount
+00:01:51.000 --> 00:02:03.733
+Tap Done to return to Reports and see the total using the charges and rates entered
