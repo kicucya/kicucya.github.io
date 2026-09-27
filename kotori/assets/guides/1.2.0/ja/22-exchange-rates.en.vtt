@@ -1,29 +1,41 @@
 WEBVTT
 
 1
-00:00:00.300 --> 00:00:04.000
+00:00:00.300 --> 00:00:03.000
 Swipe a foreign-currency record right to edit it, then open Exchange Rate
 
 2
-00:00:04.000 --> 00:00:17.800
+00:00:03.000 --> 00:00:20.500
 Choose either direction. Here, enter 1 AUD = 110.510 JPY
 
 3
-00:00:17.800 --> 00:00:28.800
+00:00:20.500 --> 00:00:31.600
 Check the conversion and save. The original amount and currency stay unchanged
 
 4
-00:00:28.800 --> 00:00:46.800
+00:00:31.600 --> 00:00:49.000
 In Reports, open Exchange Rate to select records that still need a rate
 
 5
-00:00:46.800 --> 00:00:53.400
+00:00:49.000 --> 00:00:55.600
 Save to update the total while keeping rates already entered
 
 6
-00:00:53.400 --> 00:01:24.500
+00:00:55.600 --> 00:01:26.700
 Switch the primary currency to USD; those records now need USD rates
 
 7
-00:01:24.500 --> 00:01:56.033
+00:01:26.700 --> 00:01:56.700
 Switch back to AUD to reuse the saved rates
+
+8
+00:01:56.700 --> 00:02:12.300
+If the card's final charge is known, edit the record and choose Exchange Rate → Amount
+
+9
+00:02:12.300 --> 00:02:43.500
+Enter the final AUD 103.25 charge, including fees, to calculate the effective rate
+
+10
+00:02:43.500 --> 00:03:04.700
+Save to total the exact charge while keeping the original JPY amount
