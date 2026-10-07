@@ -100,6 +100,40 @@ SCOPE_NOTES['24-control-center-record'] = {
     'en': 'In Run Shortcut, choose Kotori’s Record Entry action. Next time, tap this button to enter and save a record without opening the app.',
 }
 ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
+ENTRY_POINTS['27-copy-transaction'] = ('収支 → 記録を長押し → コピー', 'Transactions → touch and hold an entry → Copy')
+ENTRY_POINTS['28-manual-classification'] = ('レポート → 未分類 → 記録を長押し', 'Reports → Uncategorized → touch and hold an entry')
+
+# Version-specific replacements never change the original 1.1.3 media or order.
+RECORDING_IDS_120 = (
+    '21-chat-recurring', '22-exchange-rates', '23-control-center-pending',
+    '24-control-center-record', '25-appearance', '26-bookkeeping-reminders',
+    '19-shortcuts-home-screen', '09-keywords', '12-recurring',
+    '16-settings-and-shortcuts', '27-copy-transaction', '28-manual-classification',
+)
+HIDDEN_RECORDING_IDS_120 = {'14-batch-input', '17-voice-and-sharing-entry'}
+RECORDING_PREDECESSORS_120 = {
+    '21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
+    '23-control-center-pending': '03-pending-confirmation',
+    '24-control-center-record': '23-control-center-pending',
+    '26-bookkeeping-reminders': '16-settings-and-shortcuts',
+    '25-appearance': '16-settings-and-shortcuts',
+    '27-copy-transaction': '04-transaction-actions',
+    '28-manual-classification': '22-exchange-rates',
+}
+
+
+def merge_120_clips(base, additions):
+    clips = list(base)
+    for addition in additions:
+        existing = next((i for i, clip in enumerate(clips) if clip['id'] == addition['id']), None)
+        if existing is not None:
+            clips[existing] = addition
+        else:
+            predecessor = RECORDING_PREDECESSORS_120[addition['id']]
+            index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)
+            clips.insert(index + 1, addition)
+    return [clip for clip in clips if clip['id'] not in HIDDEN_RECORDING_IDS_120]
+
 
 
 def esc(value):
@@ -131,7 +165,7 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else ['21-chat-recurring', '22-exchange-rates', '23-control-center-pending', '24-control-center-record', '25-appearance', '26-bookkeeping-reminders', '19-shortcuts-home-screen']
+    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else list(RECORDING_IDS_120)
     minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     expected_present = [identity for identity in expected_ids if identity in recording_ids]
@@ -215,8 +249,8 @@ def card(clip, lang):
     entry_label = '開く場所' if lang == 'ja' else 'Where to start'
     search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
     steps = ''.join(f'<li><span>{esc(s[lang])}</span></li>' for s in clip['steps'])
-    scope_note = (f'<p class="guide-scope-note">{esc(SCOPE_NOTES[slug][lang])}</p>'
-                  if slug in SCOPE_NOTES else '')
+    scope = clip.get('scope_note', SCOPE_NOTES.get(slug, {})).get(lang, '')
+    scope_note = f'<p class="guide-scope-note">{esc(scope)}</p>' if scope else ''
     # Explain visible 1.1.3 limitations beside the affected English recording.
     english_ui_notes = {
         '13-import-and-undo': 'This build shows preset category names in Japanese in the import menu. The video maps Food to 食費 (Food).',
@@ -311,17 +345,8 @@ def main():
             extra_ja = read_clips('ja', '1.2.0')
             extra_en = read_clips('en', '1.2.0')
             check_matching_provenance(extra_ja, extra_en)
-            # Put each new feature beside the existing related guide.
-            for clips, additions in ((japanese, extra_ja), (english, extra_en)):
-                for addition in additions:
-                    if addition['id'] == '19-shortcuts-home-screen':
-                        index = next(i for i, clip in enumerate(clips) if clip['id'] == addition['id'])
-                        clips[index] = addition
-                        continue
-                    predecessor = {'21-chat-recurring': '12-recurring', '22-exchange-rates': '10-reports',
-                                   '23-control-center-pending': '03-pending-confirmation', '24-control-center-record': '23-control-center-pending', '26-bookkeeping-reminders': '16-settings-and-shortcuts', '25-appearance': '16-settings-and-shortcuts'}[addition['id']]
-                    index = next(i for i, clip in enumerate(clips) if clip['id'] == predecessor)
-                    clips.insert(index + 1, addition)
+            japanese = merge_120_clips(japanese, extra_ja)
+            english = merge_120_clips(english, extra_en)
         changed = []
         for lang, name in [('ja', 'support-ja.html'), ('en', 'support.html')]:
             clips = japanese if lang == 'ja' else english

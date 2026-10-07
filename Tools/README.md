@@ -90,7 +90,7 @@ manifest の形式：
 
 ### ショートカット動画の追加
 
-既存の `01-quick-entry` から `17-voice-and-sharing-entry` までの17本は、元の順序ですべて残す。実際に収録して素材がそろったら、次の順序で末尾へ追加できる。
+1.1.3 の元の manifest では、`01-quick-entry` から `17-voice-and-sharing-entry` までの17本を元の順序ですべて残す。実際に収録して素材がそろったら、次の順序で末尾へ追加できる。
 
 1. `19-shortcuts-home-screen`：Kotoriの「その他 → 記録を追加 / Siri」で、既存のショートカットボタンをタップするところから始める。直接開いたKotoriのページで、3つのプリセットのうち使いたい記録方法を長押しして、ホーム画面に追加する。次回からは追加したアイコンをタップして記録する。ショートカットの作成・編集やアイコンのカスタマイズは案内に含めない。タイトルは「アプリを開かずに記録：ホーム画面のショートカット」／「Record without opening the app: Home Screen shortcut」とする。
 2. `20-shortcuts-siri-name`：自分用のショートカットを作り、Siriに呼びかけやすい短い名前を付ける。タイトルは「アプリを開かずに記録：Siriで使う準備」／「Record without opening the app: Set up a Siri phrase」とする。
@@ -129,10 +129,25 @@ On 26/09/28, commit 7c73fba replaced guide 24 and the 1.2.0 Home Screen guide wi
 
 ### New-feature labels (1.2.0)
 
-Place `NEW` at the upper left of feature description cards for capabilities added since 1.1.3: recurring entries in chat and weekly schedules, exchange rates and final charges, reminders, appearance, and the pending-count control. Existing calculation input, keyword management, reports, and Home Screen shortcuts are not new to 1.2.0. Keep the historical pages and the default 1.1.3 entry unchanged.
+Place `NEW` at the upper left of feature description cards for capabilities added since 1.1.3: recurring entries in chat, exchange rates and final charges, reminders, appearance, copying entries, manual AI categorization, and the pending-count control. Weekly schedules already existed in 1.1.3; do not label them as a separate new capability. Existing calculation input, keyword management, reports, and Home Screen shortcuts are not new to 1.2.0. Keep the historical pages and the default 1.1.3 entry unchanged.
 
 ### Reminders (1.2.0)
 
 `26-bookkeeping-reminders` briefly shows how to open reminder settings, set a time and repeat days for one reminder, and enable it. Keep this tutorial to basic setup; daily, weekday, and weekend summary variants belong in UI regression checks, not additional tutorial steps. Times and weekdays sync with iCloud; notification switches remain local, and new reminders start off. The Japanese and English recordings show the settings flow on a signed-out simulator; they do not establish cross-device CloudKit delivery. Keep the existing clips’ provenance and attach this recording’s actual build and commit to its own manifest entry. Version 1.2.0 requires its first two guides and accepts subsequent feature guides in their defined order while other features are still being recorded.
 
 1.2.0 のホーム画面ガイド `19-shortcuts-home-screen` は、同版の manifest にある新しい日英動画を優先する。1.1.3 の同名動画・字幕・出典は変更しない。コントロールセンターでは「ショートカットを実行 → Kotori → 記録を追加」を選ぶ。どちらも追加後にシステムの入力画面から保存する流れを紹介する。
+
+
+### 1.2.0 の動画差し替え（26/10/07）
+
+1.2.0 の manifest に同じ ID の動画がある場合、その版だけで優先する。09は1.1.3の動画を29秒から切り出し、別名を選んで関連付ける操作と結果だけを残す。撮影版・ビルドは1.1.3のまま保存し、切り出した範囲と元ファイルのハッシュを `edit` に記録する。12は開始日と初回の記録日、16は給料日に合わせる集計期間、22は連動するレートと請求額、25はアプリ全体の外観に更新する。27は記録のコピー、28は未分類の記録を分類する操作。14と17は1.2.0のカードと検索から除外し、1.1.3の素材と本文は残す。
+
+`RECORDING_IDS_120` は追加素材の許容順序を定義する。存在する完全な日英セットだけを読み込む。`scope_note` を動画ごとに指定すると、旧版向けの注記を上書きできる。空のオブジェクトは旧注記を表示しない指定。16は `group: review` として集計期間の案内に含める。
+
+28は、実際のモデルが利用可能で、分類結果と更新された集計を日英で収録できた素材だけを採用する。モデルの可用性や解析結果をテストで上書きして、公開用の成功例に使わない。ホスト上の単独のコマンドが返す状態だけでは、録画対象のシミュレータの状態を判断しない。実際のAppの入口、結果、生成ログを確認する。
+
+26/10/07時点では、09、12、16、22、25、27の日英素材を反映し、1.2.0は24本を表示する。28は収録待ち。iOS 26.5では実際の生成がシステムモデルのエラーで失敗し、iOS 27.0の日英環境でも `SensitiveContentAnalysisML 15` / `ModelManagerError 1001` が発生した。原因は未特定。学習済みの分類規則だけで成功した試行や、生成が失敗した試行は採用していない。実際のモデル生成と結果を確認できる環境で補録した後、日英素材と機能紹介からのリンクを追加する。
+
+文言はAppの表示名と既存ガイドの用語を基準にした。「コピー」／Copy、長押しの説明はAppleの [日本語ガイド](https://support.apple.com/ja-jp/guide/iphone/iph1a9cae52c/ios) と [英語ガイド](https://support.apple.com/guide/iphone/select-edit-and-move-text-iph1a9cae52c/ios) で確認した。Xでは「家計簿 給料日 締め日」「家計簿 明細 コピー」「海外旅行 カード 請求額 為替レート」と英語の対応語を検索し、[日本語の「給料日から給料日」](https://x.com/Coco_kimama/status/2072728635711402212)、[英語の budget for the month / next payday](https://x.com/another_wurld/status/2107326971839443407) を用例として確認した。英語の duplicate transactions は二重計上の文脈が多く、操作名には採用していない。カードの最終請求額を表す英語の完全一致検索では適切な個人投稿が見つからず、製品の既存表現と実際の画面を優先した。
+
+新しい動画には実際のApp 1.2.0、build 1528、製品ソース `a581ff598aa976f1bd803a12338aa7ae30f02313` を動画単位で記録する。録画後の字幕時刻の確認内容とポスターの選択理由も残す。既存のmanifestの先頭にある古い動画の出典は書き換えない。原片、XCTestの結果、比較用の画像は収録ごとの一時ディレクトリに保存する。
