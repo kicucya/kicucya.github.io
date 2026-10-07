@@ -101,14 +101,13 @@ SCOPE_NOTES['24-control-center-record'] = {
 }
 ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
 ENTRY_POINTS['27-copy-transaction'] = ('収支 → 記録を長押し → コピー', 'Transactions → touch and hold an entry → Copy')
-ENTRY_POINTS['28-manual-classification'] = ('レポート → 未分類 → 記録を長押し', 'Reports → Uncategorized → touch and hold an entry')
 
 # Version-specific replacements never change the original 1.1.3 media or order.
 RECORDING_IDS_120 = (
     '21-chat-recurring', '22-exchange-rates', '23-control-center-pending',
     '24-control-center-record', '25-appearance', '26-bookkeeping-reminders',
     '19-shortcuts-home-screen', '09-keywords', '12-recurring',
-    '16-settings-and-shortcuts', '27-copy-transaction', '28-manual-classification',
+    '16-settings-and-shortcuts', '27-copy-transaction',
 )
 HIDDEN_RECORDING_IDS_120 = {'14-batch-input', '17-voice-and-sharing-entry'}
 RECORDING_PREDECESSORS_120 = {
@@ -118,7 +117,6 @@ RECORDING_PREDECESSORS_120 = {
     '26-bookkeeping-reminders': '16-settings-and-shortcuts',
     '25-appearance': '16-settings-and-shortcuts',
     '27-copy-transaction': '04-transaction-actions',
-    '28-manual-classification': '22-exchange-rates',
 }
 
 
