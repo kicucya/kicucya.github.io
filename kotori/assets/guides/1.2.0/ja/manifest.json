@@ -57,106 +57,93 @@
     },
     {
       "id": "22-exchange-rates",
-      "title_ja": "レポートで外貨のレートと請求額を入力する",
-      "title_en": "Enter foreign-currency rates and final charges in Reports",
+      "title_ja": "旅先の支出をカードの請求額で集計する",
+      "title_en": "Use the card's final charge for travel expenses",
       "ui_language": "ja",
-      "duration": 123.733,
-      "bytes": 1271259,
+      "duration": 87.533,
+      "bytes": 1330592,
       "steps": [
         {
-          "time": 1.134,
-          "ja": "レポートの「為替レート」を開くと、レート未設定の記録を日付ごとに確認できます",
-          "en": "Open Exchange Rate in Reports to see records with missing rates, grouped by date"
+          "time": 1.012,
+          "ja": "レポートの「為替レート」から、外貨の記録を開きます",
+          "en": "Open Exchange Rate in Reports and choose a foreign-currency entry"
         },
         {
-          "time": 8.426,
-          "ja": "「すべて表示」や通貨で絞り込み、編集したい記録をタップします",
-          "en": "Use Show All or the currency filter, then tap the record to edit"
+          "time": 7.529,
+          "ja": "分かっている向きのレートを入力すると、逆向きのレートと換算額も更新されます",
+          "en": "Enter the rate in either direction. The other rate and converted amount update together"
         },
         {
-          "time": 22,
-          "ja": "その日のレートを入力します。ここでは 1 AUD = 110.510 JPY を使います",
-          "en": "Enter that day's rate. Here, use 1 AUD = 110.510 JPY"
+          "time": 21.87,
+          "ja": "次の記録には、同じ通貨の直近のレートが入ります。確認して保存します",
+          "en": "The next entry starts with the most recent rate for these currencies. Check it and save"
         },
         {
-          "time": 39,
-          "ja": "カードの請求額が分かる場合は、その記録を開いて「金額」を選びます",
-          "en": "If the card's final charge is known, open that record and choose Amount"
+          "time": 31.138,
+          "ja": "カードの請求額が分かったら、その金額を直接入力できます",
+          "en": "When the card's final charge is known, enter that amount directly"
         },
         {
-          "time": 47,
-          "ja": "手数料を含む 103.25 AUD を入力すると、実際のレートを計算します",
-          "en": "Enter AUD 103.25 including fees to calculate the effective rate"
+          "time": 65.0,
+          "ja": "レポートには、保存した請求額とレートが反映されます",
+          "en": "Reports now uses the saved final charge and rate"
         },
         {
-          "time": 73,
-          "ja": "「レート未設定」に切り替えると、まだ入力していない記録だけが残ります",
-          "en": "Switch to Missing rate to see only records that still need one"
-        },
-        {
-          "time": 81,
-          "ja": "同じレートを使う記録は「一括入力」で選んで保存できます",
-          "en": "For records that share a rate, select them in Batch Entry and save"
-        },
-        {
-          "time": 102,
-          "ja": "「すべて表示」で入力済みの記録を見直せます。元の金額と通貨は変わりません",
-          "en": "Use Show All to review saved conversions. Original amounts and currencies stay unchanged"
-        },
-        {
-          "time": 111,
-          "ja": "「完了」でレポートへ戻ると、入力した請求額とレートで合計されます",
-          "en": "Tap Done to return to Reports and see the total using the charges and rates entered"
+          "time": 73.0,
+          "ja": "レートの表示方向は、その他の「為替レートの表示」で選べます",
+          "en": "Choose how rates are shown in More → Exchange Rate Display"
         }
       ],
-      "source_take": "22-exchange-rates-20260928-151647-389808",
-      "source_device": "6C764640-4A07-468B-9894-0F95F394B58B",
-      "source_started_at": 1790576207.994486,
-      "source_stopped_at": 1790576331.742686,
-      "source_wall_duration": 123.748,
-      "source_raw_duration": 117.147,
-      "source_raw_sha256": "a3d6a9c9eac03884c58072f8826ae6fa8701e5375818a4a0c60dae92978ca7ae",
-      "source_manifest_sha256": "9411eefed9ad274ef4db4aaeaf1b9242bf31d3a1ca574ea6bb83db4e1853e639",
-      "poster_time": 107.0,
-      "render_fingerprint": "9d9cd56b2ebb2796338a24eada96ef48a4f1f45d60c3abfb5a653cb54aefb1fc",
+      "source_take": "22-exchange-rates-20261007-211916-502702",
+      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
+      "source_started_at": 1791375556.735911,
+      "source_stopped_at": 1791375644.25382,
+      "source_wall_duration": 87.518,
+      "source_raw_duration": 83.528,
+      "source_raw_sha256": "8764e56fefa3162eba9ec26b9335130d5f5f747e801b483a8438772d58ee89fa",
+      "source_manifest_sha256": "b00619a6ad52ffe8c2024a10741ecff50f5d96686c3cb9be28f0ff0bf0a21a94",
+      "poster_time": 68.0,
+      "render_fingerprint": "859eb126d56248a863d60599ab607c536a0d230c525cd097df6651009904c7d4",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "aa701d833fda84b6a69f905ece397537475ac47c26aae8febca76887e936eb5e",
-      "sha256": "692c1fda1873c8e286966c7a87f38e1fa305d22e7f34fb979da7600126ea068e",
-      "poster_sha256": "da9e1fa1cb958dbe6f7d78d7bc462a12440e1a34074c381fc90efac2a1f2d9ed",
-      "poster_time_override": 107.0,
-      "poster_time_override_reason": "Reviewed Japanese All list showing original JPY amounts and saved AUD 103.25 final charge alongside AUD 200.00 batch conversion.",
+      "poster_fingerprint": "6eb13811bead090073dd52f4514e65a42548eeb3e44b30a7733b70adefd71e91",
+      "sha256": "2e63b1171f2e2a8dc18a92e43399c71da69a53a0c97dcd7b23ab5c684e575a9d",
+      "poster_sha256": "db3bf052ab8c40ed1cb6a62bee5b82485e5f36a5e29998a7fee3c8b8f27238ec",
+      "poster_time_override": 68.0,
+      "poster_time_override_reason": "The saved travel expenses total A$303.25 is visible in Reports.",
       "caption_timing_review": {
-        "method": "Decoded rendered video from its beginning; reviewed 10-second contact sheet and 20 boundary frames at 1-second precision. Adjusted captions to actual list/editor transitions. Raw capture retained.",
+        "method": "Decoded from the beginning; reviewed the whole flow and every second from 58 to 77. Aligned the report result and display settings captions to the visible screens.",
         "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.134,
-          8.426,
-          22.547,
-          39.55,
-          47.135,
-          78.349,
-          84.335,
-          106.933,
-          115.12
+          1.012,
+          7.529,
+          21.87,
+          31.138,
+          63.484,
+          71.167
         ],
         "reviewed_step_times": [
-          1.134,
-          8.426,
-          22,
-          39,
-          47,
-          73,
-          81,
-          102,
-          111
+          1.012,
+          7.529,
+          21.87,
+          31.138,
+          65.0,
+          73.0
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1486",
-      "source_commit": "59398c21898f3b2775c9292642b24d5034b48fc0",
-      "device_name": "iPhone 17",
+      "app_build": "1528",
+      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
+      "device_name": "iPhone 17 Pro",
       "runtime": "iOS 26.5",
-      "group": "review"
+      "scope_note": {},
+      "group": "review",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide22ExchangeRates",
+        "method_sha256": "a360c42c9d806b3761ad72475654c5105e69bd2fff63ff360267505a8bfd103b",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      }
     },
     {
       "id": "23-control-center-pending",
@@ -318,105 +305,94 @@
     },
     {
       "id": "25-appearance",
-      "title_ja": "カラーと背景を自分好みに",
-      "title_en": "Choose your own colors and background",
+      "title_ja": "カラーと写真でアプリ全体を自分好みに",
+      "title_en": "Personalize the app with colors and a photo",
       "ui_language": "ja",
-      "duration": 109.167,
-      "bytes": 2571879,
+      "duration": 70.3,
+      "bytes": 1692145,
       "steps": [
         {
-          "time": 1.01,
-          "ja": "その他からカスタマイズを開きます。",
-          "en": "Open Appearance from More."
+          "time": 1.012,
+          "ja": "その他からカスタマイズを開き、アクセントカラーを選びます",
+          "en": "Open Appearance from More and choose an accent color"
         },
         {
-          "time": 8.544,
-          "ja": "アクセントカラーを選ぶと、プレビューで見え方を確認できます。",
-          "en": "Choose an accent color and check the preview."
+          "time": 10.466,
+          "ja": "外観はライト、ダーク、システム設定から選べます",
+          "en": "Choose Light, Dark, or the system appearance"
         },
         {
-          "time": 12.112,
-          "ja": "カスタムカラーでは、好きな色を選べます。",
-          "en": "Use Custom Color to choose another color."
+          "time": 23.407,
+          "ja": "背景を写真に切り替え、好きな写真を選びます",
+          "en": "Choose Photo for the background, then pick a picture"
         },
         {
-          "time": 22.023,
-          "ja": "背景にはカラーや写真を選べます。まずカラーを選びます。",
-          "en": "Choose a color or photo for the chat background. Start with a color."
+          "time": 33.0,
+          "ja": "ピンチとドラッグで、写真の大きさや位置を調整します",
+          "en": "Pinch and drag to adjust the picture's size and position"
         },
         {
-          "time": 39.145,
-          "ja": "ライトとダークを切り替えて、背景の見え方を確認します。",
-          "en": "Switch between Light and Dark to preview the background."
+          "time": 39.0,
+          "ja": "文字の読みやすさを見ながら、不透明度を調整して保存します",
+          "en": "Adjust the opacity so text stays easy to read, then save"
         },
         {
-          "time": 52.681,
-          "ja": "写真を使う場合は、写真を選択します。",
-          "en": "To use a photo, choose it from Photos."
-        },
-        {
-          "time": 61.0,
-          "ja": "ピンチで大きさを、ドラッグで位置を調整して完了します。",
-          "en": "Pinch to resize, drag to reposition, then tap Done."
-        },
-        {
-          "time": 67.0,
-          "ja": "不透明度を調整して保存すると、記録画面に反映されます。",
-          "en": "Adjust the opacity and save to apply it to the chat screen."
-        },
-        {
-          "time": 85.719,
-          "ja": "iCloudのカスタマイズ同期は、初期状態ではオフです。",
-          "en": "Appearance syncing in iCloud starts turned off."
+          "time": 51.0,
+          "ja": "記録、収支、レポートに、同じカラーと背景が反映されます",
+          "en": "The same colors and background appear in Record, Transactions, and Reports"
         }
       ],
-      "source_take": "25-appearance-20260928-013943-238627",
-      "source_device": "6E7C2E49-992F-4AF4-A265-1EBFEB53F165",
-      "source_started_at": 1790527183.657482,
-      "source_stopped_at": 1790527292.8077,
-      "source_wall_duration": 109.15,
-      "source_raw_duration": 107.45,
-      "source_raw_sha256": "e0c2349a1a9efcee6b4064125cdc2909cba3e3a8ec6e1938648cd396623a9497",
-      "source_manifest_sha256": "270107bbb42f689e1bc6f3d6fe890c84fe3935da5948e99724e2685b6c7fd595",
-      "poster_time": 42.0,
-      "render_fingerprint": "fd6da03d8e9479458f16b53d20cd6260c37f4cfa288ef0605da17a8c83b13d11",
+      "source_take": "25-appearance-20261007-213030-097718",
+      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
+      "source_started_at": 1791376230.3384142,
+      "source_stopped_at": 1791376300.649434,
+      "source_wall_duration": 70.311,
+      "source_raw_duration": 66.32,
+      "source_raw_sha256": "6f16a7a1bbe9b3fb9a14769cb2ebc199faa21320f849231eec235669ac22425b",
+      "source_manifest_sha256": "e662074c2b5516fc7d96c24b4cbf2a6152d21fd315d39878f6fbd30b23cc2ddc",
+      "poster_time": 67.0,
+      "render_fingerprint": "35819fa1a832491ce8900cc89fd809251d13664dca6e1852cb94369be7c8a367",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "71f05171d376fec785f169a2521956025bfc156a95ddd5d03f7170b2abacaf09",
-      "sha256": "a299ce2f4bcf1f955c0dbcec205fb63e1d29abde5ea8e990baf27c845128f22e",
-      "poster_sha256": "ab53e4891920b5042620bd2284ccd214125814757dfdc40da941ce4f06774622",
-      "poster_time_override": 42.0,
-      "poster_time_override_reason": "Dark appearance preview visible inside light settings, demonstrating the added preview control.",
+      "poster_fingerprint": "0786b33354dad8dbd479cce0eb4f4554d92fa83a652fe5887a5f78f75abfb643",
+      "sha256": "ef9309d3c80c710c54127da665088c33abf79517028586edfe238a28b6670f9e",
+      "poster_sha256": "c69af8281535cc3439065e8c9dff5614c0e5bade462df8bae25edaae2393060f",
+      "poster_time_override": 67.0,
+      "poster_time_override_reason": "Reviewed the settled Reports page after all tab transitions; saved photo background and purple navigation accent are visible.",
       "caption_timing_review": {
-        "method": "Reviewed all 4-second contact sheets and 1-second frames at 60–73 s; aligned crop and opacity captions with visible transitions.",
+        "method": "Decoded from the beginning; reviewed the whole flow and one-second frames from 28 to 57. Aligned crop, opacity and saved-page captions to the observed actions.",
         "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.01,
-          8.544,
-          12.112,
-          22.023,
-          39.145,
-          52.681,
-          66.43,
-          72.215,
-          85.719
+          1.012,
+          10.466,
+          23.407,
+          38.156,
+          44.212,
+          53.214
         ],
         "reviewed_step_times": [
-          1.01,
-          8.544,
-          12.112,
-          22.023,
-          39.145,
-          52.681,
-          61.0,
-          67.0,
-          85.719
+          1.012,
+          10.466,
+          23.407,
+          33.0,
+          39.0,
+          51.0
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1468",
-      "source_commit": "035fcc9b2b53743c6628f715a3bb2851d83ae71e",
+      "app_build": "1528",
+      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
+      "device_name": "iPhone 17 Pro",
       "runtime": "iOS 26.5",
-      "device_name": "iPhone 17"
+      "scope_note": {},
+      "group": "data",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/AppearanceGuideUITests.swift",
+        "method": "testGuide25Appearance",
+        "method_sha256": "8d0e1345519d34b7fc2104f82578c7dab384e3a8d701a4b4d5caf0051eded294",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "demo_photo_sha256": "62f8c15f46415a6d5c5a77d083d6426221db8299240b89761e87bb11ae4c084e"
     },
     {
       "id": "26-bookkeeping-reminders",
@@ -561,6 +537,272 @@
       "provenance_source": "Build and simulator identity supplied by the operator at render time",
       "rendered_at": "2026-09-28T02:48:23.457803+00:00",
       "capture": "Real iOS Simulator UI; synthetic local demonstration data"
+    },
+    {
+      "id": "09-keywords",
+      "title_ja": "同じお店の表記をまとめる",
+      "title_en": "Link different names for the same merchant",
+      "duration": 12.333333,
+      "bytes": 80312,
+      "steps": [
+        {
+          "time": 0.0,
+          "ja": "「選択」をタップして、同じお店の二つの表記を選びます",
+          "en": "Tap Select and choose two names for the same merchant"
+        },
+        {
+          "time": 6.0,
+          "ja": "「関連付け」をタップします",
+          "en": "Tap Link"
+        },
+        {
+          "time": 8.0,
+          "ja": "一つのグループにまとまったことを確認できます",
+          "en": "The linked names now appear as one group"
+        }
+      ],
+      "source_take": "09-keywords-20260922-224931",
+      "source_device": "514F13B8-5366-43AB-9851-25AF3D063870",
+      "source_started_at": 1790081371.8187048,
+      "source_stopped_at": 1790081413.152986,
+      "source_wall_duration": 41.334,
+      "source_raw_duration": 36.952,
+      "source_raw_sha256": "057225c0690aab7720a0a385f6223bd5a7bb0f1de4e8c1fc689fd9e386e16094",
+      "source_manifest_sha256": "73db9b509bf1d92bf68c922ba9564785412871ca2b29dd5448d90cb164e7030a",
+      "poster_time": 10.0,
+      "sha256": "07394bf8671cb114297b8fba5c7b4bc9dabe166501802e60250afa733a6d2e22",
+      "poster_sha256": "dfc7ce35e8975128a8e2002ceb4b0a8a44ed0c5aaa66373acad4a4d3ce3ec4b3",
+      "app_version": "1.1.3",
+      "app_build": "1397",
+      "source_commit": "5a7ed066a737a3222083e7ebc19321e27e97db54",
+      "device_name": "iPhone 17 Pro Max",
+      "runtime": "iOS 26.5",
+      "ui_language": "ja",
+      "scope_note": {
+        "ja": "",
+        "en": ""
+      },
+      "poster_time_source": "reviewed_edited_video",
+      "group": "organize",
+      "edit": {
+        "edited_on": "2026-10-07",
+        "source_media_version": "1.1.3",
+        "source_video_sha256": "073f394a813467fc0b68254764a7137369f416bd353dba20664dc4773b64331a",
+        "source_manifest_sha256": "87c637d736ea0fdbbb556ec58f5d71a1025ef96bac88355feb420bf1031e09cf",
+        "start_seconds": 29.0,
+        "end_seconds": 41.333,
+        "method": "Kept only the observed select-two-names → Link → merged-group flow. Re-encoded to H.264; replaced captions and selected a new result poster. Original 1.1.3 assets unchanged."
+      }
+    },
+    {
+      "id": "12-recurring",
+      "title_ja": "固定費の開始日と最初の記録日を確認する",
+      "title_en": "Set a recurring expense and check its first date",
+      "ui_language": "ja",
+      "duration": 57.467,
+      "bytes": 881540,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "毎月のサブスクなど、繰り返す支出を追加します",
+          "en": "Add a recurring expense, such as a monthly subscription"
+        },
+        {
+          "time": 23.0,
+          "ja": "周期を「毎月」にして、開始日を選びます",
+          "en": "Choose Monthly, then select the start date"
+        },
+        {
+          "time": 37.0,
+          "ja": "最初に記録される日を確認して保存します",
+          "en": "Check the first date the entry will be recorded, then save"
+        },
+        {
+          "time": 45.0,
+          "ja": "一覧で、金額と毎月の予定を確認できます",
+          "en": "Review the amount and monthly schedule in the list"
+        }
+      ],
+      "source_take": "12-recurring-20261007-213727-694643",
+      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
+      "source_started_at": 1791376647.897247,
+      "source_stopped_at": 1791376705.358353,
+      "source_wall_duration": 57.461,
+      "source_raw_duration": 50.018,
+      "source_raw_sha256": "5a3e54aaf5892a3810e62384426092cf77800c36a6d98ddf6efe817d5a039cbf",
+      "source_manifest_sha256": "3251b2c60fe84121177bedde7b4cfddace5d16b9834dda316777ffefb0786c5c",
+      "poster_time": 40.0,
+      "render_fingerprint": "5153cd3c72f8dc7f0882fe8ec60e470867e3d6bf47d857cd41e064994d621e8b",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "70a1c35ccae8dd36c086083e91223f17ed1ada6da7f4fb46817bd4c641310d58",
+      "sha256": "1cfd6cd6e6ec06ef561457800a2bfdd843c7852c31932132d3d4fd1f37d0cd88",
+      "poster_sha256": "81f7484a2aed8ef66a49a3a0d69c2d2f8fa43c7b3e83232fb1663554dfa35d4d",
+      "poster_time_override": 40.0,
+      "poster_time_override_reason": "Start date and the calculated first entry date are visible together.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; reviewed a three-second full-flow contact sheet and one-second frames around selection, first entry date, saving and report transitions.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.01,
+          26.373,
+          43.754,
+          51.334
+        ],
+        "reviewed_step_times": [
+          1.01,
+          23.0,
+          37.0,
+          45.0
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1528",
+      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
+      "device_name": "iPhone 17 Pro",
+      "runtime": "iOS 26.5",
+      "scope_note": {},
+      "group": "review",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide12RecurringEntries",
+        "method_sha256": "00f9bf072b6e4565538f8ada86d201ad738e1973047b752dd11d665da5da5e74",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      }
+    },
+    {
+      "id": "16-settings-and-shortcuts",
+      "title_ja": "給料日に合わせて月の集計期間を変える",
+      "title_en": "Start your budget month on payday",
+      "ui_language": "ja",
+      "duration": 26.167,
+      "bytes": 445285,
+      "steps": [
+        {
+          "time": 1.016,
+          "ja": "毎月25日から集計する場合は、「締め日」で25を選びます",
+          "en": "To start each budget month on the 25th, choose 25 under Settlement Day"
+        },
+        {
+          "time": 16.0,
+          "ja": "レポートに戻ると、25日から翌月24日までの収支を確認できます",
+          "en": "Return to Reports to see income and expenses from the 25th through the 24th"
+        }
+      ],
+      "source_take": "16-settings-and-shortcuts-20261007-214221-409009",
+      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
+      "source_started_at": 1791376941.599425,
+      "source_stopped_at": 1791376967.768943,
+      "source_wall_duration": 26.17,
+      "source_raw_duration": 18.503,
+      "source_raw_sha256": "a060604ca6077a54e16925a4539370faaff386c24709d265be1de10d7f3fb887",
+      "source_manifest_sha256": "8eb2019375d337ba0290ebd8b1466d7098f8baf036ec8ea75a0531408d4ee0b4",
+      "poster_time": 21.0,
+      "render_fingerprint": "3f83f24d27f1f6a64f772765208e175bf17152846d7edda51ddf7ee74ba80d68",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "7d07cbd54a237de7a17cbb780af12b2f9627bee8a620b5b202f2e942ecf49ded",
+      "sha256": "ed7ff749801fdab236d4d3667baa3b928cd78b8b5f4558d50d5f4768aa71572d",
+      "poster_sha256": "21a4c696523ae941dc99a5140c09f30d9e5f2f9f88dbad715a07353fa26d8d1b",
+      "poster_time_override": 21.0,
+      "poster_time_override_reason": "Reports shows the saved period from the 25th through the 24th.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; reviewed a three-second full-flow contact sheet and one-second frames around selection, first entry date, saving and report transitions.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.016,
+          15.74
+        ],
+        "reviewed_step_times": [
+          1.016,
+          16.0
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1528",
+      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
+      "device_name": "iPhone 17 Pro",
+      "runtime": "iOS 26.5",
+      "scope_note": {},
+      "group": "review",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide16SettingsAndShortcuts",
+        "method_sha256": "9eedf4e22239e7b5c1a39c23924ac4fddb9b7ac9514a456aafbc9c7c3f293310",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      }
+    },
+    {
+      "id": "27-copy-transaction",
+      "title_ja": "記録をコピーして追加する",
+      "title_en": "Copy an entry and save a new one",
+      "ui_language": "ja",
+      "duration": 53.8,
+      "bytes": 723649,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "使いたい記録を長押しして「コピー」を選びます",
+          "en": "Touch and hold an entry, then choose Copy"
+        },
+        {
+          "time": 10.933,
+          "ja": "内容や金額が入力済みなので、変わったところだけ直します",
+          "en": "The details are filled in. Edit what has changed"
+        },
+        {
+          "time": 35.0,
+          "ja": "「追加」で新しい記録を保存します",
+          "en": "Tap Add to save the new entry"
+        }
+      ],
+      "source_take": "27-copy-transaction-20261007-193133-791225",
+      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
+      "source_started_at": 1791369094.045847,
+      "source_stopped_at": 1791369147.860619,
+      "source_wall_duration": 53.815,
+      "source_raw_duration": 46.217,
+      "source_raw_sha256": "2b2777fab80bff1fc9d320f60ee6d35a41a91b8bf716da9a5faab040c2f1b7b3",
+      "source_manifest_sha256": "40a1ecd0de69783bd437fbab99466e3aa355fff634fd21763d21324863c775a6",
+      "poster_time": 45.0,
+      "render_fingerprint": "0aaa1829ffc751fd2f7d7ec73c06589d1a8dd0c30113275607dade35f72d20ab",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "90fc0756313c24f7320a0e82a883a44c621c77bc10eed7a9a3a60b10148d2f9f",
+      "sha256": "70343b941697991acd808431518c3190f46afb86a92e3146b01f3b7e2af4a152",
+      "poster_sha256": "256442d6a95de75fa5bd14d1b5dfef88d86313a0054c62b440176b65bed87602",
+      "poster_time_override": 45.0,
+      "poster_time_override_reason": "Reviewed saved list with both the source and the new copied entry visible.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; reviewed a five-second full-flow contact sheet, one-second opening frames and one-second save-boundary frames. Moved Add caption before the observed save action.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.008,
+          10.933,
+          43.173
+        ],
+        "reviewed_step_times": [
+          1.008,
+          10.933,
+          35.0
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1528",
+      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
+      "device_name": "iPhone 17 Pro",
+      "runtime": "iOS 26.5",
+      "scope_note": {
+        "ja": "記録画面のカードや、レポートの明細からもコピーできます。",
+        "en": "Copy is also available on cards in Record and entries in Reports."
+      },
+      "group": "organize",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/Guide120RecordingUITests.swift",
+        "method": "testGuide27CopyTransaction",
+        "method_sha256": "71ef172493c3efec9057a6ff6a3bb238257eee2dc01186554f4bf9c11135a8d2",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      }
     }
   ]
 }

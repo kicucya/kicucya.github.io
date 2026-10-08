@@ -1,37 +1,25 @@
 WEBVTT
 
 1
-00:00:01.134 --> 00:00:08.426
-Open Exchange Rate in Reports to see records with missing rates, grouped by date
+00:00:01.012 --> 00:00:07.529
+Open Exchange Rate in Reports and choose a foreign-currency entry
 
 2
-00:00:08.426 --> 00:00:22.000
-Use Show All or the currency filter, then tap the record to edit
+00:00:07.529 --> 00:00:21.870
+Enter the rate in either direction. The other rate and converted amount update together
 
 3
-00:00:22.000 --> 00:00:39.000
-Enter that day's rate. Here, use 1 AUD = 110.510 JPY
+00:00:21.870 --> 00:00:31.138
+The next entry starts with the most recent rate for these currencies. Check it and save
 
 4
-00:00:39.000 --> 00:00:47.000
-If the card's final charge is known, open that record and choose Amount
+00:00:31.138 --> 00:01:05.000
+When the card's final charge is known, enter that amount directly
 
 5
-00:00:47.000 --> 00:01:13.000
-Enter AUD 103.25 including fees to calculate the effective rate
+00:01:05.000 --> 00:01:13.000
+Reports now uses the saved final charge and rate
 
 6
-00:01:13.000 --> 00:01:21.000
-Switch to Missing rate to see only records that still need one
-
-7
-00:01:21.000 --> 00:01:42.000
-For records that share a rate, select them in Batch Entry and save
-
-8
-00:01:42.000 --> 00:01:51.000
-Use Show All to review saved conversions. Original amounts and currencies stay unchanged
-
-9
-00:01:51.000 --> 00:02:03.733
-Tap Done to return to Reports and see the total using the charges and rates entered
+00:01:13.000 --> 00:01:27.533
+Choose how rates are shown in More → Exchange Rate Display
