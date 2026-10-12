@@ -61,6 +61,7 @@
 .guide-reference { border-top: 1px solid var(--line); width: 100%; max-width: none; margin: 0; padding: 30px 0 0; }
 .guide-reference > h2:first-child { font-size: 1.65rem; }
 .guide-reference :is(h2,h3) { scroll-margin-top: 86px; }
+.guide-reference details[id] { scroll-margin-top: 112px; }
 .guide-reference h3 { font-size: 1.13rem; margin: 28px 0 12px; }
 .guide-reference .guide-contact { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 4px; }
 @media (max-width: 720px) {

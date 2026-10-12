@@ -301,165 +301,199 @@
       "runtime": "iOS 27.0",
       "provenance_source": "Build and simulator identity supplied by the operator at render time",
       "rendered_at": "2026-09-28T02:48:23.457803+00:00",
-      "capture": "Real iOS Simulator UI; synthetic local demonstration data"
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "scope_note": {
+        "ja": "「ショートカットを実行」で、ことりの「記録を追加」を選びます。次回からはこのボタンで入力し、アプリを開かずに保存できます。記録先は「その他 → 財布 → ショートカットの財布」で選べます。特定の財布を指定するか、アプリで選択中の財布に合わせられます。",
+        "en": "In Run Shortcut, choose Kotori’s Record Entry action. Next time, tap this button to enter and save a record without opening the app. Choose where entries go in More → Wallets → Shortcut wallet. Use a fixed wallet or follow the wallet selected in the app."
+      }
     },
     {
       "id": "25-appearance",
-      "title_ja": "カラーと写真でアプリ全体を自分好みに",
-      "title_en": "Personalize the app with colors and a photo",
+      "title_ja": "カラー・背景・チャットアイコンを自分好みに",
+      "title_en": "Personalize colors, the background, and your chat avatar",
       "ui_language": "ja",
-      "duration": 70.3,
-      "bytes": 1692145,
+      "duration": 101.167,
+      "bytes": 2339044,
       "steps": [
         {
-          "time": 1.012,
+          "time": 1.016,
           "ja": "その他からカスタマイズを開き、アクセントカラーを選びます",
           "en": "Open Appearance from More and choose an accent color"
         },
         {
-          "time": 10.466,
+          "time": 11.472,
           "ja": "外観はライト、ダーク、システム設定から選べます",
           "en": "Choose Light, Dark, or the system appearance"
         },
         {
-          "time": 23.407,
+          "time": 20.896,
           "ja": "背景を写真に切り替え、好きな写真を選びます",
           "en": "Choose Photo for the background, then pick a picture"
         },
         {
-          "time": 33.0,
+          "time": 41.337,
           "ja": "ピンチとドラッグで、写真の大きさや位置を調整します",
           "en": "Pinch and drag to adjust the picture's size and position"
         },
         {
-          "time": 39.0,
-          "ja": "文字の読みやすさを見ながら、不透明度を調整して保存します",
-          "en": "Adjust the opacity so text stays easy to read, then save"
+          "time": 46.876,
+          "ja": "文字の読みやすさを見ながら、不透明度を調整します",
+          "en": "Adjust the opacity so text stays easy to read"
         },
         {
-          "time": 51.0,
-          "ja": "記録、収支、レポートに、同じカラーと背景が反映されます",
-          "en": "The same colors and background appear in Record, Transactions, and Reports"
+          "time": 52.408,
+          "ja": "チャットアイコンにも写真を選べます",
+          "en": "Choose a photo for the chat avatar too"
+        },
+        {
+          "time": 60.0,
+          "ja": "丸い表示範囲を見ながら位置を調整し、保存します",
+          "en": "Adjust the picture using the circular preview, then save"
+        },
+        {
+          "time": 73.375,
+          "ja": "チャットにはアイコン、各画面にはカラーと背景が反映されます",
+          "en": "The avatar appears in chat, with the colors and background across the app"
         }
       ],
-      "source_take": "25-appearance-20261007-213030-097718",
-      "source_device": "20963ECF-E848-452D-A47B-81C3D99B3922",
-      "source_started_at": 1791376230.3384142,
-      "source_stopped_at": 1791376300.649434,
-      "source_wall_duration": 70.311,
-      "source_raw_duration": 66.32,
-      "source_raw_sha256": "6f16a7a1bbe9b3fb9a14769cb2ebc199faa21320f849231eec235669ac22425b",
-      "source_manifest_sha256": "e662074c2b5516fc7d96c24b4cbf2a6152d21fd315d39878f6fbd30b23cc2ddc",
-      "poster_time": 67.0,
-      "render_fingerprint": "35819fa1a832491ce8900cc89fd809251d13664dca6e1852cb94369be7c8a367",
+      "source_take": "25-appearance-20261013-151101-594006",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791871861.794862,
+      "source_stopped_at": 1791871962.973233,
+      "source_wall_duration": 101.178,
+      "source_raw_duration": 95.643,
+      "source_raw_sha256": "ff79724cf9f95629a0cfdc39e1c5a175cb2f95d64c771787e800fe72af36c4d0",
+      "source_manifest_sha256": "a672cebced1aa1d366bf26a3772ce38e2de1482e3802e628466468c4124de540",
+      "poster_time": 82.0,
+      "render_fingerprint": "25d6dedb63ca1a65510a2f6c4fdba6a0ad3ba995832cc9b9b4efa699a892e718",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "0786b33354dad8dbd479cce0eb4f4554d92fa83a652fe5887a5f78f75abfb643",
-      "sha256": "ef9309d3c80c710c54127da665088c33abf79517028586edfe238a28b6670f9e",
-      "poster_sha256": "c69af8281535cc3439065e8c9dff5614c0e5bade462df8bae25edaae2393060f",
-      "poster_time_override": 67.0,
-      "poster_time_override_reason": "Reviewed the settled Reports page after all tab transitions; saved photo background and purple navigation accent are visible.",
+      "poster_fingerprint": "a6e60d5288fd9bd545bb70f0154fede5f409cbe454bc7aa748b3cfed75301384",
+      "sha256": "535c6f41f04c86bdeaa100fe4b35a2b5cf3138468298946596df73d1d9040ea7",
+      "poster_sha256": "a99482cc9687fd74927c982eebf9bf831a46af329689c1e4c6663aa222046f16",
+      "poster_time_override": 82.0,
+      "poster_time_override_reason": "Saved custom avatar, photo background and purple accent are visible in chat.",
       "caption_timing_review": {
-        "method": "Decoded from the beginning; reviewed the whole flow and one-second frames from 28 to 57. Aligned crop, opacity and saved-page captions to the observed actions.",
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
         "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.012,
-          10.466,
-          23.407,
-          38.156,
-          44.212,
-          53.214
+          1.016,
+          11.472,
+          20.896,
+          41.337,
+          46.876,
+          52.408,
+          63.987,
+          73.375
         ],
         "reviewed_step_times": [
-          1.012,
-          10.466,
-          23.407,
-          33.0,
-          39.0,
-          51.0
+          1.016,
+          11.472,
+          20.896,
+          41.337,
+          46.876,
+          52.408,
+          60.0,
+          73.375
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1528",
-      "source_commit": "a581ff598aa976f1bd803a12338aa7ae30f02313",
-      "device_name": "iPhone 17 Pro",
-      "runtime": "iOS 26.5",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
       "scope_note": {},
       "group": "data",
       "recording_script": {
         "repository": "kotori",
         "file": "OneSentenceAccountingUITests/AppearanceGuideUITests.swift",
         "method": "testGuide25Appearance",
-        "method_sha256": "8d0e1345519d34b7fc2104f82578c7dab384e3a8d701a4b4d5caf0051eded294",
+        "method_sha256": "9feeb494344cec227281b2a11b2e8bc0125ee93ad3d73fd61d7be69190c3b2e6",
         "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
       },
-      "demo_photo_sha256": "62f8c15f46415a6d5c5a77d083d6426221db8299240b89761e87bb11ae4c084e"
+      "demo_photo_sha256": "62f8c15f46415a6d5c5a77d083d6426221db8299240b89761e87bb11ae4c084e",
+      "subtitle_sha256": {
+        "ja": "8309d405bdb167adb81f1230755b9d083a9360b55871f6fad713a73cdb0ed8bd",
+        "en": "8d159c1ed9ee83d28cdf1a651cf2dc26d7e706fb3c7e739d4f5905b483b8b49f"
+      }
     },
     {
       "id": "26-bookkeeping-reminders",
       "title_ja": "記録リマインダーを設定する",
       "title_en": "Set up reminders",
       "ui_language": "ja",
-      "duration": 29.8,
-      "bytes": 340683,
+      "duration": 27.1,
+      "bytes": 419963,
       "steps": [
         {
-          "time": 0,
-          "ja": "「その他」から「記録リマインダー」を開きます",
-          "en": "Open Reminders in More"
+          "time": 1.008,
+          "ja": "「その他」の「通知」から「記録リマインダー」を開きます",
+          "en": "Open Notifications in More, then Reminders"
         },
         {
-          "time": 6,
+          "time": 8.308,
           "ja": "＋から時刻を選びます",
           "en": "Tap plus and choose a time"
         },
         {
-          "time": 11,
+          "time": 11.868,
           "ja": "繰り返す曜日をタップして選びます",
           "en": "Tap the weekdays to repeat on"
         },
         {
-          "time": 18,
+          "time": 20.293,
           "ja": "新しいリマインダーはオフです。通知を受け取る端末でオンにします",
           "en": "New reminders start off. Turn them on on each device that should notify"
         }
       ],
-      "source_take": "26-bookkeeping-reminders-20260928-022134-397184",
-      "source_device": "C41EB2B8-1D6C-4DAC-B722-0C9BD60C5FCF",
-      "source_started_at": 1790529694.640126,
-      "source_stopped_at": 1790529724.450109,
-      "source_wall_duration": 29.81,
-      "source_raw_duration": 25.363,
-      "source_raw_sha256": "bd6d55c088d7b79f01e7176e166f09599459d4e4a65af82c5c6fefbade48d790",
-      "source_manifest_sha256": "fb523ebe21a4aa4ce1dbbe454b3e2ebdfb8784d4ce6ab07c0e9329315266d726",
-      "poster_time": 16.0,
-      "render_fingerprint": "b4019ef1a4e77c940cbf69015f36290ab56b5f804c981c0c72e1981f9f328cd9",
+      "source_take": "26-bookkeeping-reminders-20261013-143523-851054",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791869724.0701911,
+      "source_stopped_at": 1791869751.186041,
+      "source_wall_duration": 27.116,
+      "source_raw_duration": 25.175,
+      "source_raw_sha256": "dfcc3b04d1e2b3cda5d2e5e8e721a3210f086ff4c8db7ef42ff7db22783c5ebb",
+      "source_manifest_sha256": "29e03bd03b1b1b02766926f1b87f71ab46fec2a0441d2440749138cab30e5a65",
+      "poster_time": 24.825,
+      "render_fingerprint": "d6390cec119b1b381b838aba3b572eb1c3cdda3ae62a6730ce3f66b7fb2eb576",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "e6cd447c94144c2413bcad3bdee7795060ecb0028eda10fb7d63a32e26657679",
-      "sha256": "69852768a26a71af27b07eafbf3fad06784ebff9e39f1dd0ae11ee9c7207aed4",
-      "poster_sha256": "c3a3dc425d9a70b1024d1022dd1092c9f5da7dae5f381741054122363d7350f8",
-      "poster_time_override": 16.0,
-      "poster_time_override_reason": "简短教程中的时间与星期设置画面，不逐一展示摘要变体。",
+      "poster_fingerprint": "a7d4e32d39ac6a172c6c1b5a318f874fa73b349e5bb05057626ae32f6f0c3c2c",
+      "sha256": "f2444f7311c3764c1b2ebdff86d061952f654c1929d5d344eff9c03bd901a58e",
+      "poster_sha256": "e808279456d5a658069c5de1013b328a8bb851fe41148e057f7611dab374ff15",
+      "poster_time_override": 24.825,
+      "poster_time_override_reason": "The saved weekday reminder is enabled after real permission handling.",
       "caption_timing_review": {
-        "method": "Reviewed all rendered frames at two-second intervals; captions align with entry, time, repeat days and saved local switch.",
-        "sampling_precision_seconds": 2,
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
+        "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.012,
-          6.858,
-          11.116,
-          21.48
+          1.008,
+          8.308,
+          11.868,
+          20.293
         ],
         "reviewed_step_times": [
-          0,
-          6,
-          11,
-          18
+          1.008,
+          8.308,
+          11.868,
+          20.293
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1471",
-      "source_commit": "a6e980403ffbe0bb4d426c0ba906ca7e6f4d60e9",
-      "runtime": "iOS 26.5",
-      "device_name": "OSA Reminder Verification (iPhone 17)"
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "group": "data",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide26BookkeepingReminders",
+        "method_sha256": "4da9d8403e1197010bea3c54be1dbc8cfa0bad2ca43feba76a552c74c2bb376e",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "0942ed935215af267fb047395bb44b6a05c816c33f2d1b46786bdd5b48b7d722",
+        "en": "c500e81d1833d35f5d3dd6384bc86143ab41f3bd106cad9deae8ec296dd7ab98"
+      }
     },
     {
       "id": "19-shortcuts-home-screen",
@@ -536,7 +570,11 @@
       "runtime": "iOS 27.0",
       "provenance_source": "Build and simulator identity supplied by the operator at render time",
       "rendered_at": "2026-09-28T02:48:23.457803+00:00",
-      "capture": "Real iOS Simulator UI; synthetic local demonstration data"
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "scope_note": {
+        "ja": "記録先は「その他 → 財布 → ショートカットの財布」で選べます。特定の財布を指定するか、アプリで選択中の財布に合わせられます。",
+        "en": "Choose where entries go in More → Wallets → Shortcut wallet. Use a fixed wallet or follow the wallet selected in the app."
+      }
     },
     {
       "id": "09-keywords",
@@ -802,6 +840,399 @@
         "method": "testGuide27CopyTransaction",
         "method_sha256": "71ef172493c3efec9057a6ff6a3bb238257eee2dc01186554f4bf9c11135a8d2",
         "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      }
+    },
+    {
+      "id": "05-category-editor",
+      "title_ja": "カテゴリとサブカテゴリを整える",
+      "title_en": "Organize categories and subcategories",
+      "ui_language": "ja",
+      "duration": 60.833,
+      "bytes": 835588,
+      "steps": [
+        {
+          "time": 1.025,
+          "ja": "「編集」をタップすると、カテゴリを追加できます",
+          "en": "Tap Edit to add a category"
+        },
+        {
+          "time": 20.242,
+          "ja": "カテゴリを開き、「編集」からサブカテゴリを追加します",
+          "en": "Open the category, then tap Edit to add a subcategory"
+        },
+        {
+          "time": 40.996,
+          "ja": "鉛筆のボタンから名前を変更し、保存します",
+          "en": "Use the pencil button to rename the category, then save"
+        }
+      ],
+      "source_take": "05-category-editor-20261013-143933-133319",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791869973.276881,
+      "source_stopped_at": 1791870034.121732,
+      "source_wall_duration": 60.845,
+      "source_raw_duration": 57.718,
+      "source_raw_sha256": "ac0b5cd852d9b787583094e492e4bac8cdfb58ea91eddeb59fc054bea1740d50",
+      "source_manifest_sha256": "c7bda5143b9c9b55ead13bcbeede616f00429dbe9f9b15324381ff80d1770c28",
+      "poster_time": 57.368333,
+      "render_fingerprint": "ff61614a2c30e5c165a4b326469f84801be5123c6cc2ae134183afd40538e783",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "79d65d8b4999672a908818fa63fd98d52469fb19d50d0ab70754a75ffcb052a8",
+      "sha256": "12167f723b2b6afac5554f3c032e2de901aa4b5a66fd42b2f5fa4ba5e4509fc7",
+      "poster_sha256": "d0e713ac50ceeb9a64ac3732cbb148f503500f5b675e06853685da90770fb0d4",
+      "poster_time_override": 57.368333,
+      "poster_time_override_reason": "The saved parent Travel and child Accommodation are both visible in browsing mode.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.025,
+          20.242,
+          40.996
+        ],
+        "reviewed_step_times": [
+          1.025,
+          20.242,
+          40.996
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "scope_note": {},
+      "group": "organize",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide05CategoryEditorAndHierarchy",
+        "method_sha256": "1326fc932e095031d371b5f848fc22b0af2d354857f957307be1be67c5d9e854",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "ce5a3733e65158f733b3ee013ca6831ba16e681b50be092a9ca5ab38e2c0257e",
+        "en": "10547f92a3d5611ee0e353e25abdab8ca41afa5b2679bc177bddc6381b7a2bc5"
+      }
+    },
+    {
+      "id": "06-category-order",
+      "title_ja": "表示と並び順を整える",
+      "title_en": "Choose category visibility and order",
+      "ui_language": "ja",
+      "duration": 20.1,
+      "bytes": 268642,
+      "steps": [
+        {
+          "time": 1.007,
+          "ja": "「編集」を開くと、名前・表示・並び順を変更できます",
+          "en": "Tap Edit to change names, visibility, and order"
+        },
+        {
+          "time": 3.0,
+          "ja": "目のボタンで非表示にし、つまみで並び替えます",
+          "en": "Use the eye button to hide a category, then drag its reorder handle"
+        },
+        {
+          "time": 10.0,
+          "ja": "保存すると並び順が確定します",
+          "en": "Save to commit the new order"
+        }
+      ],
+      "source_take": "06-category-order-20261013-144049-611427",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791870049.9314098,
+      "source_stopped_at": 1791870070.038919,
+      "source_wall_duration": 20.108,
+      "source_raw_duration": 17.992,
+      "source_raw_sha256": "71933f42cc4b2d3122dd469461b9d87202074b6396d2685685dc48f2dfcb086a",
+      "source_manifest_sha256": "7312ddf47fcb5e04e546c9fa018a9c36bdd4f8aa15432f00ab140acc5bf4cca1",
+      "poster_time": 8.0,
+      "render_fingerprint": "6eb3cf0faf94ad1d47b10bb8c393383ca763142cc692ea5202212a2e666ff347",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "1685035104cb434dd4dfc2b763ff7333735e429838618e2456412ebfb7afb490",
+      "sha256": "3d40d121ed79842b46013a74edc49198db19402d607ead891fc3800a52f31142",
+      "poster_sha256": "2ca2483ca589dd2b8a951e3afcce18497afbb7f33226b1391e3a6e34a1db92e6",
+      "poster_time_override": 8.0,
+      "poster_time_override_reason": "Editing controls, the hidden Food category and the changed order are visible.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.007,
+          5.719,
+          14.618
+        ],
+        "reviewed_step_times": [
+          1.007,
+          3.0,
+          10.0
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "scope_note": {},
+      "group": "organize",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide06CategoryOrderAndVisibility",
+        "method_sha256": "b653677ebddb1646fd0b054597c3c7104e5a6b9bf6bf3e8398b2af93113ed819",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "b37812ea3f358008b43a1be6c8dbc96cd3c83a7fabfa5ddbba4983beaa42c7ce",
+        "en": "089355fdc98015ef6546bde0997379e5533721242afb0445bbc65d758846f7b2"
+      }
+    },
+    {
+      "id": "07-wallets",
+      "title_ja": "財布を分けて管理する",
+      "title_en": "Create, rename, and switch wallets",
+      "ui_language": "ja",
+      "duration": 49.5,
+      "bytes": 721977,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "旅行用の財布を作ります",
+          "en": "Create a wallet for travel"
+        },
+        {
+          "time": 15.2,
+          "ja": "使用中の財布を右へスワイプして改名します",
+          "en": "Swipe the current wallet right to rename it"
+        },
+        {
+          "time": 35.238,
+          "ja": "財布を選ぶと、「記録」と「収支」の両方に反映されます",
+          "en": "The selected wallet is shared by Record and Transactions"
+        }
+      ],
+      "source_take": "07-wallets-20261013-145550-821941",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791870951.0147789,
+      "source_stopped_at": 1791871000.4987562,
+      "source_wall_duration": 49.484,
+      "source_raw_duration": 47.97,
+      "source_raw_sha256": "09223afe9a82680ca2a6c2ff8e08799b435b16d663f7159b83e776f08f1a47b1",
+      "source_manifest_sha256": "73404f8ecafeac113ce96cd60680df23b249763da84dfd2590ad144ce7465c46",
+      "poster_time": 36.5,
+      "render_fingerprint": "746ddd7d992520f14b64787eca1ec91f85e696727005b7e451de76770f007379",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "2a008694decbd1d0ef3629b7fa8929475bdc6e9e9b6569d45f5741d7d82aadea",
+      "sha256": "cbf7f10e84029915239fd6ae6fe67dcd844ea073b3b116f8ac6c7bcfa1e3b975",
+      "poster_sha256": "8c0e702a361d9387a5a1da7eca7497873325e5b090b88b6258afd0efb7b1a614",
+      "poster_time_override": 36.5,
+      "poster_time_override_reason": "The renamed current wallet and Shortcut wallet setting are visible together.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.012,
+          15.2,
+          35.238
+        ],
+        "reviewed_step_times": [
+          1.012,
+          15.2,
+          35.238
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "scope_note": {},
+      "group": "organize",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide07Wallets",
+        "method_sha256": "e1820cee34f86174adc9c4d4c1c20b818eefdf3795a907fa6b4ffc5f3dabb697",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "3f5afaad59a2d0e12188cdb441a685947745050059881d5eb51c8f5ed7ce69d4",
+        "en": "15ff73de736472eca1b59c8f70579a7732665a8ee79330fb3ed181b4482e7602"
+      }
+    },
+    {
+      "id": "11-budget",
+      "title_ja": "財布と通知の目安を決めて予算を立てる",
+      "title_en": "Choose wallets and an alert level for your budget",
+      "ui_language": "ja",
+      "duration": 69.467,
+      "bytes": 1258103,
+      "steps": [
+        {
+          "time": 1.014,
+          "ja": "予算に含める財布を選びます",
+          "en": "Choose which wallets to include in the budget"
+        },
+        {
+          "time": 13.623,
+          "ja": "予算アラートの割合を選びます。初期設定は80%です",
+          "en": "Choose when to receive a budget alert. The default is 80%"
+        },
+        {
+          "time": 16.624,
+          "ja": "総予算をタップすると、電卓で金額を変更できます",
+          "en": "Tap the total budget to change the amount with the calculator"
+        },
+        {
+          "time": 37.206,
+          "ja": "スライダーでカテゴリに配分します",
+          "en": "Allocate money with the category slider"
+        },
+        {
+          "time": 40.773,
+          "ja": "固定したい配分はロックできます",
+          "en": "Lock an allocation that should stay fixed"
+        },
+        {
+          "time": 43.557,
+          "ja": "保存すると、レポートで予算と支出を確認できます",
+          "en": "Save, then review the budget and spending in Reports"
+        }
+      ],
+      "source_take": "11-budget-20261013-153359-537829",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791873240.168374,
+      "source_stopped_at": 1791873309.642821,
+      "source_wall_duration": 69.474,
+      "source_raw_duration": 67.447,
+      "source_raw_sha256": "32297583827460eea5f48c254e6fe18051fc4f5dfa18b85644418467b2aff1ef",
+      "source_manifest_sha256": "b8e46390ff3da3fe5a16b667c8a35edbd83c609203e0544a8f7eb97f49eed18b",
+      "poster_time": 42.3,
+      "render_fingerprint": "9bb1e1d398021d18d9fff045bbd24070f23168466a650e841b362cdc49873c67",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "11158751ec409551c9519a77543fc6e388aac9bd1825507c913d7dd19427de2b",
+      "sha256": "5d7b50cf4798909ff8718dc9fda69c09b7aee59034e6a36d20fd0226bd8d3460",
+      "poster_sha256": "05c2c374b60b871b85b4643157f0153ed6f542261a36e26c9c2ec58261a31d4e",
+      "poster_time_override": 42.3,
+      "poster_time_override_reason": "Selected Default wallet, 60% warning and the edited, locked Food allocation are visible before saving.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; checked wallet selection at 6 and 10 seconds, slider before and after dragging, lock, save and final Reports result. Original cue times precede the observed actions.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.014,
+          13.623,
+          16.624,
+          37.206,
+          40.773,
+          43.557
+        ],
+        "reviewed_step_times": [
+          1.014,
+          13.623,
+          16.624,
+          37.206,
+          40.773,
+          43.557
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "scope_note": {},
+      "group": "review",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide11Budget",
+        "method_sha256": "41a51e18cce302986e93abc144c62479f11091b5b556a735d9fd50f4fe37bab7",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "770227e451f43335ca415161e19763d5d09da4d2341c204d596de04ed39b86b4",
+        "en": "9734e3ae6a02637d402ac498fa38d8a17745e601649d8f6a2eb5dd3762600b98"
+      }
+    },
+    {
+      "id": "29-daily-spending-alert",
+      "title_ja": "1日の支出が設定額に達したらお知らせ",
+      "title_en": "Get an alert when daily spending reaches your limit",
+      "ui_language": "ja",
+      "duration": 39.9,
+      "bytes": 368365,
+      "steps": [
+        {
+          "time": 1.015,
+          "ja": "「その他」→「通知」→「1日の支出通知」を開きます",
+          "en": "Open More → Notifications → Daily Spending Alert"
+        },
+        {
+          "time": 6.694,
+          "ja": "通知をオンにして、1日の目安になる金額を設定します",
+          "en": "Turn on the alert and set an amount for the day"
+        },
+        {
+          "time": 29.918,
+          "ja": "今日の支出が設定額に達していると、バナーでお知らせします",
+          "en": "A banner appears when today's recorded spending has reached the amount"
+        },
+        {
+          "time": 33.01,
+          "ja": "バナーをタップすると、すべての財布の今日の明細を確認できます",
+          "en": "Tap the banner to review today's spending across all wallets"
+        }
+      ],
+      "source_take": "29-daily-spending-alert-20261013-150740-677830",
+      "source_device": "1E7D44A4-5B8B-4091-8909-62E53177FBD5",
+      "source_started_at": 1791871660.85903,
+      "source_stopped_at": 1791871700.75683,
+      "source_wall_duration": 39.898,
+      "source_raw_duration": 39.9,
+      "source_raw_sha256": "5479d9fa1155f08653f57cb0ac74c43e16e12054afbf923aa51b39650a37004a",
+      "source_manifest_sha256": "4f9195904d76c45eab6de14b77a88559f31da4c859009f3701c0bbc31235cd83",
+      "poster_time": 31.0,
+      "render_fingerprint": "b187fc4c7ed0b1e89f2e95297381dfa404ab164e6a86cdaeae6ff6fcdab08b7b",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "7493d31ca00d50eaa8927b3b0ceec51ade830518505288274f50aa1e737c3421",
+      "sha256": "3d0b0e3bfe6434e9a3e40afefa55a02d82ab25ec2eb60cfcbc619316cbc117f9",
+      "poster_sha256": "1adef284afe91d3a0a475b8e27feb8b31f3d23cafb6f743dce89153639da362b",
+      "poster_time_override": 31.0,
+      "poster_time_override_reason": "The real daily banner is visible above the enabled amount setting.",
+      "caption_timing_review": {
+        "method": "Decoded from the beginning; checked the entry, key step transitions, saved result and poster. One-second samples around visibility, save and avatar-crop actions informed the adjusted cue times.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          1.015,
+          6.694,
+          29.918,
+          33.01
+        ],
+        "reviewed_step_times": [
+          1.015,
+          6.694,
+          29.918,
+          33.01
+        ]
+      },
+      "app_version": "1.2.0",
+      "app_build": "1556",
+      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "device_name": "Kotori Website 261013 JA (iPhone 17 Pro Max)",
+      "runtime": "iOS 27.0",
+      "scope_note": {},
+      "group": "review",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "method": "testGuide29DailySpendingAlert",
+        "method_sha256": "e6362e040a5cbf79ab17f73332514ed388cf102ccc65aea55ebcc9e442a436ca",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+      },
+      "subtitle_sha256": {
+        "ja": "fcd738d085109aed8658138cade5d66ef5f49b144ef31430a491fc2cb1bc1b06",
+        "en": "274df36024f71505d96b1421e75d62ebe34e62bbc3dabf6f342ebd682c63c733"
       }
     }
   ]

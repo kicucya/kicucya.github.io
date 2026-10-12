@@ -87,7 +87,7 @@ ENTRY_POINTS.update({
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
 ENTRY_POINTS['25-appearance'] = ('その他 → カスタマイズ', 'More → Appearance')
-ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → 記録リマインダー', 'More → Reminders')
+ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → 通知 → 記録リマインダー', 'More → Notifications → Reminders')
 SCOPE_NOTES['26-bookkeeping-reminders'] = {
     'ja': '時刻と曜日はiCloudで同期できます。通知のオン・オフは端末ごとに保存され、新しいリマインダーはオフで追加されます。この動画では設定操作を紹介します。',
     'en': 'Times and weekdays can sync with iCloud. Notification switches stay on each device, and new reminders start off. This video demonstrates the settings.'
@@ -101,6 +101,7 @@ SCOPE_NOTES['24-control-center-record'] = {
 }
 ENTRY_POINTS['23-control-center-pending'] = ('iPhoneのコントロールセンター', 'iPhone Control Center')
 ENTRY_POINTS['27-copy-transaction'] = ('収支 → 記録を長押し → コピー', 'Transactions → touch and hold an entry → Copy')
+ENTRY_POINTS['29-daily-spending-alert'] = ('その他 → 通知 → 1日の支出通知', 'More → Notifications → Daily Spending Alert')
 
 # Version-specific replacements never change the original 1.1.3 media or order.
 RECORDING_IDS_120 = (
@@ -108,6 +109,8 @@ RECORDING_IDS_120 = (
     '24-control-center-record', '25-appearance', '26-bookkeeping-reminders',
     '19-shortcuts-home-screen', '09-keywords', '12-recurring',
     '16-settings-and-shortcuts', '27-copy-transaction',
+    '05-category-editor', '06-category-order', '07-wallets', '11-budget',
+    '29-daily-spending-alert',
 )
 HIDDEN_RECORDING_IDS_120 = {'14-batch-input', '17-voice-and-sharing-entry'}
 RECORDING_PREDECESSORS_120 = {
@@ -117,6 +120,7 @@ RECORDING_PREDECESSORS_120 = {
     '26-bookkeeping-reminders': '16-settings-and-shortcuts',
     '25-appearance': '16-settings-and-shortcuts',
     '27-copy-transaction': '04-transaction-actions',
+    '29-daily-spending-alert': '11-budget',
 }
 
 
