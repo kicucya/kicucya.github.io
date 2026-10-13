@@ -169,3 +169,13 @@ Place `NEW` at the upper left of feature description cards for capabilities adde
 機能紹介からFAQへ進むリンクは、該当する回答を自動で開く。スマートフォンの固定ナビゲーションに質問が隠れない位置へ移動する。更新したガイド用CSS・JavaScriptは内容のハッシュをURLに付け、以前のキャッシュと区別する。過去のページに出る差分は、版の切り替えメニューが持つ1.2.0の新しいアンカー情報だけで、本文と動画は変えない。
 
 用語はAppの文言マスターと既存ガイドを基準にし、[Zaimの予算通知](https://content.zaim.net/manuals/show/63)、[Spendeeの予算案内](https://help.spendee.com/article/131-budget-my-money)、[Appleの写真調整](https://support.apple.com/ja-jp/guide/iphone/iph0f3ebb1dd/ios)を確認した。Xでは「家計簿 1日の上限 通知」「予算オーバー」「spending alerts」「daily spending limit」「アイコン トリミング」と英語の写真選択・切り抜き表現を検索。[1日の上限という個人の用例](https://x.com/karpador3cat/status/2107720189647442142)、[spending alertsというサービス側の用例](https://x.com/IFTTT/status/2050991275583979578)、[アイコンのトリミングという個人の用例](https://x.com/coconoka__/status/2109865398284005511)を参考にした。家計簿の毎日の到達通知や写真アイコンに完全に一致する個人投稿は十分に見つからず、隣接する表現と区別して扱った。英語のdaily spending limitはカードの利用制限にも使われるため、ことりでは記録額に対するお知らせだと説明する。
+
+### 個別の背景設定ガイド更新（26/10/14）
+
+少佐の再収録指示により、1.2.0 の25だけを新しい日英の動画へ差し替える。確認したAppの範囲は前回の `791e1a06f595e1802e0c5ee7abd1420fa64cdbb2` から `a4ceaab9cdd282c7641060b8a255f799d400378d`。背景操作の変更は `84c2c0f4` に含まれる。カラー背景、写真の選択と調整、写真に重ねる色と不透明度の即時プレビュー、チャットアイコン、保存後の各画面を紹介する。背景欄の「デフォルト」と、写真の0%・100%の見え方はFAQで説明する。
+
+撮影元はApp 1.2.0 build 1558、製品ソース `a4ceaab9cdd282c7641060b8a255f799d400378d`。日英の専用iPhone 17 Pro Max、iOS 27.0（24A434）を使用。撮影時に未コミットだった収録手順は、clipの `recording_script` にメソッドのハッシュを残す。原片を先頭からデコードして字幕時刻を補正し、元の時刻も保存する。ポスターは保存後の記録画面から選択する。
+
+日英の機能紹介、背景FAQ、トップページの外観画像も更新する。画像は同じ成功したXCTestからの実画面を縮小したもの。旧版・既定の1.1.3・他の動画は維持し、14・17・18・28は復活させない。1.2.0は25テーマのまま。これは背景UI変更への追随で、新しい `NEW` は増やさない。今回の交付範囲はローカルの `app-1.2.0`。
+
+用語はAppの表示とAppleの[日本語の不透明度説明](https://support.apple.com/ja-jp/guide/keynote-ipad/tancd12cd752/ipados)・[英語の説明](https://support.apple.com/guide/keynote/change-object-transparency-tancd12cd752/mac)に合わせた。Xでは[カラーレイヤーを重ねて不透明度を調整する個人の用例](https://x.com/kanaboshi0513/status/1899358311260250131)と[solid color overlayの個人の用例](https://x.com/ju1fy/status/2102234024140030025)を確認。写真編集の隣接した文脈であり、ことりの操作そのものの用例とは扱わない。英語のphoto overlayだけでは別の写真を重ねる意味にもなるため、重ねる対象が色であると明記した。

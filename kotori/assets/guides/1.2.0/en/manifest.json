@@ -314,108 +314,115 @@
       "title_ja": "カラー・背景・チャットアイコンを自分好みに",
       "title_en": "Personalize colors, the background, and your chat avatar",
       "ui_language": "en",
-      "duration": 100.867,
-      "bytes": 2393077,
+      "duration": 113.533,
+      "bytes": 2880884,
       "steps": [
         {
-          "time": 1.016,
+          "time": 1.011,
           "ja": "その他からカスタマイズを開き、アクセントカラーを選びます",
           "en": "Open Appearance from More and choose an accent color"
         },
         {
-          "time": 11.412,
+          "time": 11.58,
           "ja": "外観はライト、ダーク、システム設定から選べます",
           "en": "Choose Light, Dark, or the system appearance"
         },
         {
-          "time": 20.8,
+          "time": 21.06,
+          "ja": "背景を「カラー」にすると、好きな色を選べます",
+          "en": "Choose Color for the background and pick a color"
+        },
+        {
+          "time": 33.938,
           "ja": "背景を写真に切り替え、好きな写真を選びます",
           "en": "Choose Photo for the background, then pick a picture"
         },
         {
-          "time": 40.793,
+          "time": 48.0,
           "ja": "ピンチとドラッグで、写真の大きさや位置を調整します",
           "en": "Pinch and drag to adjust the picture's size and position"
         },
         {
-          "time": 46.314,
-          "ja": "文字の読みやすさを見ながら、不透明度を調整します",
-          "en": "Adjust the opacity so text stays easy to read"
+          "time": 54.0,
+          "ja": "写真に重ねる色を選び、不透明度を調整します。変化はその場で確認できます",
+          "en": "Choose a color to overlay on the photo, then adjust its opacity and preview the result"
         },
         {
-          "time": 51.864,
+          "time": 63.0,
           "ja": "チャットアイコンにも写真を選べます",
           "en": "Choose a photo for the chat avatar too"
         },
         {
-          "time": 59.0,
+          "time": 69.0,
           "ja": "丸い表示範囲を見ながら位置を調整し、保存します",
           "en": "Adjust the picture using the circular preview, then save"
         },
         {
-          "time": 72.939,
+          "time": 85.683,
           "ja": "チャットにはアイコン、各画面にはカラーと背景が反映されます",
           "en": "The avatar appears in chat, with the colors and background across the app"
         }
       ],
-      "source_take": "25-appearance-20261013-151858-026512",
+      "source_take": "25-appearance-20261014-001126-912531",
       "source_device": "3FB70B0E-C759-4FF2-9B7A-01E5C8C595B5",
-      "source_started_at": 1791872338.2325618,
-      "source_stopped_at": 1791872439.104647,
-      "source_wall_duration": 100.872,
-      "source_raw_duration": 95.32,
-      "source_raw_sha256": "721761c4b379deae667c740223a125abac3ff65ba9fe3d1a536bc70b526735da",
-      "source_manifest_sha256": "0757587714f88109a4b5d7de7d0599b7ad8763c3c1404b8999aea155076450a5",
-      "poster_time": 80.0,
-      "render_fingerprint": "f872185b9530a9486edc7249b9514a93e6fe4b32bf1c27e9194d4e5a17d8cced",
+      "source_started_at": 1791904287.1089458,
+      "source_stopped_at": 1791904400.649714,
+      "source_wall_duration": 113.541,
+      "source_raw_duration": 107.93,
+      "source_raw_sha256": "ad45d43357881307cb76418031147cd4bee7ac78759e022a39360b9b2a3e4f83",
+      "source_manifest_sha256": "a7a5b0f1788d05bec2d6addc98fd12b94b8b64cefcb7f425040d12fc7c8f058f",
+      "poster_time": 92.0,
+      "render_fingerprint": "036a041d9f42981a3f716415d55f58c2f40cdea0729c3874c647fef323a542e7",
       "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "bb3873b8694ab10d25ba334bbfef2e7a5d5828e8c9444787b80a06dfe3353e22",
-      "sha256": "279fb9724c4a555e46f70c5a17c7cbe34c7d7f4174bb8f60a89eec40f6830eb0",
-      "poster_sha256": "d63b7d6999584abd1c5b6593c26bc5ba2e0535526ec70d76ecbb65589710276c",
-      "poster_time_override": 80.0,
-      "poster_time_override_reason": "Saved chat photo avatar, background and purple theme after scrolling to recorded entries.",
+      "poster_fingerprint": "49fd4a000e15d4b76d132fe67aeeb1ef6d3a56633750e11d65ad6612a0530143",
+      "sha256": "4480708e7e99c07ee387e184df3d05ff324eba4a835428d53a07ea9d26be96fe",
+      "poster_sha256": "6c34fff86da6b86eaa358e9a23ac951a0e541742f903dfc233f3f843b85942a0",
+      "poster_time_override": 92.0,
+      "poster_time_override_reason": "Saved photo avatar, blue photo overlay and purple accent are visible in chat after scrolling past unrelated demo alerts.",
       "caption_timing_review": {
-        "method": "Decoded from the beginning; reviewed entry, step transitions and final result. One-second samples around avatar crop and wallet rename confirmed the selected times.",
+        "method": "Decoded final CFR video from the beginning; compared step transitions with three-second contact sheets and one-second Photos/saved-chat samples. Advanced crop, overlay and avatar cues where the picture was ahead of wall-clock events; retained original times in this record. Checked real system picker language, saved result and poster.",
         "sampling_precision_seconds": 1,
         "original_step_times": [
-          1.016,
-          11.412,
-          20.8,
-          40.793,
-          46.314,
-          51.864,
-          63.511,
-          72.939
+          1.011,
+          11.58,
+          21.06,
+          33.938,
+          52.278,
+          57.767,
+          67.043,
+          76.232,
+          85.683
         ],
         "reviewed_step_times": [
-          1.016,
-          11.412,
-          20.8,
-          40.793,
-          46.314,
-          51.864,
-          59.0,
-          72.939
+          1.011,
+          11.58,
+          21.06,
+          33.938,
+          48.0,
+          54.0,
+          63.0,
+          69.0,
+          85.683
         ]
       },
       "app_version": "1.2.0",
-      "app_build": "1556",
-      "source_commit": "791e1a06f595e1802e0c5ee7abd1420fa64cdbb2",
+      "app_build": "1558",
+      "source_commit": "a4ceaab9cdd282c7641060b8a255f799d400378d",
       "device_name": "Kotori Website 261013 EN (iPhone 17 Pro Max)",
-      "runtime": "iOS 27.0",
-      "scope_note": {},
+      "runtime": "iOS 27.0 (24A434)",
       "group": "data",
+      "scope_note": {},
       "recording_script": {
         "repository": "kotori",
         "file": "OneSentenceAccountingUITests/AppearanceGuideUITests.swift",
         "method": "testGuide25Appearance",
-        "method_sha256": "9feeb494344cec227281b2a11b2e8bc0125ee93ad3d73fd61d7be69190c3b2e6",
-        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide scripts."
+        "method_sha256": "dff0834b7b39a231e0f2cb5c112a5be49370c4d9a8ea09066482da6c0540930b",
+        "note": "Hash of the recording method used for this take; production source_commit excludes the then-uncommitted guide script."
       },
       "demo_photo_sha256": "62f8c15f46415a6d5c5a77d083d6426221db8299240b89761e87bb11ae4c084e",
       "subtitle_sha256": {
-        "ja": "0daaac3c822012d3777994cce9bf6df5b64234812b83a95ff1a368c5cccbdeca",
-        "en": "a6db17e8c4acd7e38336010284f67da53cf39b1f48868b5877d960950fa9fc13"
+        "ja": "d0e1a096c94063da485e99ddf6c8067207437f7880516cac2fef7d077faeb4b9",
+        "en": "d37cca90be34273dd165df93566b1f065160d28213b4d778b525cfe914a01cb6"
       }
     },
     {
