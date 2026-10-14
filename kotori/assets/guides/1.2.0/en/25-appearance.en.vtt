@@ -1,25 +1,37 @@
 WEBVTT
 
 1
-00:00:01.010 --> 00:00:10.517
+00:00:01.011 --> 00:00:11.580
 Open Appearance from More and choose an accent color
 
 2
-00:00:10.517 --> 00:00:23.313
+00:00:11.580 --> 00:00:21.060
 Choose Light, Dark, or the system appearance
 
 3
-00:00:23.313 --> 00:00:37.000
-Choose Photo for the background, then pick a picture
+00:00:21.060 --> 00:00:33.938
+Choose Color for the background and pick a color
 
 4
-00:00:37.000 --> 00:00:44.000
-Pinch and drag to adjust the picture's size and position
+00:00:33.938 --> 00:00:48.000
+Choose Photo for the background, then pick a picture
 
 5
-00:00:44.000 --> 00:00:53.000
-Adjust the opacity so text stays easy to read, then save
+00:00:48.000 --> 00:00:54.000
+Pinch and drag to adjust the picture's size and position
 
 6
-00:00:53.000 --> 00:01:11.567
-The same colors and background appear in Record, Transactions, and Reports
+00:00:54.000 --> 00:01:03.000
+Choose a color to overlay on the photo, then adjust its opacity and preview the result
+
+7
+00:01:03.000 --> 00:01:09.000
+Choose a photo for the chat avatar too
+
+8
+00:01:09.000 --> 00:01:25.683
+Adjust the picture using the circular preview, then save
+
+9
+00:01:25.683 --> 00:01:53.533
+The avatar appears in chat, with the colors and background across the app
