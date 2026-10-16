@@ -8,7 +8,7 @@
 
 ## 編集する場所
 
-バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.1.3`、`working: 1.2.1`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.2.0`、`working: 1.2.1`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
 
 - `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
 - `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
@@ -38,7 +38,8 @@ python3 Tools/build_versions.py --check
 | `/kotori/` とその各ページ | `latest` の完全なサイト |
 | `/kotori/main/` とその各ページ | 同じ `latest` の完全なサイト |
 | `/kotori/v1.0.0/` などとその各ページ | 指定した版の完全なサイト |
-| `/kotori/v1.1.3/` | 公開済み App 1.1.3 のサイト（既定の入口と同じ内容） |
+| `/kotori/v1.1.3/` | 公開済み App 1.1.3 のサイト |
+| `/kotori/v1.2.0/` | 現在の既定の入口と同じ内容 |
 
 ナビゲーション、言語切替、canonical、hreflang、通常の画像やCSSは閲覧中の版にとどまる。版の切替は同じページ・言語へ移動し、移動先に存在する場合だけ現在のアンカーを引き継ぐ。JavaScriptが無効でも版の切替と各ページは利用できる。新しい版を追加するときは完全な9ページと対応するアセットを用意し、registryへ追記して生成する。新しい App バージョンの公開が確認されたら、その版の `status` と `latest` を合わせて更新する。開発版サイトの公開だけでは `latest` を変更しない。App内の操作ガイドはインストール中の版に対応する `/kotori/v<version>/` を使うため、既定の入口と分けて維持する。
 
@@ -195,3 +196,7 @@ Place `NEW` at the upper left of feature description cards for capabilities adde
 `text-guides.json` 是当前版本短操作说明的源码，只能替换已有指南 ID，必须提供日英标题、步骤及适合混合图文／视频的指南列表介绍与数量标签。`Tools/build_guides.py` 继续统一生成卡片、搜索和锚点，文字卡不输出旧视频、海报、时长或拍摄来源；无此文件的历史版本保持原生成结果。
 
 本次术语依 App 的 `budget.*` 显示与 Apple 的[日语数值输入说明](https://support.apple.com/ja-jp/119889)、[英语数值输入说明](https://support.apple.com/en-us/119889)、[日语滑条说明](https://support.apple.com/ja-jp/guide/numbers-iphone/tanc8e2eb44e/ios)、[英语滑条说明](https://support.apple.com/guide/iphone/use-voiceover-gestures-iph3e2e2281/27/ios/27)、[日语锁图标说明](https://support.apple.com/ja-jp/102537)、[英语锁图标说明](https://support.apple.com/en-us/102537)核对。仅复用数值キーボード／numeric keyboard、スライダ／slider、カギのアイコン／lock icon 等操作表达；预算行为来自本产品源码，不从这些相邻产品推定。当前宿主未提供 Grok／X 搜索能力，本轮只使用网页证据。详细取证与验证产物保存在本次独立临时目录。
+
+### 默认入口切换至 1.2.0（26/10/17）
+
+按少佐本轮明确指示“默认入口改1.2.0”，将 `latest` 从 1.1.3 切换为 1.2.0，并重新生成 `/kotori/` 与 `/kotori/main/`。`working` 继续为 1.2.1，各版独立页面和媒体来源不变。本次指示只确认官网入口，不据此改写 App Store 发布状态或推定上线日期。

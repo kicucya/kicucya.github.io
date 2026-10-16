@@ -73,7 +73,7 @@
     const target = document.getElementById(id);
     if (!target) return;
     if (search?.value) { search.value = ''; filterCards(); }
-    if (target.matches('[data-guide-card]')) target.open = true;
+    if (target.matches('details')) target.open = true;
     target.scrollIntoView({block: 'start'});
   };
   window.addEventListener('hashchange', revealHash);
