@@ -240,6 +240,17 @@ def card(clip, lang):
     t = TEXT[lang]
     slug = clip['id']
     title = clip[f'title_{lang}']
+    if clip.get('_text_only'):
+        entry = ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
+        entry_label = '開く場所' if lang == 'ja' else 'Where to start'
+        search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
+        steps = ''.join(f'<li><span>{esc(s[lang])}</span></li>' for s in clip['steps'])
+        return f'''          <details class="guide-card guide-card-text" id="guide-{slug}" data-guide-card data-search="{esc(search)}">
+            <summary><span class="guide-card-title">{esc(title)}</span><span class="guide-chevron" aria-hidden="true"></span></summary>
+            <div class="guide-card-body">
+              <div class="guide-instructions"><p class="guide-entry"><strong>{entry_label}</strong><br>{esc(entry)}</p><h4>{t['steps']}</h4><ol>{steps}</ol></div>
+            </div>
+          </details>'''
     ui_language = clip['_ui_language']
     media_urls = clip['_media_urls']
     app_version = clip['_provenance']['app_version']
@@ -286,8 +297,8 @@ def card(clip, lang):
           </details>'''
 
 
-def library(clips, lang, shortcuts_first=False):
-    t = TEXT[lang]
+def library(clips, lang, shortcuts_first=False, labels=None):
+    t = {**TEXT[lang], **(labels or {})}
     if not clips:
         return ''
     if shortcuts_first:
@@ -349,6 +360,25 @@ def main():
             check_matching_provenance(extra_ja, extra_en)
             japanese = merge_120_clips(japanese, extra_ja)
             english = merge_120_clips(english, extra_en)
+        text_path = source_root / 'text-guides.json'
+        text_guides = json.loads(text_path.read_text()) if text_path.exists() else {}
+        replacements = text_guides.get('guides', {})
+        known_ids = {clip['id'] for clip in japanese}
+        if set(replacements) - known_ids:
+            raise ValueError('Written guides must replace an existing guide ID')
+        for slug, guide in replacements.items():
+            if set(guide) != {'title_ja', 'title_en', 'steps'} or not guide['steps']:
+                raise ValueError(f'{slug}: written guide needs bilingual titles and steps')
+            for lang in ('ja', 'en'):
+                if not guide[f'title_{lang}'] or any(not step.get(lang) for step in guide['steps']):
+                    raise ValueError(f'{slug}: missing {lang} written guide copy')
+                labels = text_guides.get('library', {}).get(lang, {})
+                if set(labels) != {'intro', 'count'} or not all(labels.values()):
+                    raise ValueError('Written guides need bilingual library introduction and count labels')
+        japanese = [{**clip, **replacements[clip['id']], '_text_only': True}
+                    if clip['id'] in replacements else clip for clip in japanese]
+        english = [{**clip, **replacements[clip['id']], '_text_only': True}
+                   if clip['id'] in replacements else clip for clip in english]
         changed = []
         for lang, name in [('ja', 'support-ja.html'), ('en', 'support.html')]:
             clips = japanese if lang == 'ja' else english
@@ -356,7 +386,8 @@ def main():
             source = path.read_text()
             if len(MARKER.findall(source)) != 1:
                 raise ValueError(f'Missing unique guide markers: {name}')
-            output = MARKER.sub(lambda m: m[1] + library(clips, lang, shortcuts_first) + m[2], source)
+            labels = text_guides.get('library', {}).get(lang, {})
+            output = MARKER.sub(lambda m: m[1] + library(clips, lang, shortcuts_first, labels) + m[2], source)
             if output != source:
                 changed.append(name)
                 if not args.check:
@@ -364,7 +395,7 @@ def main():
         if args.check and changed:
             print('Guide content drift: ' + ', '.join(changed), file=sys.stderr)
             return 1
-        print(f'OK: {len(japanese)} Japanese / {len(english) if has_english else 0} English recording sets; guide sources ' + ('match.' if args.check else 'generated.'))
+        print(f'OK: {len(japanese)} Japanese / {len(english) if has_english else 0} English guides ({len(replacements)} written); guide sources ' + ('match.' if args.check else 'generated.'))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as error:
         print(f'Guide build failed: {error}', file=sys.stderr)

@@ -8,7 +8,7 @@
 
 ## 編集する場所
 
-バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.1.3`、`working: 1.2.0`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.1.3`、`working: 1.2.1`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
 
 - `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
 - `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
@@ -16,7 +16,7 @@
 - `_versions/kotori/version-ui.css` と `version-ui.js`：全版共通の小さなバージョン切替。
 - `kotori/assets/guides/1.1.3/{ja,en}/`：言語別の実際の操作動画、ポスター、字幕、manifest。容量の大きい動画は各版へコピーせず、ここに一組ずつ保持する。
 
-`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。現在の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.2.0/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
+`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。現在の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.2.1/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
 
 ## 生成と確認
 
@@ -179,3 +179,19 @@ Place `NEW` at the upper left of feature description cards for capabilities adde
 日英の機能紹介、背景FAQ、トップページの外観画像も更新する。画像は同じ成功したXCTestからの実画面を縮小したもの。旧版・既定の1.1.3・他の動画は維持し、14・17・18・28は復活させない。1.2.0は25テーマのまま。これは背景UI変更への追随で、新しい `NEW` は増やさない。今回の交付範囲はローカルの `app-1.2.0`。
 
 用語はAppの表示とAppleの[日本語の不透明度説明](https://support.apple.com/ja-jp/guide/keynote-ipad/tancd12cd752/ipados)・[英語の説明](https://support.apple.com/guide/keynote/change-object-transparency-tancd12cd752/mac)に合わせた。Xでは[カラーレイヤーを重ねて不透明度を調整する個人の用例](https://x.com/kanaboshi0513/status/1899358311260250131)と[solid color overlayの個人の用例](https://x.com/ju1fy/status/2102234024140030025)を確認。写真編集の隣接した文脈であり、ことりの操作そのものの用例とは扱わない。英語のphoto overlayだけでは別の写真を重ねる意味にもなるため、重ねる対象が色であると明記した。
+
+
+### 1.2.1 官网补齐与发布（26/10/17）
+
+网站基线为 `e237b274b7b3c2a3eb7d8579729ea5835e9d69c0`；核对 App 范围为正式 `v1.2.0`（`a2ddfe4d`）至 `Dev@5a92c33b`。产品差异仅为预算锁位置、数值确认后自动上锁、锁定后金额仍可编辑；App 行为依据 `docs/map/product/budget-and-recurring.md` 与 26/10/16 的预算回归结果。发布授权为少佐本轮“把1.2.1官网补齐发布”。
+
+| 用户任务／页面 | 处理与依据 |
+| --- | --- |
+| 打开对应版本官网与 App 用法 | 从 1.2.0 建立完整九页独立源码、资源和版本入口，`working` 改为 1.2.1；不从过审推定 App 已公开，`latest` 保持 1.1.3。 |
+| 预算分配和锁定 | 11-budget 改为日英文字步骤，保留钱包范围、总预算、预警和保存说明，明确分类名左侧的小锁、确认自动上锁、数字仍可编辑及手动解锁。短操作无需录制；旧预算视频与首页预算截图仅从 1.2.1 的展示中移除。 |
+| 功能介绍、FAQ 与 NEW | 更新预算介绍和锁定 FAQ，链接直达步骤；按最新已上线的 1.1.3 保留适用的 NEW 标签，预算交互修正不单独标为新增功能。 |
+| 其余教程与截图 | 核对 App 差异后继续复用，1.2.1 共 25 项指南（24 段视频、1 项文字步骤）；媒体保留原 1.1.3／1.2.0 的真实来源，不改拍摄版号。取消的 14／17／18／28 不恢复。 |
+
+`text-guides.json` 是当前版本短操作说明的源码，只能替换已有指南 ID，必须提供日英标题、步骤及适合混合图文／视频的指南列表介绍与数量标签。`Tools/build_guides.py` 继续统一生成卡片、搜索和锚点，文字卡不输出旧视频、海报、时长或拍摄来源；无此文件的历史版本保持原生成结果。
+
+本次术语依 App 的 `budget.*` 显示与 Apple 的[日语数值输入说明](https://support.apple.com/ja-jp/119889)、[英语数值输入说明](https://support.apple.com/en-us/119889)、[日语滑条说明](https://support.apple.com/ja-jp/guide/numbers-iphone/tanc8e2eb44e/ios)、[英语滑条说明](https://support.apple.com/guide/iphone/use-voiceover-gestures-iph3e2e2281/27/ios/27)、[日语锁图标说明](https://support.apple.com/ja-jp/102537)、[英语锁图标说明](https://support.apple.com/en-us/102537)核对。仅复用数值キーボード／numeric keyboard、スライダ／slider、カギのアイコン／lock icon 等操作表达；预算行为来自本产品源码，不从这些相邻产品推定。当前宿主未提供 Grok／X 搜索能力，本轮只使用网页证据。详细取证与验证产物保存在本次独立临时目录。
