@@ -86,6 +86,7 @@ ENTRY_POINTS.update({
 })
 PROVENANCE_FIELDS = ('app_version', 'app_build', 'source_commit', 'runtime')
 LEGACY_RECORDING_IDS = tuple(ENTRY_POINTS)
+ENTRY_POINTS['30-recording-settings'] = ('その他 → 記録', 'More → Recording')
 ENTRY_POINTS['25-appearance'] = ('その他 → カスタマイズ', 'More → Appearance')
 ENTRY_POINTS['26-bookkeeping-reminders'] = ('その他 → 通知 → 記録リマインダー', 'More → Notifications → Reminders')
 SCOPE_NOTES['26-bookkeeping-reminders'] = {
@@ -167,12 +168,14 @@ def read_clips(ui_language, media_version='1.1.3'):
     manifest = json.loads(manifest_path.read_text())
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
-    expected_ids = list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else list(RECORDING_IDS_120)
-    minimum_count = len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
+    current = media_version == '1.2.1'
+    expected_ids = (list(dict.fromkeys((*LEGACY_RECORDING_IDS, *RECORDING_IDS_120, '30-recording-settings')))
+                    if current else list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else list(RECORDING_IDS_120))
+    minimum_count = 1 if current else len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
     recording_ids = [clip['id'] for clip in manifest['clips']]
     expected_present = [identity for identity in expected_ids if identity in recording_ids]
     valid_order = (recording_ids == expected_ids[:len(recording_ids)] if media_version == '1.1.3'
-                   else recording_ids[:2] == expected_ids[:2] and recording_ids == expected_present)
+                   else recording_ids == expected_present if current else recording_ids[:2] == expected_ids[:2] and recording_ids == expected_present)
     if not minimum_count <= len(recording_ids) <= len(expected_ids) or not valid_order:
         raise ValueError(f'{ui_language}/{media_version}: incomplete or unexpected recording order')
     ids = set()
@@ -241,7 +244,7 @@ def card(clip, lang):
     slug = clip['id']
     title = clip[f'title_{lang}']
     if clip.get('_text_only'):
-        entry = ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
+        entry = clip.get('entry_points', {}).get(lang) or ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
         entry_label = '開く場所' if lang == 'ja' else 'Where to start'
         search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
         steps = ''.join(f'<li><span>{esc(s[lang])}</span></li>' for s in clip['steps'])
@@ -258,7 +261,7 @@ def card(clip, lang):
     if ui_language == 'en':
         caption = (f'アプリ {app_version}・英語の画面／日本語・英語字幕' if lang == 'ja'
                    else f'App {app_version} · English interface · Japanese and English captions')
-    entry = ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
+    entry = clip.get('entry_points', {}).get(lang) or ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
     entry_label = '開く場所' if lang == 'ja' else 'Where to start'
     search = ' '.join([title, entry] + [s[lang] for s in clip['steps']])
     steps = ''.join(f'<li><span>{esc(s[lang])}</span></li>' for s in clip['steps'])
@@ -360,6 +363,23 @@ def main():
             check_matching_provenance(extra_ja, extra_en)
             japanese = merge_120_clips(japanese, extra_ja)
             english = merge_120_clips(english, extra_en)
+        if version == '1.2.1':
+            current_ja = read_clips('ja', '1.2.1')
+            current_en = read_clips('en', '1.2.1')
+            check_matching_provenance(current_ja, current_en)
+            for base, current in ((japanese, current_ja), (english, current_en)):
+                for clip in current:
+                    index = next((i for i, old in enumerate(base) if old['id'] == clip['id']), None)
+                    if index is None:
+                        base.append(clip)
+                    else:
+                        base[index] = clip
+                for clip in base:
+                    if clip['id'] in ('19-shortcuts-home-screen', '20-shortcuts-siri-name'):
+                        clip['entry_points'] = {'ja': 'Kotori → その他 → 記録 → 記録を追加 / Siri',
+                                                'en': 'Kotori → More → Recording → Record Entry / Siri'}
+                    if clip['id'] in ('05-category-editor', '06-category-order'):
+                        clip['entry_points'] = {'ja': 'その他 → カテゴリ管理', 'en': 'More → Categories'}
         text_path = source_root / 'text-guides.json'
         text_guides = json.loads(text_path.read_text()) if text_path.exists() else {}
         replacements = text_guides.get('guides', {})

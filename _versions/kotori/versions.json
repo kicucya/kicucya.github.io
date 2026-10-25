@@ -70,8 +70,8 @@
       "status": "preview",
       "source": "v1.2.1",
       "source_commit": "e237b274b7b3c2a3eb7d8579729ea5835e9d69c0",
-      "app_source_commit": "5a92c33b",
-      "provenance": "Based on the 1.2.0 website with updated budget lock instructions for App 1.2.1. Reused videos retain their actual 1.1.3 or 1.2.0 recording metadata. The budget guide uses written steps instead of the earlier interface recording. Website publication does not assert App Store release."
+      "app_source_commit": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+      "provenance": "UI review against App 1.2.1 (1593): refreshed recording settings, reports, categories, wallets, menu and appearance media. Reused recordings retain their actual capture versions and sources. Budget allocation remains a written guide. Website publication does not assert App Store release; default remains 1.2.0."
     }
   ]
 }

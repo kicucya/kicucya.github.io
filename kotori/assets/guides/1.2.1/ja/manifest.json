@@ -1,0 +1,592 @@
+{
+  "schema_version": 2,
+  "render_revision": 3,
+  "app_version": "1.2.1",
+  "app_build": "1593",
+  "source_commit": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+  "device_name": "iPhone 17 Pro Max",
+  "runtime": "iOS 27.0 (24A434)",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-10-25T15:12:57.124486+00:00",
+  "ui_language": "ja",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "05-category-editor",
+      "title_ja": "カテゴリとサブカテゴリを整える",
+      "title_en": "Organize categories and subcategories",
+      "ui_language": "ja",
+      "duration": 91.067,
+      "bytes": 1023629,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "「編集」をタップすると、カテゴリを追加できます",
+          "en": "Tap Edit to add a category"
+        },
+        {
+          "time": 29.142,
+          "ja": "カテゴリを開き、「編集」からサブカテゴリを追加します",
+          "en": "Open the category, then tap Edit to add a subcategory"
+        },
+        {
+          "time": 61.019,
+          "ja": "鉛筆のボタンから名前を変更し、保存します",
+          "en": "Use the pencil button to rename the category, then save"
+        }
+      ],
+      "source_take": "05-category-editor-20261025-235455-282415",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792940096.623988,
+      "source_stopped_at": 1792940187.687521,
+      "source_wall_duration": 91.064,
+      "source_raw_duration": 86.713,
+      "source_raw_sha256": "ae2cc8b59f097f180e15c59488bdda971800e6377bc738b3f13651cc9113d791",
+      "source_manifest_sha256": "eae0afff3347a21c85e9368b6c8a192e6362669653a4b0900c680bb9020888fc",
+      "poster_time": 29.642,
+      "render_fingerprint": "9b7923e920bd2da12d08cbd1857679ff94f63513e508a24c7ead959db213d89b",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "300b3e66d5b96a10ec17f3b401c7c9862148c9aa301b236d0a2efe705444009a",
+      "sha256": "41f36f320d450f471d64d080b2a8c41dc5440642b5dfe77b9024602675792f6f",
+      "poster_sha256": "db001de3e68dbc3f0c992c2cf4b9aeb12f2f24002a7cc82aba9a3cb57c782270",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.01,
+          29.142,
+          61.019
+        ],
+        "reviewed_step_times": [
+          1.01,
+          29.142,
+          61.019
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    },
+    {
+      "id": "06-category-order",
+      "title_ja": "表示と並び順を整える",
+      "title_en": "Choose category visibility and order",
+      "ui_language": "ja",
+      "duration": 25.167,
+      "bytes": 305819,
+      "steps": [
+        {
+          "time": 1.047,
+          "ja": "「編集」を開くと、名前・表示・並び順を変更できます",
+          "en": "Tap Edit to change names, visibility, and order"
+        },
+        {
+          "time": 6.425,
+          "ja": "目のボタンで非表示にし、つまみで並び替えます",
+          "en": "Use the eye button to hide a category, then drag its reorder handle"
+        },
+        {
+          "time": 17.529,
+          "ja": "保存すると並び順が確定します",
+          "en": "Save to commit the new order"
+        }
+      ],
+      "source_take": "06-category-order-20261025-235652-151830",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792940213.4119391,
+      "source_stopped_at": 1792940238.5745049,
+      "source_wall_duration": 25.163,
+      "source_raw_duration": 21.96,
+      "source_raw_sha256": "deab16ccd2d24099ef3a3d9253d6ae77df3d8247693ba76dc636a83f9fe6f3f6",
+      "source_manifest_sha256": "95c3cab2f661d216d2bf093e76bb0cdc5cadc306c163e79646f4c9cdbad78eac",
+      "poster_time": 6.925,
+      "render_fingerprint": "8b3e93b743ac4b2b412c636e99a853637710f3ef37bedb5259627ff4c5486b74",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "c779561444989fc66e6491d164061c5d40532a1e99c7dd282a930a82fd73d776",
+      "sha256": "685ffa1dab8d723f0431faa0b9b1a9064d1db5ce30212eb5ccb02ead986e88b6",
+      "poster_sha256": "97d9173c35c7b50d6278362664b6eb8056360e212b640934a5e67a196f9777eb",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.047,
+          6.425,
+          17.529
+        ],
+        "reviewed_step_times": [
+          1.047,
+          6.425,
+          17.529
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    },
+    {
+      "id": "07-wallets",
+      "title_ja": "財布を分けて管理する",
+      "title_en": "Create, rename, and switch wallets",
+      "ui_language": "ja",
+      "duration": 80.533,
+      "bytes": 935012,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "旅行用の財布を作ります",
+          "en": "Create a wallet for travel"
+        },
+        {
+          "time": 25.592,
+          "ja": "使用中の財布を右へスワイプして改名します",
+          "en": "Swipe the current wallet right to rename it"
+        },
+        {
+          "time": 56.241,
+          "ja": "財布を選ぶと、「記録」と「収支」の両方に反映されます",
+          "en": "The selected wallet is shared by Record and Transactions"
+        }
+      ],
+      "source_take": "07-wallets-20261025-235742-668628",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792940263.259659,
+      "source_stopped_at": 1792940343.8022358,
+      "source_wall_duration": 80.543,
+      "source_raw_duration": 79.25,
+      "source_raw_sha256": "03de4dc8051e5023ba5004d51a5c7727aee6bb40d0ad2064d770bda81141fb80",
+      "source_manifest_sha256": "a2c3da73bfcb0e2dfbad63a3ff1251de3edf2bc276904da315c05d23cb91f82c",
+      "poster_time": 26.092,
+      "render_fingerprint": "1171055d011070437832fc165f75c38094ca9219d8d97eda4b80edb6357d8899",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "bb458b156deace490e8a70566f799703c318ce736985ed0fddd163ab3a291677",
+      "sha256": "c88978b2879fc1fba8aaff14963c6647105e29cb203e85097361c696c31e07f3",
+      "poster_sha256": "cd2ee0fda2062a5b0e3fc4e01d7442fb6cc6acdee9e408118536df2251607b57",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.013,
+          25.592,
+          56.241
+        ],
+        "reviewed_step_times": [
+          1.013,
+          25.592,
+          56.241
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    },
+    {
+      "id": "10-reports",
+      "title_ja": "月・年の収支を見返す",
+      "title_en": "Explore monthly and yearly reports",
+      "ui_language": "ja",
+      "duration": 105.767,
+      "bytes": 1234639,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "期間を選んで収支を見返します",
+          "en": "Choose a reporting period"
+        },
+        {
+          "time": 19.499,
+          "ja": "円グラフを押すとカテゴリの内訳が開きます",
+          "en": "Tap the chart to explore category breakdowns"
+        },
+        {
+          "time": 38.39,
+          "ja": "月表示と年表示を切り替えられます",
+          "en": "Switch between monthly and yearly views"
+        },
+        {
+          "time": 48.154,
+          "ja": "予算のカテゴリから取引明細まで開けます",
+          "en": "Expand a budget category to see its transactions"
+        },
+        {
+          "time": 89.117,
+          "ja": "明細をタップして編集画面を開けます",
+          "en": "Tap a transaction to open its editor"
+        }
+      ],
+      "source_take": "10-reports-20261025-234458-897611",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792939499.922604,
+      "source_stopped_at": 1792939605.676213,
+      "source_wall_duration": 105.754,
+      "source_raw_duration": 103.773,
+      "source_raw_sha256": "1dd4424c92fb03daee8870cc269920bd36ea0249de15b31a4fc42cd7a9552e84",
+      "source_manifest_sha256": "e6b421650ef7d7dbcae33955629d66987f14d6ce05aad651934df69ca979ecfc",
+      "poster_time": 19.999,
+      "render_fingerprint": "63522ecb2c51dc4b3c4f9162d294a1893dbde0b0cd511e6b4e7865a67edd3c9e",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "cb5a9cd523769d8a2585503390d1ff99ff5fb4ea07dce5a0a2eb361599bf9e41",
+      "sha256": "8dec9a392a5fed6c02cd6a57753160cb1961277252a4306412d66fd3acadf385",
+      "poster_sha256": "19068d13ccaa97904501199e799357ac2bbb689f2a8b5acf9dc8b49e2e0f6eca",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.013,
+          19.499,
+          38.39,
+          48.154,
+          89.117
+        ],
+        "reviewed_step_times": [
+          1.013,
+          19.499,
+          38.39,
+          48.154,
+          89.117
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    },
+    {
+      "id": "16-settings-and-shortcuts",
+      "title_ja": "給料日に合わせて月の集計期間を変える",
+      "title_en": "Start your budget month on payday",
+      "ui_language": "ja",
+      "duration": 33.4,
+      "bytes": 322398,
+      "steps": [
+        {
+          "time": 1.013,
+          "ja": "毎月25日から集計する場合は、「締め日」で25を選びます",
+          "en": "To start each budget month on the 25th, choose 25 under Settlement Day"
+        },
+        {
+          "time": 19.218,
+          "ja": "レポートに戻ると、25日から翌月24日までの収支を確認できます",
+          "en": "Return to Reports to see income and expenses from the 25th through the 24th"
+        }
+      ],
+      "source_take": "16-settings-and-shortcuts-20261025-235927-504284",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792940368.077847,
+      "source_stopped_at": 1792940401.485421,
+      "source_wall_duration": 33.408,
+      "source_raw_duration": 24.86,
+      "source_raw_sha256": "c6bf91fcafacbf527c521b61715409fbaa92ae0d3bc0fcb0c1c70b6846a28677",
+      "source_manifest_sha256": "925fb88c54b726facdf669264a78d3c6ba126945fac2a8053674683e148e4a58",
+      "poster_time": 19.718,
+      "render_fingerprint": "e4ffdeb4966472481ebd0c5a975efcfe953069824d4618f29912ef2e4f614532",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "ad3922df8de95e98c38cd8398c0c18c32809087c53abc35e343e7cbfbaba54cf",
+      "sha256": "bfded596d5670a9405f9b6c5e177540fb5421b1fabb0ec7f35edeb72ea261158",
+      "poster_sha256": "2143e6804eb107e0be21f9cb3bd0f1496a4b24a79a3a6e3550c21ca6e454278d",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.013,
+          19.218
+        ],
+        "reviewed_step_times": [
+          1.013,
+          19.218
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      },
+      "scope_note": {}
+    },
+    {
+      "id": "20-shortcuts-siri-name",
+      "title_ja": "アプリを開かずに記録：Siriで使う準備",
+      "title_en": "Record without opening the app: Set up a Siri phrase",
+      "ui_language": "ja",
+      "duration": 56.667,
+      "bytes": 888253,
+      "steps": [
+        {
+          "time": 0.001,
+          "ja": "「記録を追加 / Siri」で、ショートカットのボタンをタップします。",
+          "en": "In Record Entry / Siri, tap the Shortcuts button."
+        },
+        {
+          "time": 8.514,
+          "ja": "マイクの「記録を追加」を長押しします。",
+          "en": "Touch and hold 記録を追加 (Record Entry) with the microphone icon."
+        },
+        {
+          "time": 14.489,
+          "ja": "「新規ショートカット」で自分用のショートカットを作ります。",
+          "en": "Choose 新規ショートカット (New Shortcut) to create a personal shortcut."
+        },
+        {
+          "time": 20.917,
+          "ja": "「編集」でアクションの編集画面を開きます。",
+          "en": "Tap 編集 (Edit) to open the action editor."
+        },
+        {
+          "time": 26.052,
+          "ja": "「記録内容」をタップし「毎回尋ねる」を選びます。",
+          "en": "Tap 記録内容 (Entry) and choose 毎回尋ねる (Ask Each Time)."
+        },
+        {
+          "time": 34.148,
+          "ja": "画面上部の名前から「名称変更」を選びます。",
+          "en": "Open the name menu at the top and choose 名称変更 (Rename)."
+        },
+        {
+          "time": 46.912,
+          "ja": "例として「家計簿につけて」という短い名前を付けます。",
+          "en": "Choose a short name, such as 家計簿につけて (Log my spending)."
+        },
+        {
+          "time": 50.516,
+          "ja": "保存された名前を確認します。この動画は名前の設定までを紹介します。",
+          "en": "Check the saved name. This video covers setting up the name."
+        }
+      ],
+      "source_take": "20-shortcuts-siri-name-20260925-132743-736990",
+      "source_device": "7D63842E-72A1-4474-A0AC-70DFD344607D",
+      "source_started_at": 1790310463.932835,
+      "source_stopped_at": 1790310520.613631,
+      "source_wall_duration": 56.681,
+      "source_raw_duration": 52.82,
+      "source_raw_sha256": "82d2ce4d37aabf81959f4da6f0beea1ba349cd98912e3373c6288740fa4907c5",
+      "source_manifest_sha256": "e9dea24b3d14cc39a5fc8f43c10861de34e012ec864d78b5474ce459b1ac73a1",
+      "poster_time": 1.0,
+      "render_fingerprint": "921256f8a14adb07324389dfcee57b5bfecad299d7548173d9af6517458e4232",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "d6e292ccc005e350a978e4735e8685d6dec5a060d5fc561bf238a66b54efb16b",
+      "sha256": "557c26ef5e8215e151937d1fb599ab4fefb31981f9cd75464787aa6d676a5b0a",
+      "poster_sha256": "71918a96ec23891f9ec918f897c2fef82d2979629c3adeda9f7ff468f6542b31",
+      "poster_time_override": 1.0,
+      "poster_time_override_reason": "Start from the real in-app Shortcuts button, matching the guide entry point.",
+      "caption_timing_review": {
+        "method": "Sequential decode at 1 fps; inspected all action transitions and 2-second contact sheet. Captions precede their actions; no retiming required.",
+        "sampling_precision_seconds": 1,
+        "original_step_times": [
+          0.001,
+          8.514,
+          14.489,
+          20.917,
+          26.052,
+          34.148,
+          46.912,
+          50.516
+        ],
+        "reviewed_step_times": [
+          0.001,
+          8.514,
+          14.489,
+          20.917,
+          26.052,
+          34.148,
+          46.912,
+          50.516
+        ]
+      },
+      "app_version": "1.1.3",
+      "app_build": "1409",
+      "source_commit": "98fb9140fc9e3ef2613ccbe9ba7171cf37e89de6",
+      "device_name": "iPhone 17 Pro Max",
+      "runtime": "iOS 27.0 (24A434)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "provenance_source": "Build and simulator identity supplied by the operator at render time",
+      "source_edit": "Copied original 1.1.3 (1409) recording without pixel changes. Updated the first caption to omit the relocated menu path; current entry is documented on the 1.2.1 card."
+    },
+    {
+      "id": "25-appearance",
+      "title_ja": "カラー・背景・チャットアイコンを自分好みに",
+      "title_en": "Personalize colors, the background, and your chat avatar",
+      "ui_language": "ja",
+      "duration": 166.2,
+      "bytes": 3328797,
+      "steps": [
+        {
+          "time": 1.018,
+          "ja": "その他からカスタマイズを開き、アクセントカラーを選びます",
+          "en": "Open Appearance from More and choose an accent color"
+        },
+        {
+          "time": 17.008,
+          "ja": "外観はライト、ダーク、システム設定から選べます",
+          "en": "Choose Light, Dark, or the system appearance"
+        },
+        {
+          "time": 28.681,
+          "ja": "背景を「カラー」にすると、好きな色を選べます",
+          "en": "Choose Color for the background and pick a color"
+        },
+        {
+          "time": 46.926,
+          "ja": "背景を写真に切り替え、好きな写真を選びます",
+          "en": "Choose Photo for the background, then pick a picture"
+        },
+        {
+          "time": 85.927,
+          "ja": "ピンチとドラッグで、写真の大きさや位置を調整します",
+          "en": "Pinch and drag to adjust the picture's size and position"
+        },
+        {
+          "time": 92.886,
+          "ja": "写真に重ねる色を選び、不透明度を調整します。変化はその場で確認できます",
+          "en": "Choose a color to overlay on the photo, then adjust its opacity and preview the result"
+        },
+        {
+          "time": 104.396,
+          "ja": "チャットアイコンにも写真を選べます",
+          "en": "Choose a photo for the chat avatar too"
+        },
+        {
+          "time": 124.641,
+          "ja": "丸い表示範囲を見ながら位置を調整し、保存します",
+          "en": "Adjust the picture using the circular preview, then save"
+        },
+        {
+          "time": 135.825,
+          "ja": "チャットにはアイコン、各画面にはカラーと背景が反映されます",
+          "en": "The avatar appears in chat, with the colors and background across the app"
+        }
+      ],
+      "source_take": "25-appearance-20261026-000050-569743",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792940451.735252,
+      "source_stopped_at": 1792940617.9251149,
+      "source_wall_duration": 166.19,
+      "source_raw_duration": 160.5,
+      "source_raw_sha256": "80ef2f7ef8510d067f23dec157a90900aa5cd145e6c7917d43692ceeb20f83b2",
+      "source_manifest_sha256": "11705a959024684610d656e219e6da2936008a54cc8457052d8aba0a41df4480",
+      "poster_time": 144.0,
+      "render_fingerprint": "3159579ba0d106501c593e32fc41f299e319f064c2e7c3097f558bad7e28191f",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "2ded21d32da31c0d7c76fb7ed35e2c45200723ccf8e12de2b4677fae29a1ffcd",
+      "sha256": "23eb26dc6e3523a5cab04e8e18c60144c96336410ca8f887c9321b43907b37e9",
+      "poster_sha256": "06c63f02f01be2179b434d38d847cf514abb84a6bf811c246568319b63545169",
+      "poster_time_override": 144.0,
+      "poster_time_override_reason": "Saved custom photo background and avatar on the actual Record screen; avoids crop picker and unfinished previews.",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.018,
+          17.008,
+          28.681,
+          46.926,
+          85.927,
+          92.886,
+          104.396,
+          124.641,
+          135.825
+        ],
+        "reviewed_step_times": [
+          1.018,
+          17.008,
+          28.681,
+          46.926,
+          85.927,
+          92.886,
+          104.396,
+          124.641,
+          135.825
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    },
+    {
+      "id": "30-recording-settings",
+      "title_ja": "チャットの表示を自分好みに",
+      "title_en": "Choose what appears in chat",
+      "ui_language": "ja",
+      "duration": 42.1,
+      "bytes": 392302,
+      "steps": [
+        {
+          "time": 1.015,
+          "ja": "「その他」から「記録」を開きます",
+          "en": "Open Recording from More"
+        },
+        {
+          "time": 8.202,
+          "ja": "「履歴の表示期間」で、表示したい期間を選びます",
+          "en": "Open Chat History Range and choose a range"
+        },
+        {
+          "time": 17.132,
+          "ja": "表示範囲は次回の起動から適用されます。帳簿の記録は削除されません",
+          "en": "The range applies on the next launch. Your financial records are not deleted"
+        },
+        {
+          "time": 30.45,
+          "ja": "あいさつや雑談を隠したいときは、「ことりのつぶやきを非表示」をオンにします",
+          "en": "Turn on Hide Kotori’s Chatter to hide greetings and small talk"
+        }
+      ],
+      "source_take": "30-recording-settings-20261025-235242-955785",
+      "source_device": "70EA512C-3F18-4375-A883-7CC06A6B699E",
+      "source_started_at": 1792939963.6055439,
+      "source_stopped_at": 1792940005.70063,
+      "source_wall_duration": 42.095,
+      "source_raw_duration": 38.688,
+      "source_raw_sha256": "69e70edd4646f9c06aaeae9146f4deb0dff6b39d182b7c327310609b0bbff6a2",
+      "source_manifest_sha256": "7cfe8ab51dee0f1e41ff1729af55e6cc4251c9a05cd0654bbf85b3331e4c4025",
+      "poster_time": 8.702,
+      "render_fingerprint": "1e7eb9e24d9a30455989a7710b8c2cb59574dacabfcbeb6141144893a937307b",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "a6350423b11c951172c353f97306e0a3c42a1d55ffeea053a6a08f505a27c9ea",
+      "sha256": "e81d356a77d6c93f8a3c8c70dff1732d00ded42d8cd6147c780941b7f98a46a9",
+      "poster_sha256": "eb0ebc08fef1edfe8579851659ad0d8dc780b9ed3c74249dce8c6225d7938fc9",
+      "caption_timing_review": {
+        "method": "Decoded rendered video from the beginning and visually inspected frames at each step plus four seconds, initial frame, and final still; instructions span the corresponding operation.",
+        "sampling_precision_seconds": 4,
+        "original_step_times": [
+          1.015,
+          8.202,
+          17.132,
+          30.45
+        ],
+        "reviewed_step_times": [
+          1.015,
+          8.202,
+          17.132,
+          30.45
+        ]
+      },
+      "recording_script": {
+        "path": "OneSentenceAccountingUITests/GuideRecordingUITests.swift",
+        "sha256": "59c2852b0767167ceb4495f9f4a89785531795428696dfd444d646adbed2a349",
+        "harness_patch_sha256": "440c8bac0d86ff100f189faaac91c3c3037a2fb238818c52467d958984798eb1",
+        "product_source": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+        "changes": "Navigation wait and isolated snapshot cache; added recording-settings flow and report screenshots. No product UI modifications."
+      }
+    }
+  ]
+}
