@@ -1,0 +1,288 @@
+{
+  "app_version": "1.2.1",
+  "app_build": "1623",
+  "product_source_commit": "215562fb4e4a49e6cd49a886b4ae5ed94aededc0",
+  "device": "iPhone 17 Pro",
+  "device_uuid": "07574B84-9E30-42C5-8C45-3BDCFD8D8C9A",
+  "runtime": "iOS 27.0",
+  "capture": "XCTest on mac-mini-kt agents; account-free dedicated simulator; synthetic demonstration ledgers and repository misty-lake fixture. Production source unchanged. Screenshot harness patch retained with raw results.",
+  "scope": "14 changed screenshots only. Videos, App Store assets, historical sites and default version retained.",
+  "harness_sha256": {
+    "initial": "66bc326890535a6e762027d432e284b9aa91aafcd4b0831a8cff940b745e178e",
+    "photo_correction": "2ccb097671e2165c46bca511da08c35eac0fc4729461f8a6f95a897766eee833"
+  },
+  "images": [
+    {
+      "image": "assets/screens/ja/01-conversation.jpg",
+      "previous_sha256": "f831a8c911339b98ac071eb5115d5cd15886595865a6156b2aee6d91e6706417",
+      "sha256": "48a41d03ecdf0c1b3bc7ed7d9c68f846f253909b583974ee740e371264e6f70c",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-01-conversation.png",
+      "source_sha256": "8e8e5d2b107014a75275d28a2780fbaea227b7637ed69c92be97e5b5b449c834",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/03-learning.jpg",
+      "previous_sha256": "d0ff850f250771a711f40e67990be319fbe139229abd769ec8c7964bf7babf4b",
+      "sha256": "e81a577f93bda2bbc84c16f24cadd73ee8461442e602ef387610d88f7b38d0ae",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-03-learning.png",
+      "source_sha256": "188fb893a786288e0d59abd879e8815b2abc5a0bb2f584bb03438ae05b4fe6d2",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/04-export.jpg",
+      "previous_sha256": "a15f0058c5ba2287974187dad2f82be21882e518bb2ba35d22bedc14876e3fed",
+      "sha256": "6200947f265088fb35601dbfec672bb3a92e187857997a269e78778482e37624",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-04-export.png",
+      "source_sha256": "d2185dffc37c6db74b6b65530f36194fe3cf94547d859a92770e6044a3122228",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/05-report.png",
+      "previous_sha256": "b2656f3561a52fa9fbf9cbb5f377faeb712138bf23ceeb358b78f374b7bd5c91",
+      "sha256": "a98698b1a1293bec8c859d27d81e55585cfe3309b4b13c4d837d123b955a9653",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-05-report.png",
+      "source_sha256": "d634ec8f874b6c1f0b7918eb05fbd0ed66697ab5a069f07ed96f450b796d2cba",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/05-report-detail.png",
+      "previous_sha256": "78ae3e89ce02f8bda23d6813acecbe03697b4e06115363df1922c2fd64bd48e9",
+      "sha256": "85a9a1066b6060a9d4e94c64af216801bfb13633503a5555f4e072a54231fb45",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-05-report-detail.png",
+      "source_sha256": "b7fdc6edfe33352cadb7cbb133e7fc26f9c6da47e9eb0e11df21c1ebe4ccfb66",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/06-wallet-share.jpg",
+      "previous_sha256": "3579aae79db95d6b412ec33ebbd0e435bf249fc1c5c91a56862503fdfbda4fdb",
+      "sha256": "988360121f358048a7fdcf7850f5fb3e23c1fe42ae1fe50834f37dfa9b84ae1f",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-06-wallet-share.png",
+      "source_sha256": "92509e011e001fd36fbafd25113accbca5efcc1c1866856b4057e4dc368c4e2e",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/07-budget.png",
+      "previous_sha256": "4c1a46f78ad3591ea219cc8bc4420465d07d4fcd430efc08936fe7c25c926c07",
+      "sha256": "ed85aa52fe3f51b89295101e268eff1b0f0cbf14e185b2c5a339ad65ae38f13b",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-07-budget.png",
+      "source_sha256": "ea5fb927a8da122a8abc293a8516bded6d02357cc204b0a7ae5c57bfd4b40ac3",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/25-chat-avatar.jpg",
+      "previous_sha256": "600525a1122beb431b3da7b3c530776bab58efe9fa49ba1c8dc009671788d9a5",
+      "sha256": "4058321f6f9ee1ed6de2917cb74df8f2af623ff890770a39e0cd161977c2a2a7",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-ja-25-chat-avatar.png",
+      "source_sha256": "45c1faa3d707d9e13d0a2b0f17150a882a27907e4f7d99b3274a200a7052eaaa",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/en/25-chat-avatar.jpg",
+      "previous_sha256": "73881433d3f261adf165adb16038ff60a940d85986646d8a2b5ef94c0b71f690",
+      "sha256": "f4ce8332941ca484ce0aab55a7f8632481eac583a8ac3266b7abaf9d1fde4b49",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-en-25-chat-avatar.png",
+      "source_sha256": "010dbbc28530674509218c088b9200115ec61afc99f6c67fb9c303eab66861bb",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/en/30-recording-settings.png",
+      "previous_sha256": "2a4f1b104989be201436c97286878c8b9c76ce55c02c237c73c00d44fb7f0cc9",
+      "sha256": "147d2d3ddf704fd29faa06b80cb45e08953be83600a9d2a918a64d90c3651b71",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-en-30-recording-settings.png",
+      "source_sha256": "ba5b6677f4801ac399b038cf684b8960e3bd66dbb06806402b2863c3eb974f60",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/en/30-history-options.png",
+      "previous_sha256": "a0b87252d794239a13fdfc4e75d62f8efcdfac1719c8edbeb61b22a4b0649c93",
+      "sha256": "5ae2020996acf8698886bf65c11696efd5fc2a9ce2ce09e12a79f3188c49941e",
+      "source": "/tmp/kotori-web-121-1623/photo-selected/website-en-30-history-options.png",
+      "source_sha256": "f71e6b586db296ef8e7d9c55c42a58228b895384af694708774e69fd210fe32b",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-photo-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/ja/29-daily-chat.jpg",
+      "previous_sha256": "5281804d9d10a9135510db262d5efc052016c0b4cae43c61da86bd224dacf718",
+      "sha256": "a61456b28522ca5227c5391817595c1cb9984164c0faf43042ebd66d74438c53",
+      "source": "/tmp/kotori-web-121-1623/selected/website-ja-29-daily-chat.png",
+      "source_sha256": "581286290b356895400da0322e46bce8b838fa0374eba56f1cc3a23d4d2bab65",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "system default",
+      "capture_run": "website-121-1623-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/en/01-conversation.jpg",
+      "previous_sha256": "4f8dd97db7b72e6bf5861e2e3ed29db492c824757028f9216c617f8783db7b87",
+      "sha256": "2f418b10dcf36c8ddc2157bff7056b314e187c29de5724c35f5f0badf41d91e5",
+      "source": "/tmp/kotori-web-121-1623/selected/website-en-01-conversation.png",
+      "source_sha256": "bd9cfd163abda3f82e54c262ab0c8ed4920b7e63c55fcf38f9c962238c07345f",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "appearance": "system default",
+      "capture_run": "website-121-1623-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    },
+    {
+      "image": "assets/screens/en/29-daily-chat.jpg",
+      "previous_sha256": "1761c5d93ec3f988be873adacd2194c6a093fd029aed5ea1ff34c5d6a7f58d08",
+      "sha256": "4ae49368b9ee4a4a1b0571d81c93b01a636bc1b78e18914b862ad7c826f59f0f",
+      "source": "/tmp/kotori-web-121-1623/selected/website-en-29-daily-chat.png",
+      "source_sha256": "9e033acb44fbaf9a85bedcac70cf3faf451877bef2ebb72d06c9acad25a4a454",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "appearance": "system default",
+      "capture_run": "website-121-1623-20261027",
+      "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
+    }
+  ],
+  "retained_pending": [
+    {
+      "image": "assets/screens/ja/02-siri.jpg",
+      "reason": "New capture has unresolved gray system SiriTipView placeholder in both light and dark. Existing complete 1593 image retained; mini has no valid development signing identities. No certificate provisioning or production changes attempted."
+    }
+  ]
+}
