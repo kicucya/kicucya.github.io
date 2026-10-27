@@ -6,7 +6,7 @@
   "device_uuid": "07574B84-9E30-42C5-8C45-3BDCFD8D8C9A",
   "runtime": "iOS 27.0",
   "capture": "XCTest on mac-mini-kt agents; account-free dedicated simulator; synthetic demonstration ledgers and repository misty-lake fixture. Production source unchanged. Screenshot harness patch retained with raw results.",
-  "scope": "14 changed screenshots only. Videos, App Store assets, historical sites and default version retained.",
+  "scope": "15 changed screenshots only. Videos, App Store assets, historical sites and default version retained.",
   "harness_sha256": {
     "initial": "66bc326890535a6e762027d432e284b9aa91aafcd4b0831a8cff940b745e178e",
     "photo_correction": "2ccb097671e2165c46bca511da08c35eac0fc4729461f8a6f95a897766eee833"
@@ -277,12 +277,27 @@
       "appearance": "system default",
       "capture_run": "website-121-1623-20261027",
       "visual_review": "passed: actual pixels reviewed; no account/personal ledger data; real production UI, only resized"
-    }
-  ],
-  "retained_pending": [
+    },
     {
       "image": "assets/screens/ja/02-siri.jpg",
-      "reason": "New capture has unresolved gray system SiriTipView placeholder in both light and dark. Existing complete 1593 image retained; mini has no valid development signing identities. No certificate provisioning or production changes attempted."
+      "previous_sha256": "848ebd9bff4e2f0677ce0781c14c51df5cdbc65ba1342639e7dcb4e1209f3204",
+      "sha256": "d4897a4602c5e04341d1488b12e8519a76a28762e56789d4586f0be4a56c8a88",
+      "source": "/tmp/kotori-web-121-1623/siri-ready-selected/website-ja-02-siri-ready-light.png",
+      "source_sha256": "d388d0a5f68ce06ee53817e18b59dc33b8eea79389f238f8efe6246a77e9e584",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "capture_run": "website-121-1623-siri-ready-20261027",
+      "visual_review": "passed: native SiriTipView phrase visible after accessibility readiness wait, synthetic budget banners dismissed through existing Done buttons; light and dark actual pixels reviewed; no product code changes"
     }
-  ]
+  ],
+  "retained_pending": [],
+  "siri_capture_resolution": "The previous 1.2-second capture caught native SiriTipView loading. A 20-second diagnostic resolved the phrase before opening Shortcuts. Final capture waits for the real phrase and dismisses synthetic budget banners through the existing UI. No certificates, account changes, product-code edits or fabricated system imagery."
 }
