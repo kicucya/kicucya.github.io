@@ -8,7 +8,7 @@
 
 ## 編集する場所
 
-バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.2.0`、`working: 1.2.1`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
+バージョンの一覧、既定のバージョン、編集中のバージョンは `_versions/kotori/versions.json` に集約する。`latest` は現在公開されている最新の App バージョンに対応し、`working` は開発中の版を表す。現在は `latest: 1.2.0`、`working: 1.2.2`。各版の App は `/kotori/v<version>/` の対応するサイトを開く。開発中の版のサイトも公開できるが、それだけで既定の入口や App の公開状態を変更しない。26/09/27 に少佐が再確認したこのルールを現行の基準とし、App の公開前に既定の版だけを先行して切り替える以前の運用は適用しない。公開ページのバージョン表示にはプレビュー表記を付けない。
 
 - `_versions/kotori/v<version>/`：各版の9ページのHTMLと、当時のCSS・JavaScript・画像・フォント。
 - `_versions/kotori/v<version>/_partials/`：各版で固定したナビゲーションとフッター。
@@ -16,7 +16,7 @@
 - `_versions/kotori/version-ui.css` と `version-ui.js`：全版共通の小さなバージョン切替。
 - `kotori/assets/guides/1.1.3/{ja,en}/`：言語別の実際の操作動画、ポスター、字幕、manifest。容量の大きい動画は各版へコピーせず、ここに一組ずつ保持する。
 
-`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。現在の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.2.1/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
+`kotori/*.html`、`kotori/main/`、`kotori/v*/` は生成物なので直接編集しない。現在の本文・FAQ・幅などを直す場合は `_versions/kotori/v1.2.2/` を編集する。操作動画カードの生成範囲外にある本文とFAQは、その版のHTML内で編集できる。
 
 ## 生成と確認
 

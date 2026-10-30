@@ -363,7 +363,8 @@ def main():
             check_matching_provenance(extra_ja, extra_en)
             japanese = merge_120_clips(japanese, extra_ja)
             english = merge_120_clips(english, extra_en)
-        if version == '1.2.1':
+        # Claude: 1.2.2 has no new recordings and reuses the 1.2.1 guide media.
+        if version in ('1.2.1', '1.2.2'):
             current_ja = read_clips('ja', '1.2.1')
             current_en = read_clips('en', '1.2.1')
             check_matching_provenance(current_ja, current_en)

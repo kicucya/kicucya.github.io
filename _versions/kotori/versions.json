@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "latest": "1.2.0",
-  "working": "1.2.1",
+  "working": "1.2.2",
   "versions": [
     {
       "version": "1.0.0",
@@ -72,6 +72,13 @@
       "source_commit": "e237b274b7b3c2a3eb7d8579729ea5835e9d69c0",
       "app_source_commit": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
       "provenance": "UI review against App 1.2.1 (1593): refreshed recording settings, reports, categories, wallets, menu and appearance media. Reused recordings retain their actual capture versions and sources. Budget allocation remains a written guide. Website publication does not assert App Store release; default remains 1.2.0."
+    },
+    {
+      "version": "1.2.2",
+      "status": "preview",
+      "source": "v1.2.2",
+      "app_source_commit": "bd65bca77c5e",
+      "provenance": "Copied from the 1.2.1 site for App 1.2.2 (theme color readability fixes only; no new user capability or tutorial). Guide media retain their actual 1.2.1 capture versions. Website publication does not assert App Store release; default remains 1.2.0."
     }
   ]
 }
