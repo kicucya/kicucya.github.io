@@ -82,3 +82,6 @@
   .guide-toc a { padding: 13px; font-size: .85rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Written guides share the same card and search behavior as video guides. */
+.guide-card-text .guide-card-body { display: block; }

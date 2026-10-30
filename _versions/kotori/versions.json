@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest": "1.2.0",
+  "latest": "1.2.1",
   "working": "1.2.2",
   "versions": [
     {
@@ -67,11 +67,11 @@
     },
     {
       "version": "1.2.1",
-      "status": "preview",
+      "status": "released",
       "source": "v1.2.1",
       "source_commit": "e237b274b7b3c2a3eb7d8579729ea5835e9d69c0",
       "app_source_commit": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
-      "provenance": "UI review against App 1.2.1 (1593): refreshed recording settings, reports, categories, wallets, menu and appearance media. Reused recordings retain their actual capture versions and sources. Budget allocation remains a written guide. Website publication does not assert App Store release; default remains 1.2.0."
+      "provenance": "UI review against App 1.2.1 (1593): refreshed recording settings, reports, categories, wallets, menu and appearance media. Reused recordings retain their actual capture versions and sources. Budget allocation remains a written guide. Default website for released app 1.2.1. App release was confirmed by the user on 2026-10-31; no exact release time is inferred."
     },
     {
       "version": "1.2.2",
