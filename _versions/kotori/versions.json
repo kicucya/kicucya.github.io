@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest": "1.2.1",
+  "latest": "1.2.2",
   "working": "1.2.3",
   "versions": [
     {
@@ -75,10 +75,10 @@
     },
     {
       "version": "1.2.2",
-      "status": "preview",
+      "status": "released",
       "source": "v1.2.2",
       "app_source_commit": "bd65bca77c5e",
-      "provenance": "Copied from the 1.2.1 site for App 1.2.2 (theme color readability fixes only; no new user capability or tutorial). Guide media retain their actual 1.2.1 capture versions. Website publication does not assert App Store release; default remains 1.2.0."
+      "provenance": "Copied from the 1.2.1 site for App 1.2.2 (theme color readability fixes only; no new user capability or tutorial). Guide media retain their actual 1.2.1 capture versions. Major designated 1.2.2 as the default website version on 2026-11-07; no exact App release time is inferred."
     },
     {
       "version": "1.2.3",
@@ -86,7 +86,7 @@
       "source": "v1.2.3",
       "source_commit": "60251f7",
       "app_source_commit": "be2d486e358e2127b2869744a859298cd72a0e23",
-      "provenance": "Created from the 1.2.2 website after the user accepted the current appearance on 2026-11-07. This version addresses custom accent colors not applying correctly in parts of the interface. Existing layout, screenshots and tutorials are reused with their original capture provenance; no new user capability. Default remains the latest confirmed released App version, 1.2.1.",
+      "provenance": "Created from the 1.2.2 website after the user accepted the current appearance on 2026-11-07. This version addresses custom accent colors not applying correctly in parts of the interface. Existing layout, screenshots and tutorials are reused with their original capture provenance; no new user capability. The default website version is managed separately through latest; publishing this version does not change it.",
       "release_notes": {
         "ja": [
           "カスタマイズしたアクセントカラーが一部の画面に正しく反映されない問題を修正しました。"
