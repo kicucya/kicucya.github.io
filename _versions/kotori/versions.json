@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "latest": "1.2.1",
-  "working": "1.2.2",
+  "working": "1.2.3",
   "versions": [
     {
       "version": "1.0.0",
@@ -79,6 +79,25 @@
       "source": "v1.2.2",
       "app_source_commit": "bd65bca77c5e",
       "provenance": "Copied from the 1.2.1 site for App 1.2.2 (theme color readability fixes only; no new user capability or tutorial). Guide media retain their actual 1.2.1 capture versions. Website publication does not assert App Store release; default remains 1.2.0."
+    },
+    {
+      "version": "1.2.3",
+      "status": "preview",
+      "source": "v1.2.3",
+      "source_commit": "60251f7",
+      "app_source_commit": "be2d486e358e2127b2869744a859298cd72a0e23",
+      "provenance": "Created from the 1.2.2 website after the user accepted the current appearance on 2026-11-07. This version addresses custom accent colors not applying correctly in parts of the interface. Existing layout, screenshots and tutorials are reused with their original capture provenance; no new user capability. Default remains the latest confirmed released App version, 1.2.1.",
+      "release_notes": {
+        "ja": [
+          "カスタマイズしたアクセントカラーが一部の画面に正しく反映されない問題を修正しました。"
+        ],
+        "en": [
+          "Fixed an issue where custom accent colors were not applied correctly in some parts of the app."
+        ],
+        "zh-hant": [
+          "修正自訂強調色在部分介面未正確套用的問題。"
+        ]
+      }
     }
   ]
 }

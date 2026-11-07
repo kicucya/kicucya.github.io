@@ -1,0 +1,40 @@
+{
+  "library": {
+    "ja": {
+      "intro": "項目を選ぶと、操作の手順が開きます。動画は自分のペースで再生・一時停止できます。",
+      "count": "件の操作ガイド"
+    },
+    "en": {
+      "intro": "Choose a guide to see the steps. You can play and pause the videos whenever you need.",
+      "count": "guides"
+    }
+  },
+  "guides": {
+    "11-budget": {
+      "title_ja": "予算を配分して、金額を保つ",
+      "title_en": "Allocate your budget and keep amounts in place",
+      "steps": [
+        {
+          "ja": "「対象の財布」で、すべての財布か、予算に含めたい財布を選びます。「総予算」をタップして金額を入力します。",
+          "en": "In Included Wallets, include all wallets or choose the ones to budget for. Tap Total Budget and enter an amount."
+        },
+        {
+          "ja": "カテゴリの金額をタップし、数値キーボードで入力してチェックマークをタップします。確認すると、そのカテゴリが自動でロックされます。",
+          "en": "Tap a category amount, enter the value with the numeric keyboard, then tap the checkmark. Confirming the amount automatically locks that category."
+        },
+        {
+          "ja": "カギのアイコンはカテゴリ名の左にあります。ロック中は、そのカテゴリのスライダを動かせず、ほかのスライダを動かしても金額は変わりません。",
+          "en": "The lock icon is to the left of the category name. While locked, its slider cannot change the amount, and moving other sliders will not reduce it."
+        },
+        {
+          "ja": "ロック中も、金額をタップすれば数値キーボードで編集できます。スライダで調整したいときは、カギのアイコンをタップしてロックを解除します。",
+          "en": "You can still tap a locked amount and edit it with the numeric keyboard. To adjust it with the slider, tap the lock icon to unlock it."
+        },
+        {
+          "ja": "予算アラートの割合を決めて「保存」をタップします。配分の合計が総予算を超えている場合は、金額を見直してから保存します。",
+          "en": "Choose the budget alert percentage, then tap Save. If your allocations exceed the total budget, adjust the amounts before saving."
+        }
+      ]
+    }
+  }
+}

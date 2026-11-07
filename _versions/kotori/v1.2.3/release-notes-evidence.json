@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-07",
+  "scope": "1.2.3 website release note only",
+  "userDirection": "对外更新日志就是直说自定义强调色有些地方没适配的问题",
+  "sourceLanguage": "ja",
+  "copy": {
+    "ja": [
+      "カスタマイズしたアクセントカラーが一部の画面に正しく反映されない問題を修正しました。"
+    ],
+    "en": [
+      "Fixed an issue where custom accent colors were not applied correctly in some parts of the app."
+    ],
+    "zh-hant": [
+      "修正自訂強調色在部分介面未正確套用的問題。"
+    ]
+  },
+  "terminology": [
+    {
+      "locale": "ja",
+      "url": "https://support.microsoft.com/ja-jp/windows/experience/personalization/personalize-your-colors-in-windows",
+      "use": "Reference for accent color, customization and applying color to interface elements; the release-note sentence is newly written for Kotori."
+    },
+    {
+      "locale": "en",
+      "url": "https://support.microsoft.com/en-us/windows/experience/personalization/personalize-your-colors-in-windows",
+      "use": "Reference for accent color, customization and applying color to interface elements; the release-note sentence is newly written for Kotori."
+    },
+    {
+      "locale": "zh-hant",
+      "url": "https://support.microsoft.com/zh-tw/windows/experience/personalization/personalize-your-colors-in-windows",
+      "use": "Reference for accent color, customization and applying color to interface elements; the release-note sentence is newly written for Kotori."
+    }
+  ],
+  "existingTerminology": "Kotori appearance UI and 1.2.2 store copy: アクセントカラー / accent color / 強調色",
+  "xSearch": "Grok search skill is not available in this session; public official support pages used."
+}

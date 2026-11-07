@@ -73,9 +73,10 @@ def version_bar(data, version, page, route):
   valid = json.dumps(anchors(v, page), ensure_ascii=False, separators=(',', ':'))
   links.append(f'<li><a href="{esc(relative(target + "/" + page, route))}" data-version-link data-anchors="{esc(valid)}"{current}>{esc(label)}</a></li>')
  notes = ''
- if version.get('reconstructed_from'):
+ if version.get('release_notes'):
   items = ''.join('<li>' + esc(line) + '</li>' for line in version['release_notes'][PAGES[page]])
-  notes = f'<details class="kotori-version-notes"><summary>{esc(t["notes"])}</summary><p>{esc(t["restored"])}</p><ul>{items}</ul></details>'
+  restored = f'<p>{esc(t["restored"])}</p>' if version.get('reconstructed_from') else ''
+  notes = f'<details class="kotori-version-notes"><summary>{esc(t["notes"])}</summary>{restored}<ul>{items}</ul></details>'
  return f'''  <!-- kotori:version:start -->
   <aside class="kotori-version-bar" aria-label="{esc(t['label'])}">
     <div class="kotori-version-inner"><span>{esc(t['label'])}</span><details class="kotori-version-menu"><summary>{esc(current_label)}</summary><nav aria-label="{esc(t['label'])}"><ul>{''.join(links)}</ul></nav></details>{notes}</div>
