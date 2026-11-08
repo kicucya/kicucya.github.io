@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest": "1.2.2",
+  "latest": "1.2.3",
   "working": "1.2.3",
   "versions": [
     {
@@ -82,11 +82,11 @@
     },
     {
       "version": "1.2.3",
-      "status": "preview",
+      "status": "released",
       "source": "v1.2.3",
       "source_commit": "60251f7",
       "app_source_commit": "be2d486e358e2127b2869744a859298cd72a0e23",
-      "provenance": "Created from the 1.2.2 website after the user accepted the current appearance on 2026-11-07. This version addresses custom accent colors not applying correctly in parts of the interface. Existing layout, screenshots and tutorials are reused with their original capture provenance; no new user capability. The default website version is managed separately through latest; publishing this version does not change it.",
+      "provenance": "Created from the 1.2.2 website after the user accepted the current appearance on 2026-11-07. This version addresses custom accent colors not applying correctly in parts of the interface. Existing layout, screenshots and tutorials are reused with their original capture provenance; no new user capability. The default website version is managed separately through latest; publishing this version does not change it. Major reported App approval and requested the default website update on 2026-11-09; no exact App public release time is inferred.",
       "release_notes": {
         "ja": [
           "カスタマイズしたアクセントカラーが一部の画面に正しく反映されない問題を修正しました。"
