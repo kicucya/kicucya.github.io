@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "latest": "1.2.3",
-  "working": "1.2.3",
+  "working": "1.3.0",
   "versions": [
     {
       "version": "1.0.0",
@@ -98,6 +98,14 @@
           "修正自訂強調色在部分介面未正確套用的問題。"
         ]
       }
+    },
+    {
+      "version": "1.3.0",
+      "status": "preview",
+      "source": "v1.3.0",
+      "source_commit": "7a29beb",
+      "app_source_commit": "cfdac94e946c9022955338df7ffdc50557dcd3a1",
+      "provenance": "Created from the 1.2.3 website for App 1.3.0 (build 1652) so the versioned support pages exist before TestFlight. Adds written introductions for changing the background by date, pending reminders, and recording from receipt photos, using the App's current strings. Guide videos for these features wait for the user's feature acceptance; existing layout, screenshots and tutorials are reused with their original capture provenance. Publishing this version does not change the default website version."
     }
   ]
 }

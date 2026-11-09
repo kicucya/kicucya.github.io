@@ -363,8 +363,8 @@ def main():
             check_matching_provenance(extra_ja, extra_en)
             japanese = merge_120_clips(japanese, extra_ja)
             english = merge_120_clips(english, extra_en)
-        # Fix-only versions retain the actual 1.2.1 recording provenance.
-        if version in ('1.2.1', '1.2.2', '1.2.3'):
+        # Claude: versions without new recordings retain the actual 1.2.1 recording provenance.
+        if version in ('1.2.1', '1.2.2', '1.2.3', '1.3.0'):
             current_ja = read_clips('ja', '1.2.1')
             current_en = read_clips('en', '1.2.1')
             check_matching_provenance(current_ja, current_en)

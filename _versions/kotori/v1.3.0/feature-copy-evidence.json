@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-10",
+  "scope": "1.3.0 written feature introductions (features.html / features-en.html); no guide videos",
+  "userDirection": "内容以 1.2.3 为底，加上三项新功能的文字介绍，视频等验收后再补；push 到官网 main，默认入口仍是 1.2.3，不切换。",
+  "appSource": {
+    "branch": "Dev",
+    "commit": "cfdac94e946c9022955338df7ffdc50557dcd3a1",
+    "version": "1.3.0",
+    "build": "1652"
+  },
+  "features": [
+    {
+      "card": "Background by date",
+      "productDoc": "docs/map/product/appearance.md#按日期切换背景",
+      "appStrings": {
+        "appearance.background.photo": {"ja": "写真", "en": "Photo"},
+        "appearance.schedule": {"ja": "日付で切り替え", "en": "Change by Date"},
+        "appearance.schedule.limit": {"ja": "最大%lld件まで追加できます。", "en": "You can add up to %lld dates."}
+      },
+      "facts": "Photo backgrounds only; month/day dates repeat every year; up to 64 dates."
+    },
+    {
+      "card": "Pending reminders",
+      "productDoc": "docs/map/product/reminders.md#待确认提醒",
+      "appStrings": {
+        "notifications.title": {"ja": "通知", "en": "Notifications"},
+        "reminder.pending.title": {"ja": "未確認リマインダー", "en": "Pending Reminders"},
+        "reminder.pending.footer": {"ja": "選んだ財布に未確認の記録があるときだけ通知します。通知をタップすると、使用中の財布の未確認の記録を開きます。…通知は端末ごとにオンにしてください。", "en": "You’ll be notified only when the selected wallets have pending entries. Tap the notification to open pending entries in the current wallet. … Turn on notifications on each device."}
+      },
+      "facts": "Notification shows the count only; nothing is sent when there are no pending entries; enablement is per device."
+    },
+    {
+      "card": "Receipt photos",
+      "productDoc": "docs/map/product/recording.md#收据拍照记录",
+      "appStrings": {
+        "chat.input.menu.scan_receipt": {"ja": "レシートを撮影", "en": "Scan Receipt"},
+        "chat.input.menu.receipt_photo": {"ja": "レシート写真を選択", "en": "Choose Receipt Photo"},
+        "chat.receipt_photo.choose_total": {"ja": "合計金額を確認して、正しい金額をタップしてください", "en": "Check the total and tap the correct amount"}
+      },
+      "facts": "Reads total, date and store name; multi-page document camera for long receipts; candidate totals are tapped to choose; the original image and recognized text are not saved."
+    }
+  ],
+  "terminology": "All UI names quoted on the page are the App's existing strings from docs/data/l10n-master.csv; no new UI term or translation was introduced. Japanese copy uses 記録, never 記帳. Marketing sentences are newly written for Kotori and contain no internal mechanism (OCR, models, DataPack).",
+  "externalSearch": "Not performed: no new terminology beyond the App's existing localized strings."
+}
