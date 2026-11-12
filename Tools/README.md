@@ -259,9 +259,9 @@ TestFlight 打包脚本要求 `/kotori/v1.3.0/support-ja.html` 与 `support.html
 - 三项功能尚待少佐验收，本轮不录制、不接入操作视频，也不新增 FAQ。验收后按「操作動画の更新」补齐日英视频、字幕、海报和来源。既有教程、截图沿用 1.2.1 起的真实拍摄来源。
 - `working` 改为 1.3.0，`status` 为 `preview`；`latest` 保持 1.2.3。默认入口只在版本菜单中多出 1.3.0 链接。本条不表示 App 1.3.0 已上线。
 
-### 1.3.0 介绍与教程（26/11/13，提前制作）
+### 1.3.0 介绍与教程（26/11/13，push-up 阶段）
 
-Major 26/11/13 指示「可以先做，UI 应该不会改多少，做完记录一下，之后还有更新再增量替换。」本轮在功能验收前制作 1.3.0 的介绍与教程，不发布、不 push；裁定与素材来源清单在 App 仓 `docs/map/release/website.md` 和 `docs/publishing/asset-sources.md`。UI 改动后按清单只替换受影响的素材。
+Major 26/11/13 确认 1.3 功能验收通过（「功能都能用了 只差UI微调 所以验收了」），本轮在 push-up 阶段制作 1.3.0 的介绍与教程，不发布、不 push；裁定与素材来源清单在 App 仓 `docs/map/release/website.md` 和 `docs/publishing/asset-sources.md`。之后的 UI 微调按清单只替换受影响的素材。
 
 | 用户任务 | 处理 |
 | --- | --- |
