@@ -41,5 +41,47 @@
     }
   ],
   "terminology": "All UI names quoted on the page are the App's existing strings from docs/data/l10n-master.csv; no new UI term or translation was introduced. Japanese copy uses 記録, never 記帳. Marketing sentences are newly written for Kotori and contain no internal mechanism (OCR, models, DataPack).",
-  "externalSearch": "Not performed: no new terminology beyond the App's existing localized strings."
+  "externalSearch": "Not performed: no new terminology beyond the App's existing localized strings.",
+  "updates": [
+    {
+      "date": "2026-11-13",
+      "scope": "1.3.0 FAQ (receipt entry points, wrong total, export file names) and home-page receipt caption",
+      "userDirection": "可以先做，UI 应该不会改多少，做完记录一下，之后还有更新再增量替换。",
+      "appSource": {
+        "branch": "Dev",
+        "commit": "0a0bba5e",
+        "version": "1.3.0",
+        "build": "1676"
+      },
+      "appStrings": {
+        "chat.input.menu.scan_receipt": {
+          "ja": "レシートを撮影",
+          "en": "Scan Receipt"
+        },
+        "chat.input.menu.receipt_photo": {
+          "ja": "レシート写真を選択",
+          "en": "Choose Receipt Photo"
+        },
+        "receipt_record.intent.title": {
+          "ja": "レシートを読み取る",
+          "en": "Scan Receipt"
+        },
+        "wallets.badge.current": {
+          "ja": "使用中",
+          "en": "Current"
+        },
+        "export.range.all": {
+          "ja": "全期間",
+          "en": "All Time"
+        },
+        "export.range.label": {
+          "ja": "期間",
+          "en": "Period"
+        }
+      },
+      "facts": "recording.md#收据拍照记录 (entry points, current wallet, photo and text not saved, candidate totals, editor opened when no total is read) and data-management.md#导出与备份恢复 (file names).",
+      "homeCaption": "Reuses the App Store receipt page copy (App repo docs/publishing/store-screenshot-composer/receipt-copy-evidence.json, ja and en-US).",
+      "note": "No new UI terms; FAQ sentences combine existing App strings with the product rules above."
+    }
+  ]
 }

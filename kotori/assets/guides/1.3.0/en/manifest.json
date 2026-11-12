@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "render_revision": 3,
+  "app_version": "1.3.0",
+  "app_build": "1677",
+  "source_commit": "fa73b22cd32258288b4ce6e9588cafa7a1f847b2",
+  "device_name": "KT guide13 en 261113 (iPhone 17 Pro Max)",
+  "runtime": "iOS 27.0",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-11-12T15:52:51.581507+00:00",
+  "ui_language": "en",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "31-receipt-photo",
+      "title_ja": "レシートの写真から記録する",
+      "title_en": "Record from a receipt photo",
+      "ui_language": "en",
+      "duration": 33.7,
+      "bytes": 847551,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "「記録」の「＋」から「レシート写真を選択」を選びます",
+          "en": "In Record, tap + and choose Choose Receipt Photo"
+        },
+        {
+          "time": 9.281,
+          "ja": "レシートの写真を選びます",
+          "en": "Choose the photo of your receipt"
+        },
+        {
+          "time": 14.319,
+          "ja": "店名と合計金額を読み取ります。内容を確かめて「確認」をタップします",
+          "en": "Kotori reads the store name and total. Check them, then tap Confirm"
+        },
+        {
+          "time": 24.763,
+          "ja": "記録した内容は「収支」で確認できます",
+          "en": "Find the recorded entry in Transactions"
+        }
+      ],
+      "source_take": "31-receipt-photo-20261113-004651-537215",
+      "source_device": "335657E4-2C5B-454C-A250-347AF055A3F3",
+      "source_started_at": 1794498411.68784,
+      "source_stopped_at": 1794498445.387588,
+      "source_wall_duration": 33.7,
+      "source_raw_duration": 33.7,
+      "source_raw_sha256": "ba09d25a60fb9149516fc4a3b9ef9dc828adda4d82d1499e2b3f859254ce5390",
+      "source_manifest_sha256": "afe6f5dba17ec5f8c46523497f7fb39585aa4bc64479d598bd2d6d9e2b02c098",
+      "poster_time": 18.0,
+      "render_fingerprint": "c10aa96c826d845d176c2ed44c18d75798ab301cf6ce9a9f4371c87369d338a0",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "3934566d2059aad33e9dfe2658c46b20f3b544e602b9d2f8d46351666194446f",
+      "sha256": "7541e6bd1e25cfe6d0ecf33b45c5a5530500a3bcd4e4862a69f38aa15e01a385",
+      "poster_sha256": "7c7a1ba903fefdaa09e4cb0206dc06d1e02a4feaa9ae102a5021fe86dd9e54f0",
+      "poster_time_override": 18.0,
+      "poster_time_override_reason": "The reading card shows the store name, total, category and item memo read from the receipt.",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
+        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
+        "method": "testGuide31ReceiptPhoto",
+        "method_sha256": "218be931103758d937de03ce71606595fe5ff662abd9e9563ffde83ecdc547bf",
+        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677."
+      },
+      "capture_note": "Simulator has no document camera and its document segmentation and model are not representative, so Vision OCR and the model reading were replaced by the synthetic receipt rows (docs/publishing/receipt-fixtures). The card, saving and Transactions list are the real app.",
+      "group": "record"
+    },
+    {
+      "id": "32-pending-reminders",
+      "title_ja": "未確認の記録をお知らせする",
+      "title_en": "Get reminded about pending entries",
+      "ui_language": "en",
+      "duration": 35.833,
+      "bytes": 622036,
+      "steps": [
+        {
+          "time": 1.016,
+          "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
+          "en": "Open Notifications in More, then Pending Reminders"
+        },
+        {
+          "time": 8.33,
+          "ja": "＋から時刻を選びます",
+          "en": "Tap plus and choose a time"
+        },
+        {
+          "time": 11.81,
+          "ja": "お知らせする曜日を選んで保存します",
+          "en": "Choose the days, then save"
+        },
+        {
+          "time": 20.442,
+          "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
+          "en": "Turn it on. You're notified of the count only when entries are pending"
+        },
+        {
+          "time": 27.308,
+          "ja": "「財布」で、数える財布を選べます",
+          "en": "In Wallets, choose which wallets to count"
+        }
+      ],
+      "source_take": "32-pending-reminders-20261113-005037-754461",
+      "source_device": "335657E4-2C5B-454C-A250-347AF055A3F3",
+      "source_started_at": 1794498637.922261,
+      "source_stopped_at": 1794498673.769632,
+      "source_wall_duration": 35.847,
+      "source_raw_duration": 34.418,
+      "source_raw_sha256": "36e5b7ec39372fec0955223ebfdfb2e39549dbeb2cf1905acd9fa8e564dd0b4b",
+      "source_manifest_sha256": "14ad13d5265e6780cdeb53d42679b1690955dc065ae8bc19bf84ccc1ffb85359",
+      "poster_time": 26.0,
+      "render_fingerprint": "6bd8c762a549d6bad9b7a171be9518bd18b1b162b975bc75fa0f2837f030eb73",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "8f1df1fd6c67e1ef43e23336baf561a9a36e953b50f63dc17a51f02fc417f0d2",
+      "sha256": "027865a282488c443edc160cb5953c545f9a1f595ef1b443a6185a0a6de6e0b0",
+      "poster_sha256": "beb7197223708853d70ffdc8cf47868b105868e712fe314ea6a04e0584e4c5ab",
+      "poster_time_override": 26.0,
+      "poster_time_override_reason": "The saved weekday rule is switched on after the real notification permission prompt.",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
+        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
+        "method": "testGuide32PendingReminders",
+        "method_sha256": "291eea1b085283632fea413de19d9b27dbe6c1e27f35753d36e15d89eca394e6",
+        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677."
+      },
+      "capture_note": "Real notification permission prompt on a signed-out simulator; no notification delivery or iCloud sync is demonstrated.",
+      "group": "data"
+    },
+    {
+      "id": "33-date-background",
+      "title_ja": "日付に合わせて背景を切り替える",
+      "title_en": "Change the background by date",
+      "ui_language": "en",
+      "duration": 80.133,
+      "bytes": 2276752,
+      "steps": [
+        {
+          "time": 1.015,
+          "ja": "「その他」の「カスタマイズ」で背景を「写真」にし、「日付で切り替え」を開きます",
+          "en": "In More → Appearance, set the background to Photo and open Change by Date"
+        },
+        {
+          "time": 19.252,
+          "ja": "「日付を追加」で月日を選び、その日の写真を選びます",
+          "en": "Tap Add Date, choose a month and day, and pick that day's photo"
+        },
+        {
+          "time": 38.383,
+          "ja": "ほかの日付も、それぞれ写真を選んで追加できます",
+          "en": "Add other dates, each with its own photo"
+        },
+        {
+          "time": 62.443,
+          "ja": "オンにすると、その日になった日付の写真が背景になります",
+          "en": "Turn it on. Each date's photo becomes the background when that day arrives"
+        },
+        {
+          "time": 67.556,
+          "ja": "戻って「保存」すると、背景が切り替わります",
+          "en": "Go back and tap Save to apply it"
+        }
+      ],
+      "source_take": "33-date-background-20261113-004816-887369",
+      "source_device": "335657E4-2C5B-454C-A250-347AF055A3F3",
+      "source_started_at": 1794498497.0605361,
+      "source_stopped_at": 1794498577.185735,
+      "source_wall_duration": 80.125,
+      "source_raw_duration": 80.125,
+      "source_raw_sha256": "337c0cf810a23614d5dc09375ba995f79a99c6f582d3fc44af105bcf5d5dab8f",
+      "source_manifest_sha256": "e0e6d549228d751cf7b04ebd88d9e214446e2a9513bb163a1174e45039ef385d",
+      "poster_time": 63.0,
+      "render_fingerprint": "630fc60342a58967bf46ce167aedd9cf83d84d45ba4abd621defcd7bd56f7b62",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "f0b5398d78fb3fe986f61e4dc5896517bfd25a1c44c9c3227032f3db37f6eda2",
+      "sha256": "cd347f6c883be79f97efeaea565796502e73d161a48672812f8be030131885ff",
+      "poster_sha256": "1f9caac9208272280d24f8f4a4a158f90541e687ac1df9734b223f05f66cf245",
+      "poster_time_override": 63.0,
+      "poster_time_override_reason": "Both dates are listed with their photos and today's date is marked in use.",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
+        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
+        "method": "testGuide33DateBackground",
+        "method_sha256": "d02a3b25462aee0b723a359dcebc1b87f390eb0b36c40af7ec8e273b9fbd0f8d",
+        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677."
+      },
+      "capture_note": "Photos: Tools/guide-recordings/fixtures/misty-lake.png for today's date and misty-lake-dusk.jpg (mirrored, tinted copy) for the December date.",
+      "group": "data"
+    }
+  ]
+}
