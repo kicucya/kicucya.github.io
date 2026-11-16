@@ -62,12 +62,12 @@ def anchors(version, page):
 
 def version_bar(data, version, page, route):
  t = TEXT[PAGES[page]]
- # Website labels do not expose the independent App Store release status.
+ # Display labels may mark a separately published development version.
  status = t['latest'] if version['version'] == data['latest'] else t['history'] if version['status'] == 'released' else ''
- current_label = version['version'] + (' · ' + status if status else '')
+ current_label = version.get('display_name', version['version']) + (' · ' + status if status else '')
  links = []
  options = [(t['latest'] + ' · ' + data['latest'], 'kotori', next(v for v in data['versions'] if v['version'] == data['latest']))]
- options += [(v['version'], 'kotori/v' + v['version'], v) for v in reversed(data['versions'])]
+ options += [(v.get('display_name', v['version']), 'kotori/v' + v['version'], v) for v in reversed(data['versions'])]
  for label, target, v in options:
   current = ' aria-current="page"' if route == target else ''
   valid = json.dumps(anchors(v, page), ensure_ascii=False, separators=(',', ':'))

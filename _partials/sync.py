@@ -54,7 +54,7 @@ def render(block: str, page: str, version: dict, working: str) -> str:
     tpl = (templates / f'{block}-{cfg["lang"]}.html').read_text()
     if block == 'nav':
         tpl = tpl.replace('__NAV_LANG__', nav_lang_span(cfg['lang'], cfg['links']))
-    tpl = tpl.replace('__APP_VERSION__', version['version'])
+    tpl = tpl.replace('__APP_VERSION__', version.get('display_name', version['version']))
     if '__' in tpl:
         raise ValueError(f'{version["version"]}/{page}/{block}: unresolved placeholder')
     return tpl.rstrip('\n')

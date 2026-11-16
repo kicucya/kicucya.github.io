@@ -72,122 +72,260 @@
       "title_ja": "未確認の記録をお知らせする",
       "title_en": "Get reminded about pending entries",
       "ui_language": "ja",
-      "duration": 35.467,
-      "bytes": 565267,
+      "duration": 36.7,
+      "bytes": 532144,
       "steps": [
         {
-          "time": 1.015,
+          "time": 1.009,
           "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
           "en": "Open Notifications in More, then Pending Reminders"
         },
         {
-          "time": 8.269,
+          "time": 8.719,
           "ja": "＋から時刻を選びます",
           "en": "Tap plus and choose a time"
         },
         {
-          "time": 11.551,
+          "time": 12.117,
           "ja": "お知らせする曜日を選んで保存します",
           "en": "Choose the days, then save"
         },
         {
-          "time": 20.093,
+          "time": 21.251,
           "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
           "en": "Turn it on. You're notified of the count only when entries are pending"
         },
         {
-          "time": 26.877,
+          "time": 28.07,
           "ja": "「財布」で、数える財布を選べます",
           "en": "In Wallets, choose which wallets to count"
         }
       ],
-      "source_take": "32-pending-reminders-20261113-003834-232100",
-      "source_device": "E6B9BBD8-1C9C-4247-B056-DDE461E93691",
-      "source_started_at": 1794497914.401746,
-      "source_stopped_at": 1794497949.856272,
-      "source_wall_duration": 35.455,
-      "source_raw_duration": 33.272,
-      "source_raw_sha256": "642ec08fe1602d6d91f0086971339a9318b60f84973ae6eaf23ff1139697e082",
-      "source_manifest_sha256": "acecedeb11ea6802c1def50d96af7e7817ffb97d89cc5042d12f2d91bc7add15",
-      "poster_time": 26.0,
-      "render_fingerprint": "a5f191554e9c7d751162f9bc3dcefadc85d3e7b5bdae6fbd8c73871004d184a0",
-      "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "0ec831b4edb928e6ec961343dc1ea23237e910ae79405498755a3ae106570a4d",
-      "sha256": "77bf5c9741a42f9a9302c1fef602a253d2f1988e571cb443b846cb9a120017ee",
-      "poster_sha256": "99bd38f53a251c87ff05613512eda799d2054a267fe7428ef8d1400ebe6e4b80",
-      "poster_time_override": 26.0,
-      "poster_time_override_reason": "The saved weekday rule is switched on after the real notification permission prompt.",
-      "recording_script": {
-        "repository": "kotori",
-        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
-        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
-        "method": "testGuide32PendingReminders",
-        "method_sha256": "291eea1b085283632fea413de19d9b27dbe6c1e27f35753d36e15d89eca394e6",
-        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677. The Japanese 32 take predates the 12-hour picker fallback added for English; the 24-hour path is unchanged."
+      "source_take": "32-pending-reminders-20261117-195202-760640",
+      "source_device": "6542D149-061C-4C2B-A166-4E5D7EAE562F",
+      "source_started_at": 1794912722.958611,
+      "source_stopped_at": 1794912759.642462,
+      "source_wall_duration": 36.684,
+      "source_raw_duration": 35.262,
+      "source_raw_sha256": "5638c7816d7b2d5fb6d58226c17b64e1187e845595eb563f2a0842ee9aaa26ae",
+      "source_manifest_sha256": "19e740aa25a7fd05ea0eba8faaba606c501cbece84630a778bc4a5ceb455b94c",
+      "poster_time": 27,
+      "poster_time_source": "reviewed_recorded_frame",
+      "sha256": "6d0c841d08b733ea6b33c1c78fd7721041e7a84c08f0a36d90b0b8dfc7ffd509",
+      "poster_sha256": "144507bc2e90366db693bd99d2bdaca43a827569ffdc24ae4860178d0cb0ef96",
+      "caption_timing_review": {
+        "original_steps": [
+          {
+            "time": 1.009,
+            "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
+            "en": "Open Notifications in More, then Pending Reminders"
+          },
+          {
+            "time": 8.719,
+            "ja": "＋から時刻を選びます",
+            "en": "Tap plus and choose a time"
+          },
+          {
+            "time": 12.117,
+            "ja": "お知らせする曜日を選んで保存します",
+            "en": "Choose the days, then save"
+          },
+          {
+            "time": 21.251,
+            "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
+            "en": "Turn it on. You're notified of the count only when entries are pending"
+          },
+          {
+            "time": 28.07,
+            "ja": "「財布」で、数える財布を選べます",
+            "en": "In Wallets, choose which wallets to count"
+          }
+        ],
+        "reviewed_source_times": [
+          1.009,
+          8.719,
+          12.117,
+          21.251,
+          28.07
+        ],
+        "method": "Decoded from start; exact 30 fps frame selection at 4-second intervals, with exact transition frames checked. Captions retimed to their visible operations, then divided by playback speed.",
+        "sampling_precision_seconds": 2,
+        "result": "Time, weekday grid, enablement and wallet scope checked."
       },
-      "capture_note": "Real notification permission prompt on a signed-out simulator; no notification delivery or iCloud sync is demonstrated.",
-      "group": "data"
+      "edit": {
+        "speed": 1,
+        "source_video_sha256": "6d0c841d08b733ea6b33c1c78fd7721041e7a84c08f0a36d90b0b8dfc7ffd509",
+        "source_video_duration": 36.7,
+        "source_interval": [
+          0,
+          36.7
+        ],
+        "operation": "Original playback speed."
+      },
+      "app_version": "1.3.0",
+      "app_build": "1719",
+      "source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
+      "runtime": "iOS 27.0",
+      "recording_script_sha256": "3033ea20acdeeecf81c041833b26152e8c295282bc35d288e7e08a5cf29709ba",
+      "poster_time_override_reason": "Enabled 20:00 weekday reminder, fully visible before wallet selection.",
+      "device_name": "KT personalize iPhone 261117",
+      "fixture_provenance": {
+        "source": "Major-owned illustration fixtures only in the visible Photos library; guide 32 does not open the photo picker.",
+        "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
+        "preflight": "website-B/ja-195135/preflight.json"
+      }
     },
     {
       "id": "33-date-background",
-      "title_ja": "日付に合わせて背景を切り替える",
-      "title_en": "Change the background by date",
+      "title_ja": "お気に入りの写真を、毎日と特別な日の背景に",
+      "title_en": "Enjoy favorite photos every day and on special days",
       "ui_language": "ja",
-      "duration": 81.0,
-      "bytes": 2085908,
+      "duration": 72.2,
+      "bytes": 3335741,
       "steps": [
         {
-          "time": 1.014,
-          "ja": "「その他」の「カスタマイズ」で背景を「写真」にし、「日付で切り替え」を開きます",
-          "en": "In More → Appearance, set the background to Photo and open Change by Date"
+          "time": 0.575,
+          "ja": "「その他」→「カスタマイズ」で背景を「写真」にし、「背景写真」を開きます",
+          "en": "In More → Appearance, choose Photo, then open Background Photos"
         },
         {
-          "time": 19.863,
-          "ja": "「日付を追加」で月日を選び、その日の写真を選びます",
-          "en": "Tap Add Date, choose a month and day, and pick that day's photo"
+          "time": 5.714,
+          "ja": "「＋」から写真をまとめて選び、追加します",
+          "en": "Tap +, select several photos, then add them"
         },
         {
-          "time": 39.013,
-          "ja": "ほかの日付も、それぞれ写真を選んで追加できます",
-          "en": "Add other dates, each with its own photo"
+          "time": 12.571,
+          "ja": "「写真を調整」で位置をドラッグし、「完了」をタップします",
+          "en": "Tap Adjust Photo, drag to frame it, then tap Done"
         },
         {
-          "time": 63.298,
-          "ja": "オンにすると、その日になった日付の写真が背景になります",
-          "en": "Turn it on. Each date's photo becomes the background when that day arrives"
+          "time": 17.143,
+          "ja": "チェックを付けた写真が、普段の背景に使われます",
+          "en": "Checked photos are used for your everyday background"
         },
         {
-          "time": 68.432,
-          "ja": "戻って「保存」すると、背景が切り替わります",
-          "en": "Go back and tap Save to apply it"
+          "time": 21.353,
+          "ja": "「開くたび」は開くたびに、「1日1回」は日ごとに写真が切り替わります",
+          "en": "Each Time You Open changes photos on opening; Once a Day changes them daily"
+        },
+        {
+          "time": 26.857,
+          "ja": "「特別な日を追加」で写真を選び、「毎年」の月日を指定して追加します",
+          "en": "Tap Add Special Day, choose a photo, and add a Yearly date"
+        },
+        {
+          "time": 44.703,
+          "ja": "「毎月」では、1日・15日など複数の日を選べます",
+          "en": "For Monthly, select multiple dates, such as the 1st and 15th"
+        },
+        {
+          "time": 54.949,
+          "ja": "「毎週」では、曜日を複数選んで追加できます",
+          "en": "For Weekly, select more than one weekday, then add the rule"
+        },
+        {
+          "time": 63.714,
+          "ja": "戻って「保存」。選んだ写真が「記録」の背景になります",
+          "en": "Go back and save. Your photo appears behind Record"
         }
       ],
-      "source_take": "33-date-background-20261113-004507-954370",
-      "source_device": "E6B9BBD8-1C9C-4247-B056-DDE461E93691",
-      "source_started_at": 1794498308.124091,
-      "source_stopped_at": 1794498389.120909,
-      "source_wall_duration": 80.997,
-      "source_raw_duration": 80.998,
-      "source_raw_sha256": "fcd85d450ef0442bbff515eadc68d915e2a8ff6bde8642fa49348b7569ea2444",
-      "source_manifest_sha256": "fdab78520941b5c145933749e8547bc775620570215101a8c9330a29353e5761",
-      "poster_time": 66.0,
-      "render_fingerprint": "4239ad26bbcc471abae49f4762d2c6cbfd6bf56af28c774d6fee0a79ef206bf1",
-      "poster_time_source": "take_manifest_override",
-      "poster_fingerprint": "1008709a4b45cdd73ff9de600eaaf2e884a6bd64885769718e514b82ab5af29a",
-      "sha256": "c2e7b85f563596d58b8d46fc705641a7326abc2d585934aa7f0be095f229d4f5",
-      "poster_sha256": "3c496a62afe1a9e468b9db37cdd98dafcf83c7dd6d3bb2910183833a55ade640",
-      "poster_time_override": 66.0,
-      "poster_time_override_reason": "Both dates are listed with their photos and today's date is marked in use.",
-      "recording_script": {
-        "repository": "kotori",
-        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
-        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
-        "method": "testGuide33DateBackground",
-        "method_sha256": "d02a3b25462aee0b723a359dcebc1b87f390eb0b36c40af7ec8e273b9fbd0f8d",
-        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677."
+      "source_take": "33-date-background-20261117-195311-359482",
+      "source_device": "6542D149-061C-4C2B-A166-4E5D7EAE562F",
+      "source_started_at": 1794912791.515938,
+      "source_stopped_at": 1794912917.837481,
+      "source_wall_duration": 126.322,
+      "source_raw_duration": 125.595,
+      "source_raw_sha256": "6a174e3dd07233d6585ec61e32ef9b365dbe5eb457c3f66aab8ed7f551e6c353",
+      "source_manifest_sha256": "fd7769280d428ac3406b658741512a443dd7f1b559c774500b39ab6a074fda41",
+      "poster_time": 62.857,
+      "poster_time_source": "reviewed_recorded_frame",
+      "sha256": "ee76032d09f74a8974f3d06b9f8654d63127de183b0c83fa56b1eb034d94685a",
+      "poster_sha256": "0e28f8aad6b0751d4170eae3e9dccf1c9b854efa66f19e6797d1a13c24129923",
+      "caption_timing_review": {
+        "original_steps": [
+          {
+            "time": 1.006,
+            "ja": "「その他」→「カスタマイズ」で背景を「写真」にし、「背景写真」を開きます",
+            "en": "In More → Appearance, choose Photo, then open Background Photos"
+          },
+          {
+            "time": 12.283,
+            "ja": "「＋」から写真をまとめて選び、追加します",
+            "en": "Tap +, select several photos, then add them"
+          },
+          {
+            "time": 24.241,
+            "ja": "「写真を調整」で位置をドラッグし、「完了」をタップします",
+            "en": "Tap Adjust Photo, drag to frame it, then tap Done"
+          },
+          {
+            "time": 32.06,
+            "ja": "チェックを付けた写真が、普段の背景に使われます",
+            "en": "Checked photos are used for your everyday background"
+          },
+          {
+            "time": 37.368,
+            "ja": "「開くたび」は開くたびに、「1日1回」は日ごとに写真が切り替わります",
+            "en": "Each Time You Open changes photos on opening; Once a Day changes them daily"
+          },
+          {
+            "time": 48.566,
+            "ja": "「特別な日を追加」で写真を選び、「毎年」の月日を指定して追加します",
+            "en": "Tap Add Special Day, choose a photo, and add a Yearly date"
+          },
+          {
+            "time": 78.23,
+            "ja": "「毎月」では、1日・15日など複数の日を選べます",
+            "en": "For Monthly, select multiple dates, such as the 1st and 15th"
+          },
+          {
+            "time": 96.161,
+            "ja": "「毎週」では、曜日を複数選んで追加できます",
+            "en": "For Weekly, select more than one weekday, then add the rule"
+          },
+          {
+            "time": 114.689,
+            "ja": "戻って「保存」。選んだ写真が「記録」の背景になります",
+            "en": "Go back and save. Your photo appears behind Record"
+          }
+        ],
+        "reviewed_source_times": [
+          1.006,
+          10,
+          22,
+          30,
+          37.368,
+          47,
+          78.23,
+          96.161,
+          111.5
+        ],
+        "method": "Decoded from start; exact 30 fps frame selection at 4-second intervals, with exact transition frames checked. Captions retimed to their visible operations, then divided by playback speed.",
+        "sampling_precision_seconds": 1,
+        "result": "Photo picker, crop, selection, frequency, yearly/monthly/weekly rules and final saved result checked."
       },
-      "capture_note": "Photos: Tools/guide-recordings/fixtures/misty-lake.png for today's date and misty-lake-dusk.jpg (mirrored, tinted copy) for the December date.",
-      "group": "data"
+      "edit": {
+        "speed": 1.75,
+        "source_video_sha256": "04ce3e371e02c3849726f12ce9229027af9884cb0cf99009f7d18948ef1c8164",
+        "source_video_duration": 126.333,
+        "source_interval": [
+          0,
+          126.333
+        ],
+        "operation": "Continuous actual recording; no operation removed or UI replaced. Playback accelerated for guide 33."
+      },
+      "app_version": "1.3.0",
+      "app_build": "1719",
+      "source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
+      "runtime": "iOS 27.0",
+      "recording_script_sha256": "3033ea20acdeeecf81c041833b26152e8c295282bc35d288e7e08a5cf29709ba",
+      "poster_time_override_reason": "All three saved Yearly, Monthly and Weekly summaries are visible beneath the selected photo grid.",
+      "device_name": "KT personalize iPhone 261117",
+      "fixture_provenance": {
+        "source": "Major-owned illustration; P1, P2, P4 and P5 selected through the system photo picker.",
+        "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
+        "preflight": "website-B/ja-195135/preflight.json"
+      }
     }
   ]
 }

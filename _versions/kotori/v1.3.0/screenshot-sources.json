@@ -82,5 +82,37 @@
     "ui_locale": "en-US",
     "raw_sha256": "756b1863d24ddb550a4b9f19bfc986202cd233e879197692dd04c46060c292f9",
     "note": "Same RAW as the App Store receipt page, scaled to 660x1434. Synthetic receipt; Vision OCR and the model reading are replaced by the receipt's printed rows on the simulator. Product source equals TestFlight 1.3.0 (1676); App repo docs/publishing/asset-sources.md lists the details."
+  },
+  "assets/screens/ja/10-personalize-chat.jpg": {
+    "app_version": "1.3.0",
+    "app_build": "1707",
+    "capture_date": "2026-11-17",
+    "source_base": "5cf7a106f5501962c235f307958f6b6157225c6e",
+    "test": "ScreenshotUITests/testCapturePersonalization",
+    "ui_locale": "ja",
+    "raw_path": "fastlane/screenshots/raw/ja/iPhone 17 Pro Max-10-personalize-chat.png",
+    "raw_sha256": "b63ec4c03050eeeae3568434528bea6144af20b32156ed272688dc6828d9ab68",
+    "sha256": "19385040e92bf8beb137aeb3cff93c4e48773696e14c8611a02193bb9bc1e6c8",
+    "size": [
+      660,
+      1434
+    ],
+    "note": "Task A owned illustration; real UI setup; scaled proportionally from 1320x2868. Exact per-locale capture provenance retained in App asset-sources-1.3.json."
+  },
+  "assets/screens/en/10-personalize-chat.jpg": {
+    "app_version": "1.3.0",
+    "app_build": "1708",
+    "capture_date": "2026-11-17",
+    "source_base": "366be5ed96a58fbd412fc689035e5e8008f46493",
+    "test": "ScreenshotUITests/testCapturePersonalization",
+    "ui_locale": "en-US",
+    "raw_path": "fastlane/screenshots/raw/en-US/iPhone 17 Pro Max-10-personalize-chat.png",
+    "raw_sha256": "94fbfcb429b3b14b5e907ea590a889e9764a3a8e2d8176cdb96ecc8ac31d9540",
+    "sha256": "1f36115c7e20a7432c0bd0f7e59e0de51509893722ae2587cdf59007693c8392",
+    "size": [
+      660,
+      1434
+    ],
+    "note": "Task A owned illustration; real UI setup; scaled proportionally from 1320x2868. Exact per-locale capture provenance retained in App asset-sources-1.3.json."
   }
 }
