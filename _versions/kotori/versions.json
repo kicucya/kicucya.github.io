@@ -106,7 +106,36 @@
       "source_commit": "7a29beb",
       "app_source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
       "provenance": "Created from the 1.2.3 website for App 1.3.0 (build 1652) so the versioned support pages exist before TestFlight. Adds written introductions for changing the background by date, pending reminders, and recording from receipt photos, using the App's current strings. Guide videos for these features wait for the user's feature acceptance; existing layout, screenshots and tutorials are reused with their original capture provenance. Publishing this version does not change the default website version. On 2026-11-13, after the user confirmed the 1.3 features as accepted (push-up phase, with later UI adjustments replaced incrementally), guide videos 31 (receipt photo), 32 (pending reminders) and 33 (background by date) were recorded in Japanese and English from App 1.3.0 build 1677 (product code of TestFlight 1676 plus a DEBUG-only wait), with a home-page receipt screenshot and FAQ entries; the App repository docs/publishing/asset-sources.md lists each asset's source. On 2026-11-17, guides 32 and 33 were replaced with real Japanese and English UI recordings from build 1719. Guide 33 now covers Background Photos, everyday switching, and Yearly/Monthly/Weekly special days; guide 32 reflects the new weekday grid. Guide 31 remains unchanged after review through Dev cf3a2eb0. Home-page personalization screenshots reuse Task A RAW captures (1707/1708). The display name is 1.3.0 (Preview); latest remains 1.2.3.",
-      "display_name": "1.3.0 (Preview)"
+      "display_name": "1.3.0 (Preview)",
+      "release_notes": {
+        "ja": [
+          "背景写真を複数登録し、開くたびまたは1日1回に自動で切り替える機能を追加しました。毎年・毎月・毎週くり返す特別な日の写真にも対応しました。",
+          "レシートの写真から店名と合計金額を読み取って記録する機能を追加しました。コントロールセンターやショートカットからも使えます。レシートの画像は保存しません。",
+          "未確認の記録を、決めた曜日と時刻に通知でお知らせする「未確認リマインダー」を追加しました。",
+          "背景写真を大きな画面でもより鮮明に表示できるようになりました。縦向き・横向きでの写真の位置合わせも改善しました。",
+          "書き出したCSVのファイル名に、対象の期間が入るようになりました。",
+          "記録が多いときの収支一覧の表示速度を改善しました。",
+          "大きな画面での表示と、外付けキーボードでの金額入力を改善しました。確認・削除の画面を統一し、設定画面の項目の並びを整えました。"
+        ],
+        "en": [
+          "Added a library of multiple Background Photos that switch automatically, either each time you open the app or once a day. Photos for Special Days can also repeat every year, month or week.",
+          "Added the ability to read the store name and total from a receipt photo and record it. It also works from Control Center and Shortcuts. Receipt images are not saved.",
+          "Added “Pending Reminders,” which send a notification on the days of the week and at the time you choose when unreviewed entries are waiting.",
+          "Background photos now look sharper on large screens, and photo positioning in portrait and landscape has been improved.",
+          "Exported CSV file names now include the selected period.",
+          "Improved how quickly the transaction list displays when there are many entries.",
+          "Improved the display on large screens and amount entry with an external keyboard. Unified the confirmation and deletion screens and tidied the order of items in Settings."
+        ],
+        "zh-hant": [
+          "新增可加入多張背景照片，並在每次開啟或每天一次自動切換的功能。特別日的照片也支援每年、每月或每週重複。",
+          "新增從發票或收據的照片讀取店名與總金額並記錄的功能，也可從控制中心和捷徑使用。不會儲存發票或收據的圖片。",
+          "新增「待確認提醒」，會在設定的星期與時間，以通知提醒尚有未確認的記錄。",
+          "背景照片在大螢幕上顯示得更清晰，也改善直向與橫向時的照片位置調整。",
+          "匯出的 CSV 檔名現在會包含所選的期間。",
+          "改善記錄較多時收支列表的顯示速度。",
+          "改善大螢幕顯示與外接鍵盤的金額輸入，統一確認與刪除的畫面，並調整設定畫面的項目排列。"
+        ]
+      }
     }
   ]
 }
