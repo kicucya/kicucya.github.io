@@ -1,0 +1,431 @@
+{
+  "app_version": "1.2.3",
+  "app_tag_or_ref": "v1.2.3",
+  "product_source_commit": "e7b327b86f949456eb47862fd22656c72dcc8184",
+  "app_build": "1638",
+  "runtime": "iOS 27.0 (24A434)",
+  "capture_run": "default-appearance-261118",
+  "capture": "XCTest on mac-mini-kt agents; newly created account-free dedicated simulators; synthetic demonstration ledger; no appearance settings opened or injected. Only resize; no screenshot retouching. DEBUG-only capture patches and clock source retained in App docs/publishing/default-appearance-261118/.",
+  "scope": "15 files: 12 Japanese and 3 English. Videos and all other screenshots retained, including v1.3.0 10-personalize-chat.jpg.",
+  "fixture": "Website app wall time reproduces 2026-10-28; original localized greeting/receipt strings and visible learned-keyword order are fixed by opt-in DEBUG simulator capture patches. Legacy budget: warning 60%, default wallet, total 300000, food 105147. Learned keyword approval counts 8/6/4/2 stay below the scoring cap, preserving the original row order.",
+  "images": [
+    {
+      "image": "assets/screens/ja/01-conversation.jpg",
+      "previous_sha256": "48a41d03ecdf0c1b3bc7ed7d9c68f846f253909b583974ee740e371264e6f70c",
+      "sha256": "f170acdac6211e91cb60f2b90a4578b7e7d2a9fd4981937097e983c311789b16",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-01-conversation.png",
+      "source_sha256": "b655838d2bc13bac69342883ff1630be854febe35747264ca0123820d2df445a",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/02-siri.jpg",
+      "previous_sha256": "d4897a4602c5e04341d1488b12e8519a76a28762e56789d4586f0be4a56c8a88",
+      "sha256": "b9f68efb0239d789fa5deec8dbff5ba67d6a17d1beca01bbbf617bce195b875b",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-02-siri.png",
+      "source_sha256": "6acb8ebf4af7e507774f40a617260faf0f3623839901b350c7a5d56625b1000c",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/03-learning.jpg",
+      "previous_sha256": "e81a577f93bda2bbc84c16f24cadd73ee8461442e602ef387610d88f7b38d0ae",
+      "sha256": "da629e88156bc31b03ec8634f39bf48fe23c60172b31f1000fd11c424c52acc0",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/keywords-ja/screenshots/KT default website 261118-03-learning.png",
+      "source_sha256": "72c37eb3bb90a9474c54033ba097e98a5d4f910bdab84d7bb56d131648b5d4e9",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "final",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/keywords-ja-224416.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/04-export.jpg",
+      "previous_sha256": "6200947f265088fb35601dbfec672bb3a92e187857997a269e78778482e37624",
+      "sha256": "f8f9cf4e622843f17300b3e8694ff0f94d05027f55aea21c326d21ef508947b7",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-04-export.png",
+      "source_sha256": "d0e1af6caa50ce42748c1af0117791ee087bf74d31250828a0a84bacb4a3926b",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/05-report-detail.png",
+      "previous_sha256": "85a9a1066b6060a9d4e94c64af216801bfb13633503a5555f4e072a54231fb45",
+      "sha256": "f84c7176d4d7a9ca16093f1ca7f814c246ba55ad0a70f064d3f41b55f065237e",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-05-report-detail.png",
+      "source_sha256": "d89f618e90131d2d866a889f5737a490456b52b1bfd6aa53725042cceec5a62f",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/05-report.png",
+      "previous_sha256": "a98698b1a1293bec8c859d27d81e55585cfe3309b4b13c4d837d123b955a9653",
+      "sha256": "3c54a1d4c40ea85dca054453e747b408e6ecd66438e9405760533a3f4a38543c",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-05-report.png",
+      "source_sha256": "a4edca788abbe514f68360af45085e289422f704321c47e2c1fef328591b1094",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/06-wallet-share.jpg",
+      "previous_sha256": "988360121f358048a7fdcf7850f5fb3e23c1fe42ae1fe50834f37dfa9b84ae1f",
+      "sha256": "28dc27ba6765cd524225e9088fcce4b1a19d3229180294e293bd6504a9eb5c99",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-06-wallet-share.png",
+      "source_sha256": "91c1ae2433300f9086634bf207fb3acc00f5e6fa50cbc5ebdad496bd7e31c882",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/07-budget.jpg",
+      "previous_sha256": "c6b2a53964d9c7c9d54b8fb143e18b45859f53ab21cf032d0d85a2df74b239d7",
+      "sha256": "924896e5470660ed7cb23c8e4aee463535aad863cc20e3244fb1b4617bb619d1",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja/screenshots/KT default store 261118-07-budget-legacy.png",
+      "source_sha256": "73093c78762fb89acfd939394c3f91e7d36e2a78e3275afd8dc0fe126737693d",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "device": "iPhone 17 Pro Max",
+      "device_uuid": "8755114A-96B0-422C-B18E-5CB6F8AEA41E",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "final",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja-224503.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/07-budget.png",
+      "previous_sha256": "b533a148dac91e0ea503b70b69223a2ef716b43b7f54133ff6908649a0be1d88",
+      "sha256": "d308ed5b184f3ff56344a11d421ca1459d7a8f408babf5cce929b8751ebf664c",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-07-budget.png",
+      "source_sha256": "73cc6f17111607ca9227ce37e383424e4b6100f036e7de7909327fe42eb18f9c",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/25-chat-avatar.jpg",
+      "previous_sha256": "4058321f6f9ee1ed6de2917cb74df8f2af623ff890770a39e0cd161977c2a2a7",
+      "sha256": "606aa9c77e37ff7968a819f2ed44a7306f3b3192c053681aa108b3a94118791e",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots/KT default website 261118-25-chat-avatar.png",
+      "source_sha256": "c181d96625778f30fb25c06a60713d68dfa51c660fb10ab6e0e34d99021a4d2d",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/30-history-options.png",
+      "previous_sha256": "ab892806aab0337bf5855e425c9669850c7abbd7ab8f31c552c8860b848b17ca",
+      "sha256": "e1ba1372034ef8bed656d3757324395c063028de74ccf833c0f0cf2cfdcbc999",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja/screenshots/KT default store 261118-30-history-options.png",
+      "source_sha256": "c9db77e0e81380fa4166677b05ce87383f7917679db7ae624d586fea46ed6386",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "device": "iPhone 17 Pro Max",
+      "device_uuid": "8755114A-96B0-422C-B18E-5CB6F8AEA41E",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "final",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja-224503.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/ja/30-recording-settings.png",
+      "previous_sha256": "f84962d1ae5d973270a92629b4e1596c01de87d02a642900049646359328d763",
+      "sha256": "d6f052f95ea343c8df5708bee8d4ab1e32b9be0e2de04ec92993390dde434f38",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja/screenshots/KT default store 261118-30-recording-settings.png",
+      "source_sha256": "b92e0900d16638be09a0489da6a363f6c0e6a6f958640847cc5f98c6049b2b3f",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "device": "iPhone 17 Pro Max",
+      "device_uuid": "8755114A-96B0-422C-B18E-5CB6F8AEA41E",
+      "language": "ja",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "final",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja-224503.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/en/25-chat-avatar.jpg",
+      "previous_sha256": "f4ce8332941ca484ce0aab55a7f8632481eac583a8ac3266b7abaf9d1fde4b49",
+      "sha256": "1244c7d8802748250ee17549bbba70bb48ae498618f6e4cc1168b65902c3e16a",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US/screenshots/KT default website 261118-25-chat-avatar.png",
+      "source_sha256": "93640c2045fba97844604e51b922c53586f867bca0a57a685b848a6c9b972b5a",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "en",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US-223301.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/en/30-history-options.png",
+      "previous_sha256": "5ae2020996acf8698886bf65c11696efd5fc2a9ce2ce09e12a79f3188c49941e",
+      "sha256": "5e23c2c01af5f563ec4172fc654b2a526ea79cb86ce104b47f07a0ffb67b9f04",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US/screenshots/KT default website 261118-30-history-options.png",
+      "source_sha256": "b232fe04e3b0f127376f32616a9501e417ba02b81440074b1dc6e5f2562f17ca",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "en",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US-223301.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    },
+    {
+      "image": "assets/screens/en/30-recording-settings.png",
+      "previous_sha256": "147d2d3ddf704fd29faa06b80cb45e08953be83600a9d2a918a64d90c3651b71",
+      "sha256": "3280313799baa365b95ff7687623a0df3bf9e76bcd4cfc123fe6e3a6b6d3ba8c",
+      "source": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US/screenshots/KT default website 261118-30-recording-settings.png",
+      "source_sha256": "b050a8c8288453cf9a4b777dcea7332ba4ed0f3a0ce1fd0b5a254250d0d403d6",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "device": "iPhone 17 Pro",
+      "device_uuid": "0B770D19-2139-46DF-BD35-CB31F1EB1AE5",
+      "language": "en",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "harness_revision": "initial",
+      "test_result": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US-223301.xcresult",
+      "visual_review_note": "Checked rendered output against original: default appearance, unchanged scene, language, date, numerical values, keyword order, framing and absence of transient banners."
+    }
+  ],
+  "harness": {
+    "initial": {
+      "source_ref": "v1.2.3",
+      "source_commit": "e7b327b86f949456eb47862fd22656c72dcc8184",
+      "patch_sha256": "547d83a49ccff857e86d90166615a2bc5b23de519382e27579281e6a95fe036e",
+      "patched_sources_sha256": {
+        "OneSentenceAccountingUITests/ScreenshotUITests.swift": "6aa8923667a6362b20a07779f92e425061ced93910403de4ca828caada4ea0b7",
+        "OneSentenceAccounting/Features/Chat/KotoriQuipLibrary.swift": "8c84fb36fc8120bdf7aba25a0ceb25fbbeacb1b39a0d2e83df36d62583208c82",
+        "OneSentenceAccounting/Shared/Testing/ScreenshotDemoSeeder.swift": "a1fd173e49bc4478a41387bf8572fedd07cc17c0ad34db91f26fbf243f0ba48a"
+      }
+    },
+    "final": {
+      "source_ref": "v1.2.3",
+      "source_commit": "d4bedb4a8f569e1ecf0d28980d57f3d3f145ddc5",
+      "patch_sha256": "67323b21bd91bd259ce218271d80784ed6acba3eb3b55b77bbb5d9f2a48dbb01",
+      "patched_sources_sha256": {
+        "OneSentenceAccountingUITests/ScreenshotUITests.swift": "ccbde00c7b452233bb5fc5e9ec6227b0d5dd4b5e37c740cbcac1a9af073d8735",
+        "OneSentenceAccounting/Features/Chat/KotoriQuipLibrary.swift": "8c84fb36fc8120bdf7aba25a0ceb25fbbeacb1b39a0d2e83df36d62583208c82",
+        "OneSentenceAccounting/Shared/Testing/ScreenshotDemoSeeder.swift": "b5da81e9763799c68f76b4464fd09a4fe9f96353439c1a35093dffc4cca8f7cc"
+      }
+    }
+  },
+  "actual_capture_date": "2026-11-17",
+  "batch_label_note": "261118 is the assigned task batch label; capture dates are taken from the result logs.",
+  "capture_tests": [
+    {
+      "version": "1.2.3",
+      "capture": "website-ja",
+      "log": "/Users/agents/Workspaces/kotori-default-appearance-261118/logs/capture-1.2.3-website-ja-222947.log",
+      "xcresult": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja-222947.xcresult",
+      "status": "passed",
+      "raw_directory": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-ja/screenshots"
+    },
+    {
+      "version": "1.2.3",
+      "capture": "website-en-US",
+      "log": "/Users/agents/Workspaces/kotori-default-appearance-261118/logs/capture-1.2.3-website-en-US-223301.log",
+      "xcresult": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US-223301.xcresult",
+      "status": "passed",
+      "raw_directory": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/website-en-US/screenshots"
+    },
+    {
+      "version": "1.2.3",
+      "capture": "keywords-ja",
+      "log": "/Users/agents/Workspaces/kotori-default-appearance-261118/logs/capture-1.2.3-keywords-ja-224416.log",
+      "xcresult": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/keywords-ja-224416.xcresult",
+      "status": "passed",
+      "raw_directory": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/keywords-ja/screenshots"
+    },
+    {
+      "version": "1.2.3",
+      "capture": "legacy-ja",
+      "log": "/Users/agents/Workspaces/kotori-default-appearance-261118/logs/capture-1.2.3-legacy-ja-224503.log",
+      "xcresult": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja-224503.xcresult",
+      "status": "passed",
+      "raw_directory": "/Users/agents/Workspaces/kotori-default-appearance-261118/1.2.3/results/legacy-ja/screenshots"
+    }
+  ]
+}
