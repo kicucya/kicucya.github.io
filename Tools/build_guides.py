@@ -125,6 +125,30 @@ RECORDING_PREDECESSORS_120 = {
 }
 
 
+# Claude (1.3.0): new guides recorded for 1.3.0, each placed after the closest existing guide.
+RECORDING_IDS_130 = ('31-receipt-photo', '32-pending-reminders', '33-date-background')
+RECORDING_PREDECESSORS_130 = {
+    '31-receipt-photo': '02-manual-entry',
+    '32-pending-reminders': '26-bookkeeping-reminders',
+    '33-date-background': '25-appearance',
+}
+ENTRY_POINTS['31-receipt-photo'] = ('記録 → ＋ → レシート写真を選択', 'Record → + → Choose Receipt Photo')
+ENTRY_POINTS['32-pending-reminders'] = ('その他 → 通知 → 未確認リマインダー', 'More → Notifications → Pending Reminders')
+ENTRY_POINTS['33-date-background'] = ('その他 → カスタマイズ → 背景「写真」→ 背景写真', 'More → Appearance → Background: Photo → Background Photos')
+SCOPE_NOTES['31-receipt-photo'] = {
+    'ja': 'iPhoneでは「＋」の「レシートを撮影」でカメラから読み取れます。コントロールセンターの「レシートを撮影」や、ショートカットAppの「レシートを読み取る」からも始められます。レシートの写真と読み取った文字は保存されません。動画のレシートは見本です。',
+    'en': 'On iPhone, Scan Receipt in the + menu reads a receipt with the camera. You can also start from the Scan Receipt control in Control Center or the Scan Receipt action in the Shortcuts app. Receipt photos and the text read from them are not saved. The receipt in the video is a sample.',
+}
+SCOPE_NOTES['32-pending-reminders'] = {
+    'ja': '時刻・曜日・財布はiCloudで同期できます。通知のオン・オフは端末ごとに保存され、新しいリマインダーはオフで追加されます。この動画では設定操作を紹介します。',
+    'en': 'The time, days, and wallets can sync with iCloud. Notification switches stay on each device, and new reminders start off. This video demonstrates the settings.',
+}
+SCOPE_NOTES['33-date-background'] = {
+    'ja': '動画は1.75倍速です。写真は64枚、特別な日は64件まで追加できます。毎月の日付と毎週の曜日は複数選べます。普段の写真が2枚以上なら特別な日の翌日に通常の切り替えへ戻り、1枚なら次の特別な日までその写真が続きます。',
+    'en': 'The video plays at 1.75× speed. Add up to 64 photos and 64 special-day rules. Monthly dates and weekdays allow multiple selections. With two or more everyday photos, normal switching resumes the next day; with one, the special photo stays until the next special day.',
+}
+
+
 def merge_120_clips(base, additions):
     clips = list(base)
     for addition in additions:
@@ -169,15 +193,21 @@ def read_clips(ui_language, media_version='1.1.3'):
     if manifest.get('app_version') != media_version or manifest.get('ui_language') != ui_language:
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
     current = media_version == '1.2.1'
-    expected_ids = (list(dict.fromkeys((*LEGACY_RECORDING_IDS, *RECORDING_IDS_120, '30-recording-settings')))
-                    if current else list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else list(RECORDING_IDS_120))
-    minimum_count = 1 if current else len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
-    recording_ids = [clip['id'] for clip in manifest['clips']]
-    expected_present = [identity for identity in expected_ids if identity in recording_ids]
-    valid_order = (recording_ids == expected_ids[:len(recording_ids)] if media_version == '1.1.3'
-                   else recording_ids == expected_present if current else recording_ids[:2] == expected_ids[:2] and recording_ids == expected_present)
-    if not minimum_count <= len(recording_ids) <= len(expected_ids) or not valid_order:
-        raise ValueError(f'{ui_language}/{media_version}: incomplete or unexpected recording order')
+    if media_version == '1.3.0':
+        expected_ids = list(RECORDING_IDS_130)
+        recording_ids = [clip['id'] for clip in manifest['clips']]
+        if not recording_ids or recording_ids != [i for i in expected_ids if i in recording_ids]:
+            raise ValueError(f'{ui_language}/{media_version}: incomplete or unexpected recording order')
+    else:
+        expected_ids = (list(dict.fromkeys((*LEGACY_RECORDING_IDS, *RECORDING_IDS_120, '30-recording-settings')))
+                        if current else list(LEGACY_RECORDING_IDS) if media_version == '1.1.3' else list(RECORDING_IDS_120))
+        minimum_count = 1 if current else len(REQUIRED_RECORDING_IDS) if media_version == '1.1.3' else 2
+        recording_ids = [clip['id'] for clip in manifest['clips']]
+        expected_present = [identity for identity in expected_ids if identity in recording_ids]
+        valid_order = (recording_ids == expected_ids[:len(recording_ids)] if media_version == '1.1.3'
+                       else recording_ids == expected_present if current else recording_ids[:2] == expected_ids[:2] and recording_ids == expected_present)
+        if not minimum_count <= len(recording_ids) <= len(expected_ids) or not valid_order:
+            raise ValueError(f'{ui_language}/{media_version}: incomplete or unexpected recording order')
     ids = set()
     clips = []
     for clip in manifest['clips']:
@@ -381,6 +411,16 @@ def main():
                                                 'en': 'Kotori → More → Recording → Record Entry / Siri'}
                     if clip['id'] in ('05-category-editor', '06-category-order'):
                         clip['entry_points'] = {'ja': 'その他 → カテゴリ管理', 'en': 'More → Categories'}
+        # Claude (1.3.0): 1.3.0-only recordings, inserted after their predecessor guide.
+        if version == '1.3.0' and (MEDIA_ROOT.parent / '1.3.0' / 'ja/manifest.json').is_file():
+            new_ja = read_clips('ja', '1.3.0')
+            new_en = read_clips('en', '1.3.0')
+            check_matching_provenance(new_ja, new_en)
+            for base, additions in ((japanese, new_ja), (english, new_en)):
+                for addition in additions:
+                    predecessor = RECORDING_PREDECESSORS_130[addition['id']]
+                    index = next(i for i, clip in enumerate(base) if clip['id'] == predecessor)
+                    base.insert(index + 1, addition)
         text_path = source_root / 'text-guides.json'
         text_guides = json.loads(text_path.read_text()) if text_path.exists() else {}
         replacements = text_guides.get('guides', {})

@@ -1,0 +1,331 @@
+{
+  "schema_version": 2,
+  "render_revision": 3,
+  "app_version": "1.3.0",
+  "app_build": "1677",
+  "source_commit": "fa73b22cd32258288b4ce6e9588cafa7a1f847b2",
+  "device_name": "KT guide13 en 261113 (iPhone 17 Pro Max)",
+  "runtime": "iOS 27.0",
+  "provenance_source": "Build and simulator identity supplied by the operator at render time",
+  "rendered_at": "2026-11-12T15:52:51.581507+00:00",
+  "ui_language": "en",
+  "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+  "clips": [
+    {
+      "id": "31-receipt-photo",
+      "title_ja": "レシートの写真から記録する",
+      "title_en": "Record from a receipt photo",
+      "ui_language": "en",
+      "duration": 33.7,
+      "bytes": 847551,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "「記録」の「＋」から「レシート写真を選択」を選びます",
+          "en": "In Record, tap + and choose Choose Receipt Photo"
+        },
+        {
+          "time": 9.281,
+          "ja": "レシートの写真を選びます",
+          "en": "Choose the photo of your receipt"
+        },
+        {
+          "time": 14.319,
+          "ja": "店名と合計金額を読み取ります。内容を確かめて「確認」をタップします",
+          "en": "Kotori reads the store name and total. Check them, then tap Confirm"
+        },
+        {
+          "time": 24.763,
+          "ja": "記録した内容は「収支」で確認できます",
+          "en": "Find the recorded entry in Transactions"
+        }
+      ],
+      "source_take": "31-receipt-photo-20261113-004651-537215",
+      "source_device": "335657E4-2C5B-454C-A250-347AF055A3F3",
+      "source_started_at": 1794498411.68784,
+      "source_stopped_at": 1794498445.387588,
+      "source_wall_duration": 33.7,
+      "source_raw_duration": 33.7,
+      "source_raw_sha256": "ba09d25a60fb9149516fc4a3b9ef9dc828adda4d82d1499e2b3f859254ce5390",
+      "source_manifest_sha256": "afe6f5dba17ec5f8c46523497f7fb39585aa4bc64479d598bd2d6d9e2b02c098",
+      "poster_time": 18.0,
+      "render_fingerprint": "c10aa96c826d845d176c2ed44c18d75798ab301cf6ce9a9f4371c87369d338a0",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "3934566d2059aad33e9dfe2658c46b20f3b544e602b9d2f8d46351666194446f",
+      "sha256": "7541e6bd1e25cfe6d0ecf33b45c5a5530500a3bcd4e4862a69f38aa15e01a385",
+      "poster_sha256": "7c7a1ba903fefdaa09e4cb0206dc06d1e02a4feaa9ae102a5021fe86dd9e54f0",
+      "poster_time_override": 18.0,
+      "poster_time_override_reason": "The reading card shows the store name, total, category and item memo read from the receipt.",
+      "recording_script": {
+        "repository": "kotori",
+        "file": "OneSentenceAccountingUITests/Guide130RecordingUITests.swift",
+        "commit": "b04dc064d87a68b026da99d2639226f0811b0e32",
+        "method": "testGuide31ReceiptPhoto",
+        "method_sha256": "218be931103758d937de03ce71606595fe5ff662abd9e9563ffde83ecdc547bf",
+        "note": "Product source_commit fa73b22c is TestFlight 1.3.0 (1676) product code plus a DEBUG-simulator-only wait; the recorded binary is build 1677."
+      },
+      "capture_note": "Simulator has no document camera and its document segmentation and model are not representative, so Vision OCR and the model reading were replaced by the synthetic receipt rows (docs/publishing/receipt-fixtures). The card, saving and Transactions list are the real app.",
+      "group": "record"
+    },
+    {
+      "id": "32-pending-reminders",
+      "title_ja": "未確認の記録をお知らせする",
+      "title_en": "Get reminded about pending entries",
+      "ui_language": "en",
+      "duration": 42.9,
+      "bytes": 754211,
+      "steps": [
+        {
+          "time": 1.016,
+          "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
+          "en": "Open Notifications in More, then Pending Reminders"
+        },
+        {
+          "time": 12.377,
+          "ja": "＋から時刻を選びます",
+          "en": "Tap plus and choose a time"
+        },
+        {
+          "time": 16.901,
+          "ja": "お知らせする曜日を選んで保存します",
+          "en": "Choose the days, then save"
+        },
+        {
+          "time": 27.096,
+          "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
+          "en": "Turn it on. You're notified of the count only when entries are pending"
+        },
+        {
+          "time": 34.052,
+          "ja": "「財布」で、数える財布を選べます",
+          "en": "In Wallets, choose which wallets to count"
+        }
+      ],
+      "source_take": "32-pending-reminders-20261117-195552-727554",
+      "source_device": "6A80EDA4-72BB-46C2-BEDE-72823CD27C2D",
+      "source_started_at": 1794912952.92734,
+      "source_stopped_at": 1794912995.816145,
+      "source_wall_duration": 42.889,
+      "source_raw_duration": 41.612,
+      "source_raw_sha256": "e9727bba9dff4f751e94ca44c6af7bcfebb5f797e8aef557cdfd7a2f6dc46aba",
+      "source_manifest_sha256": "30b7ee41bab3b3b2a04541f44a3cd9f2985bf1cf43328418e5d6f440eb54732f",
+      "poster_time": 32.0,
+      "poster_time_source": "reviewed_recorded_frame",
+      "sha256": "adf4de29474c06cc27978ad37300a8f50659d5a186311cf5c58b3c6d82acc5da",
+      "poster_sha256": "e0ed75b544b7e03a42823d416e6a9c9313acf562a1266adcd24782e215a14da2",
+      "caption_timing_review": {
+        "original_steps": [
+          {
+            "time": 1.016,
+            "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
+            "en": "Open Notifications in More, then Pending Reminders"
+          },
+          {
+            "time": 12.377,
+            "ja": "＋から時刻を選びます",
+            "en": "Tap plus and choose a time"
+          },
+          {
+            "time": 16.901,
+            "ja": "お知らせする曜日を選んで保存します",
+            "en": "Choose the days, then save"
+          },
+          {
+            "time": 27.096,
+            "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
+            "en": "Turn it on. You're notified of the count only when entries are pending"
+          },
+          {
+            "time": 34.052,
+            "ja": "「財布」で、数える財布を選べます",
+            "en": "In Wallets, choose which wallets to count"
+          }
+        ],
+        "reviewed_source_times": [
+          1.016,
+          12.377,
+          16.901,
+          27.096,
+          34.052
+        ],
+        "method": "Decoded from start; exact 30 fps frame selection at 4-second intervals, with exact transition frames checked. Captions retimed to their visible operations, then divided by playback speed.",
+        "sampling_precision_seconds": 4,
+        "result": "Time, weekday grid, enablement and wallet scope checked."
+      },
+      "edit": {
+        "speed": 1,
+        "source_video_sha256": "adf4de29474c06cc27978ad37300a8f50659d5a186311cf5c58b3c6d82acc5da",
+        "source_video_duration": 42.9,
+        "source_interval": [
+          0,
+          42.9
+        ],
+        "operation": "Original playback speed."
+      },
+      "app_version": "1.3.0",
+      "app_build": "1719",
+      "source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
+      "runtime": "iOS 27.0",
+      "recording_script_sha256": "3033ea20acdeeecf81c041833b26152e8c295282bc35d288e7e08a5cf29709ba",
+      "poster_time_override_reason": "Enabled reminder and saved weekday summary before choosing the wallet scope.",
+      "device_name": "KT personalize iPhone B 261117",
+      "fixture_provenance": {
+        "source": "Major-owned illustration fixtures only in the visible Photos library; guide 32 does not open the photo picker.",
+        "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
+        "preflight": "website-B/en-195521/preflight.json"
+      }
+    },
+    {
+      "id": "33-date-background",
+      "title_ja": "お気に入りの写真を、毎日と特別な日の背景に",
+      "title_en": "Enjoy favorite photos every day and on special days",
+      "ui_language": "en",
+      "duration": 71.166667,
+      "bytes": 3531455,
+      "steps": [
+        {
+          "time": 0.579,
+          "ja": "「その他」→「カスタマイズ」で背景を「写真」にし、「背景写真」を開きます",
+          "en": "In More → Appearance, choose Photo, then open Background Photos"
+        },
+        {
+          "time": 7.094,
+          "ja": "「＋」から写真をまとめて選び、追加します",
+          "en": "Tap +, select several photos, then add them"
+        },
+        {
+          "time": 13.749,
+          "ja": "「写真を調整」で位置をドラッグし、「完了」をタップします",
+          "en": "Tap Adjust Photo, drag to frame it, then tap Done"
+        },
+        {
+          "time": 18.289,
+          "ja": "チェックを付けた写真が、普段の背景に使われます",
+          "en": "Checked photos are used for your everyday background"
+        },
+        {
+          "time": 21.038,
+          "ja": "「開くたび」は開くたびに、「1日1回」は日ごとに写真が切り替わります",
+          "en": "Each Time You Open changes photos on opening; Once a Day changes them daily"
+        },
+        {
+          "time": 26.595,
+          "ja": "「特別な日を追加」で写真を選び、「毎年」の月日を指定して追加します",
+          "en": "Tap Add Special Day, choose a photo, and add a Yearly date"
+        },
+        {
+          "time": 43.484,
+          "ja": "「毎月」では、1日・15日など複数の日を選べます",
+          "en": "For Monthly, select multiple dates, such as the 1st and 15th"
+        },
+        {
+          "time": 54.857,
+          "ja": "「毎週」では、曜日を複数選んで追加できます",
+          "en": "For Weekly, select more than one weekday, then add the rule"
+        },
+        {
+          "time": 65.143,
+          "ja": "戻って「保存」。選んだ写真が「記録」の背景になります",
+          "en": "Go back and save. Your photo appears behind Record"
+        }
+      ],
+      "source_take": "33-date-background-20261117-195707-298122",
+      "source_device": "6A80EDA4-72BB-46C2-BEDE-72823CD27C2D",
+      "source_started_at": 1794913027.455095,
+      "source_stopped_at": 1794913152.035338,
+      "source_wall_duration": 124.58,
+      "source_raw_duration": 123.863,
+      "source_raw_sha256": "0f80bd8df79abe59396a1778ddf8005acb02b5a0fc67d7ad94c8acb23eb5439f",
+      "source_manifest_sha256": "f1ace69fb1ccc3108edcda7a9b4fd4823899d4eff5904b56afaefed9909193c0",
+      "poster_time": 64.0,
+      "poster_time_source": "reviewed_recorded_frame",
+      "sha256": "74370ece4aaff3b9b316fac538efdb9a6139fec9d8477ba34281857ef088f04a",
+      "poster_sha256": "56becdb5b3586de7eeec0b51cf90425f487e1846f9ae3940cd97504ad2fc32a1",
+      "caption_timing_review": {
+        "original_steps": [
+          {
+            "time": 1.013,
+            "ja": "「その他」→「カスタマイズ」で背景を「写真」にし、「背景写真」を開きます",
+            "en": "In More → Appearance, choose Photo, then open Background Photos"
+          },
+          {
+            "time": 12.414,
+            "ja": "「＋」から写真をまとめて選び、追加します",
+            "en": "Tap +, select several photos, then add them"
+          },
+          {
+            "time": 24.06,
+            "ja": "「写真を調整」で位置をドラッグし、「完了」をタップします",
+            "en": "Tap Adjust Photo, drag to frame it, then tap Done"
+          },
+          {
+            "time": 32.005,
+            "ja": "チェックを付けた写真が、普段の背景に使われます",
+            "en": "Checked photos are used for your everyday background"
+          },
+          {
+            "time": 36.817,
+            "ja": "「開くたび」は開くたびに、「1日1回」は日ごとに写真が切り替わります",
+            "en": "Each Time You Open changes photos on opening; Once a Day changes them daily"
+          },
+          {
+            "time": 46.541,
+            "ja": "「特別な日を追加」で写真を選び、「毎年」の月日を指定して追加します",
+            "en": "Tap Add Special Day, choose a photo, and add a Yearly date"
+          },
+          {
+            "time": 76.097,
+            "ja": "「毎月」では、1日・15日など複数の日を選べます",
+            "en": "For Monthly, select multiple dates, such as the 1st and 15th"
+          },
+          {
+            "time": 93.956,
+            "ja": "「毎週」では、曜日を複数選んで追加できます",
+            "en": "For Weekly, select more than one weekday, then add the rule"
+          },
+          {
+            "time": 112.838,
+            "ja": "戻って「保存」。選んだ写真が「記録」の背景になります",
+            "en": "Go back and save. Your photo appears behind Record"
+          }
+        ],
+        "reviewed_source_times": [
+          1.013,
+          12.414,
+          24.06,
+          32.005,
+          36.817,
+          46.541,
+          76.097,
+          96,
+          114
+        ],
+        "method": "Decoded from start; exact 30 fps frame selection at 4-second intervals, with exact transition frames checked. Captions retimed to their visible operations, then divided by playback speed.",
+        "sampling_precision_seconds": 1,
+        "result": "Photo picker, crop, selection, frequency, yearly/monthly/weekly rules and final saved result checked."
+      },
+      "edit": {
+        "speed": 1.75,
+        "source_video_sha256": "2f891626bea30517beaf1560a15d5abb79534e326740ef2e3350f2c00153d610",
+        "source_video_duration": 124.567,
+        "source_interval": [
+          0,
+          124.567
+        ],
+        "operation": "Continuous actual recording; no operation removed or UI replaced. Playback accelerated for guide 33."
+      },
+      "app_version": "1.3.0",
+      "app_build": "1719",
+      "source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
+      "runtime": "iOS 27.0",
+      "recording_script_sha256": "3033ea20acdeeecf81c041833b26152e8c295282bc35d288e7e08a5cf29709ba",
+      "poster_time_override_reason": "The three saved Yearly, Monthly and Weekly summaries are visible together.",
+      "device_name": "KT personalize iPhone B 261117",
+      "fixture_provenance": {
+        "source": "Major-owned illustration; P1, P2, P4 and P5 selected through the system photo picker.",
+        "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
+        "preflight": "website-B/en-195521/preflight.json"
+      }
+    }
+  ]
+}
