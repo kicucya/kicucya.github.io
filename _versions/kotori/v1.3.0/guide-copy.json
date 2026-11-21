@@ -1,0 +1,29 @@
+{
+  "note": "1.3.0-only wording for retained 1.1.3/1.2.x recordings, aligned with the App's current UI strings at Dev d5f90181 (docs/data/l10n-master.csv). Videos, posters and captions are unchanged.",
+  "sources": {
+    "more.csv_import / import.title": {"ja": "データをインポート", "en": "Import Data"},
+    "import.history.title": {"ja": "インポート履歴", "en": "Import History"},
+    "import.history.undo.title": {"ja": "インポートを取り消し", "en": "Undo Import"},
+    "appearance.opacity": {"ja": "カラーの濃さ", "en": "Color intensity"},
+    "recording.history.footer": {"ja": "次回の起動から反映されます。記録そのものはそのまま残ります。", "en": "Takes effect the next time the app opens. Your entries stay as they are."}
+  },
+  "guides": {
+    "13-import-and-undo": [
+      {"lang": "ja", "field": "title", "from": "CSVを読み込み、履歴から取り消す", "to": "CSVをインポートし、履歴から取り消す"},
+      {"lang": "ja", "field": "entry", "from": "その他 → データを読み込む", "to": "その他 → データをインポート"},
+      {"lang": "ja", "field": "step", "index": 0, "from": "ファイルを選んで読み込みます", "to": "ファイルを選んでインポートします"},
+      {"lang": "ja", "field": "step", "index": 1, "from": "カテゴリの対応を確認して読み込みます", "to": "カテゴリの対応を確認してインポートします"},
+      {"lang": "ja", "field": "step", "index": 2, "from": "読み込み履歴から、このまとまりを取り消せます", "to": "「インポート履歴」から、このインポートを取り消せます"},
+      {"lang": "en", "field": "title", "from": "Import a CSV and undo its batch", "to": "Import a CSV and undo the import"},
+      {"lang": "en", "field": "step", "index": 3, "from": "Undo the imported batch from Import History", "to": "Undo the import from Import History"}
+    ],
+    "25-appearance": [
+      {"lang": "ja", "field": "step", "index": 5, "from": "写真に重ねる色を選び、不透明度を調整します。変化はその場で確認できます", "to": "写真に重ねる色を選び、「カラーの濃さ」を調整します。変化はその場で確認できます"},
+      {"lang": "en", "field": "step", "index": 5, "from": "Choose a color to overlay on the photo, then adjust its opacity and preview the result", "to": "Choose a color for the photo, then adjust Color intensity and preview the result"}
+    ],
+    "30-recording-settings": [
+      {"lang": "ja", "field": "step", "index": 2, "from": "表示範囲は次回の起動から適用されます。帳簿の記録は削除されません", "to": "次回の起動から反映されます。記録そのものはそのまま残ります"},
+      {"lang": "en", "field": "step", "index": 2, "from": "The range applies on the next launch. Your financial records are not deleted", "to": "The range takes effect the next time the app opens. Your entries stay as they are"}
+    ]
+  }
+}

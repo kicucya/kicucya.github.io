@@ -255,6 +255,43 @@ def read_clips(ui_language, media_version='1.1.3'):
     return clips
 
 
+def apply_guide_copy(copy, clips_by_lang):
+    """Apply version-scoped wording updates to retained recordings.
+
+    Each change names the text it replaces, so a stale override fails instead
+    of silently rewriting a different sentence. Shared media manifests stay
+    unchanged for older version sites.
+    """
+    for slug, changes in copy.get('guides', {}).items():
+        for change in changes:
+            lang, field, old, new = change['lang'], change['field'], change['from'], change['to']
+            if lang not in clips_by_lang or not new or old == new:
+                raise ValueError(f'{slug}: invalid guide copy change')
+            if lang == 'ja':
+                validate_copy(new, 'ja', f'guide-copy/{slug}')
+            clip = next((item for item in clips_by_lang[lang] if item['id'] == slug), None)
+            if clip is None:
+                raise ValueError(f'{slug}: guide copy targets an unknown guide')
+            if field == 'title':
+                current = clip[f'title_{lang}']
+            elif field == 'entry':
+                current = clip.get('entry_points', {}).get(lang) or ENTRY_POINTS[slug][0 if lang == 'ja' else 1]
+            elif field == 'step':
+                current = clip['steps'][int(change['index'])][lang]
+            else:
+                raise ValueError(f'{slug}: unknown guide copy field {field}')
+            if current != old:
+                raise ValueError(f'{slug}: guide copy expected {old!r} but found {current!r}')
+            if field == 'title':
+                clip[f'title_{lang}'] = new
+            elif field == 'entry':
+                clip['entry_points'] = {**clip.get('entry_points', {}), lang: new}
+            else:
+                steps = [dict(step) for step in clip['steps']]
+                steps[int(change['index'])][lang] = new
+                clip['steps'] = steps
+
+
 def check_matching_provenance(japanese, english):
     if [clip['id'] for clip in japanese] != [clip['id'] for clip in english]:
         raise ValueError('Japanese and English recording IDs must match')
@@ -421,6 +458,11 @@ def main():
                     predecessor = RECORDING_PREDECESSORS_130[addition['id']]
                     index = next(i for i, clip in enumerate(base) if clip['id'] == predecessor)
                     base.insert(index + 1, addition)
+        # Claude (1.3.0): wording updates for retained recordings live beside the
+        # version's pages, so other version sites keep their own copy.
+        copy_path = source_root / 'guide-copy.json'
+        if copy_path.exists():
+            apply_guide_copy(json.loads(copy_path.read_text()), {'ja': japanese, 'en': english})
         text_path = source_root / 'text-guides.json'
         text_guides = json.loads(text_path.read_text()) if text_path.exists() else {}
         replacements = text_guides.get('guides', {})

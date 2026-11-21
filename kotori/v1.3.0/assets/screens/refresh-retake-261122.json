@@ -1,0 +1,421 @@
+{
+  "app_version": "1.3.0",
+  "app_tag_or_ref": "Dev",
+  "product_source_commit": "d5f90181",
+  "product_source_note": "git archive of App Dev d5f90181 (build number in source 1736); production Swift unchanged apart from the DEBUG/UI-test-gated capture patch below.",
+  "runtime": "iOS 27.0 (24A434)",
+  "xcode": "27.2 (27B52)",
+  "capture_run": "web-retake-130-261122",
+  "actual_capture_date": "2026-11-22",
+  "reason": "App Dev d5f90181 (T-408 copy cleanup, T-386/T-393 row layout) changed visible text on these screens; see App docs/archive/2026-11-23-presubmission-recheck.md section 2.",
+  "capture": "XCTest on mac-mini-kt agents; four newly created account-free task simulators (deleted after capture); synthetic demonstration ledger; system default appearance, never opened or injected. Same scenes, values, devices and framing as the replaced images; only resize, no retouching.",
+  "scope": "16 files: Japanese and English 02-siri.jpg, 04-export.jpg, 06-wallet-share.jpg, 07-budget.jpg, 07-budget.png, 19-shortcuts-saved.png, 30-history-options.png, 30-recording-settings.png. Videos, posters, captions and all other screenshots retained.",
+  "fixture": "Same opt-in fixture as refresh-default-261118 (website clock 2026-10-28, fixed quips and keyword order). Japanese 07-budget.png warning 60%; legacy budget warning 60%, default wallet, total 300000 / 105147 minor units (JPY 300,000 / 105,147; USD 3,000.00 / 1,051.47). English 07-budget.png keeps the app default 80%. Home Screen sentences: 'ランチ 1200円' and 'Lunch $12.80', parsed by the app's normal rule path.",
+  "harness": {
+    "base_patch": "App docs/publishing/default-appearance-261118/1.3.0.patch (applies unchanged to d5f90181)",
+    "patch_sha256": "9ef38158864e32cedbcc7ebe20b39b8dcbdf2651257491613375c876d0c9e34e",
+    "patch_path": "/Users/agents/Workspaces/kotori-web-retake-130-261122/retake-1.3.0.patch",
+    "additions": "testRetakeWebsiteEnglishMax (English Pro Max 02/04/06/07), testRetakeHomeScreenShortcutSaved (19), English labels and decimal key for the legacy budget, OSA_RETAKE_SKIP_NOTICES (the retaken settings screens do not show chat budget notices), clock dylib path.",
+    "patched_sources_sha256": {
+      "OneSentenceAccountingUITests/ScreenshotUITests.swift": "7dddc4314ce4d1ae200ade32c491163fe0d878b94de2e2481303a69c6c96d090",
+      "OneSentenceAccounting/Features/Chat/KotoriQuipLibrary.swift": "08ba69b3f4e5f2dabfe6fa3b61b95e891b36307cbd6a5461f5a55a825fd8557c",
+      "OneSentenceAccounting/Shared/Testing/ScreenshotDemoSeeder.swift": "3733bfcc926f07cc3a16098834d72f4713220682ae8417b922238cacc98bab9d"
+    },
+    "capture_script": "/Users/agents/Workspaces/kotori-web-retake-130-261122/capture.sh",
+    "clock_source_sha256": "d56fe0995d8072d8b80b158ad70a4e3705fbb836d12197475526ab74f70662c3",
+    "clock_dylib_sha256": "1c84a292b00f70d1bf9cdf19cbf0d8f1bbadd3579a47e0310f88c694df1bc955",
+    "build_note": "Harness additions were made between takes; each adopted take ran with the then-current build, and later changes only touch other tests or the legacy English amount path."
+  },
+  "simulators": {
+    "created": "2026-11-22 14:59 JST onward, iOS 27.0, never signed in",
+    "deleted": "all task simulators deleted with xcrun simctl delete after capture"
+  },
+  "images": [
+    {
+      "image": "assets/screens/en/02-siri.jpg",
+      "previous_sha256": "d4feb010f659bc0b827be54bf90bdf9937fbb75836f044acf400be46504a2d00",
+      "sha256": "ab291059e55136699c26e1dfaf04fd4cd75c1d0becf1d855b53d40bba9150ed7",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US/screenshots/KT web-retake store 261122-02-siri.png",
+      "source_sha256": "a16d6b3bd7bfbab846125c31bdab2f91e18bc6eb16e4e82853a6ee3863ed3119",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testRetakeWebsiteEnglishMax",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US-151757.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/04-export.jpg",
+      "previous_sha256": "8cc85adda640fc1db2b8c43d4eb2ee884bb839a5753983a13abc96f8890aa7b6",
+      "sha256": "950c2fef4f7dd67c58ddf2b90abf4dd63f6a0a743271927aaf48769cf2fefcc1",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US/screenshots/KT web-retake store 261122-04-export.png",
+      "source_sha256": "4a9674b899e0a7edc0192f225b71d096506113363d4e382616edb3ee9f6371bf",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testRetakeWebsiteEnglishMax",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US-151757.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/06-wallet-share.jpg",
+      "previous_sha256": "c6d078f14ce465874626da33ce68de41575bb965a1c8863e5db9a09f7141afff",
+      "sha256": "efaa9273e9c345fb4505ac2f3eb077daab808052cbe8f41930e1b68aa8dd02f9",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US/screenshots/KT web-retake store 261122-06-wallet-share.png",
+      "source_sha256": "e339fd923d8497c5efe5b17315cf04ff61641b296d5a816a14281edd3fe57601",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testRetakeWebsiteEnglishMax",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US-151757.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/07-budget.jpg",
+      "previous_sha256": "f51869f07df6e58aa62ac4bac64c73f92ba968f0f80642d51c04f4b61fbdf1e4",
+      "sha256": "7eee72c5408a72b01590783fe99514b53e8488914f63a962300441cfcda15051",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-en-US/screenshots/KT web-retake store 261122-07-budget-legacy.png",
+      "source_sha256": "478f9f3629eccd47ccedaa99a353753782bcf7f59df6a9967757a07151096345",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testDefaultWebsiteLegacyScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-en-US-152503.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/07-budget.png",
+      "previous_sha256": "6ea1de46f209772a091cd1cd6f8a08651df5b6bb52726f309fbf8154c2ca26f9",
+      "sha256": "7b00ecb09daf90a8685e38d245b3e92a9e488db1987ad8e5a1f68889ed43a06f",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US/screenshots/KT web-retake store 261122-07-budget.png",
+      "source_sha256": "13939acb02e0c2bc667dfac4c8560bd7aede2052d7f891ddd54569a6ef76e80f",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testRetakeWebsiteEnglishMax",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US-151757.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/19-shortcuts-saved.png",
+      "previous_sha256": "706756c6bfb87cdaaacabfb3fdc0440d7083e181a84a080d3f14727bddf09f76",
+      "sha256": "82734c930c8f1382e3cc4589854182284b2fdc64cdf670f0f37ea86116e1075b",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/home-en-US/screenshots/KT web-retake home en2 261122-19-shortcuts-saved.png",
+      "source_sha256": "6b438b6bb84af8fdd40e9548e3962596873018b5eab9f4e66a7e8ac15b98924c",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        600,
+        1304
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake home en2 261122",
+      "device_uuid": "E42ACDCC-C4DC-42B3-BE7F-269154CC3245",
+      "test": "ScreenshotUITests/testRetakeHomeScreenShortcutSaved",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/home-en-US-152953.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "note": "Home Screen bookmark added from Kotori's Shortcuts page, then run with the clipboard sentence pasted through the real Paste menu; SpringBoard result platter after Done. Replaces the 1.1.3 recording frame; scaled from 1320x2868 to the previous 600x1304."
+    },
+    {
+      "image": "assets/screens/en/30-history-options.png",
+      "previous_sha256": "5e23c2c01af5f563ec4172fc654b2a526ea79cb86ce104b47f07a0ffb67b9f04",
+      "sha256": "0b23af8188bfc192fe9d86eb9d515c964f7221be326734691f95e880f509130e",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-en-US/screenshots/KT web-retake website 261122-30-history-options.png",
+      "source_sha256": "9de3592944bf3e18b2af1594f2b892a6742d3a30cdb468916548063509ab8188",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-en-US-151118.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/en/30-recording-settings.png",
+      "previous_sha256": "51d02a90432c7f655f263a641c4754c34c93a60bbf020b36cbc9fa4c47f719d1",
+      "sha256": "ce8484fce66ea4dad23d2d3cc56317283d093dcb99d8da3d2297e610fb54f592",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-en-US/screenshots/KT web-retake website 261122-30-recording-settings.png",
+      "source_sha256": "c0ee53ad8d72fd762a6390a27e71172a0ad37e286040bf1b016c22ee0402fcdc",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "en",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-en-US-151118.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/02-siri.jpg",
+      "previous_sha256": "1c89f2e1a6d704bcd05ca82870be28f40bc3bd4f383ec79909c8c7a4368e7b39",
+      "sha256": "5e9a71faa9d7cb1cba0e3051f47c526d59bb22ffbba46e4dfcbf18377d5258e3",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja/screenshots/KT web-retake website 261122-02-siri.png",
+      "source_sha256": "8645df8701670cddab8ef19ded5e9fa5359fb4de02de0a832ac0104682d2fca2",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja-150640.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/04-export.jpg",
+      "previous_sha256": "3f60e22d946c1449cb38e09a42d85f73220ac1ce2d6d4b526c9490b9d470ca77",
+      "sha256": "4a61df9973699753c25546777559f5b470d5d0a7de4f014262295e48e605edc6",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja/screenshots/KT web-retake website 261122-04-export.png",
+      "source_sha256": "0b545efb39e839ddde3d6f89e0852694e4bc1897c4ee798779bb7bd710675a59",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja-150640.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/06-wallet-share.jpg",
+      "previous_sha256": "28dc27ba6765cd524225e9088fcce4b1a19d3229180294e293bd6504a9eb5c99",
+      "sha256": "b23bd76d3d98f63b08eed9cfaca75b2396ce99545b06fb4419558c8b5be9b0de",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja/screenshots/KT web-retake website 261122-06-wallet-share.png",
+      "source_sha256": "51d9f4bc0d43ef2054940366884d5e93348e5a34f42df835967d35a4621c6b81",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja-150640.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/07-budget.jpg",
+      "previous_sha256": "924896e5470660ed7cb23c8e4aee463535aad863cc20e3244fb1b4617bb619d1",
+      "sha256": "3b310755e52a0b61bf45b585ddf37efdcd90d02c670b860b96039a603f240eb8",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja/screenshots/KT web-retake store 261122-07-budget-legacy.png",
+      "source_sha256": "4b0cf67435b8994c90fd0441aee30463b17f5f3243ad71cd0b402224a0e07c7a",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testDefaultWebsiteLegacyScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja-150904.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/07-budget.png",
+      "previous_sha256": "d308ed5b184f3ff56344a11d421ca1459d7a8f408babf5cce929b8751ebf664c",
+      "sha256": "9ddc6a825e12dd72de6bcb253ee2807f1f24277786a22072a2af17b4e5774128",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja/screenshots/KT web-retake website 261122-07-budget.png",
+      "source_sha256": "7f833f998cd5945f80f6d5aba215e1a7ae75eea59b9e3765baa488374c640565",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro",
+      "device_name": "KT web-retake website 261122",
+      "device_uuid": "B274AA2E-F382-4F59-B309-7D553C4D67E3",
+      "test": "ScreenshotUITests/testDefaultWebsiteScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/website-ja-150640.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/19-shortcuts-saved.png",
+      "previous_sha256": "3226d41a8c506daf46a35bf717c15404fc359ee1a99412d9b068dd7e7b00dc77",
+      "sha256": "d313f430d0162be4a5a981c54420e33dad6cf16330cbf2ad8d8d371bcd715f70",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/home-ja/screenshots/KT web-retake home ja2 261122-19-shortcuts-saved.png",
+      "source_sha256": "e25157840d6991d4a4fdfe30385cf09060a380bbf658b1990167867912bde652",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        600,
+        1304
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake home ja2 261122",
+      "device_uuid": "E8D3DF5A-E1DE-4E58-AA8C-EEBCAA8DDE1E",
+      "test": "ScreenshotUITests/testRetakeHomeScreenShortcutSaved",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/home-ja-153217.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed",
+      "note": "Home Screen bookmark added from Kotori's Shortcuts page, then run with the clipboard sentence pasted through the real Paste menu; SpringBoard result platter after Done. Replaces the 1.1.3 recording frame; scaled from 1320x2868 to the previous 600x1304."
+    },
+    {
+      "image": "assets/screens/ja/30-history-options.png",
+      "previous_sha256": "e1ba1372034ef8bed656d3757324395c063028de74ccf833c0f0cf2cfdcbc999",
+      "sha256": "6315e94aabea5806e24a00522e543545fcca7afc8ad11f61a6533ae89c7df08b",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja/screenshots/KT web-retake store 261122-30-history-options.png",
+      "source_sha256": "a78dba2999b162e1755e165db9a92cb59b7f423712512969cb24afc130d89396",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testDefaultWebsiteLegacyScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja-150904.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    },
+    {
+      "image": "assets/screens/ja/30-recording-settings.png",
+      "previous_sha256": "46ecc9294876398c0c64120b19b0bc063f9ec3f5dd05514e971457bbe9c4062c",
+      "sha256": "5f47a67acb219439c246c0a916a9e6b3622da38f69ff7e23b81e836e5c63c7ea",
+      "source": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja/screenshots/KT web-retake store 261122-30-recording-settings.png",
+      "source_sha256": "b18027a1b0229d7b4aa3cd63bb86e1128cfd2c9a2d2c6d58e8d1eaa2c36fc5a0",
+      "raw_dimensions": [
+        1320,
+        2868
+      ],
+      "dimensions": [
+        660,
+        1434
+      ],
+      "language": "ja",
+      "device": "iPhone 17 Pro Max",
+      "device_name": "KT web-retake store 261122",
+      "device_uuid": "6F5956CB-EF49-43D3-86E8-DAADC97F3ECA",
+      "test": "ScreenshotUITests/testDefaultWebsiteLegacyScreenshots",
+      "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/legacy-ja-150904.xcresult",
+      "appearance": "system default",
+      "system_appearance": "light",
+      "visual_review": "passed"
+    }
+  ]
+}

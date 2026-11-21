@@ -292,3 +292,10 @@ Major 26/11/13 确认 1.3 功能验收通过（「功能都能用了 只差UI微
 1.2.1、1.2.2、1.2.3、1.3.0 各替换日语 12 张、英语 3 张，共 60 张。其余已为默认外观的图片、全部视频，以及 1.3.0 的 `10-personalize-chat.jpg` 保留；该图专门展示个性化。App 商店同步更新日语 iPhone 的第 1、3、6、7 张，其他 236 张保留。
 
 历史官网分别使用 App 标签 `v1.2.1`（`a8998d26`／1625）、`v1.2.2`（`07f676bb`／1633）、`v1.2.3`（`e7b327b8`／1638）；1.3.0 与商店使用 `Dev@79033e02`（1722）。全部在 mini 的独立源码目录和新建无账号模拟器拍摄，不进入外观设置。refresh-1623 画面用 iPhone 17 Pro；日语旧预算 JPG 与两张 30-* 沿用原 Pro Max 尺寸，商店也用 Pro Max，系统均为 iOS 27.0。各版逐图 RAW、设备、尺寸、新旧 SHA-256 见 `_versions/kotori/v<版本>/assets/screens/refresh-default-261118.json`；DEBUG 拍摄补丁及复现步骤保存在 App 仓 `docs/publishing/default-appearance-261118/`。只在各 `app-<版本>` 本地分支交付，发布由调度会话另行执行。
+
+## 1.3.0 提审前补拍与文字对齐（261122 批次）
+
+依据 App 仓 `docs/archive/2026-11-23-presubmission-recheck.md` 第 2、3 节：App `Dev@d5f90181` 的 T-408 文案整理与 T-386／T-393 行高改动使 1.3.0 官网的部分静态截图和文字与 App 不一致。本轮只改 1.3.0 站点，不改视频、海报、字幕，也不改其他版本。
+
+- 补拍日语、英语各 8 张：`02-siri.jpg`、`04-export.jpg`、`06-wallet-share.jpg`、`07-budget.jpg`、`07-budget.png`、`19-shortcuts-saved.png`、`30-history-options.png`、`30-recording-settings.png`。场景、演示数据、机型、默认外观与构图沿用被替换的图片，只有 App 文字不同。在 mini 从 `d5f90181` 的 `git archive` 构建，沿用 261118 批次的拍摄补丁并追加英语 Pro Max 画面与主屏幕快捷指令结果两项测试；四台本轮新建的无账号模拟器拍完即用 `xcrun simctl delete` 删除。`19-shortcuts-saved.png` 原为 1.1.3 录像帧，本轮改为真实运行主屏幕「記録を追加」／「Record Entry」后的系统结果画面，等比缩为原尺寸 600×1304。逐图 RAW、设备、测试结果与新旧 SHA-256 见 `_versions/kotori/v1.3.0/assets/screens/refresh-retake-261122.json`。
+- 文字按 App 现行用语对齐：「カラーの濃さ」／Color intensity，「データをインポート」「インポート履歴」／Import Data・Import History，历史设置用「記録そのものはそのまま残ります」／“Your entries stay as they are”。沿用旧录像的教程卡片文字改在 `_versions/kotori/v1.3.0/guide-copy.json`：`build_guides.py` 只在该版本目录存在此文件时套用，每条写明替换前原文，原文不符即报错；共享的媒体 manifest 不变，所以其他版本页面不受影响。
