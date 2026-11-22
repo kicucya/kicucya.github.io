@@ -53,7 +53,8 @@
       "test_result": "/Users/agents/Workspaces/kotori-web-retake-130-261122/results/enmax-en-US-151757.xcresult",
       "appearance": "system default",
       "system_appearance": "light",
-      "visual_review": "passed"
+      "visual_review": "passed",
+      "superseded_by": "assets/screens/refresh-siri-phrase-261122.json"
     },
     {
       "image": "assets/screens/en/04-export.jpg",
