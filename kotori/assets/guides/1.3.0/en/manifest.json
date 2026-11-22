@@ -72,107 +72,69 @@
       "title_ja": "未確認の記録をお知らせする",
       "title_en": "Get reminded about pending entries",
       "ui_language": "en",
-      "duration": 42.9,
-      "bytes": 754211,
+      "duration": 37.067,
+      "bytes": 470412,
       "steps": [
         {
-          "time": 1.016,
+          "time": 1.017,
           "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
           "en": "Open Notifications in More, then Pending Reminders"
         },
         {
-          "time": 12.377,
+          "time": 8.552,
           "ja": "＋から時刻を選びます",
           "en": "Tap plus and choose a time"
         },
         {
-          "time": 16.901,
+          "time": 12.091,
           "ja": "お知らせする曜日を選んで保存します",
           "en": "Choose the days, then save"
         },
         {
-          "time": 27.096,
+          "time": 21.064,
           "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
           "en": "Turn it on. You're notified of the count only when entries are pending"
         },
         {
-          "time": 34.052,
+          "time": 28.341,
           "ja": "「財布」で、数える財布を選べます",
           "en": "In Wallets, choose which wallets to count"
         }
       ],
-      "source_take": "32-pending-reminders-20261117-195552-727554",
-      "source_device": "6A80EDA4-72BB-46C2-BEDE-72823CD27C2D",
-      "source_started_at": 1794912952.92734,
-      "source_stopped_at": 1794912995.816145,
-      "source_wall_duration": 42.889,
-      "source_raw_duration": 41.612,
-      "source_raw_sha256": "e9727bba9dff4f751e94ca44c6af7bcfebb5f797e8aef557cdfd7a2f6dc46aba",
-      "source_manifest_sha256": "30b7ee41bab3b3b2a04541f44a3cd9f2985bf1cf43328418e5d6f440eb54732f",
-      "poster_time": 32.0,
-      "poster_time_source": "reviewed_recorded_frame",
-      "sha256": "adf4de29474c06cc27978ad37300a8f50659d5a186311cf5c58b3c6d82acc5da",
-      "poster_sha256": "e0ed75b544b7e03a42823d416e6a9c9313acf562a1266adcd24782e215a14da2",
-      "caption_timing_review": {
-        "original_steps": [
-          {
-            "time": 1.016,
-            "ja": "「その他」の「通知」から「未確認リマインダー」を開きます",
-            "en": "Open Notifications in More, then Pending Reminders"
-          },
-          {
-            "time": 12.377,
-            "ja": "＋から時刻を選びます",
-            "en": "Tap plus and choose a time"
-          },
-          {
-            "time": 16.901,
-            "ja": "お知らせする曜日を選んで保存します",
-            "en": "Choose the days, then save"
-          },
-          {
-            "time": 27.096,
-            "ja": "オンにすると、未確認の記録があるときだけ件数をお知らせします",
-            "en": "Turn it on. You're notified of the count only when entries are pending"
-          },
-          {
-            "time": 34.052,
-            "ja": "「財布」で、数える財布を選べます",
-            "en": "In Wallets, choose which wallets to count"
-          }
-        ],
-        "reviewed_source_times": [
-          1.016,
-          12.377,
-          16.901,
-          27.096,
-          34.052
-        ],
-        "method": "Decoded from start; exact 30 fps frame selection at 4-second intervals, with exact transition frames checked. Captions retimed to their visible operations, then divided by playback speed.",
-        "sampling_precision_seconds": 4,
-        "result": "Time, weekday grid, enablement and wallet scope checked."
-      },
-      "edit": {
-        "speed": 1,
-        "source_video_sha256": "adf4de29474c06cc27978ad37300a8f50659d5a186311cf5c58b3c6d82acc5da",
-        "source_video_duration": 42.9,
-        "source_interval": [
-          0,
-          42.9
-        ],
-        "operation": "Original playback speed."
-      },
+      "source_take": "32-pending-reminders-20261122-203756-822442",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347476.9766378,
+      "source_stopped_at": 1795347514.0354428,
+      "source_wall_duration": 37.059,
+      "source_raw_duration": 35.733,
+      "source_raw_sha256": "62e66d048c0bd64f9a5c0828ce4a2d89e0ce43ab19511c1a036bfb23ac1d7384",
+      "source_manifest_sha256": "204c73fdcd80644120042bae1de1ca889080c4e43908b7b3cabdef47de5e5754",
+      "poster_time": 29.5,
+      "render_fingerprint": "5fae336e09ecc62694b52b452b967d869809b9f6c79ae4b94ca1cd292bdd6c13",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "b43c1f11f24644bc995fc9ab3324cba8378941b42a1b1ab2609a47ffe4c294bc",
+      "sha256": "62c58590d9bab32411e1b07854cd220f94466dc50b04c5aebd571cfd5d62cd1a",
+      "poster_sha256": "40b73099d6cf840fae37487dd0f8edde26144bb4e666bc0c199ab7355a93ab93",
+      "poster_time_override": 29.5,
+      "poster_time_override_reason": "Enabled 20:00 weekday reminder, fully visible before wallet selection.",
       "app_version": "1.3.0",
-      "app_build": "1719",
-      "source_commit": "0fd0fc5ffe4604424340ca00c92798005ff550de",
-      "runtime": "iOS 27.0",
-      "recording_script_sha256": "3033ea20acdeeecf81c041833b26152e8c295282bc35d288e7e08a5cf29709ba",
-      "poster_time_override_reason": "Enabled reminder and saved weekday summary before choosing the wallet scope.",
-      "device_name": "KT personalize iPhone B 261117",
-      "fixture_provenance": {
-        "source": "Major-owned illustration fixtures only in the visible Photos library; guide 32 does not open the photo picker.",
-        "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
-        "preflight": "website-B/en-195521/preflight.json"
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
       }
     },
     {
@@ -325,6 +287,957 @@
         "source": "Major-owned illustration; P1, P2, P4 and P5 selected through the system photo picker.",
         "visible_photo_library": "Six P1–P6 owned fixtures only; simulator default photos removed through Photos UI before capture.",
         "preflight": "website-B/en-195521/preflight.json"
+      }
+    },
+    {
+      "id": "04-transaction-actions",
+      "title_ja": "スワイプで編集・削除・復元",
+      "title_en": "Swipe to edit, delete, and restore",
+      "ui_language": "en",
+      "duration": 87.8,
+      "bytes": 1595936,
+      "steps": [
+        {
+          "time": 1.11,
+          "ja": "右へ大きくスワイプすると編集できます",
+          "en": "Swipe fully right to open the editor"
+        },
+        {
+          "time": 10.186,
+          "ja": "短くスワイプしてから、もう一度右へ動かしても編集できます",
+          "en": "Reveal the action, then swipe right again to edit"
+        },
+        {
+          "time": 40.4,
+          "ja": "左へ大きくスワイプすると削除されます",
+          "en": "Swipe fully left to delete"
+        },
+        {
+          "time": 47.326,
+          "ja": "「最近削除した取引」から元に戻せます",
+          "en": "Restore the entry from Recently Deleted"
+        }
+      ],
+      "source_take": "04-transaction-actions-20261122-201932-410361",
+      "source_device": "D43D9F16-18D1-4080-9A99-76CB453D5621",
+      "source_started_at": 1795346372.7054741,
+      "source_stopped_at": 1795346460.495044,
+      "source_wall_duration": 87.79,
+      "source_raw_duration": 84.34,
+      "source_raw_sha256": "5934b0062d56ab1bd057b39d1c2382b925ab517fcb0a7fc702e1ac86d8a7066f",
+      "source_manifest_sha256": "2a47d37f4679e99e488c42e100de981ec888894e00d545d7deecf372bdf90304",
+      "poster_time": 10.686,
+      "render_fingerprint": "13a40e7294919f685fd61c9abb5d3f25bc897c0050d27f7618b220b279ab9520",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "f7b4439bc9e72f853d8d3f8254949acf3834843238c5a8612722f19f8d350f3a",
+      "sha256": "30dc735dcb8313e1efa7bd6072311919cf784fc57ca20d780796dd66a40737cf",
+      "poster_sha256": "d4d155a6135b961a788c2ed517cf3a021830938607933a929583fab2148eae07",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 26.5 (23F77)",
+      "device_name": "KT guides pm265 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "05-category-editor",
+      "title_ja": "カテゴリとサブカテゴリを整える",
+      "title_en": "Organize categories and subcategories",
+      "ui_language": "en",
+      "duration": 86.9,
+      "bytes": 1031513,
+      "steps": [
+        {
+          "time": 1.021,
+          "ja": "「編集」をタップすると、カテゴリを追加できます",
+          "en": "Tap Edit to add a category"
+        },
+        {
+          "time": 21.33,
+          "ja": "カテゴリを開き、「編集」からサブカテゴリを追加します",
+          "en": "Open the category, then tap Edit to add a subcategory"
+        },
+        {
+          "time": 46.253,
+          "ja": "鉛筆のボタンから名前を変更し、保存します",
+          "en": "Use the pencil button to rename the category, then save"
+        }
+      ],
+      "source_take": "05-category-editor-20261122-204109-690921",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347669.997663,
+      "source_stopped_at": 1795347756.88496,
+      "source_wall_duration": 86.887,
+      "source_raw_duration": 82.535,
+      "source_raw_sha256": "1100c958082ff12011876f617c11623a694404c201c5c7f32e2c6f9cfb9e6010",
+      "source_manifest_sha256": "ed8f8bd08cb78c8e898185c4e93cdaeca2c317ee98f88b762771934365f4f98a",
+      "poster_time": 21.83,
+      "render_fingerprint": "d1affe8eb2408fca00f4b64238350fa71a78c25b219378f9a1032424bd346ad0",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "3722ffe52e3cbd32b71eb1312c6814b4ac57329fe00ff7b4bf338a9b404db0ab",
+      "sha256": "71585c1ac39cb587f725dd66b48fda38c78d81c3bb7f62d795b5857ff56fc318",
+      "poster_sha256": "48c82848191c5f633530fa812ec01f546827f57f34c1a4c2bf169e9a6db93d88",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "07-wallets",
+      "title_ja": "財布を分けて管理する",
+      "title_en": "Create, rename, and switch wallets",
+      "ui_language": "en",
+      "duration": 53.333,
+      "bytes": 614461,
+      "steps": [
+        {
+          "time": 1.016,
+          "ja": "旅行用の財布を作ります",
+          "en": "Create a wallet for travel"
+        },
+        {
+          "time": 16.471,
+          "ja": "使用中の財布を右へスワイプして改名します",
+          "en": "Swipe the current wallet right to rename it"
+        },
+        {
+          "time": 38.564,
+          "ja": "財布を選ぶと、「記録」と「収支」の両方に反映されます",
+          "en": "The selected wallet is shared by Record and Transactions"
+        }
+      ],
+      "source_take": "07-wallets-20261122-202722-336946",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795346842.5186172,
+      "source_stopped_at": 1795346895.8648388,
+      "source_wall_duration": 53.346,
+      "source_raw_duration": 51.847,
+      "source_raw_sha256": "387aa7a94258f4e4bcf132c5fea765a584582c4830eae0d300ea5712163893c4",
+      "source_manifest_sha256": "b2cd3a769defd0d2f548978c63978bf40e865a18f7434a8d8256ddc3e0b13107",
+      "poster_time": 16.971,
+      "render_fingerprint": "825efe12405282585ab7562153da005a0b048f6d90b0fdaeaf97541432f76f27",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "7988462b898ca0572ba88c76cf2ff7ddc78f00627d117d6dd1e06b7b607a31e6",
+      "sha256": "aefd4ac688fef614a399b890f9e55bacddd58349d999980730bb735ca2bc4c25",
+      "poster_sha256": "42492b438d745fc2d631bcdb650feff86ee3fc85fb9cbdb324364e027c676190",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "12-recurring",
+      "title_ja": "固定費の開始日と最初の記録日を確認する",
+      "title_en": "Set a recurring expense and check its first date",
+      "ui_language": "en",
+      "duration": 64.967,
+      "bytes": 731609,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "毎月のサブスクなど、繰り返す支出を追加します",
+          "en": "Add a recurring expense, such as a monthly subscription"
+        },
+        {
+          "time": 32.776,
+          "ja": "周期を「毎月」にして、開始日を選びます",
+          "en": "Choose Monthly, then select the start date"
+        },
+        {
+          "time": 50.85,
+          "ja": "最初に記録される日を確認して保存します",
+          "en": "Check the first date the entry will be recorded, then save"
+        },
+        {
+          "time": 58.826,
+          "ja": "一覧で、金額と毎月の予定を確認できます",
+          "en": "Review the amount and monthly schedule in the list"
+        }
+      ],
+      "source_take": "12-recurring-20261122-202344-570590",
+      "source_device": "0D977B8A-B194-42FD-B137-0F8CA97B17BF",
+      "source_started_at": 1795346624.737582,
+      "source_stopped_at": 1795346689.6903691,
+      "source_wall_duration": 64.953,
+      "source_raw_duration": 57.64,
+      "source_raw_sha256": "510904c3cda6e3c565febcd6990efc2137f39656a9b4bc7a2faf6c5ef217bdce",
+      "source_manifest_sha256": "958d1d33e05d9d37c35f78cd4249fc2614cac612ca55fac94f42e0ef16ccefbb",
+      "poster_time": 52.0,
+      "render_fingerprint": "9cba3356dab09efc81bd664d4d110a8f1d6932265130c5f2694f244c856ec8b1",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "ec6ff37d2a45f636222ae89e624a2f668e86765a1c3f0accf7c9f25899fa576b",
+      "sha256": "1a0455370b72c8d6604046cd512f54ca9e5e4fa6149a56b20a59af75ccf8afb1",
+      "poster_sha256": "6658e23a4f7403a455433d63bbb6f7780a3b2604829a85b22d5cb1c089f61b29",
+      "poster_time_override": 52.0,
+      "poster_time_override_reason": "Start date and the calculated first entry date are visible together.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 26.5 (23F77)",
+      "device_name": "KT guides p265 en 261122 (iPhone 17 Pro)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "13-import-and-undo",
+      "title_ja": "CSVをインポートし、履歴から取り消す",
+      "title_en": "Import a CSV and undo the import",
+      "ui_language": "en",
+      "duration": 72.933,
+      "bytes": 1530570,
+      "steps": [
+        {
+          "time": 1.014,
+          "ja": "ファイルを選んでインポートします",
+          "en": "Choose the CSV in the system file picker"
+        },
+        {
+          "time": 8.858,
+          "ja": "CSV の Food を食費に割り当てます",
+          "en": "Map Food to the Food category"
+        },
+        {
+          "time": 18.442,
+          "ja": "カテゴリの対応を確認してインポートします",
+          "en": "Review the category mapping and confirm the import"
+        },
+        {
+          "time": 45.249,
+          "ja": "「インポート履歴」から、このインポートを取り消せます",
+          "en": "Undo the import from Import History"
+        }
+      ],
+      "source_take": "13-import-and-undo-20261122-202126-339946",
+      "source_device": "D43D9F16-18D1-4080-9A99-76CB453D5621",
+      "source_started_at": 1795346486.583669,
+      "source_stopped_at": 1795346559.526939,
+      "source_wall_duration": 72.943,
+      "source_raw_duration": 69.012,
+      "source_raw_sha256": "b557babf8b805b9eab47e3988834652f6c15f8a6b4b07f838623d70bff5f7144",
+      "source_manifest_sha256": "c1b1918c98782debadc4c4e97e39401eb4d3f415aaeeb80db9284e348669183e",
+      "poster_time": 9.358,
+      "render_fingerprint": "56d1f1dbc3d1de47ef5690fab9a657669df92ad7379cd5e20d29e9e3db4af497",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "7bb66e2825481a7e3c37f0f065770a244e25d301b348746e50aefdfb0a7a1033",
+      "sha256": "23e1e44603372564d8028398670818ea0c3421585daca71406784055d88f8fb4",
+      "poster_sha256": "c8b064f446cb511a69d14e6e140a034eec2b0ba95803af115428c796e60304e7",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 26.5 (23F77)",
+      "device_name": "KT guides pm265 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "15-export",
+      "title_ja": "バックアップとCSVを書き出す",
+      "title_en": "Export a backup and CSV",
+      "ui_language": "en",
+      "duration": 30.3,
+      "bytes": 422477,
+      "steps": [
+        {
+          "time": 1.011,
+          "ja": "バックアップを書き出します",
+          "en": "Generate a complete backup"
+        },
+        {
+          "time": 7.823,
+          "ja": "保存先を選ぶ画面を確認し、この動画では選ばずに閉じます",
+          "en": "Review the share sheet; this walkthrough closes it without choosing a destination"
+        },
+        {
+          "time": 14.987,
+          "ja": "CSVでは書き出す期間を選べます",
+          "en": "Choose a date range for a CSV export"
+        }
+      ],
+      "source_take": "15-export-20261122-202300-979494",
+      "source_device": "D43D9F16-18D1-4080-9A99-76CB453D5621",
+      "source_started_at": 1795346581.254838,
+      "source_stopped_at": 1795346611.566981,
+      "source_wall_duration": 30.312,
+      "source_raw_duration": 25.488,
+      "source_raw_sha256": "81c38b8446fbcbc4806c2710997194defedf62fba5fd23ce31e932b0e3ff6454",
+      "source_manifest_sha256": "4c3ca0263c2bf8fa7bd0c8c1fc87f18c9db79d8554bf7af0237285b9fd17a15b",
+      "poster_time": 8.323,
+      "render_fingerprint": "228b7e73524177bd12f6e5726c2fed260c25438c7b0d45c80e47797000456055",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "b983eb9ae39187a783db22001c327b233c127876b82ba334a88f88685372a0f4",
+      "sha256": "ea98c47819c85e6b16b7ec7e1e69029a09e6a3132e5a3076b36eb3a248f397c2",
+      "poster_sha256": "6e3baa09b6a91c3ebba471fd62a8f41f94aee4f3c50a8582fe9a60da378e2fa4",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 26.5 (23F77)",
+      "device_name": "KT guides pm265 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "19-shortcuts-home-screen",
+      "title_ja": "ホーム画面にショートカットを追加して記録",
+      "title_en": "Add and use a Home Screen shortcut",
+      "ui_language": "en",
+      "duration": 44.867,
+      "bytes": 1571450,
+      "steps": [
+        {
+          "time": 1.008,
+          "ja": "「記録を追加 / Siri」からショートカットを開きます",
+          "en": "Open Shortcuts from Record Entry / Siri"
+        },
+        {
+          "time": 6.342,
+          "ja": "「記録を追加」を長押しし、「ホーム画面に追加」を選びます",
+          "en": "Touch and hold Record Entry, then choose Add to Home Screen"
+        },
+        {
+          "time": 13.35,
+          "ja": "右上の追加ボタンで、ホーム画面に置きます",
+          "en": "Confirm the addition at the top right"
+        },
+        {
+          "time": 18.871,
+          "ja": "次からは、ホーム画面の「記録を追加」をタップします",
+          "en": "Next time, tap Record Entry on the Home Screen"
+        },
+        {
+          "time": 29.12,
+          "ja": "内容と金額を入力して完了します。アプリを開かずに記録できます",
+          "en": "Enter the description and amount, then tap Done to save without opening the app"
+        }
+      ],
+      "source_take": "19-shortcuts-home-screen-20261122-201653-639090",
+      "source_device": "4461ABEF-2E2C-4EF7-9722-475C6778B40E",
+      "source_started_at": 1795346213.965322,
+      "source_stopped_at": 1795346258.8410208,
+      "source_wall_duration": 44.876,
+      "source_raw_duration": 43.927,
+      "source_raw_sha256": "4ed328344877dfb5ed3d3196d7a3c2b47cf57328a66041392d76187aaa3a9015",
+      "source_manifest_sha256": "f3a77d4a1da2e2bf95652a7ac91ba08fe090f3999d39c2a4fa8dbaecfc18d02b",
+      "poster_time": 20.1,
+      "render_fingerprint": "3d2def3eb7becc7a6421005c12ca45d0accbbb55ed45ca02ae263c5a821e989b",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "7095e44c60099942b4801adeede0089cc14f71a9a40db211ac1dd95c03dc3e51",
+      "sha256": "2b00ff281bdfde33ab730e503121dfb0aba041f642340dbf4af438ee1c86d3fd",
+      "poster_sha256": "7f0fc657e27d5e9a411cf594e936b8f9edee975ed11c20c9eec6712c589e2498",
+      "poster_time_override": 20.1,
+      "poster_time_override_reason": "The added Record Entry icon on the Home Screen, before tapping it.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides e27r en 261122 (iPhone 17e)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "20-shortcuts-siri-name",
+      "title_ja": "アプリを開かずに記録：Siriで使う準備",
+      "title_en": "Record without opening the app: Set up a Siri phrase",
+      "ui_language": "en",
+      "duration": 52.1,
+      "bytes": 774030,
+      "steps": [
+        {
+          "time": 1.014,
+          "ja": "「記録を追加 / Siri」で、ショートカットのボタンをタップします",
+          "en": "In Record Entry / Siri, tap the Shortcuts button"
+        },
+        {
+          "time": 6.452,
+          "ja": "マイクの「記録を追加」を長押しします",
+          "en": "Touch and hold Record Entry with the microphone icon"
+        },
+        {
+          "time": 10.09,
+          "ja": "「新規ショートカット」で自分用のショートカットを作ります",
+          "en": "Choose New Shortcut to create a personal shortcut"
+        },
+        {
+          "time": 16.483,
+          "ja": "「編集」でアクションの編集画面を開きます",
+          "en": "Tap Edit to open the action editor"
+        },
+        {
+          "time": 21.334,
+          "ja": "「記録内容」をタップし「毎回尋ねる」を選びます",
+          "en": "Tap Entry and choose Ask Each Time"
+        },
+        {
+          "time": 25.874,
+          "ja": "画面上部の名前から「名称変更」を選びます",
+          "en": "Open the name menu at the top and choose Rename"
+        },
+        {
+          "time": 41.541,
+          "ja": "例として「Log my spending」という短い名前を付けます",
+          "en": "Choose a short name, such as “Log my spending”"
+        },
+        {
+          "time": 46.664,
+          "ja": "保存された名前を確認します。この動画は名前の設定までを紹介します",
+          "en": "Check the saved name. This video covers setting up the name"
+        }
+      ],
+      "source_take": "20-shortcuts-siri-name-20261122-205404-895277",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795348445.163008,
+      "source_stopped_at": 1795348497.264726,
+      "source_wall_duration": 52.102,
+      "source_raw_duration": 45.948,
+      "source_raw_sha256": "e3ab83d8ec2bec89ada3d2a6db3a1c21215abbc0eca2e22d9d1bcec1e8642f55",
+      "source_manifest_sha256": "48d7515220d40ab5a7f7db31f63bfdced21017cfff6d6599778b8da69719b740",
+      "poster_time": 6.952,
+      "render_fingerprint": "bdbf4c33c3cf7bed18e0523ef7b360fed2b52c2045f1e2f6bfd52dfa61371e28",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "63121224fe3c482e0d499147f0fb424376567d25450000945565644fbc6faf06",
+      "sha256": "8dd1dda6baa81338970ad2678df72b088af9941b137d3feb778164ad654996b3",
+      "poster_sha256": "c939bfaeb0c1895ae2e90f907933e7c54f136cd70ff547959cf9aa7b44ebcdfd",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "22-exchange-rates",
+      "title_ja": "旅先の支出をカードの請求額で集計する",
+      "title_en": "Use the card's final charge for travel expenses",
+      "ui_language": "en",
+      "duration": 100.833,
+      "bytes": 1385156,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "レポートの「為替レート」から、外貨の記録を開きます",
+          "en": "Open Exchange Rate in Reports and choose a foreign-currency entry"
+        },
+        {
+          "time": 8.959,
+          "ja": "分かっている向きのレートを入力すると、逆向きのレートと換算額も更新されます",
+          "en": "Enter the rate in either direction. The other rate and converted amount update together"
+        },
+        {
+          "time": 27.341,
+          "ja": "次の記録には、同じ通貨の直近のレートが入ります。確認して保存します",
+          "en": "The next entry starts with the most recent rate for these currencies. Check it and save"
+        },
+        {
+          "time": 37.484,
+          "ja": "カードの請求額が分かったら、その金額を直接入力できます",
+          "en": "When the card's final charge is known, enter that amount directly"
+        },
+        {
+          "time": 74.032,
+          "ja": "レポートには、保存した請求額とレートが反映されます",
+          "en": "Reports now uses the saved final charge and rate"
+        },
+        {
+          "time": 81.853,
+          "ja": "レートの表示方向は、その他の「為替レートの表示」で選べます",
+          "en": "Choose how rates are shown in More → Exchange Rate Display"
+        }
+      ],
+      "source_take": "22-exchange-rates-20261122-202710-243492",
+      "source_device": "0D977B8A-B194-42FD-B137-0F8CA97B17BF",
+      "source_started_at": 1795346830.527245,
+      "source_stopped_at": 1795346931.372867,
+      "source_wall_duration": 100.846,
+      "source_raw_duration": 96.858,
+      "source_raw_sha256": "62446e3c1738f701291f3cc525d3d108bb86418f7bb2907022e72c4e3a0eb37c",
+      "source_manifest_sha256": "e2924e8524da23e381e0007681d8d8d8544d768cbdf3d1ad49818e9e9a9667bd",
+      "poster_time": 76.5,
+      "render_fingerprint": "5a569e220eb23c6292fede7e6c2cff2125d05cc84f5d0015476f4a63acfd59f5",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "3c0f8e8f43a64d6f45e1e07262483f54beb0e27608b99b045de6cc48badda3c6",
+      "sha256": "b77121220b52d491b2d544edbcda76f296efc17793522bbbcd7da53282a3f482",
+      "poster_sha256": "4b6f89228e46346e4fba232e2c587ff887c348914d90c666eca255a26422a69a",
+      "poster_time_override": 76.5,
+      "poster_time_override_reason": "The saved travel expenses total A$303.25 is visible in Reports.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 26.5 (23F77)",
+      "device_name": "KT guides p265 en 261122 (iPhone 17 Pro)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "24-control-center-record",
+      "title_ja": "コントロールセンターにショートカットを追加して記録",
+      "title_en": "Add and use a Control Center shortcut",
+      "ui_language": "en",
+      "duration": 56.333,
+      "bytes": 1757202,
+      "steps": [
+        {
+          "time": 1.019,
+          "ja": "右上から下にスワイプし、「コントロールを追加」を開きます",
+          "en": "Swipe down from the top right and open Add a Control"
+        },
+        {
+          "time": 6.878,
+          "ja": "「ショートカット」を検索し、「ショートカットを実行」を追加します",
+          "en": "Search for Shortcuts and add Run Shortcut"
+        },
+        {
+          "time": 14.659,
+          "ja": "ことりを選び、既存の「記録を追加」を指定します",
+          "en": "Choose Kotori, then select the existing Record Entry action"
+        },
+        {
+          "time": 24.707,
+          "ja": "次からは、コントロールセンターのこのボタンをタップします",
+          "en": "Next time, tap this button in Control Center"
+        },
+        {
+          "time": 35.016,
+          "ja": "内容と金額を入力して完了します。アプリを開かずに記録できます",
+          "en": "Enter the description and amount, then tap Done to save without opening the app"
+        },
+        {
+          "time": 49.052,
+          "ja": "未確認の件数が増えました。あとで内容を確認できます",
+          "en": "The pending count increased. Review the entry later"
+        }
+      ],
+      "source_take": "24-control-center-record-20261122-200911-777260",
+      "source_device": "55CCC0E4-0036-4FFE-86B7-60BDD0810EE5",
+      "source_started_at": 1795345752.2474701,
+      "source_stopped_at": 1795345808.584162,
+      "source_wall_duration": 56.337,
+      "source_raw_duration": 53.427,
+      "source_raw_sha256": "8e8a61c481b3649f92ca977368e27564593380f08889e93baf7ebf5925c566eb",
+      "source_manifest_sha256": "ce548599bbff7cfa0acf8c057e8c233975e33adae9cdc993f33daf532301b11a",
+      "poster_time": 25.9,
+      "render_fingerprint": "54095d3f42b1b0de2385121ad92c2a482d5d2d3f520c66decd6be60762d06041",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "8fb0198e0958a3161236d7922f93efc06a0f3754ef7ca28b13d325616123568f",
+      "sha256": "3f143159b170c703ca5380c2c5c57ba91b9060efe1359057458f481ba6979eb8",
+      "poster_sha256": "f97c52c5f7030767b2e6df41e1663400666e87c8a1078058a945765233367811",
+      "poster_time_override": 25.9,
+      "poster_time_override_reason": "Configured Run Shortcut control (Record Entry) next to the pending control, before opening the input prompt.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides e27r en 261122 (iPhone 17e)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "25-appearance",
+      "title_ja": "カラー・背景・チャットアイコンを自分好みに",
+      "title_en": "Personalize colors, the background, and your chat avatar",
+      "ui_language": "en",
+      "duration": 130.133,
+      "bytes": 2729416,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "その他からカスタマイズを開き、アクセントカラーを選びます",
+          "en": "Open Appearance from More and choose an accent color"
+        },
+        {
+          "time": 13.718,
+          "ja": "外観はライト、ダーク、システム設定から選べます",
+          "en": "Choose Light, Dark, or the system appearance"
+        },
+        {
+          "time": 24.823,
+          "ja": "背景を「カラー」にすると、好きな色を選べます",
+          "en": "Choose Color for the background and pick a color"
+        },
+        {
+          "time": 40.504,
+          "ja": "背景を写真に切り替え、好きな写真を選びます",
+          "en": "Choose Photo for the background, then pick a picture"
+        },
+        {
+          "time": 63.304,
+          "ja": "ピンチとドラッグで、写真の大きさや位置を調整します",
+          "en": "Pinch and drag to adjust the picture's size and position"
+        },
+        {
+          "time": 71.171,
+          "ja": "写真に重ねる色を選び、「カラーの濃さ」を調整します。変化はその場で確認できます",
+          "en": "Choose a color for the photo, then adjust Color intensity and preview the result"
+        },
+        {
+          "time": 81.551,
+          "ja": "チャットアイコンにも写真を選べます",
+          "en": "Choose a photo for the chat avatar too"
+        },
+        {
+          "time": 92.161,
+          "ja": "丸い表示範囲を見ながら位置を調整し、保存します",
+          "en": "Adjust the picture using the circular preview, then save"
+        },
+        {
+          "time": 102.12,
+          "ja": "チャットにはアイコン、各画面にはカラーと背景が反映されます",
+          "en": "The avatar appears in chat, with the colors and background across the app"
+        }
+      ],
+      "source_take": "25-appearance-20261122-204313-160567",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347793.342981,
+      "source_stopped_at": 1795347923.489985,
+      "source_wall_duration": 130.147,
+      "source_raw_duration": 124.59,
+      "source_raw_sha256": "41197a3e4a85a7e12ccfdbbe32046ecd90e1585be706509364c9c63042f028d2",
+      "source_manifest_sha256": "90e54ae28a799f9ff0a45f056337160f7573ac1267870e297a00f0530aa7b906",
+      "poster_time": 106.0,
+      "render_fingerprint": "56b5ccd694e042be826efc05506be3ac50c4fabf3bcf922282ef9fda2c03841d",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "9362a75282e0bd3dfe9c29ddd8173e68a872b3c783ef4969ab5950869fbcb2fe",
+      "sha256": "92b73a0619aae02af649a906f5d0c788bc148612aa481c432a177cbc8a99f5d8",
+      "poster_sha256": "3a922cacdf50766572965d85ffdf2c1b5d673f090987696c49d25e493b88a241",
+      "poster_time_override": 106.0,
+      "poster_time_override_reason": "Saved photo background, colors and chat avatar on the actual Record screen; avoids pickers and unfinished previews.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "26-bookkeeping-reminders",
+      "title_ja": "記録リマインダーを設定する",
+      "title_en": "Set up reminders",
+      "ui_language": "en",
+      "duration": 27.9,
+      "bytes": 389814,
+      "steps": [
+        {
+          "time": 1.016,
+          "ja": "「その他」の「通知」から「記録リマインダー」を開きます",
+          "en": "Open Notifications in More, then Reminders"
+        },
+        {
+          "time": 8.596,
+          "ja": "＋から時刻を選びます",
+          "en": "Tap plus and choose a time"
+        },
+        {
+          "time": 12.035,
+          "ja": "繰り返す曜日をタップして選びます",
+          "en": "Tap the weekdays to repeat on"
+        },
+        {
+          "time": 21.142,
+          "ja": "新しいリマインダーはオフです。通知を受け取る端末でオンにします",
+          "en": "New reminders start off. Turn them on on each device that should notify"
+        }
+      ],
+      "source_take": "26-bookkeeping-reminders-20261122-203241-259113",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347161.4695108,
+      "source_stopped_at": 1795347189.358568,
+      "source_wall_duration": 27.889,
+      "source_raw_duration": 25.948,
+      "source_raw_sha256": "44462411b08cd214c67b60bfd1c24740cf96b437175780f0b363b2bb9565f665",
+      "source_manifest_sha256": "149b5f79f802855289ca27e8a35cadbaf0b1a045c415151512533787f2554810",
+      "poster_time": 27.0,
+      "render_fingerprint": "a76cb23c742391ef55851a6d15121a076e76c575e8b490a4bf1991a143b045d1",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "38c492d071a8f74c3dcc99055744d1b021333a76dddb78fd1d4d4b33e12e4bd3",
+      "sha256": "029fed1ee18ad0efc3a219e42d030650eb9f8a75256537aaf9593e42952ed43a",
+      "poster_sha256": "0e66b548bd264278d16a6c1b5b925da72f470ec8d45e90facb65a721d8bc3db2",
+      "poster_time_override": 27.0,
+      "poster_time_override_reason": "The saved weekday reminder is enabled after real permission handling.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "29-daily-spending-alert",
+      "title_ja": "1日の支出が設定額に達したらお知らせ",
+      "title_en": "Get an alert when daily spending reaches your limit",
+      "ui_language": "en",
+      "duration": 37.333,
+      "bytes": 385651,
+      "steps": [
+        {
+          "time": 1.01,
+          "ja": "「その他」→「通知」→「1日の支出通知」を開きます",
+          "en": "Open More → Notifications → Daily Spending Alert"
+        },
+        {
+          "time": 7.377,
+          "ja": "通知をオンにして、1日の目安になる金額を設定します",
+          "en": "Turn on the alert and set an amount for the day"
+        },
+        {
+          "time": 27.517,
+          "ja": "今日の支出が設定額に達していると、バナーでお知らせします",
+          "en": "A banner appears when today's recorded spending has reached the amount"
+        },
+        {
+          "time": 30.592,
+          "ja": "バナーをタップすると、すべての財布の今日の明細を確認できます",
+          "en": "Tap the banner to review today's spending across all wallets"
+        }
+      ],
+      "source_take": "29-daily-spending-alert-20261122-203444-311999",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347284.4915788,
+      "source_stopped_at": 1795347321.833698,
+      "source_wall_duration": 37.342,
+      "source_raw_duration": 37.343,
+      "source_raw_sha256": "c0bbc7be033cfae54c6b2194721ec0a0932c4bec73b7faa9a82685526d0a3b78",
+      "source_manifest_sha256": "34b5c71daf3f2ae1307c88224187ca5430a13b71af74d6481b7fc99ef6766bfb",
+      "poster_time": 29.5,
+      "render_fingerprint": "d3c1a930b8c337d8edfa1e28d3c65e2e29c1fb1b1559db5f407302cf9e226edd",
+      "poster_time_source": "take_manifest_override",
+      "poster_fingerprint": "bc98940457d524d28cf43663218d260750e941509d217d90dfa63db0f3de7d7e",
+      "sha256": "c0222502e47880ba741dec14840dc328ded3ffc2be11e52cb6a670d86e2d4dc1",
+      "poster_sha256": "e8a89bf2f510387cdb118619b1084852fc166bf42c8ac4ad25223804917dbfc8",
+      "poster_time_override": 29.5,
+      "poster_time_override_reason": "The real daily banner is visible above the enabled amount setting.",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
+      }
+    },
+    {
+      "id": "30-recording-settings",
+      "title_ja": "チャットの表示を自分好みに",
+      "title_en": "Choose what appears in chat",
+      "ui_language": "en",
+      "duration": 26.033,
+      "bytes": 337108,
+      "steps": [
+        {
+          "time": 1.012,
+          "ja": "「その他」から「記録」を開きます",
+          "en": "Open Recording from More"
+        },
+        {
+          "time": 6.654,
+          "ja": "「履歴の表示期間」で、表示したい期間を選びます",
+          "en": "Open Chat History Range and choose a range"
+        },
+        {
+          "time": 13.864,
+          "ja": "次回の起動から反映されます。記録そのものはそのまま残ります",
+          "en": "The range takes effect the next time the app opens. Your entries stay as they are"
+        },
+        {
+          "time": 18.614,
+          "ja": "あいさつや雑談を隠したいときは、「ことりのつぶやきを非表示」をオンにします",
+          "en": "Turn on Hide Kotori’s Chatter to hide greetings and small talk"
+        }
+      ],
+      "source_take": "30-recording-settings-20261122-203719-268443",
+      "source_device": "436FF30B-0620-4F04-8B58-C7C3C1A416F8",
+      "source_started_at": 1795347439.457002,
+      "source_stopped_at": 1795347465.4832919,
+      "source_wall_duration": 26.026,
+      "source_raw_duration": 22.917,
+      "source_raw_sha256": "5de225cd459a7885e55062bc948ed686991123db94a186051348a9ca3068aac0",
+      "source_manifest_sha256": "bbfe3312ca489c24c82ba7de60b2ef5fe2e09d4b142c1973f5e1287934ea982d",
+      "poster_time": 7.154,
+      "render_fingerprint": "979ab832571d39b372517f435c3e02520cf02e5beba5a070b697db464031ace6",
+      "poster_time_source": "step_default",
+      "poster_fingerprint": "e743b81130747625b295c90eb96206f6887ac2c059147c84e58448cd0d1d3d92",
+      "sha256": "517892cbaccbb6e7a741727cb5f8ec0a6fbd4e12d5edc2db5e24db6ddf3a13c1",
+      "poster_sha256": "3bd7415e7141fbca2c0c63863cc1867f497d45383cfd81f81b17a83fa2b5ce88",
+      "app_version": "1.3.0",
+      "app_build": "1739",
+      "source_commit": "030e53acf738d93682c2e09cc380dbd956368ab0",
+      "runtime": "iOS 27.0 (24A434)",
+      "device_name": "KT guides pm27 en 261122 (iPhone 17 Pro Max)",
+      "capture": "Real iOS Simulator UI; synthetic local demonstration data",
+      "batch": "website guide retake 261122 (1.3.0 copy cleanup)",
+      "recording_script": {
+        "repository": "kotori",
+        "commit": "d3baa63b",
+        "branch": "claude/guide-retake-261122",
+        "product_source": "030e53acf738d93682c2e09cc380dbd956368ab0",
+        "files": {
+          "OneSentenceAccountingUITests/GuideRecordingUITests.swift": "67bb753809aa033ddb593ec3175176246265113a355314a63dca73e302f073b6",
+          "OneSentenceAccountingUITests/ControlCenterRecordUITests.swift": "1b03597ec1bd98479e4a78afc4010e70423cf3545d1533f1ed405fe3194c9af2",
+          "OneSentenceAccountingUITests/AppearanceGuideUITests.swift": "833ff61a8f88d2c8f875d02b8fb4d9036a8ad13ae55f658a33cc15fc24328ee7"
+        },
+        "note": "File hashes are the committed harness. Earlier revisions of the same files were used for some takes: 12/22/15/23 (ja) and 19/24 were recorded before guideTab's pushed-page wait was shortened (idle time only); 20 (ja) before the title-menu step tapped the chevron and keyboard check mark. Test-only changes; no product UI modifications."
       }
     }
   ]

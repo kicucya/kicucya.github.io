@@ -127,6 +127,21 @@ RECORDING_PREDECESSORS_120 = {
 
 # Claude (1.3.0): new guides recorded for 1.3.0, each placed after the closest existing guide.
 RECORDING_IDS_130 = ('31-receipt-photo', '32-pending-reminders', '33-date-background')
+# Claude (1.3.0, 261122): 1.3.0-only re-recordings of earlier guides whose on-screen text
+# changed with the 1.3.0 copy cleanup. Each replaces the guide with the same ID in place, only
+# on the 1.3.0 site; the shared 1.1.3/1.2.x media and the older version sites stay unchanged.
+REPLACEMENT_IDS_130 = (
+    '04-transaction-actions', '05-category-editor', '07-wallets', '12-recurring',
+    '13-import-and-undo', '15-export', '19-shortcuts-home-screen', '20-shortcuts-siri-name',
+    '22-exchange-rates', '23-control-center-pending', '24-control-center-record',
+    '25-appearance', '26-bookkeeping-reminders', '29-daily-spending-alert',
+    '30-recording-settings',
+)
+# Replacements whose on-screen text changed in one interface language only. The other
+# language keeps its existing recording, so only these IDs may differ between the manifests.
+LANGUAGE_ONLY_REPLACEMENTS_130 = {'23-control-center-pending': 'ja'}
+# Card presentation that a replaced guide keeps unless the new clip states its own.
+INHERITED_CARD_FIELDS = ('entry_points', 'scope_note', 'group')
 RECORDING_PREDECESSORS_130 = {
     '31-receipt-photo': '02-manual-entry',
     '32-pending-reminders': '26-bookkeeping-reminders',
@@ -194,7 +209,7 @@ def read_clips(ui_language, media_version='1.1.3'):
         raise ValueError(f'Expected app_version={media_version} and ui_language={ui_language}')
     current = media_version == '1.2.1'
     if media_version == '1.3.0':
-        expected_ids = list(RECORDING_IDS_130)
+        expected_ids = list(RECORDING_IDS_130 + REPLACEMENT_IDS_130)
         recording_ids = [clip['id'] for clip in manifest['clips']]
         if not recording_ids or recording_ids != [i for i in expected_ids if i in recording_ids]:
             raise ValueError(f'{ui_language}/{media_version}: incomplete or unexpected recording order')
@@ -339,7 +354,8 @@ def card(clip, lang):
         '13-import-and-undo': 'This build shows preset category names in Japanese in the import menu. The video maps Food to 食費 (Food).',
         '14-batch-input': 'In this build, use single-entry recording for amounts with cents. Opening the batch preview editor can also change an amount, so check and correct it before importing. This video shows that correction using whole-dollar amounts.',
     }
-    if ui_language == 'en' and lang == 'en' and slug in english_ui_notes:
+    # These notes describe the 1.1.3 recordings only; later re-recordings do not show those limits.
+    if ui_language == 'en' and lang == 'en' and slug in english_ui_notes and str(clip['_provenance']['app_version']) == '1.1.3':
         scope_note += f'<p class="guide-scope-note">{esc(english_ui_notes[slug])}</p>'
     seconds = int(round(float(clip['duration'])))
     duration_a11y = f'動画の長さ {seconds} 秒' if lang == 'ja' else f'Video duration: {seconds} seconds'
@@ -452,12 +468,25 @@ def main():
         if version == '1.3.0' and (MEDIA_ROOT.parent / '1.3.0' / 'ja/manifest.json').is_file():
             new_ja = read_clips('ja', '1.3.0')
             new_en = read_clips('en', '1.3.0')
-            check_matching_provenance(new_ja, new_en)
+            for lang, clips in (('ja', new_ja), ('en', new_en)):
+                for clip in clips:
+                    if LANGUAGE_ONLY_REPLACEMENTS_130.get(clip['id'], lang) != lang:
+                        raise ValueError(f'{clip["id"]}: 1.3.0 replacement is {LANGUAGE_ONLY_REPLACEMENTS_130[clip["id"]]} only')
+            check_matching_provenance([c for c in new_ja if c['id'] not in LANGUAGE_ONLY_REPLACEMENTS_130],
+                                      [c for c in new_en if c['id'] not in LANGUAGE_ONLY_REPLACEMENTS_130])
             for base, additions in ((japanese, new_ja), (english, new_en)):
                 for addition in additions:
-                    predecessor = RECORDING_PREDECESSORS_130[addition['id']]
-                    index = next(i for i, clip in enumerate(base) if clip['id'] == predecessor)
-                    base.insert(index + 1, addition)
+                    existing = next((i for i, clip in enumerate(base) if clip['id'] == addition['id']), None)
+                    if existing is not None:
+                        # Replace in place; keep the card's place, entry point, note and group.
+                        old = base[existing]
+                        base[existing] = {**{key: old[key] for key in INHERITED_CARD_FIELDS if key in old}, **addition}
+                    elif addition['id'] in REPLACEMENT_IDS_130:
+                        raise ValueError(f'{addition["id"]}: a 1.3.0 replacement needs an existing guide')
+                    else:
+                        predecessor = RECORDING_PREDECESSORS_130[addition['id']]
+                        index = next(i for i, clip in enumerate(base) if clip['id'] == predecessor)
+                        base.insert(index + 1, addition)
         # Claude (1.3.0): wording updates for retained recordings live beside the
         # version's pages, so other version sites keep their own copy.
         copy_path = source_root / 'guide-copy.json'
