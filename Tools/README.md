@@ -299,3 +299,7 @@ Major 26/11/13 确认 1.3 功能验收通过（「功能都能用了 只差UI微
 
 - 补拍日语、英语各 8 张：`02-siri.jpg`、`04-export.jpg`、`06-wallet-share.jpg`、`07-budget.jpg`、`07-budget.png`、`19-shortcuts-saved.png`、`30-history-options.png`、`30-recording-settings.png`。场景、演示数据、机型、默认外观与构图沿用被替换的图片，只有 App 文字不同。在 mini 从 `d5f90181` 的 `git archive` 构建，沿用 261118 批次的拍摄补丁并追加英语 Pro Max 画面与主屏幕快捷指令结果两项测试；四台本轮新建的无账号模拟器拍完即用 `xcrun simctl delete` 删除。`19-shortcuts-saved.png` 原为 1.1.3 录像帧，本轮改为真实运行主屏幕「記録を追加」／「Record Entry」后的系统结果画面，等比缩为原尺寸 600×1304。逐图 RAW、设备、测试结果与新旧 SHA-256 见 `_versions/kotori/v1.3.0/assets/screens/refresh-retake-261122.json`。
 - 文字按 App 现行用语对齐：「カラーの濃さ」／Color intensity，「データをインポート」「インポート履歴」／Import Data・Import History，历史设置用「記録そのものはそのまま残ります」／“Your entries stay as they are”。沿用旧录像的教程卡片文字改在 `_versions/kotori/v1.3.0/guide-copy.json`：`build_guides.py` 只在该版本目录存在此文件时套用，每条写明替换前原文，原文不符即报错；共享的媒体 manifest 不变，所以其他版本页面不受影响。
+
+## 1.3.0 Siri 提示语补拍（261122 Siri 批次）
+
+上一批的英语 `02-siri.jpg` 里，快捷记录引导页的 Siri 提示显示日语「“Kotoriで記録を追加”と言ってください」：当时 App 只有日语快捷指令短语，拍摄模拟器的 Siri 语言也是日语。App `Dev@1813d477`（1738）加入各语言短语后，只替换英语 `02-siri.jpg`，提示变为 Say “Record an entry in Kotori”，其余像素区域与上一批相同。拍法沿用 261122 批次（`retake-1.3.0.patch` 原样套用、同一 fixture、时钟 dylib、`capture.sh` 的参数），唯一补充是拍摄前把模拟器 Siri 语言设为拍摄语言；缩放用 Pillow LANCZOS、JPEG 质量 90、optimize，可由上一批 RAW 逐字节复现旧文件。日语同法重拍核对，RAW 与上一批逐字节相同，文件保留。两台本轮新建的无账号模拟器拍完即删。来源见 `_versions/kotori/v1.3.0/assets/screens/refresh-siri-phrase-261122.json`。

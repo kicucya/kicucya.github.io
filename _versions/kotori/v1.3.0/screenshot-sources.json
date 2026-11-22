@@ -43,7 +43,7 @@
     "ui_locale": "en-US",
     "raw_sha256": "a1ff76593a77982c8c6a5ca4577199d3e9402af79c63c54db7995cab08999b42",
     "note": "Production UI with deterministic demo seed and parser override; not a parsing-accuracy benchmark.",
-    "superseded_by": "assets/screens/refresh-retake-261122.json"
+    "superseded_by": "assets/screens/refresh-siri-phrase-261122.json"
   },
   "assets/screens/ja/19-shortcuts-saved.png": {
     "app_version": "1.1.3",
