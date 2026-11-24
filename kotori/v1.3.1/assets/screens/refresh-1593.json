@@ -1,0 +1,225 @@
+{
+  "app_version": "1.2.1",
+  "app_build": "1593",
+  "source_commit": "6b8589a6b5ac0b4b96445262d4a414a62903a1be",
+  "capture": "XCTest + simctl; synthetic local data; real unmodified UI pixels resized for web",
+  "runtime": "iOS 27.0 (24A434)",
+  "images": [
+    {
+      "image": "assets/screens/ja/01-conversation.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-01-conversation.png",
+      "source_sha256": "4728c5eba299889fec481488509be807d840ed020d81c3e8992d1ca94373d211",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/02-siri.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-02-siri.png",
+      "source_sha256": "8b1c77dc2c7a92ecf2f54bf17d16478e56cd2c398a81e9304670540f7bf79911",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/03-learning.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-03-learning.png",
+      "source_sha256": "780bb3b2cc6d7cfbc50890c6061f520c3be4b250f645a61dfe6dd5da107a8326",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/04-export.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-04-export.png",
+      "source_sha256": "bd19f980b3ae6e5d757ca5f9d76568b00217337ae1d3d53bddad98a6fb92e7fd",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/05-report.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-05-report.png",
+      "source_sha256": "7f999e3274963ede6503c024a768d46b260d865d01760ca684a557e06b7b7319",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/05-report-detail.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-05-report-detail.png",
+      "source_sha256": "66bbbdbcd440374c0e664cf823a26daff81ceac3a760e37b0fe42a0894a69357",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/06-wallet-share.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-06-wallet-share.png",
+      "source_sha256": "62c6b48118514345a8bb16cb8f188e8fed4b754057246f4e51267649f3edfd46",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/07-budget.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/ja/screenshots/Kotori Website 1593 JA-07-budget.png",
+      "source_sha256": "8b395c9949cafab76ba36b70268f945826dee9874930bf0c82b2b1652b4a403a",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/25-chat-avatar.jpg",
+      "source": "/tmp/kotori-web-121-1593/screenshots/ja/25-appearance-tab-0.png",
+      "source_sha256": "d255c6c0c8c1eb1ef69be7dcaae33d231c2a142e80a0ed32c0d2ce25009f58e6",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/30-recording-settings.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/ja/30-recording-settings.png",
+      "source_sha256": "6029aea208449836e828ee14c943fb4801a8079e663807dd623bb37d61f677dd",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/30-history-options.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/ja/30-history-options.png",
+      "source_sha256": "59a65e5f660f451449a2b2a9570f7ced7694bab88e707a451d43e153246c08d8",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/ja/05-report-pie-detail.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/ja/05-report-pie-detail.png",
+      "source_sha256": "812e0c8ffa87f666d175bf2442f8532275f081d59ef94e11ad21a745d650618d",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/01-conversation.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-01-conversation.png",
+      "source_sha256": "f8b2383e29af05bf5393ac6331589dd92d1994f9ca0236b0863df73b352c951b",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/02-siri.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-02-siri.png",
+      "source_sha256": "0d442721192e7895d580b61cdc27c48fefc49a2560f705ed5378fb3d525a663d",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/03-learning.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-03-learning.png",
+      "source_sha256": "e4bb328ad62cbd9eeb1f95bf47ad3ece69bd448370c307c6a4c6f8e42de8e4dc",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/04-export.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-04-export.png",
+      "source_sha256": "5d969ad2846a1cdad0712b406ecb7ba8a425c9f59d5fa66ca41bdcf8acc706fb",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/05-report.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-05-report.png",
+      "source_sha256": "a01b7684cf114009be1744c109968b7ea7e49d78871cfc69ca7e9d469118573a",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/05-report-detail.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-05-report-detail.png",
+      "source_sha256": "e17a6199462adb99216602a2db5a52b1cabb495b15ed37ff960226c0f6d05e04",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/06-wallet-share.jpg",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-06-wallet-share.png",
+      "source_sha256": "2640661bcf0cbeea24a7e2fcd4a6c51d286094164a6c86a26a96976175d4d284",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/07-budget.png",
+      "source": "/tmp/kotori-web-121-1593/snapshots/en-US/screenshots/Kotori Website 1593 EN-07-budget.png",
+      "source_sha256": "f1960df14936e40e7a3aa0ca2ed3117e1ff0be98c13da8bbda1c778e120f1d48",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/25-chat-avatar.jpg",
+      "source": "/tmp/kotori-web-121-1593/screenshots/en/25-appearance-tab-0.png",
+      "source_sha256": "e43b59eee5f1fcb99141c8bbd6a150274cbda4884c3d1ac943a7d594ddf380d8",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/30-recording-settings.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/en/30-recording-settings.png",
+      "source_sha256": "9db36f0414c0084b597268f762a463aa1f66a76c83ef70baa0e2ffe7c6ea4b73",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/30-history-options.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/en/30-history-options.png",
+      "source_sha256": "69e5d356fe1f9ad4af72c5161175728fbef9937c79404a18318f5440b714bf29",
+      "size": [
+        660,
+        1434
+      ]
+    },
+    {
+      "image": "assets/screens/en/05-report-pie-detail.png",
+      "source": "/tmp/kotori-web-121-1593/screenshots/en/05-report-pie-detail.png",
+      "source_sha256": "f9a717bfa3d93117bd0b4824773cfc7ffd9d9a5f7a34bd6959b44245298499f9",
+      "size": [
+        660,
+        1434
+      ]
+    }
+  ]
+}

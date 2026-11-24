@@ -447,7 +447,7 @@ def main():
             japanese = merge_120_clips(japanese, extra_ja)
             english = merge_120_clips(english, extra_en)
         # Claude: versions without new recordings retain the actual 1.2.1 recording provenance.
-        if version in ('1.2.1', '1.2.2', '1.2.3', '1.3.0'):
+        if version in ('1.2.1', '1.2.2', '1.2.3', '1.3.0', '1.3.1'):
             current_ja = read_clips('ja', '1.2.1')
             current_en = read_clips('en', '1.2.1')
             check_matching_provenance(current_ja, current_en)
@@ -464,8 +464,8 @@ def main():
                                                 'en': 'Kotori → More → Recording → Record Entry / Siri'}
                     if clip['id'] in ('05-category-editor', '06-category-order'):
                         clip['entry_points'] = {'ja': 'その他 → カテゴリ管理', 'en': 'More → Categories'}
-        # Claude (1.3.0): 1.3.0-only recordings, inserted after their predecessor guide.
-        if version == '1.3.0' and (MEDIA_ROOT.parent / '1.3.0' / 'ja/manifest.json').is_file():
+        # Claude (1.3.0): recordings made for 1.3.0, inserted after their predecessor guide; 1.3.1 (fix only) keeps them.
+        if version in ('1.3.0', '1.3.1') and (MEDIA_ROOT.parent / '1.3.0' / 'ja/manifest.json').is_file():
             new_ja = read_clips('ja', '1.3.0')
             new_en = read_clips('en', '1.3.0')
             for lang, clips in (('ja', new_ja), ('en', new_en)):

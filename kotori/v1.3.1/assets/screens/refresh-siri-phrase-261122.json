@@ -1,0 +1,59 @@
+{
+ "app_version": "1.3.0",
+ "app_tag_or_ref": "Dev",
+ "product_source_commit": "1813d477",
+ "product_source_note": "git archive of App Dev 1813d477 (build number in source 1738; per-language Siri App Shortcut phrases, T-1#170); production Swift unchanged apart from the DEBUG/UI-test-gated capture patch below.",
+ "runtime": "iOS 27.0 (24A434)",
+ "xcode": "27.2 (27B52)",
+ "capture_run": "siri-retake-261122",
+ "actual_capture_date": "2026-11-22",
+ "reason": "English 02-siri.jpg (refresh-retake-261122) showed the Japanese Siri tip 「“Kotoriで記録を追加”と言ってください」: the app had no English App Shortcut phrase and the capture simulator's Siri language was Japanese. App Dev 1813d477 adds per-language phrases; the Siri tip now reads Say “Record an entry in Kotori”.",
+ "capture": "Same harness as refresh-retake-261122 (retake-1.3.0.patch applied unchanged, capture.sh flags, website fixture and clock dylib, task-only account-free simulators deleted after capture). Only addition: the simulator's Siri language is set to the capture language before the run, as the App store capture does, because SiriTipView renders the phrase in the Siri language. Resized with Pillow LANCZOS, JPEG quality 90, optimize (reproduces the previous files byte for byte from their RAWs).",
+ "scope": "1 file: English 02-siri.jpg. Japanese 02-siri.jpg was recaptured the same way for checking; its RAW is byte-identical to the 261122 retake RAW (SHA-256 8645df87…), so the file is kept. Everything else unchanged.",
+ "harness": {
+  "patch_path": "/Users/agents/Workspaces/kotori-web-retake-130-261122/retake-1.3.0.patch",
+  "patch_sha256": "9ef38158864e32cedbcc7ebe20b39b8dcbdf2651257491613375c876d0c9e34e",
+  "patched_sources_sha256": {
+   "OneSentenceAccountingUITests/ScreenshotUITests.swift": "87fcc1069c49481da69430358c5752d7390cd5694f2fbbaa3628ccccd8a07ac0",
+   "OneSentenceAccounting/Features/Chat/KotoriQuipLibrary.swift": "08ba69b3f4e5f2dabfe6fa3b61b95e891b36307cbd6a5461f5a55a825fd8557c",
+   "OneSentenceAccounting/Shared/Testing/ScreenshotDemoSeeder.swift": "3733bfcc926f07cc3a16098834d72f4713220682ae8417b922238cacc98bab9d"
+  },
+  "patched_sources_note": "ScreenshotUITests.swift differs from the 261122 hash only because Dev 1813d477 already contains the App store retake test changes (8a1884a5); the patch hunks are the same.",
+  "capture_script": "/Users/agents/Workspaces/kotori-siri-retake-261122/web.sh",
+  "capture_script_sha256": "3b865cdf116a54417ab94580d07cfa89e4295bfcf9acb993e8e069d4a8dcdc46",
+  "clock_dylib_sha256": "1c84a292b00f70d1bf9cdf19cbf0d8f1bbadd3579a47e0310f88c694df1bc955"
+ },
+ "simulators": {
+  "created": "2026-11-22 18:31 JST, iOS 27.0, never signed in: KT siri-retake web enmax en-US 261122 (02613234-4A5A-4115-A7B6-2B1DBC15C824, iPhone 17 Pro Max, Siri en-US), KT siri-retake web website ja 261122 (A114EC81-1D67-4B7F-ADF1-848D90643CFF, iPhone 17 Pro, Siri ja-JP)",
+  "deleted": "both deleted with xcrun simctl delete after capture (18:35 and 18:36 JST)"
+ },
+ "images": [
+  {
+   "image": "assets/screens/en/02-siri.jpg",
+   "previous_sha256": "ab291059e55136699c26e1dfaf04fd4cd75c1d0becf1d855b53d40bba9150ed7",
+   "sha256": "fb9816f6a611ce96377c2854ffadea9c4439399ea548b92902c37088757ee1a3",
+   "source": "/Users/agents/Workspaces/kotori-siri-retake-261122/results/web-enmax-en-US/screenshots/KT siri-retake web enmax en-US 261122-02-siri.png",
+   "source_sha256": "1d0c415940680f60cf061e6cc06dadf0d45adc5d845ec71b9001fe39a0e9b619",
+   "raw_dimensions": [
+    1320,
+    2868
+   ],
+   "dimensions": [
+    660,
+    1434
+   ],
+   "language": "en",
+   "siri_language": "en-US",
+   "device": "iPhone 17 Pro Max",
+   "device_name": "KT siri-retake web enmax en-US 261122",
+   "device_uuid": "02613234-4A5A-4115-A7B6-2B1DBC15C824",
+   "test": "ScreenshotUITests/testRetakeWebsiteEnglishMax",
+   "test_result": "/Users/agents/Workspaces/kotori-siri-retake-261122/results/web-enmax-en-US-183145.xcresult",
+   "raw_diff_vs_previous": "only the Siri tip row (x 227–903, y 1008–1048 of the RAW)",
+   "visible_phrase": "Say “Record an entry in Kotori”",
+   "appearance": "system default",
+   "system_appearance": "light",
+   "visual_review": "passed"
+  }
+ ]
+}

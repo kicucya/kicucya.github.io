@@ -1,0 +1,29 @@
+{
+  "app_version": "1.2.2",
+  "app_build": "1631",
+  "product_source_commit": "9bc5eca0",
+  "device": "iPhone 17 Pro",
+  "device_uuid": "07574B84-9E30-42C5-8C45-3BDCFD8D8C9A",
+  "runtime": "iOS 27.0",
+  "capture": "XCTest on mac-mini-kt agents; account-free dedicated simulator; synthetic demonstration ledger and the same misty-lake appearance (accent AF52DE) as refresh-1623. Temporary screenshot harness, not committed; production source unchanged.",
+  "scope": "Japanese 07-budget only: the disabled Save action now follows the shared accent-fill confirmation style. English 07-budget uses the system default appearance and is unaffected; all other images retained.",
+  "images": [
+    {
+      "image": "assets/screens/ja/07-budget.png",
+      "previous_sha256": "ed85aa52fe3f51b89295101e268eff1b0f0cbf14e185b2c5a339ad65ae38f13b",
+      "sha256": "b533a148dac91e0ea503b70b69223a2ef716b43b7f54133ff6908649a0be1d88",
+      "source_sha256": "81f4d7965357daef1f6005f9f30cac260cd024a799552dd7caad68560bcd0287",
+      "raw_dimensions": [
+        1206,
+        2622
+      ],
+      "dimensions": [
+        660,
+        1435
+      ],
+      "language": "ja",
+      "appearance": "synthetic misty lake, purple accent, lake avatar",
+      "system_appearance": "light"
+    }
+  ]
+}
