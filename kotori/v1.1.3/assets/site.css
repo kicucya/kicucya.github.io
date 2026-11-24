@@ -7,11 +7,11 @@
    ============================================================ */
 
 /* 自托管フォント subset(Google Fonts text= サブセット・runtime で Google を呼ばない) */
-@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/zenmaru-500.woff2') format('woff2'); }
-@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/zenmaru-700.woff2') format('woff2'); }
-@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/notosansjp-400.woff2') format('woff2'); }
-@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/notosansjp-500.woff2') format('woff2'); }
-@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/notosansjp-700.woff2') format('woff2'); }
+@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 500; font-display: swap; src: url('../../assets/shared/4d74e4d1dd03f48751cf.woff2') format('woff2'); }
+@font-face { font-family: 'Zen Maru Gothic'; font-style: normal; font-weight: 700; font-display: swap; src: url('../../assets/shared/7ec78c437a5ac8c7e3b3.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 400; font-display: swap; src: url('../../assets/shared/a2b93e8b81f25bbc9d76.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 500; font-display: swap; src: url('../../assets/shared/a2b93e8b81f25bbc9d76.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-style: normal; font-weight: 700; font-display: swap; src: url('../../assets/shared/a2b93e8b81f25bbc9d76.woff2') format('woff2'); }
 
 :root {
   --cream:      #fbf7ee;   /* ページ地 */

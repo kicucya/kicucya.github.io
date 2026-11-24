@@ -3,8 +3,14 @@
 
 python3 Tools/build_versions.py [--check]
 No network, Git checkout, packages, or server-side routing is needed.
+
+Every version keeps its own complete HTML, CSS and JavaScript. Images and fonts
+are published once under kotori/assets/shared/, named by their content, so
+versions with the same file share one URL and one browser cache entry, and a
+changed file in one version never reaches another version's pages.
 """
 import argparse
+import hashlib
 import html
 from html.parser import HTMLParser
 import json
@@ -18,6 +24,10 @@ from l10n_terms import validate_copy
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / '_versions/kotori'
 GENERATED = SOURCES / 'generated-files.json'
+GUIDES = ROOT / 'kotori/assets/guides'
+SHARED = 'kotori/assets/shared'
+# Code stays per version; only these file types are shared between versions.
+SHARED_TYPES = {'.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.ico', '.woff2', '.woff'}
 SITE = 'https://kicucya.github.io'
 PAGES = {'index.html': 'ja', 'index-en.html': 'en', 'features.html': 'ja',
          'features-en.html': 'en', 'support-ja.html': 'ja', 'support.html': 'en',
@@ -60,6 +70,54 @@ def anchors(version, page):
  return re.findall(r'\bid=["\']([^"\']+)["\']', text)
 
 
+class SharedAssets:
+ """Content-addressed images and fonts referenced by any version."""
+ def __init__(self):
+  self.published = {}
+  self.guides = None
+
+ def url(self, path, route, base):
+  """Register a source file and return its shared URL relative to a page or stylesheet in `base`."""
+  if not path.is_file(): raise ValueError(f'Missing source asset: {path}')
+  content = path.read_bytes()
+  target = f'{SHARED}/{hashlib.sha256(content).hexdigest()[:20]}{path.suffix.lower()}'
+  if self.published.setdefault(target, content) != content: raise ValueError('Hash collision: ' + target)
+  return relative(target, base)
+
+ def guide(self, ref):
+  """Return one path for guide media recorded under several media versions with the same content."""
+  if self.guides is None:
+   self.guides, first = {}, {}
+   for path in sorted(GUIDES.rglob('*')):
+    if path.is_file() and path.suffix in ('.mp4', '.jpg', '.vtt'):
+     name = path.relative_to(ROOT).as_posix()
+     self.guides[name] = first.setdefault((path.suffix, hashlib.sha256(path.read_bytes()).hexdigest()), name)
+  return self.guides.get(ref, ref)
+
+
+def share_page_assets(source, version, route, shared):
+ def replace(match):
+  if Path(match['path']).suffix.lower() not in SHARED_TYPES: return match[0]
+  return match['quote'] + shared.url(SOURCES / version['source'] / 'assets' / match['path'], route, route) + match['quote']
+ source = re.sub(r'(?P<quote>["\'])assets/(?!guides/)(?P<path>[^"\'?#]+)(?:\?[^"\'#]*)?(?P=quote)', replace, source)
+
+ def guide(match):
+  return match['quote'] + relative(shared.guide('kotori/assets/guides/' + match['path']), route)
+ return re.sub(r'(?P<quote>["\'])assets/guides/(?P<path>[^"\'?#]+)', guide, source)
+
+
+def share_css_assets(css, stylesheet, version, route, shared):
+ """Rewrite font and image URLs in one version's own stylesheet."""
+ folder = posixpath.dirname(stylesheet)
+ def replace(match):
+  url = match['url']
+  if urlsplit(url).scheme or url.startswith(('/', '#')): return match[0]
+  path = SOURCES / version['source'] / posixpath.normpath(posixpath.join(folder, unquote(urlsplit(url).path)))
+  if path.suffix.lower() not in SHARED_TYPES: return match[0]
+  return 'url(' + match['quote'] + shared.url(path, route, posixpath.join(route, folder)) + match['quote'] + ')'
+ return re.sub(r'url\((?P<quote>["\']?)(?P<url>[^)"\']+)(?P=quote)\)', replace, css)
+
+
 def version_bar(data, version, page, route):
  t = TEXT[PAGES[page]]
  # Display labels may mark a separately published development version.
@@ -84,13 +142,13 @@ def version_bar(data, version, page, route):
   <!-- kotori:version:end -->'''
 
 
-def render(data, version, page, route):
+def render(data, version, page, route, shared):
  source = (SOURCES / version['source'] / page).read_text()
  if 'kotori:version:start' in source:
   raise ValueError('Generated version UI must not be stored in source: ' + version['source'] + '/' + page)
  # Metadata and any absolute same-site links must resolve within this snapshot.
  source = source.replace(SITE + '/kotori/', SITE + '/' + route + '/')
- source = re.sub(r'(["\'])assets/guides/', lambda m: m[1] + relative('kotori/assets/guides', route) + '/', source)
+ source = share_page_assets(source, version, route, shared)
  source = source.replace('</head>', '  <link rel="stylesheet" href="assets/version-ui.css">\n  <script src="assets/version-ui.js" defer></script>\n</head>')
  marker = '  <!-- kotori:nav:end -->'
  if source.count(marker) != 1:
@@ -102,6 +160,7 @@ def render(data, version, page, route):
 
 def expected_files(data):
  expected = {}
+ shared = SharedAssets()
  latest = next(v for v in data['versions'] if v['version'] == data['latest'])
  routes = [('kotori', latest), ('kotori/main', latest)] + [('kotori/v' + v['version'], v) for v in data['versions']]
  for route, version in routes:
@@ -110,15 +169,20 @@ def expected_files(data):
   if found != set(PAGES):
    raise ValueError(f'{version["version"]}: expected all nine complete pages, found {sorted(found)}')
   for page in PAGES:
-   expected[route + '/' + page] = render(data, version, page, route)
+   expected[route + '/' + page] = render(data, version, page, route, shared)
   for asset in (source / 'assets').rglob('*'):
    if asset.is_file():
     rel = asset.relative_to(source).as_posix()
     if rel.startswith('assets/guides/'):
      raise ValueError('Public guide media must be shared, not copied into source snapshots')
-    expected[route + '/' + rel] = asset.read_bytes()
+    # Shared types are published only through references, so nothing is copied per version.
+    if asset.suffix.lower() in SHARED_TYPES: continue
+    content = asset.read_bytes()
+    if asset.suffix == '.css': content = share_css_assets(content.decode(), rel, version, route, shared).encode()
+    expected[route + '/' + rel] = content
   for name in ('version-ui.css', 'version-ui.js'):
    expected[route + '/assets/' + name] = (SOURCES / name).read_bytes()
+ expected.update(shared.published)
  return expected
 
 
@@ -178,7 +242,9 @@ def main():
  try:
   data = registry(); expected = expected_files(data); pages, refs = validate(expected)
   previous = previous_outputs()
-  obsolete = sorted(previous - set(expected))
+  # The shared folder is generated as a whole, so unregistered files there are leftovers too.
+  leftovers = {path.relative_to(ROOT).as_posix() for path in (ROOT / SHARED).glob('*') if path.name != '.DS_Store'}
+  obsolete = sorted((previous | leftovers) - set(expected))
   file_registry = (json.dumps(sorted(expected), indent=2) + '\n').encode()
   registry_changed = not GENERATED.is_file() or GENERATED.read_bytes() != file_registry
   drift = [name for name, contents in expected.items() if not (ROOT / name).is_file() or (ROOT / name).read_bytes() != contents]
