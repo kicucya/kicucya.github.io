@@ -146,15 +146,15 @@
       "release_notes": {
         "ja": [
           "収支の検索で、日付からも記録を探せるようになりました。",
-          "収支の検索で、何も入力せずにキーボードを閉じたときに、ページの見出しが元に戻らない問題を修正しました。"
+          "細かな不具合も直しました。"
         ],
         "en": [
           "You can now search Transactions by date.",
-          "Fixed an issue in Transactions where the page title didn’t come back after dismissing the keyboard without entering a search."
+          "Fixed a few minor bugs, too."
         ],
         "zh-hant": [
           "收支搜尋現在也能依日期尋找記錄。",
-          "修正了在收支搜尋中未輸入內容就收起鍵盤時，頁面標題無法恢復的問題。"
+          "也修正了一些小問題。"
         ]
       }
     }
