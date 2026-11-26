@@ -142,7 +142,21 @@
       "status": "preview",
       "source": "v1.3.1",
       "source_commit": "952e000",
-      "provenance": "Created from the 1.3.0 website for App 1.3.1 so the versioned support pages exist before TestFlight (T-488). Fix-only version: layout, copy, screenshots and guide videos are reused from 1.3.0 with their original capture provenance. The 1.3.0 NEW badges are removed. Release notes wait for the approved 1.3.1 What's New. Publishing this version does not change the default website version."
+      "provenance": "Created from the 1.3.0 website for App 1.3.1 so the versioned support pages exist before TestFlight (T-488). Fix-only version: layout, copy, screenshots and guide videos are reused from 1.3.0 with their original capture provenance. The 1.3.0 NEW badges are removed. Release notes use the approved 1.3.1 App Store What's New (App repo docs/release/store-copy.md, T-476#48). Publishing this version does not change the default website version.",
+      "release_notes": {
+        "ja": [
+          "収支の検索で、日付からも記録を探せるようになりました。",
+          "収支の検索で、何も入力せずにキーボードを閉じたときに、ページの見出しが元に戻らない問題を修正しました。"
+        ],
+        "en": [
+          "You can now search Transactions by date.",
+          "Fixed an issue in Transactions where the page title didn’t come back after dismissing the keyboard without entering a search."
+        ],
+        "zh-hant": [
+          "收支搜尋現在也能依日期尋找記錄。",
+          "修正了在收支搜尋中未輸入內容就收起鍵盤時，頁面標題無法恢復的問題。"
+        ]
+      }
     }
   ]
 }

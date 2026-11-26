@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-27",
+  "scope": "1.3.1 website release notes",
+  "userDirection": "Major chose option A for the Japanese 1.3.1 App Store What's New (T-476#48).",
+  "sourceLanguage": "ja",
+  "copy": {
+    "ja": [
+      "収支の検索で、日付からも記録を探せるようになりました。",
+      "収支の検索で、何も入力せずにキーボードを閉じたときに、ページの見出しが元に戻らない問題を修正しました。"
+    ],
+    "en": [
+      "You can now search Transactions by date.",
+      "Fixed an issue in Transactions where the page title didn’t come back after dismissing the keyboard without entering a search."
+    ],
+    "zh-hant": [
+      "收支搜尋現在也能依日期尋找記錄。",
+      "修正了在收支搜尋中未輸入內容就收起鍵盤時，頁面標題無法恢復的問題。"
+    ]
+  },
+  "evidence": "Same text as the App Store notes; term sources in the App repo docs/publishing/1.3.1-store-copy-evidence.json."
+}

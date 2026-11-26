@@ -330,5 +330,5 @@ Major 26/11/13 确认 1.3 功能验收通过（「功能都能用了 只差UI微
 TestFlight 打包脚本要求 `/kotori/v1.3.1/support-ja.html` 与 `support.html` 可直接访问（T-488）。基于官网 `952e000` 的 1.3.0 完整站点建立 9 页。
 
 - 1.3.1 目前只有修复，不新增介绍、教程或录制；截图与视频沿用 1.3.0 的来源。1.3.0 的 `NEW` 标记相对上一已发布版本不再成立，已去掉。
-- 更新说明等 1.3.1 的 App Store 更新说明定稿后再填。
+- 更新说明使用 1.3.1 App Store 更新说明的定稿（26/11/27，T-476#48 选 A 稿），日、英、繁中三种写入 registry 的 `release_notes`，用语来源见 `_versions/kotori/v1.3.1/release-notes-evidence.json`。
 - `working` 改为 1.3.1，`status` 为 `preview`，版本名标 `1.3.1 (Preview)`；`latest` 保持 1.3.0。本条不表示 App 1.3.1 已上线。
